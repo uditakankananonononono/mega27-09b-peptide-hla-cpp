@@ -1,0 +1,84 @@
+{
+ "tool": "EMBOSS Clustal Omega 1.2.4 (EBI REST)",
+ "job": "clustalo-R20260924-205051-0337-21943761-p1m",
+ "per_cpp": {
+  "9B-CPP-1": {
+   "max_identity_to_archetype_pct": 36.4,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-2": {
+   "max_identity_to_archetype_pct": 36.4,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-3": {
+   "max_identity_to_archetype_pct": 60.0,
+   "nearest": "CPPsite_MPG"
+  },
+  "9B-CPP-4": {
+   "max_identity_to_archetype_pct": 33.3,
+   "nearest": "CPPsite_FAM-pVEC"
+  },
+  "9B-CPP-5": {
+   "max_identity_to_archetype_pct": 35.7,
+   "nearest": "CPPsite_Penetratin_unit"
+  },
+  "9B-CPP-6": {
+   "max_identity_to_archetype_pct": 44.4,
+   "nearest": "CPPsite_MPG"
+  },
+  "9B-CPP-7": {
+   "max_identity_to_archetype_pct": 40.0,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-8": {
+   "max_identity_to_archetype_pct": 41.7,
+   "nearest": "CPPsite_FAM-pVEC"
+  },
+  "9B-CPP-9": {
+   "max_identity_to_archetype_pct": 50.0,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-10": {
+   "max_identity_to_archetype_pct": 33.3,
+   "nearest": "CPPsite_MPGNLS"
+  },
+  "9B-CPP-11": {
+   "max_identity_to_archetype_pct": 45.5,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-12": {
+   "max_identity_to_archetype_pct": 36.4,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-13": {
+   "max_identity_to_archetype_pct": 30.8,
+   "nearest": "CPPsite_FAM-pVEC"
+  },
+  "9B-CPP-14": {
+   "max_identity_to_archetype_pct": 28.6,
+   "nearest": "CPPsite_FAM-pVEC"
+  },
+  "9B-CPP-15": {
+   "max_identity_to_archetype_pct": 45.5,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-16": {
+   "max_identity_to_archetype_pct": 50.0,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-17": {
+   "max_identity_to_archetype_pct": 45.5,
+   "nearest": "CPPsite_TAT47-57_unit"
+  },
+  "9B-CPP-18": {
+   "max_identity_to_archetype_pct": 36.4,
+   "nearest": "CPPsite_TAT47-57_unit"
+  }
+ },
+ "summary": {
+  "n_cpp": 18,
+  "mean_max_identity_pct": 40.5,
+  "max_identity_pct": 60.0,
+  "min_identity_pct": 28.6
+ }
+}
