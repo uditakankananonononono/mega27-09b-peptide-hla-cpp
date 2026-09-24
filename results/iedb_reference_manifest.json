@@ -1,0 +1,2168 @@
+{
+ "n_reference_datasets": 350,
+ "total_measurements": 135854,
+ "top10": [
+  {
+   "reference_iri": "http://www.iedb.org/reference/1006442",
+   "n_measurements": 22699,
+   "n_unique_peptides": 2735,
+   "n_alleles": 28
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000994",
+   "n_measurements": 15007,
+   "n_unique_peptides": 2973,
+   "n_alleles": 21
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022551",
+   "n_measurements": 13878,
+   "n_unique_peptides": 4007,
+   "n_alleles": 28
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1014017",
+   "n_measurements": 9150,
+   "n_unique_peptides": 1818,
+   "n_alleles": 48
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022588",
+   "n_measurements": 8442,
+   "n_unique_peptides": 5024,
+   "n_alleles": 28
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000425",
+   "n_measurements": 7815,
+   "n_unique_peptides": 1410,
+   "n_alleles": 27
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013510",
+   "n_measurements": 6041,
+   "n_unique_peptides": 1207,
+   "n_alleles": 29
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013512",
+   "n_measurements": 3223,
+   "n_unique_peptides": 2525,
+   "n_alleles": 32
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000945",
+   "n_measurements": 2876,
+   "n_unique_peptides": 893,
+   "n_alleles": 16
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1014192",
+   "n_measurements": 1945,
+   "n_unique_peptides": 998,
+   "n_alleles": 8
+  }
+ ],
+ "references": [
+  {
+   "reference_iri": "http://www.iedb.org/reference/1006442",
+   "n_measurements": 22699,
+   "n_unique_peptides": 2735,
+   "n_alleles": 28
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000994",
+   "n_measurements": 15007,
+   "n_unique_peptides": 2973,
+   "n_alleles": 21
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022551",
+   "n_measurements": 13878,
+   "n_unique_peptides": 4007,
+   "n_alleles": 28
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1014017",
+   "n_measurements": 9150,
+   "n_unique_peptides": 1818,
+   "n_alleles": 48
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022588",
+   "n_measurements": 8442,
+   "n_unique_peptides": 5024,
+   "n_alleles": 28
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000425",
+   "n_measurements": 7815,
+   "n_unique_peptides": 1410,
+   "n_alleles": 27
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013510",
+   "n_measurements": 6041,
+   "n_unique_peptides": 1207,
+   "n_alleles": 29
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013512",
+   "n_measurements": 3223,
+   "n_unique_peptides": 2525,
+   "n_alleles": 32
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000945",
+   "n_measurements": 2876,
+   "n_unique_peptides": 893,
+   "n_alleles": 16
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1014192",
+   "n_measurements": 1945,
+   "n_unique_peptides": 998,
+   "n_alleles": 8
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1005810",
+   "n_measurements": 1712,
+   "n_unique_peptides": 1655,
+   "n_alleles": 12
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000741",
+   "n_measurements": 1616,
+   "n_unique_peptides": 485,
+   "n_alleles": 27
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000735",
+   "n_measurements": 1230,
+   "n_unique_peptides": 82,
+   "n_alleles": 15
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000396",
+   "n_measurements": 1150,
+   "n_unique_peptides": 230,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019354",
+   "n_measurements": 1000,
+   "n_unique_peptides": 722,
+   "n_alleles": 17
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019518",
+   "n_measurements": 999,
+   "n_unique_peptides": 184,
+   "n_alleles": 61
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019521",
+   "n_measurements": 999,
+   "n_unique_peptides": 180,
+   "n_alleles": 61
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019520",
+   "n_measurements": 999,
+   "n_unique_peptides": 165,
+   "n_alleles": 58
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019513",
+   "n_measurements": 998,
+   "n_unique_peptides": 150,
+   "n_alleles": 61
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019523",
+   "n_measurements": 997,
+   "n_unique_peptides": 133,
+   "n_alleles": 61
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019516",
+   "n_measurements": 997,
+   "n_unique_peptides": 118,
+   "n_alleles": 60
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019507",
+   "n_measurements": 997,
+   "n_unique_peptides": 261,
+   "n_alleles": 56
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019522",
+   "n_measurements": 996,
+   "n_unique_peptides": 153,
+   "n_alleles": 59
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019515",
+   "n_measurements": 994,
+   "n_unique_peptides": 136,
+   "n_alleles": 57
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019514",
+   "n_measurements": 991,
+   "n_unique_peptides": 145,
+   "n_alleles": 60
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019517",
+   "n_measurements": 986,
+   "n_unique_peptides": 138,
+   "n_alleles": 61
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019512",
+   "n_measurements": 982,
+   "n_unique_peptides": 135,
+   "n_alleles": 62
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019508",
+   "n_measurements": 980,
+   "n_unique_peptides": 194,
+   "n_alleles": 53
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019510",
+   "n_measurements": 979,
+   "n_unique_peptides": 143,
+   "n_alleles": 53
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019509",
+   "n_measurements": 969,
+   "n_unique_peptides": 130,
+   "n_alleles": 52
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019511",
+   "n_measurements": 961,
+   "n_unique_peptides": 156,
+   "n_alleles": 56
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1014194",
+   "n_measurements": 931,
+   "n_unique_peptides": 482,
+   "n_alleles": 8
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019519",
+   "n_measurements": 900,
+   "n_unique_peptides": 136,
+   "n_alleles": 58
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1021091",
+   "n_measurements": 643,
+   "n_unique_peptides": 64,
+   "n_alleles": 22
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200155",
+   "n_measurements": 616,
+   "n_unique_peptides": 134,
+   "n_alleles": 16
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1048573",
+   "n_measurements": 592,
+   "n_unique_peptides": 70,
+   "n_alleles": 13
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019524",
+   "n_measurements": 552,
+   "n_unique_peptides": 100,
+   "n_alleles": 57
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000395",
+   "n_measurements": 529,
+   "n_unique_peptides": 89,
+   "n_alleles": 21
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1042751",
+   "n_measurements": 500,
+   "n_unique_peptides": 500,
+   "n_alleles": 11
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200136",
+   "n_measurements": 493,
+   "n_unique_peptides": 76,
+   "n_alleles": 7
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1031894",
+   "n_measurements": 467,
+   "n_unique_peptides": 436,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200059",
+   "n_measurements": 454,
+   "n_unique_peptides": 88,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028790",
+   "n_measurements": 450,
+   "n_unique_peptides": 90,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019353",
+   "n_measurements": 445,
+   "n_unique_peptides": 378,
+   "n_alleles": 17
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000743",
+   "n_measurements": 428,
+   "n_unique_peptides": 126,
+   "n_alleles": 16
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1024516",
+   "n_measurements": 415,
+   "n_unique_peptides": 83,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000402",
+   "n_measurements": 398,
+   "n_unique_peptides": 73,
+   "n_alleles": 27
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000410",
+   "n_measurements": 382,
+   "n_unique_peptides": 71,
+   "n_alleles": 11
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1023025",
+   "n_measurements": 357,
+   "n_unique_peptides": 315,
+   "n_alleles": 15
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000983",
+   "n_measurements": 339,
+   "n_unique_peptides": 109,
+   "n_alleles": 21
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028554",
+   "n_measurements": 312,
+   "n_unique_peptides": 285,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000456",
+   "n_measurements": 305,
+   "n_unique_peptides": 61,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000416",
+   "n_measurements": 274,
+   "n_unique_peptides": 15,
+   "n_alleles": 22
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1033071",
+   "n_measurements": 238,
+   "n_unique_peptides": 216,
+   "n_alleles": 10
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1001254",
+   "n_measurements": 231,
+   "n_unique_peptides": 49,
+   "n_alleles": 27
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028234",
+   "n_measurements": 228,
+   "n_unique_peptides": 228,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200133",
+   "n_measurements": 220,
+   "n_unique_peptides": 49,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1039423",
+   "n_measurements": 212,
+   "n_unique_peptides": 196,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1025099",
+   "n_measurements": 203,
+   "n_unique_peptides": 203,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1026840",
+   "n_measurements": 198,
+   "n_unique_peptides": 133,
+   "n_alleles": 8
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1037812",
+   "n_measurements": 192,
+   "n_unique_peptides": 52,
+   "n_alleles": 10
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200073",
+   "n_measurements": 190,
+   "n_unique_peptides": 37,
+   "n_alleles": 15
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028231",
+   "n_measurements": 184,
+   "n_unique_peptides": 184,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028235",
+   "n_measurements": 181,
+   "n_unique_peptides": 181,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013714",
+   "n_measurements": 181,
+   "n_unique_peptides": 38,
+   "n_alleles": 26
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200072",
+   "n_measurements": 180,
+   "n_unique_peptides": 36,
+   "n_alleles": 15
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028230",
+   "n_measurements": 172,
+   "n_unique_peptides": 172,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028286",
+   "n_measurements": 172,
+   "n_unique_peptides": 172,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200060",
+   "n_measurements": 171,
+   "n_unique_peptides": 33,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028228",
+   "n_measurements": 163,
+   "n_unique_peptides": 163,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028229",
+   "n_measurements": 157,
+   "n_unique_peptides": 157,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1038983",
+   "n_measurements": 148,
+   "n_unique_peptides": 119,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028232",
+   "n_measurements": 143,
+   "n_unique_peptides": 143,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028553",
+   "n_measurements": 142,
+   "n_unique_peptides": 138,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019788",
+   "n_measurements": 137,
+   "n_unique_peptides": 28,
+   "n_alleles": 27
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/931",
+   "n_measurements": 136,
+   "n_unique_peptides": 94,
+   "n_alleles": 11
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200074",
+   "n_measurements": 135,
+   "n_unique_peptides": 27,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000405",
+   "n_measurements": 120,
+   "n_unique_peptides": 24,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1037895",
+   "n_measurements": 115,
+   "n_unique_peptides": 105,
+   "n_alleles": 10
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000738",
+   "n_measurements": 114,
+   "n_unique_peptides": 58,
+   "n_alleles": 12
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1007769",
+   "n_measurements": 112,
+   "n_unique_peptides": 30,
+   "n_alleles": 20
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020882",
+   "n_measurements": 111,
+   "n_unique_peptides": 111,
+   "n_alleles": 12
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1002221",
+   "n_measurements": 110,
+   "n_unique_peptides": 20,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000734",
+   "n_measurements": 107,
+   "n_unique_peptides": 19,
+   "n_alleles": 22
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200080",
+   "n_measurements": 106,
+   "n_unique_peptides": 53,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000278",
+   "n_measurements": 105,
+   "n_unique_peptides": 21,
+   "n_alleles": 15
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1006339",
+   "n_measurements": 105,
+   "n_unique_peptides": 105,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200084",
+   "n_measurements": 103,
+   "n_unique_peptides": 51,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200126",
+   "n_measurements": 100,
+   "n_unique_peptides": 20,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200106",
+   "n_measurements": 100,
+   "n_unique_peptides": 20,
+   "n_alleles": 10
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1031072",
+   "n_measurements": 96,
+   "n_unique_peptides": 96,
+   "n_alleles": 13
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1037971",
+   "n_measurements": 95,
+   "n_unique_peptides": 24,
+   "n_alleles": 9
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003942",
+   "n_measurements": 94,
+   "n_unique_peptides": 94,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200048",
+   "n_measurements": 94,
+   "n_unique_peptides": 33,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028267",
+   "n_measurements": 91,
+   "n_unique_peptides": 14,
+   "n_alleles": 7
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1031253",
+   "n_measurements": 90,
+   "n_unique_peptides": 90,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200045",
+   "n_measurements": 88,
+   "n_unique_peptides": 23,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028233",
+   "n_measurements": 87,
+   "n_unique_peptides": 87,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000415",
+   "n_measurements": 85,
+   "n_unique_peptides": 17,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/859",
+   "n_measurements": 84,
+   "n_unique_peptides": 84,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1030412",
+   "n_measurements": 80,
+   "n_unique_peptides": 77,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1042995",
+   "n_measurements": 79,
+   "n_unique_peptides": 79,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200029",
+   "n_measurements": 77,
+   "n_unique_peptides": 49,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1039348",
+   "n_measurements": 77,
+   "n_unique_peptides": 63,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200065",
+   "n_measurements": 75,
+   "n_unique_peptides": 75,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200040",
+   "n_measurements": 75,
+   "n_unique_peptides": 61,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003536",
+   "n_measurements": 70,
+   "n_unique_peptides": 70,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200026",
+   "n_measurements": 69,
+   "n_unique_peptides": 23,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200025",
+   "n_measurements": 66,
+   "n_unique_peptides": 65,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1034868",
+   "n_measurements": 65,
+   "n_unique_peptides": 65,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1024170",
+   "n_measurements": 63,
+   "n_unique_peptides": 9,
+   "n_alleles": 14
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1029957",
+   "n_measurements": 60,
+   "n_unique_peptides": 60,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/329",
+   "n_measurements": 60,
+   "n_unique_peptides": 30,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1034610",
+   "n_measurements": 60,
+   "n_unique_peptides": 48,
+   "n_alleles": 12
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1034875",
+   "n_measurements": 60,
+   "n_unique_peptides": 21,
+   "n_alleles": 9
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000737",
+   "n_measurements": 59,
+   "n_unique_peptides": 51,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1042203",
+   "n_measurements": 58,
+   "n_unique_peptides": 47,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1499",
+   "n_measurements": 56,
+   "n_unique_peptides": 55,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1029125",
+   "n_measurements": 56,
+   "n_unique_peptides": 17,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1015975",
+   "n_measurements": 55,
+   "n_unique_peptides": 37,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200046",
+   "n_measurements": 54,
+   "n_unique_peptides": 54,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200022",
+   "n_measurements": 53,
+   "n_unique_peptides": 43,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022144",
+   "n_measurements": 53,
+   "n_unique_peptides": 29,
+   "n_alleles": 8
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022297",
+   "n_measurements": 51,
+   "n_unique_peptides": 9,
+   "n_alleles": 18
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200095",
+   "n_measurements": 51,
+   "n_unique_peptides": 51,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000418",
+   "n_measurements": 50,
+   "n_unique_peptides": 10,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1021194",
+   "n_measurements": 50,
+   "n_unique_peptides": 10,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200131",
+   "n_measurements": 50,
+   "n_unique_peptides": 34,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1002097",
+   "n_measurements": 49,
+   "n_unique_peptides": 32,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1039752",
+   "n_measurements": 49,
+   "n_unique_peptides": 49,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1015058",
+   "n_measurements": 48,
+   "n_unique_peptides": 48,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200077",
+   "n_measurements": 48,
+   "n_unique_peptides": 48,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1025101",
+   "n_measurements": 47,
+   "n_unique_peptides": 36,
+   "n_alleles": 12
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1031258",
+   "n_measurements": 46,
+   "n_unique_peptides": 23,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200100",
+   "n_measurements": 44,
+   "n_unique_peptides": 9,
+   "n_alleles": 10
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200098",
+   "n_measurements": 44,
+   "n_unique_peptides": 44,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200075",
+   "n_measurements": 41,
+   "n_unique_peptides": 41,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200058",
+   "n_measurements": 40,
+   "n_unique_peptides": 40,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1041177",
+   "n_measurements": 39,
+   "n_unique_peptides": 39,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1044853",
+   "n_measurements": 38,
+   "n_unique_peptides": 13,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200052",
+   "n_measurements": 38,
+   "n_unique_peptides": 38,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1039602",
+   "n_measurements": 38,
+   "n_unique_peptides": 38,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200132",
+   "n_measurements": 38,
+   "n_unique_peptides": 38,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1004898",
+   "n_measurements": 37,
+   "n_unique_peptides": 28,
+   "n_alleles": 8
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028443",
+   "n_measurements": 37,
+   "n_unique_peptides": 37,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003506",
+   "n_measurements": 37,
+   "n_unique_peptides": 37,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000733",
+   "n_measurements": 36,
+   "n_unique_peptides": 17,
+   "n_alleles": 12
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200038",
+   "n_measurements": 36,
+   "n_unique_peptides": 24,
+   "n_alleles": 7
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003242",
+   "n_measurements": 36,
+   "n_unique_peptides": 36,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020898",
+   "n_measurements": 35,
+   "n_unique_peptides": 6,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1017786",
+   "n_measurements": 32,
+   "n_unique_peptides": 28,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200055",
+   "n_measurements": 32,
+   "n_unique_peptides": 30,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200047",
+   "n_measurements": 32,
+   "n_unique_peptides": 8,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200092",
+   "n_measurements": 31,
+   "n_unique_peptides": 23,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003440",
+   "n_measurements": 30,
+   "n_unique_peptides": 5,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200150",
+   "n_measurements": 30,
+   "n_unique_peptides": 30,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315217",
+   "n_measurements": 30,
+   "n_unique_peptides": 15,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1016566",
+   "n_measurements": 30,
+   "n_unique_peptides": 30,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1031481",
+   "n_measurements": 29,
+   "n_unique_peptides": 29,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1043769",
+   "n_measurements": 29,
+   "n_unique_peptides": 11,
+   "n_alleles": 18
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013407",
+   "n_measurements": 28,
+   "n_unique_peptides": 28,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200118",
+   "n_measurements": 28,
+   "n_unique_peptides": 20,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003945",
+   "n_measurements": 28,
+   "n_unique_peptides": 28,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200068",
+   "n_measurements": 26,
+   "n_unique_peptides": 26,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1029061",
+   "n_measurements": 26,
+   "n_unique_peptides": 26,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000406",
+   "n_measurements": 25,
+   "n_unique_peptides": 5,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1021189",
+   "n_measurements": 24,
+   "n_unique_peptides": 22,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1029673",
+   "n_measurements": 24,
+   "n_unique_peptides": 4,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200088",
+   "n_measurements": 24,
+   "n_unique_peptides": 23,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1001012",
+   "n_measurements": 24,
+   "n_unique_peptides": 4,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200061",
+   "n_measurements": 23,
+   "n_unique_peptides": 23,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1039432",
+   "n_measurements": 23,
+   "n_unique_peptides": 23,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200027",
+   "n_measurements": 23,
+   "n_unique_peptides": 23,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1024927",
+   "n_measurements": 22,
+   "n_unique_peptides": 22,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200107",
+   "n_measurements": 22,
+   "n_unique_peptides": 22,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1027629",
+   "n_measurements": 21,
+   "n_unique_peptides": 21,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1029829",
+   "n_measurements": 21,
+   "n_unique_peptides": 21,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1035929",
+   "n_measurements": 21,
+   "n_unique_peptides": 20,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1021345",
+   "n_measurements": 21,
+   "n_unique_peptides": 6,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1024928",
+   "n_measurements": 20,
+   "n_unique_peptides": 20,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000420",
+   "n_measurements": 20,
+   "n_unique_peptides": 4,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200094",
+   "n_measurements": 20,
+   "n_unique_peptides": 8,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1029818",
+   "n_measurements": 20,
+   "n_unique_peptides": 20,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003550",
+   "n_measurements": 20,
+   "n_unique_peptides": 4,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200090",
+   "n_measurements": 19,
+   "n_unique_peptides": 19,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003499",
+   "n_measurements": 19,
+   "n_unique_peptides": 19,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1029406",
+   "n_measurements": 19,
+   "n_unique_peptides": 12,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200043",
+   "n_measurements": 18,
+   "n_unique_peptides": 18,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200101",
+   "n_measurements": 18,
+   "n_unique_peptides": 10,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1021191",
+   "n_measurements": 18,
+   "n_unique_peptides": 18,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020105",
+   "n_measurements": 18,
+   "n_unique_peptides": 18,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1015947",
+   "n_measurements": 18,
+   "n_unique_peptides": 18,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1018623",
+   "n_measurements": 18,
+   "n_unique_peptides": 9,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200079",
+   "n_measurements": 18,
+   "n_unique_peptides": 18,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1033318",
+   "n_measurements": 17,
+   "n_unique_peptides": 17,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200066",
+   "n_measurements": 17,
+   "n_unique_peptides": 17,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1018648",
+   "n_measurements": 17,
+   "n_unique_peptides": 12,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200021",
+   "n_measurements": 17,
+   "n_unique_peptides": 17,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1042595",
+   "n_measurements": 16,
+   "n_unique_peptides": 8,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315328",
+   "n_measurements": 16,
+   "n_unique_peptides": 16,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1030030",
+   "n_measurements": 16,
+   "n_unique_peptides": 16,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1045240",
+   "n_measurements": 16,
+   "n_unique_peptides": 16,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000450",
+   "n_measurements": 16,
+   "n_unique_peptides": 1,
+   "n_alleles": 16
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000747",
+   "n_measurements": 16,
+   "n_unique_peptides": 4,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1018603",
+   "n_measurements": 15,
+   "n_unique_peptides": 15,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200085",
+   "n_measurements": 15,
+   "n_unique_peptides": 3,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019763",
+   "n_measurements": 15,
+   "n_unique_peptides": 15,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1030792",
+   "n_measurements": 15,
+   "n_unique_peptides": 5,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1036600",
+   "n_measurements": 15,
+   "n_unique_peptides": 15,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1007463",
+   "n_measurements": 15,
+   "n_unique_peptides": 15,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1447",
+   "n_measurements": 14,
+   "n_unique_peptides": 14,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000739",
+   "n_measurements": 14,
+   "n_unique_peptides": 14,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200134",
+   "n_measurements": 14,
+   "n_unique_peptides": 14,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315470",
+   "n_measurements": 14,
+   "n_unique_peptides": 14,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1027578",
+   "n_measurements": 14,
+   "n_unique_peptides": 13,
+   "n_alleles": 10
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1037140",
+   "n_measurements": 14,
+   "n_unique_peptides": 14,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315282",
+   "n_measurements": 14,
+   "n_unique_peptides": 2,
+   "n_alleles": 7
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1014730",
+   "n_measurements": 13,
+   "n_unique_peptides": 5,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013511",
+   "n_measurements": 13,
+   "n_unique_peptides": 13,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013643",
+   "n_measurements": 13,
+   "n_unique_peptides": 13,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022468",
+   "n_measurements": 13,
+   "n_unique_peptides": 13,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1047335",
+   "n_measurements": 12,
+   "n_unique_peptides": 11,
+   "n_alleles": 9
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200042",
+   "n_measurements": 12,
+   "n_unique_peptides": 12,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1025753",
+   "n_measurements": 12,
+   "n_unique_peptides": 4,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200036",
+   "n_measurements": 12,
+   "n_unique_peptides": 12,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315179",
+   "n_measurements": 12,
+   "n_unique_peptides": 3,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1034991",
+   "n_measurements": 12,
+   "n_unique_peptides": 12,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028559",
+   "n_measurements": 12,
+   "n_unique_peptides": 12,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200099",
+   "n_measurements": 11,
+   "n_unique_peptides": 11,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013509",
+   "n_measurements": 11,
+   "n_unique_peptides": 6,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1008008",
+   "n_measurements": 11,
+   "n_unique_peptides": 11,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1037874",
+   "n_measurements": 11,
+   "n_unique_peptides": 11,
+   "n_alleles": 4
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1030631",
+   "n_measurements": 11,
+   "n_unique_peptides": 11,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1018015",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1007658",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1007943",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1015875",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013935",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1018625",
+   "n_measurements": 10,
+   "n_unique_peptides": 5,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1029434",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1031051",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1026050",
+   "n_measurements": 10,
+   "n_unique_peptides": 9,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1026941",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1026955",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1004570",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200105",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1003616",
+   "n_measurements": 10,
+   "n_unique_peptides": 10,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200146",
+   "n_measurements": 9,
+   "n_unique_peptides": 9,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200139",
+   "n_measurements": 9,
+   "n_unique_peptides": 9,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1039424",
+   "n_measurements": 9,
+   "n_unique_peptides": 9,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1037260",
+   "n_measurements": 9,
+   "n_unique_peptides": 6,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200119",
+   "n_measurements": 9,
+   "n_unique_peptides": 9,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200024",
+   "n_measurements": 9,
+   "n_unique_peptides": 9,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1355",
+   "n_measurements": 9,
+   "n_unique_peptides": 9,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1038327",
+   "n_measurements": 8,
+   "n_unique_peptides": 8,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1032479",
+   "n_measurements": 8,
+   "n_unique_peptides": 8,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022535",
+   "n_measurements": 8,
+   "n_unique_peptides": 8,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200096",
+   "n_measurements": 8,
+   "n_unique_peptides": 8,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1021579",
+   "n_measurements": 8,
+   "n_unique_peptides": 8,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020396",
+   "n_measurements": 8,
+   "n_unique_peptides": 8,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1036212",
+   "n_measurements": 8,
+   "n_unique_peptides": 8,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200109",
+   "n_measurements": 8,
+   "n_unique_peptides": 8,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1012803",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1026752",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1024522",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1031696",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1032718",
+   "n_measurements": 7,
+   "n_unique_peptides": 2,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200102",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200151",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1024274",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200049",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315301",
+   "n_measurements": 7,
+   "n_unique_peptides": 7,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1204",
+   "n_measurements": 6,
+   "n_unique_peptides": 6,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020267",
+   "n_measurements": 6,
+   "n_unique_peptides": 2,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1010862",
+   "n_measurements": 6,
+   "n_unique_peptides": 6,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028168",
+   "n_measurements": 6,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1026340",
+   "n_measurements": 6,
+   "n_unique_peptides": 6,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200141",
+   "n_measurements": 6,
+   "n_unique_peptides": 6,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1036009",
+   "n_measurements": 6,
+   "n_unique_peptides": 6,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200112",
+   "n_measurements": 6,
+   "n_unique_peptides": 1,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000417",
+   "n_measurements": 6,
+   "n_unique_peptides": 2,
+   "n_alleles": 3
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1008795",
+   "n_measurements": 6,
+   "n_unique_peptides": 6,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000403",
+   "n_measurements": 6,
+   "n_unique_peptides": 1,
+   "n_alleles": 6
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000732",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1031123",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1004707",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200121",
+   "n_measurements": 5,
+   "n_unique_peptides": 1,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200124",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1030466",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200037",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200078",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000463",
+   "n_measurements": 5,
+   "n_unique_peptides": 1,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1021967",
+   "n_measurements": 5,
+   "n_unique_peptides": 1,
+   "n_alleles": 5
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022677",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1043345",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1027056",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1032897",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315054",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200148",
+   "n_measurements": 5,
+   "n_unique_peptides": 5,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000802",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1001708",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1028339",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315374",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1010863",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1018622",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1047466",
+   "n_measurements": 4,
+   "n_unique_peptides": 2,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1043789",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1017604",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1027269",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1025672",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315047",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1039848",
+   "n_measurements": 4,
+   "n_unique_peptides": 2,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1027438",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022200",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020300",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1027076",
+   "n_measurements": 4,
+   "n_unique_peptides": 4,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1032898",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1024498",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1008093",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1014975",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1019711",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1032160",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315241",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315189",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1015824",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/782",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000464",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/732",
+   "n_measurements": 3,
+   "n_unique_peptides": 3,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1042653",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/200057",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315335",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1025272",
+   "n_measurements": 2,
+   "n_unique_peptides": 1,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1045257",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022281",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/315465",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1000284",
+   "n_measurements": 2,
+   "n_unique_peptides": 1,
+   "n_alleles": 2
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1006043",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013704",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1022710",
+   "n_measurements": 2,
+   "n_unique_peptides": 2,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1001013",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1025182",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1045453",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020404",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020388",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1020430",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1047641",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1044167",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1043098",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1013507",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  },
+  {
+   "reference_iri": "http://www.iedb.org/reference/1018511",
+   "n_measurements": 1,
+   "n_unique_peptides": 1,
+   "n_alleles": 1
+  }
+ ]
+}
