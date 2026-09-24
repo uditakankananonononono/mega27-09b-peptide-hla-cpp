@@ -189,20 +189,172 @@
    ]
   },
   "9B-CPP-5": {
-   "status": "WAITING",
-   "rid": "BANGUSR2014"
+   "status": "READY",
+   "rid": "BANGUSR2014",
+   "n_hits": 178,
+   "top_hits": [
+    {
+     "subject_id": "P12448.1",
+     "pct_identity": 71.429,
+     "align_len": 14,
+     "evalue": 0.047,
+     "bit_score": 31.6
+    },
+    {
+     "subject_id": "P20870.1",
+     "pct_identity": 76.923,
+     "align_len": 13,
+     "evalue": 0.048,
+     "bit_score": 31.6
+    },
+    {
+     "subject_id": "P05873.1",
+     "pct_identity": 76.923,
+     "align_len": 13,
+     "evalue": 0.048,
+     "bit_score": 31.6
+    },
+    {
+     "subject_id": "P04615.1",
+     "pct_identity": 76.923,
+     "align_len": 13,
+     "evalue": 0.048,
+     "bit_score": 31.6
+    },
+    {
+     "subject_id": "P15830.2",
+     "pct_identity": 81.818,
+     "align_len": 11,
+     "evalue": 0.13,
+     "bit_score": 30.3
+    }
+   ]
   },
   "9B-CPP-6": {
-   "status": "WAITING",
-   "rid": "BANGYVK5014"
+   "status": "READY",
+   "rid": "BANGYVK5014",
+   "n_hits": 161,
+   "top_hits": [
+    {
+     "subject_id": "Q914N0.1",
+     "pct_identity": 77.778,
+     "align_len": 9,
+     "evalue": 0.021,
+     "bit_score": 31.2
+    },
+    {
+     "subject_id": "Q914N0.1",
+     "pct_identity": 63.636,
+     "align_len": 11,
+     "evalue": 16.0,
+     "bit_score": 23.1
+    },
+    {
+     "subject_id": "P58268.1",
+     "pct_identity": 100.0,
+     "align_len": 7,
+     "evalue": 0.24,
+     "bit_score": 28.2
+    },
+    {
+     "subject_id": "Q61103.1",
+     "pct_identity": 100.0,
+     "align_len": 7,
+     "evalue": 0.24,
+     "bit_score": 28.2
+    },
+    {
+     "subject_id": "Q92785.2",
+     "pct_identity": 100.0,
+     "align_len": 7,
+     "evalue": 0.24,
+     "bit_score": 28.2
+    }
+   ]
   },
   "9B-CPP-7": {
-   "status": "WAITING",
-   "rid": "BANH1P9M014"
+   "status": "READY",
+   "rid": "BANH1P9M014",
+   "n_hits": 130,
+   "top_hits": [
+    {
+     "subject_id": "Q9DUC9.1",
+     "pct_identity": 70.0,
+     "align_len": 10,
+     "evalue": 1.5,
+     "bit_score": 26.9
+    },
+    {
+     "subject_id": "Q9DUC9.1",
+     "pct_identity": 62.5,
+     "align_len": 8,
+     "evalue": 182436.0,
+     "bit_score": 12.9
+    },
+    {
+     "subject_id": "Q914N0.1",
+     "pct_identity": 66.667,
+     "align_len": 9,
+     "evalue": 1.5,
+     "bit_score": 26.9
+    },
+    {
+     "subject_id": "Q914N0.1",
+     "pct_identity": 54.545,
+     "align_len": 11,
+     "evalue": 604.0,
+     "bit_score": 19.7
+    },
+    {
+     "subject_id": "G3MY25.2",
+     "pct_identity": 85.714,
+     "align_len": 7,
+     "evalue": 2.2,
+     "bit_score": 26.5
+    }
+   ]
   },
   "9B-CPP-8": {
-   "status": "WAITING",
-   "rid": "BANH530P014"
+   "status": "READY",
+   "rid": "BANH530P014",
+   "n_hits": 208,
+   "top_hits": [
+    {
+     "subject_id": "Q5JNB5.1",
+     "pct_identity": 77.778,
+     "align_len": 9,
+     "evalue": 0.039,
+     "bit_score": 31.2
+    },
+    {
+     "subject_id": "Q9DUC9.1",
+     "pct_identity": 61.538,
+     "align_len": 13,
+     "evalue": 0.054,
+     "bit_score": 30.8
+    },
+    {
+     "subject_id": "Q9DUC9.1",
+     "pct_identity": 87.5,
+     "align_len": 8,
+     "evalue": 0.077,
+     "bit_score": 30.3
+    },
+    {
+     "subject_id": "Q9DUC9.1",
+     "pct_identity": 77.778,
+     "align_len": 9,
+     "evalue": 2.5,
+     "bit_score": 26.1
+    },
+    {
+     "subject_id": "Q9DUC9.1",
+     "pct_identity": 26.087,
+     "align_len": 23,
+     "evalue": 8775.0,
+     "bit_score": 16.3
+    }
+   ]
   },
   "9B-CPP-9": {
    "status": "WAITING",
@@ -210,7 +362,7 @@
   }
  },
  "summary": {
-  "n_ready": 3,
+  "n_ready": 7,
   "n_total": 18
  }
 }
