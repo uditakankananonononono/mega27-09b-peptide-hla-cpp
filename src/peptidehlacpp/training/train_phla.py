@@ -154,16 +154,22 @@ def main() -> None:
 
     # --- CNN ---
     cnn = PHLACNN(n_alleles=len(alleles))
-    train_torch_model(cnn, train, val, allele_map, args.epochs_cnn, args.batch,
-                      args.lr, with_graph=False)
+    if args.epochs_cnn > 0:
+        train_torch_model(cnn, train, val, allele_map, args.epochs_cnn, args.batch,
+                          args.lr, with_graph=False)
+    else:
+        cnn.load_state_dict(torch.load("results/phla_cnn.pt")["state"])
     results["cnn"] = evaluate_torch(cnn, test, allele_map, with_graph=False)
     print("CNN:", {k: round(v, 4) for k, v in results["cnn"].items()}, flush=True)
     torch.save({"state": cnn.state_dict(), "alleles": alleles}, "results/phla_cnn.pt")
 
     # --- GNN ---
     gnn = PHLAGNN(n_alleles=len(alleles))
-    train_torch_model(gnn, train, val, allele_map, args.epochs_gnn, args.batch,
-                      args.lr, with_graph=True)
+    if args.epochs_gnn > 0:
+        train_torch_model(gnn, train, val, allele_map, args.epochs_gnn, args.batch,
+                          args.lr, with_graph=True)
+    else:
+        gnn.load_state_dict(torch.load("results/phla_gnn.pt")["state"])
     results["gnn"] = evaluate_torch(gnn, test, allele_map, with_graph=True)
     print("GNN:", {k: round(v, 4) for k, v in results["gnn"].items()}, flush=True)
     torch.save({"state": gnn.state_dict(), "alleles": alleles}, "results/phla_gnn.pt")
