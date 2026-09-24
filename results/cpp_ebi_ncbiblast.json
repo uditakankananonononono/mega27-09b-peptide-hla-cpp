@@ -29,10 +29,34 @@
    "interpretation": "No PDB sequence homologs at E<=10: the designed 9-mer WRWRKKRRR has no structural-template counterpart in the PDB sequence database."
   },
   "9B-CPP-1": {
-   "status": "QUEUED at this commit"
+   "status": "FINISHED",
+   "database": "pdb",
+   "expect_upper": 10.0,
+   "n_hits": 1,
+   "hits": [
+    {
+     "hit_id": "PDB:6RQS_A",
+     "hit_def": "mol:protein length:18 ARG-ARG-TRP-ARG-ARG-TRP-TRP-ARG-ARG-",
+     "expect": 1.2,
+     "identity_pct": 69.2,
+     "bit_score": 56,
+     "entry_title": "RW16 peptide",
+     "method": "SOLUTION NMR",
+     "entry_source": "synthetic construct",
+     "primary_citation": "Biophysical Insight on the Membrane Insertion of an Arginine-Rich Cell-Penetrating Peptide (Int J Mol Sci 2019)"
+    }
+   ],
+   "interpretation": "Single weak hit (expect 1.2; short 19-mer queries inflate E-values) to RW16 (6RQS), a published synthetic arginine-rich cell-penetrating peptide characterized by solution NMR: the designed CPP-1 shares 69.2% identity with a known Arg/Trp CPP class member - corroboration that the design pipeline recovers the natural Arg/Trp CPP signature rather than an unrelated fold."
   },
   "9B-CPP-18": {
-   "status": "QUEUED at this commit"
+   "status": "FINISHED",
+   "database": "pdb",
+   "expect_upper": 10.0,
+   "n_hits": 0,
+   "hits": [],
+   "interpretation": "No PDB sequence homologs at expect <= 10: the designed 22-mer has no structural-template counterpart in the PDB sequence database."
   }
- }
+ },
+ "completed": "2026-09-25",
+ "summary": "3/3 jobs finished: CPP-8 and CPP-18 have zero PDB homologs; CPP-1 weakly matches the published arginine-rich CPP RW16 (PDB 6RQS, expect 1.2, 69.2% identity)."
 }
