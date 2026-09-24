@@ -890,6 +890,15 @@ the data are: %(auc9)s on 9-mers ($n=%(n9)s$), %(auc10)s on 10-mers, with
 thin lengths noisier and lower. Models trained on pooled data inherit this
 length prior, one more reason peptide-level splits must stratify
 implicitly through disjointness rather than random pairing.
+One length effect is not a sample-size story: 10-mers reach only
+%(auc10)s AUC at $n = %(n10)s$ --- well above any noise floor, yet
+%(auc10minus9)s below the 9-mer number. Ranking 10-mer binders is
+genuinely harder on this data: with both anchors fixed by the groove,
+the extra central residue adds a bulge position whose contribution the
+additive model must spread across more weakly conserved sites. The gap
+is stated rather than explained away; it marks where interaction terms
+should matter most, and the per-allele epistasis estimates of
+Section~\ref{sec:epialgo} are the instrument to test that.
 \begin{figure}[h]\centering
 \includegraphics[width=.55\linewidth]{figures/fig12_length.png}
 \caption{Assay count and binder fraction by peptide length (all alleles).}
@@ -2028,6 +2037,8 @@ subs = {
     "locauc_bn": f"{locauc['loci'][1]['n']:,}",
     "locauc_c": f(locauc["loci"][2]["ensemble_auc"]),
     "locauc_cn": f"{locauc['loci'][2]['n']:,}",
+    "n10": f"{[d for d in plauc['per_length_auc'] if d['len'] == 10][0]['n']:,}",
+    "auc10minus9": f"{[d for d in plauc['per_length_auc'] if d['len'] == 9][0]['ensemble_auc'] - [d for d in plauc['per_length_auc'] if d['len'] == 10][0]['ensemble_auc']:.3f}",
     "pdb_bN": 8,
     "pdbm_rows": pdbm_rows,
     "pdbm_idrows": pdbm_idrows,
