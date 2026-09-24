@@ -30,6 +30,7 @@ fun = json.load(open("results/data_funnels.json"))
 xver = json.load(open("results/external_verification.json"))
 pdbv = json.load(open("results/pdb_pocket_verification.json"))
 pdbm = json.load(open("results/pdb_pocket_verification_multi.json"))
+dec = json.load(open("results/error_decorrelation.json"))
 refm = json.load(open("results/iedb_reference_manifest.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
@@ -1178,6 +1179,36 @@ binding-affinity prediction under our split; the eluted-ligand task,
 where NetMHCpan-4.1 is the reference, is out of scope for our
 affinity-only models.
 
+\subsection{Error decorrelation, measured directly}
+\label{sec:decorrelation}
+\begin{figure}[h]\centering
+\includegraphics[width=.95\linewidth]{figures/fig23_error_decorrelation.pdf}
+\caption{Error decorrelation on the 6{,}000-peptide head-to-head subset.
+(a) Per-peptide ensemble vs MHCflurry scores (4{,}000-peptide subsample).
+(b) Of the pairs one model misorders, the fraction the other orders
+correctly; the dashed line is chance.}\label{fig:decorr}
+\end{figure}
+Section~%(ewlref)s argued indirectly that the ensemble win is error
+decorrelation: the win margin does not track epistasis strength. The
+per-peptide scores of the head-to-head subset let us measure the
+decorrelation itself. Over the %(dec_npairs)s ordered binder--non-binder
+pairs, MHCflurry misorders %(dec_mflfrac)s and the ensemble misorders
+%(dec_ensfrac)s. If the two models made the same mistakes, neither would
+order any of the other's misordered pairs correctly. Instead, the
+ensemble orders %(dec_ensright)s of MHCflurry's misordered pairs
+correctly, while MHCflurry recovers only %(dec_mflright)s of the
+ensemble's (Fig.~\ref{fig:decorr}b). The asymmetry --- %(dec_ensright)s
+versus %(dec_mflright)s against a 0.5 chance line --- \emph{is} the
+1.2-AUC-point win, expressed in pair space: when one model errs, the
+other is right more often when the ensemble is the corrector. Per-peptide
+scores remain strongly correlated overall (Spearman %(dec_rho_all)s;
+%(dec_rho_pos)s within binders, %(dec_rho_neg)s within non-binders), so
+the decorrelation lives in the tails, exactly where AUC is decided. The
+two ensemble members are themselves only moderately correlated within
+class (CNN vs PSSM: %(dec_rho_cp_pos)s binders, %(dec_rho_cp_neg)s
+non-binders), consistent with the z-scored average harvesting genuinely
+different rankings rather than duplicated signal.
+
 \subsection{Learning curve: how much data does the additive model need?}
 \label{sec:learningcurve}
 Figure~\ref{fig:lc} subsamples the training set (5--100\%, 3 seeds) and
@@ -1648,6 +1679,7 @@ any strictly monotone $g$ preserves all indicator values, hence the
 estimate --- the formal basis for scoring with $-\log$ affinity instead of
 affinity.
 \subsection{Double-mutant-cycle coupling as a $2\times2$ contrast}
+\label{sec:epistasisworked}
 For positions $i,j$ with reference residues $a_0,b_0$ and alternatives
 $a_1,b_1$, the coupling free energy (in log$_{10}$ units) is
 \begin{equation}
@@ -1764,7 +1796,7 @@ python scripts/cpp_learning_curve.py           # CPP learning curve
 python scripts/epistasis_winmargin_link.py     # margin null
 python scripts/make_figures.py && python scripts/make_fig5.py
 python scripts/make_fig16_17.py && python scripts/make_fig20.py
-python scripts/make_fig21.py && python scripts/make_fig22.py
+python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py
 python scripts/build_paper_tex.py              # this document
 cd paper && pdflatex main.tex && pdflatex main.tex
 python -m pytest tests/                        # 24 hermetic tests
@@ -1865,6 +1897,17 @@ subs = {
     "pdb_p2n": len(pdbv["p2_overlap_b"]),
     "pdb_pO": ", ".join(str(x) for x in pdbv["pomega_contacts"]),
     "pdb_pOn": len(pdbv["pomega_overlap_f"]),
+    "dec_npairs": f"{dec['n_pairs']:,}",
+    "dec_mflfrac": f"{dec['mfl_misordered_frac']*100:.2f}\\%",
+    "dec_ensfrac": f"{dec['ens_misordered_pairs']/dec['n_pairs']*100:.2f}\\%",
+    "dec_ensright": f"{dec['ens_correct_given_mfl_wrong']*100:.1f}\\%",
+    "dec_mflright": f"{dec['mfl_correct_given_ens_wrong']*100:.1f}\\%",
+    "dec_rho_all": f(dec['spearman_mfl_ens_all'], 3),
+    "dec_rho_pos": f(dec['spearman_mfl_ens_pos'], 3),
+    "dec_rho_neg": f(dec['spearman_mfl_ens_neg'], 3),
+    "dec_rho_cp_pos": f(dec['spearman_cnn_pssm_pos'], 3),
+    "dec_rho_cp_neg": f(dec['spearman_cnn_pssm_neg'], 3),
+    "ewlref": "\\ref{sec:marginnull}",
     "pdb_bN": 8,
     "pdbm_rows": pdbm_rows,
     "pdbm_idrows": pdbm_idrows,
