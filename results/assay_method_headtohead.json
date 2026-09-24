@@ -1,0 +1,30 @@
+{
+ "n_subset": 6000,
+ "replication_max_diff": 0.0,
+ "strata": [
+  {
+   "method": "purified MHC/competitive/radioactivity",
+   "n": 4056,
+   "n_binders": 3677,
+   "mhcflurry_auc": 0.8855532824381469,
+   "ensemble_auc": 0.9002075943808154,
+   "delta": 0.01465431194266853
+  },
+  {
+   "method": "purified MHC/direct/fluorescence",
+   "n": 1166,
+   "n_binders": 823,
+   "mhcflurry_auc": 0.95390539482587,
+   "ensemble_auc": 0.959888624778153,
+   "delta": 0.0059832299522829535
+  },
+  {
+   "method": "purified MHC/competitive/fluorescence",
+   "n": 757,
+   "n_binders": 548,
+   "mhcflurry_auc": 0.9207557713128209,
+   "ensemble_auc": 0.9229560297558761,
+   "delta": 0.0022002584430551586
+  }
+ ]
+}

@@ -33,6 +33,7 @@ pdbm = json.load(open("results/pdb_pocket_verification_multi.json"))
 dec = json.load(open("results/error_decorrelation.json"))
 wmd = json.load(open("results/winmargin_datasize.json"))
 amauc = json.load(open("results/assay_method_auc.json"))
+amh2h = json.load(open("results/assay_method_headtohead.json"))
 refm = json.load(open("results/iedb_reference_manifest.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
@@ -1251,6 +1252,20 @@ the latter's 0.60 reflects a handful of peptides, not a modeling
 failure mode we can localize). Prevalence and allele composition differ
 across strata, so the numbers are a description of where the aggregate
 comes from, not a like-for-like assay comparison.
+The head-to-head holds within every large stratum: the ensemble beats
+MHCflurry by %(amh_d1)s on radioactivity-competition, %(amh_d2)s on
+direct-fluorescence, and %(amh_d3)s on competitive-fluorescence pairs
+(subset replication verified against the saved score arrays, max
+difference 0.0). The win is therefore not an artifact of one assay
+chemistry dominating the 6{,}000-pair subset.
+\begin{center}\footnotesize
+\begin{tabular}{lrrrr}\hline\hline
+assay method & $n$ & MHCflurry AUC & ensemble AUC & $\Delta$ \\\hline
+%(amh_rows)s
+\hline\hline
+\end{tabular}
+\end{center}
+\normalsize
 
 \subsection{Learning curve: how much data does the additive model need?}
 \label{sec:learningcurve}
@@ -1839,7 +1854,7 @@ python scripts/cpp_learning_curve.py           # CPP learning curve
 python scripts/epistasis_winmargin_link.py     # margin null
 python scripts/make_figures.py && python scripts/make_fig5.py
 python scripts/make_fig16_17.py && python scripts/make_fig20.py
-python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py && python scripts/winmargin_datasize.py && python scripts/assay_method_stratified_auc.py
+python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py && python scripts/winmargin_datasize.py && python scripts/assay_method_stratified_auc.py && python scripts/assay_method_headtohead.py
 python scripts/build_paper_tex.py              # this document
 cd paper && pdflatex main.tex && pdflatex main.tex
 python -m pytest tests/                        # 24 hermetic tests
@@ -1939,6 +1954,10 @@ amauc_rows = "\n".join(
     for s in amauc["strata"])
 _large = [s for s in amauc["strata"] if s["n"] > 1000]
 
+amh_rows = "\n".join(
+    f"{_short(s['method'])} & {s['n']:,} & {f(s['mhcflurry_auc'])} & {f(s['ensemble_auc'])} & +{s['delta']:.4f} \\\\" 
+    for s in amh2h["strata"])
+
 subs = {
     "tools_rows": "1 & PyTorch 2.x & CNN, GNN, GRU training (pHLA + CPP) \\\\\n2 & scikit-learn & 3-mer logistic regression (L-BFGS); AUC cross-check \\\\\n3 & NumPy & all numerical arrays, bootstrap machinery \\\\\n4 & pandas & IEDB TSV handling, dataset aggregation \\\\\n5 & SciPy & Spearman/Pearson tests (epistasis--margin null) \\\\\n6 & matplotlib & all 22 figures \\\\\n7 & Biopython 1.88 & PairwiseAligner novelty recheck; ProtParam descriptors; PDB parsing \\\\\n8 & pytest & 24-test hermetic suite \\\\\n9 & MHCflurry 2.2.1 & head-to-head comparator (affinity predictor, CPU) \\\\\n10 & NetMHCpan-4.1 & published landscape numbers (gkaa379) \\\\\n11 & IEDB & mhc\\_ligand\\_full export (350 studies) \\\\\n12 & IEDB Analysis Resource & benchmark framework reference \\\\\n13 & CPPsite 2.0 & CPP positives (Raghava group) \\\\\n14 & UniProtKB REST API & negative pools; novelty screen pool \\\\\n15 & RCSB PDB & structures 1DUZ, 8RNI, 7OW3 (pocket verification) \\\\\n16 & NCBI BLOSUM62 & substitution-matrix encoding channel \\\\\n17 & GitHub & repository hosting \\\\\n18 & Google Drive API & results delivery \\\\\n19 & Python 3.10 & runtime \\\\\n20 & git & version control; bundle transport \\\\\n21 & pdfLaTeX (TeX Live) & this document \\\\\n22 & curl & dataset download (download\\_data.sh) \\\\\n23 & OpenSSH & authenticated push transport \\\\\n24 & RCSB PDB Search API & structure discovery by title/attribute query (8RNI, 7OW3) \\\\\n25 & RCSB PDB Data API & entry metadata and citation verification \\\\",
     "xver_aucdiff": f"{xver['auc_max_abs_diff']:.1e}",
@@ -1973,6 +1992,10 @@ subs = {
     "amauc_max": f(max(s["ensemble_auc"] for s in _large)),
     "amauc_radio": f(amauc["strata"][0]["ensemble_auc"]),
     "amauc_fluo": f(amauc["strata"][1]["ensemble_auc"]),
+    "amh_rows": amh_rows,
+    "amh_d1": f"+{amh2h['strata'][0]['delta']:.4f}",
+    "amh_d2": f"+{amh2h['strata'][1]['delta']:.4f}",
+    "amh_d3": f"+{amh2h['strata'][2]['delta']:.4f}",
     "pdb_bN": 8,
     "pdbm_rows": pdbm_rows,
     "pdbm_idrows": pdbm_idrows,
