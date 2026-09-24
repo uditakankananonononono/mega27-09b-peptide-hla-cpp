@@ -1,0 +1,766 @@
+{
+ "tool": "EMBOSS pepstats 6.6.0 (EBI REST)",
+ "per_cpp": {
+  "9B-CPP-11": {
+   "sequence": "RLFRRRRLRRRRRRNN",
+   "molecular_weight": 2337.78,
+   "residues": 16,
+   "charge": 11.0,
+   "isoelectric_point": 13.4999,
+   "a280_molar_ext_reduced": 0,
+   "prob_inclusion_bodies": -8.679,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 2,
+    "mole_pct": 12.5
+   },
+   "aromatic": {
+    "n": 1,
+    "mole_pct": 6.25
+   },
+   "non_polar": {
+    "n": 3,
+    "mole_pct": 18.75
+   },
+   "polar": {
+    "n": 13,
+    "mole_pct": 81.25
+   },
+   "charged": {
+    "n": 11,
+    "mole_pct": 68.75
+   },
+   "basic": {
+    "n": 11,
+    "mole_pct": 68.75
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 16\n\nMolecular weight = 2337.78   \t\tResidues = 16    \nAverage Residue Weight  = 146.111 \tCharge   = 11.0  \nIsoelectric Point = 13.4999\nA280 Molar Extinction Coefficients  = 0 (reduced)   0 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 0.000 (reduced)   0.000 (cystine bridges)\nProbability of expression in inclusion bodies = -8.679\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t1\t\t6.250  \t\t1.736  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t2\t\t12.500 \t\t1.689  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t2\t\t12.500 \t\t2.907  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t11\t\t68.750 \t\t14.031 \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t0\t\t0.000  \t\t0.000  \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t2\t\t12.500\nAliphatic\t(A+I+L+V)\t\t2\t\t12.500\nAromatic\t(F+H+W+Y)\t\t1\t\t 6.250\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t3\t\t18.750\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t13\t\t81.250\nCharged\t\t(B+D+E+H+K+R+Z)\t\t11\t\t68.750\nBasic\t\t(H+K+R)\t\t\t11\t\t68.750\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-14": {
+   "sequence": "RRRRWRRLWRHLRRR",
+   "molecular_weight": 2315.78,
+   "residues": 15,
+   "charge": 10.5,
+   "isoelectric_point": 13.4542,
+   "a280_molar_ext_reduced": 11000,
+   "prob_inclusion_bodies": -10.362,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 2,
+    "mole_pct": 13.333
+   },
+   "aromatic": {
+    "n": 3,
+    "mole_pct": 20.0
+   },
+   "non_polar": {
+    "n": 4,
+    "mole_pct": 26.667
+   },
+   "polar": {
+    "n": 11,
+    "mole_pct": 73.333
+   },
+   "charged": {
+    "n": 11,
+    "mole_pct": 73.333
+   },
+   "basic": {
+    "n": 11,
+    "mole_pct": 73.333
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 15\n\nMolecular weight = 2315.78   \t\tResidues = 15    \nAverage Residue Weight  = 154.385 \tCharge   = 10.5  \nIsoelectric Point = 13.4542\nA280 Molar Extinction Coefficients  = 11000 (reduced)   11000 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 4.750 (reduced)   4.750 (cystine bridges)\nProbability of expression in inclusion bodies = -10.362\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t1\t\t6.667  \t\t3.333  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t2\t\t13.333 \t\t1.802  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t10\t\t66.667 \t\t13.605 \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t2\t\t13.333 \t\t10.256 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t0\t\t 0.000\nAliphatic\t(A+I+L+V)\t\t2\t\t13.333\nAromatic\t(F+H+W+Y)\t\t3\t\t20.000\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t4\t\t26.667\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t11\t\t73.333\nCharged\t\t(B+D+E+H+K+R+Z)\t\t11\t\t73.333\nBasic\t\t(H+K+R)\t\t\t11\t\t73.333\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-15": {
+   "sequence": "YLLRLRRRLRRRSRARRRR",
+   "molecular_weight": 2666.24,
+   "residues": 19,
+   "charge": 12.0,
+   "isoelectric_point": 13.1991,
+   "a280_molar_ext_reduced": 1490,
+   "prob_inclusion_bodies": -8.03,
+   "tiny": {
+    "n": 2,
+    "mole_pct": 10.526
+   },
+   "aliphatic": {
+    "n": 5,
+    "mole_pct": 26.316
+   },
+   "aromatic": {
+    "n": 1,
+    "mole_pct": 5.263
+   },
+   "non_polar": {
+    "n": 6,
+    "mole_pct": 31.579
+   },
+   "polar": {
+    "n": 13,
+    "mole_pct": 68.421
+   },
+   "charged": {
+    "n": 12,
+    "mole_pct": 63.158
+   },
+   "basic": {
+    "n": 12,
+    "mole_pct": 63.158
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 19\n\nMolecular weight = 2666.24   \t\tResidues = 19    \nAverage Residue Weight  = 140.328 \tCharge   = 12.0  \nIsoelectric Point = 13.1991\nA280 Molar Extinction Coefficients  = 1490 (reduced)   1490 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 0.559 (reduced)   0.559 (cystine bridges)\nProbability of expression in inclusion bodies = -8.030\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t1\t\t5.263  \t\t0.612  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t4\t\t21.053 \t\t2.845  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t12\t\t63.158 \t\t12.889 \t\nS = Ser\t\t1\t\t5.263  \t\t0.752  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t0\t\t0.000  \t\t0.000  \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t1\t\t5.263  \t\t1.548  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t2\t\t10.526\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t2\t\t10.526\nAliphatic\t(A+I+L+V)\t\t5\t\t26.316\nAromatic\t(F+H+W+Y)\t\t1\t\t 5.263\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t6\t\t31.579\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t13\t\t68.421\nCharged\t\t(B+D+E+H+K+R+Z)\t\t12\t\t63.158\nBasic\t\t(H+K+R)\t\t\t12\t\t63.158\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-18": {
+   "sequence": "LGRLWRRLRRRRRHLRRAARSH",
+   "molecular_weight": 2935.5,
+   "residues": 22,
+   "charge": 12.0,
+   "isoelectric_point": 13.4999,
+   "a280_molar_ext_reduced": 5500,
+   "prob_inclusion_bodies": -3.492,
+   "tiny": {
+    "n": 4,
+    "mole_pct": 18.182
+   },
+   "aliphatic": {
+    "n": 6,
+    "mole_pct": 27.273
+   },
+   "aromatic": {
+    "n": 3,
+    "mole_pct": 13.636
+   },
+   "non_polar": {
+    "n": 8,
+    "mole_pct": 36.364
+   },
+   "polar": {
+    "n": 14,
+    "mole_pct": 63.636
+   },
+   "charged": {
+    "n": 13,
+    "mole_pct": 59.091
+   },
+   "basic": {
+    "n": 13,
+    "mole_pct": 59.091
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 22\n\nMolecular weight = 2935.50   \t\tResidues = 22    \nAverage Residue Weight  = 133.432 \tCharge   = 12.0  \nIsoelectric Point = 13.4999\nA280 Molar Extinction Coefficients  = 5500 (reduced)   5500 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 1.874 (reduced)   1.874 (cystine bridges)\nProbability of expression in inclusion bodies = -3.492\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t2\t\t9.091  \t\t1.057  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t1\t\t4.545  \t\t0.541  \t\nH = His\t\t2\t\t9.091  \t\t4.545  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t4\t\t18.182 \t\t2.457  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t11\t\t50.000 \t\t10.204 \t\nS = Ser\t\t1\t\t4.545  \t\t0.649  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t1\t\t4.545  \t\t3.497  \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t4\t\t18.182\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t4\t\t18.182\nAliphatic\t(A+I+L+V)\t\t6\t\t27.273\nAromatic\t(F+H+W+Y)\t\t3\t\t13.636\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t8\t\t36.364\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t14\t\t63.636\nCharged\t\t(B+D+E+H+K+R+Z)\t\t13\t\t59.091\nBasic\t\t(H+K+R)\t\t\t13\t\t59.091\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-9": {
+   "sequence": "RLRRRRRRNRRRNWRWL",
+   "molecular_weight": 2563.03,
+   "residues": 17,
+   "charge": 11.0,
+   "isoelectric_point": 13.4999,
+   "a280_molar_ext_reduced": 11000,
+   "prob_inclusion_bodies": -7.393,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 2,
+    "mole_pct": 11.765
+   },
+   "aromatic": {
+    "n": 2,
+    "mole_pct": 11.765
+   },
+   "non_polar": {
+    "n": 4,
+    "mole_pct": 23.529
+   },
+   "polar": {
+    "n": 13,
+    "mole_pct": 76.471
+   },
+   "charged": {
+    "n": 11,
+    "mole_pct": 64.706
+   },
+   "basic": {
+    "n": 11,
+    "mole_pct": 64.706
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 17\n\nMolecular weight = 2563.03   \t\tResidues = 17    \nAverage Residue Weight  = 150.767 \tCharge   = 11.0  \nIsoelectric Point = 13.4999\nA280 Molar Extinction Coefficients  = 11000 (reduced)   11000 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 4.292 (reduced)   4.292 (cystine bridges)\nProbability of expression in inclusion bodies = -7.393\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t2\t\t11.765 \t\t1.590  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t2\t\t11.765 \t\t2.736  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t11\t\t64.706 \t\t13.205 \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t2\t\t11.765 \t\t9.050  \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t2\t\t11.765\nAliphatic\t(A+I+L+V)\t\t2\t\t11.765\nAromatic\t(F+H+W+Y)\t\t2\t\t11.765\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t4\t\t23.529\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t13\t\t76.471\nCharged\t\t(B+D+E+H+K+R+Z)\t\t11\t\t64.706\nBasic\t\t(H+K+R)\t\t\t11\t\t64.706\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-1": {
+   "sequence": "LRILRWWRWRWRNRWKRRR",
+   "molecular_weight": 2936.52,
+   "residues": 19,
+   "charge": 10.0,
+   "isoelectric_point": 13.4042,
+   "a280_molar_ext_reduced": 27500,
+   "prob_inclusion_bodies": -4.711,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 3,
+    "mole_pct": 15.789
+   },
+   "aromatic": {
+    "n": 5,
+    "mole_pct": 26.316
+   },
+   "non_polar": {
+    "n": 8,
+    "mole_pct": 42.105
+   },
+   "polar": {
+    "n": 11,
+    "mole_pct": 57.895
+   },
+   "charged": {
+    "n": 10,
+    "mole_pct": 52.632
+   },
+   "basic": {
+    "n": 10,
+    "mole_pct": 52.632
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 19\n\nMolecular weight = 2936.52   \t\tResidues = 19    \nAverage Residue Weight  = 154.554 \tCharge   = 10.0  \nIsoelectric Point = 13.4042\nA280 Molar Extinction Coefficients  = 27500 (reduced)   27500 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 9.365 (reduced)   9.365 (cystine bridges)\nProbability of expression in inclusion bodies = -4.711\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t1\t\t5.263  \t\t1.170  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t1\t\t5.263  \t\t0.797  \t\nL = Leu\t\t2\t\t10.526 \t\t1.422  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t1\t\t5.263  \t\t1.224  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t9\t\t47.368 \t\t9.667  \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t5\t\t26.316 \t\t20.243 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t1\t\t 5.263\nAliphatic\t(A+I+L+V)\t\t3\t\t15.789\nAromatic\t(F+H+W+Y)\t\t5\t\t26.316\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t8\t\t42.105\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t11\t\t57.895\nCharged\t\t(B+D+E+H+K+R+Z)\t\t10\t\t52.632\nBasic\t\t(H+K+R)\t\t\t10\t\t52.632\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-10": {
+   "sequence": "WRWKWKKRWRKH",
+   "molecular_weight": 1881.27,
+   "residues": 12,
+   "charge": 7.5,
+   "isoelectric_point": 12.8256,
+   "a280_molar_ext_reduced": 22000,
+   "prob_inclusion_bodies": -7.315,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aromatic": {
+    "n": 5,
+    "mole_pct": 41.667
+   },
+   "non_polar": {
+    "n": 4,
+    "mole_pct": 33.333
+   },
+   "polar": {
+    "n": 8,
+    "mole_pct": 66.667
+   },
+   "charged": {
+    "n": 8,
+    "mole_pct": 66.667
+   },
+   "basic": {
+    "n": 8,
+    "mole_pct": 66.667
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 12\n\nMolecular weight = 1881.27   \t\tResidues = 12    \nAverage Residue Weight  = 156.772 \tCharge   = 7.5   \nIsoelectric Point = 12.8256\nA280 Molar Extinction Coefficients  = 22000 (reduced)   22000 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 11.694 (reduced)   11.694 (cystine bridges)\nProbability of expression in inclusion bodies = -7.315\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t1\t\t8.333  \t\t4.167  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t4\t\t33.333 \t\t5.051  \t\nL = Leu\t\t0\t\t0.000  \t\t0.000  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t3\t\t25.000 \t\t5.102  \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t4\t\t33.333 \t\t25.641 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t0\t\t 0.000\nAliphatic\t(A+I+L+V)\t\t0\t\t 0.000\nAromatic\t(F+H+W+Y)\t\t5\t\t41.667\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t4\t\t33.333\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t8\t\t66.667\nCharged\t\t(B+D+E+H+K+R+Z)\t\t8\t\t66.667\nBasic\t\t(H+K+R)\t\t\t8\t\t66.667\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-12": {
+   "sequence": "RLRLRLRLRLRIRIRR",
+   "molecular_weight": 2215.82,
+   "residues": 16,
+   "charge": 9.0,
+   "isoelectric_point": 13.403,
+   "a280_molar_ext_reduced": 0,
+   "prob_inclusion_bodies": -6.628,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 7,
+    "mole_pct": 43.75
+   },
+   "aromatic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "non_polar": {
+    "n": 7,
+    "mole_pct": 43.75
+   },
+   "polar": {
+    "n": 9,
+    "mole_pct": 56.25
+   },
+   "charged": {
+    "n": 9,
+    "mole_pct": 56.25
+   },
+   "basic": {
+    "n": 9,
+    "mole_pct": 56.25
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 16\n\nMolecular weight = 2215.82   \t\tResidues = 16    \nAverage Residue Weight  = 138.489 \tCharge   = 9.0   \nIsoelectric Point = 13.4030\nA280 Molar Extinction Coefficients  = 0 (reduced)   0 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 0.000 (reduced)   0.000 (cystine bridges)\nProbability of expression in inclusion bodies = -6.628\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t2\t\t12.500 \t\t2.778  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t5\t\t31.250 \t\t4.223  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t9\t\t56.250 \t\t11.480 \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t0\t\t0.000  \t\t0.000  \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t0\t\t 0.000\nAliphatic\t(A+I+L+V)\t\t7\t\t43.750\nAromatic\t(F+H+W+Y)\t\t0\t\t 0.000\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t7\t\t43.750\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t9\t\t56.250\nCharged\t\t(B+D+E+H+K+R+Z)\t\t9\t\t56.250\nBasic\t\t(H+K+R)\t\t\t9\t\t56.250\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-13": {
+   "sequence": "AWRWRWRCKAKKR",
+   "molecular_weight": 1831.22,
+   "residues": 13,
+   "charge": 7.0,
+   "isoelectric_point": 12.5242,
+   "a280_molar_ext_reduced": 16500,
+   "prob_inclusion_bodies": -5.871,
+   "tiny": {
+    "n": 3,
+    "mole_pct": 23.077
+   },
+   "aliphatic": {
+    "n": 2,
+    "mole_pct": 15.385
+   },
+   "aromatic": {
+    "n": 3,
+    "mole_pct": 23.077
+   },
+   "non_polar": {
+    "n": 6,
+    "mole_pct": 46.154
+   },
+   "polar": {
+    "n": 7,
+    "mole_pct": 53.846
+   },
+   "charged": {
+    "n": 7,
+    "mole_pct": 53.846
+   },
+   "basic": {
+    "n": 7,
+    "mole_pct": 53.846
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 13\n\nMolecular weight = 1831.22   \t\tResidues = 13    \nAverage Residue Weight  = 140.863 \tCharge   = 7.0   \nIsoelectric Point = 12.5242\nA280 Molar Extinction Coefficients  = 16500 (reduced)   16500 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 9.010 (reduced)   9.010 (cystine bridges)\nProbability of expression in inclusion bodies = -5.871\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t2\t\t15.385 \t\t1.789  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t1\t\t7.692  \t\t2.653  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t3\t\t23.077 \t\t3.497  \t\nL = Leu\t\t0\t\t0.000  \t\t0.000  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t4\t\t30.769 \t\t6.279  \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t3\t\t23.077 \t\t17.751 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t3\t\t23.077\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t3\t\t23.077\nAliphatic\t(A+I+L+V)\t\t2\t\t15.385\nAromatic\t(F+H+W+Y)\t\t3\t\t23.077\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t6\t\t46.154\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t7\t\t53.846\nCharged\t\t(B+D+E+H+K+R+Z)\t\t7\t\t53.846\nBasic\t\t(H+K+R)\t\t\t7\t\t53.846\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-16": {
+   "sequence": "RGRLRRHLRRRLRRR",
+   "molecular_weight": 2113.56,
+   "residues": 15,
+   "charge": 10.5,
+   "isoelectric_point": 13.4542,
+   "a280_molar_ext_reduced": 0,
+   "prob_inclusion_bodies": -9.032,
+   "tiny": {
+    "n": 1,
+    "mole_pct": 6.667
+   },
+   "aliphatic": {
+    "n": 3,
+    "mole_pct": 20.0
+   },
+   "aromatic": {
+    "n": 1,
+    "mole_pct": 6.667
+   },
+   "non_polar": {
+    "n": 4,
+    "mole_pct": 26.667
+   },
+   "polar": {
+    "n": 11,
+    "mole_pct": 73.333
+   },
+   "charged": {
+    "n": 11,
+    "mole_pct": 73.333
+   },
+   "basic": {
+    "n": 11,
+    "mole_pct": 73.333
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 15\n\nMolecular weight = 2113.56   \t\tResidues = 15    \nAverage Residue Weight  = 140.904 \tCharge   = 10.5  \nIsoelectric Point = 13.4542\nA280 Molar Extinction Coefficients  = 0 (reduced)   0 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 0.000 (reduced)   0.000 (cystine bridges)\nProbability of expression in inclusion bodies = -9.032\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t1\t\t6.667  \t\t0.794  \t\nH = His\t\t1\t\t6.667  \t\t3.333  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t3\t\t20.000 \t\t2.703  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t10\t\t66.667 \t\t13.605 \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t0\t\t0.000  \t\t0.000  \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t1\t\t 6.667\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t1\t\t 6.667\nAliphatic\t(A+I+L+V)\t\t3\t\t20.000\nAromatic\t(F+H+W+Y)\t\t1\t\t 6.667\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t4\t\t26.667\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t11\t\t73.333\nCharged\t\t(B+D+E+H+K+R+Z)\t\t11\t\t73.333\nBasic\t\t(H+K+R)\t\t\t11\t\t73.333\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-17": {
+   "sequence": "RLRRRLRLRRFLRRRR",
+   "molecular_weight": 2335.89,
+   "residues": 16,
+   "charge": 11.0,
+   "isoelectric_point": 13.4999,
+   "a280_molar_ext_reduced": 0,
+   "prob_inclusion_bodies": -11.198,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 4,
+    "mole_pct": 25.0
+   },
+   "aromatic": {
+    "n": 1,
+    "mole_pct": 6.25
+   },
+   "non_polar": {
+    "n": 5,
+    "mole_pct": 31.25
+   },
+   "polar": {
+    "n": 11,
+    "mole_pct": 68.75
+   },
+   "charged": {
+    "n": 11,
+    "mole_pct": 68.75
+   },
+   "basic": {
+    "n": 11,
+    "mole_pct": 68.75
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 16\n\nMolecular weight = 2335.89   \t\tResidues = 16    \nAverage Residue Weight  = 145.993 \tCharge   = 11.0  \nIsoelectric Point = 13.4999\nA280 Molar Extinction Coefficients  = 0 (reduced)   0 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 0.000 (reduced)   0.000 (cystine bridges)\nProbability of expression in inclusion bodies = -11.198\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t1\t\t6.250  \t\t1.736  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t4\t\t25.000 \t\t3.378  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t11\t\t68.750 \t\t14.031 \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t0\t\t0.000  \t\t0.000  \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t0\t\t 0.000\nAliphatic\t(A+I+L+V)\t\t4\t\t25.000\nAromatic\t(F+H+W+Y)\t\t1\t\t 6.250\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t5\t\t31.250\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t11\t\t68.750\nCharged\t\t(B+D+E+H+K+R+Z)\t\t11\t\t68.750\nBasic\t\t(H+K+R)\t\t\t11\t\t68.750\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-2": {
+   "sequence": "RLRRRLRLRLRLRLRLRRL",
+   "molecular_weight": 2641.35,
+   "residues": 19,
+   "charge": 11.0,
+   "isoelectric_point": 13.4999,
+   "a280_molar_ext_reduced": 0,
+   "prob_inclusion_bodies": -7.168,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 8,
+    "mole_pct": 42.105
+   },
+   "aromatic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "non_polar": {
+    "n": 8,
+    "mole_pct": 42.105
+   },
+   "polar": {
+    "n": 11,
+    "mole_pct": 57.895
+   },
+   "charged": {
+    "n": 11,
+    "mole_pct": 57.895
+   },
+   "basic": {
+    "n": 11,
+    "mole_pct": 57.895
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 19\n\nMolecular weight = 2641.35   \t\tResidues = 19    \nAverage Residue Weight  = 139.019 \tCharge   = 11.0  \nIsoelectric Point = 13.4999\nA280 Molar Extinction Coefficients  = 0 (reduced)   0 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 0.000 (reduced)   0.000 (cystine bridges)\nProbability of expression in inclusion bodies = -7.168\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t8\t\t42.105 \t\t5.690  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t11\t\t57.895 \t\t11.815 \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t0\t\t0.000  \t\t0.000  \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t0\t\t 0.000\nAliphatic\t(A+I+L+V)\t\t8\t\t42.105\nAromatic\t(F+H+W+Y)\t\t0\t\t 0.000\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t8\t\t42.105\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t11\t\t57.895\nCharged\t\t(B+D+E+H+K+R+Z)\t\t11\t\t57.895\nBasic\t\t(H+K+R)\t\t\t11\t\t57.895\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-3": {
+   "sequence": "WRWRKKKRKK",
+   "molecular_weight": 1499.87,
+   "residues": 10,
+   "charge": 8.0,
+   "isoelectric_point": 12.8313,
+   "a280_molar_ext_reduced": 11000,
+   "prob_inclusion_bodies": -16.227,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aromatic": {
+    "n": 2,
+    "mole_pct": 20.0
+   },
+   "non_polar": {
+    "n": 2,
+    "mole_pct": 20.0
+   },
+   "polar": {
+    "n": 8,
+    "mole_pct": 80.0
+   },
+   "charged": {
+    "n": 8,
+    "mole_pct": 80.0
+   },
+   "basic": {
+    "n": 8,
+    "mole_pct": 80.0
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 10\n\nMolecular weight = 1499.87   \t\tResidues = 10    \nAverage Residue Weight  = 149.987 \tCharge   = 8.0   \nIsoelectric Point = 12.8313\nA280 Molar Extinction Coefficients  = 11000 (reduced)   11000 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 7.334 (reduced)   7.334 (cystine bridges)\nProbability of expression in inclusion bodies = -16.227\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t5\t\t50.000 \t\t7.576  \t\nL = Leu\t\t0\t\t0.000  \t\t0.000  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t3\t\t30.000 \t\t6.122  \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t2\t\t20.000 \t\t15.385 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t0\t\t 0.000\nAliphatic\t(A+I+L+V)\t\t0\t\t 0.000\nAromatic\t(F+H+W+Y)\t\t2\t\t20.000\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t2\t\t20.000\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t8\t\t80.000\nCharged\t\t(B+D+E+H+K+R+Z)\t\t8\t\t80.000\nBasic\t\t(H+K+R)\t\t\t8\t\t80.000\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-4": {
+   "sequence": "GLWRWRWRWRKSLKK",
+   "molecular_weight": 2142.59,
+   "residues": 15,
+   "charge": 7.0,
+   "isoelectric_point": 12.9883,
+   "a280_molar_ext_reduced": 22000,
+   "prob_inclusion_bodies": -2.224,
+   "tiny": {
+    "n": 2,
+    "mole_pct": 13.333
+   },
+   "aliphatic": {
+    "n": 2,
+    "mole_pct": 13.333
+   },
+   "aromatic": {
+    "n": 4,
+    "mole_pct": 26.667
+   },
+   "non_polar": {
+    "n": 7,
+    "mole_pct": 46.667
+   },
+   "polar": {
+    "n": 8,
+    "mole_pct": 53.333
+   },
+   "charged": {
+    "n": 7,
+    "mole_pct": 46.667
+   },
+   "basic": {
+    "n": 7,
+    "mole_pct": 46.667
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 15\n\nMolecular weight = 2142.59   \t\tResidues = 15    \nAverage Residue Weight  = 142.839 \tCharge   = 7.0   \nIsoelectric Point = 12.9883\nA280 Molar Extinction Coefficients  = 22000 (reduced)   22000 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 10.268 (reduced)   10.268 (cystine bridges)\nProbability of expression in inclusion bodies = -2.224\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t1\t\t6.667  \t\t0.794  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t3\t\t20.000 \t\t3.030  \t\nL = Leu\t\t2\t\t13.333 \t\t1.802  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t4\t\t26.667 \t\t5.442  \t\nS = Ser\t\t1\t\t6.667  \t\t0.952  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t4\t\t26.667 \t\t20.513 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t2\t\t13.333\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t2\t\t13.333\nAliphatic\t(A+I+L+V)\t\t2\t\t13.333\nAromatic\t(F+H+W+Y)\t\t4\t\t26.667\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t7\t\t46.667\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t8\t\t53.333\nCharged\t\t(B+D+E+H+K+R+Z)\t\t7\t\t46.667\nBasic\t\t(H+K+R)\t\t\t7\t\t46.667\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-5": {
+   "sequence": "RRINRRWRWKRWKKC",
+   "molecular_weight": 2228.7,
+   "residues": 15,
+   "charge": 9.0,
+   "isoelectric_point": 12.8105,
+   "a280_molar_ext_reduced": 16500,
+   "prob_inclusion_bodies": -6.715,
+   "tiny": {
+    "n": 1,
+    "mole_pct": 6.667
+   },
+   "aliphatic": {
+    "n": 1,
+    "mole_pct": 6.667
+   },
+   "aromatic": {
+    "n": 3,
+    "mole_pct": 20.0
+   },
+   "non_polar": {
+    "n": 5,
+    "mole_pct": 33.333
+   },
+   "polar": {
+    "n": 10,
+    "mole_pct": 66.667
+   },
+   "charged": {
+    "n": 9,
+    "mole_pct": 60.0
+   },
+   "basic": {
+    "n": 9,
+    "mole_pct": 60.0
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 15\n\nMolecular weight = 2228.70   \t\tResidues = 15    \nAverage Residue Weight  = 148.580 \tCharge   = 9.0   \nIsoelectric Point = 12.8105\nA280 Molar Extinction Coefficients  = 16500 (reduced)   16500 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 7.403 (reduced)   7.403 (cystine bridges)\nProbability of expression in inclusion bodies = -6.715\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t1\t\t6.667  \t\t2.299  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t1\t\t6.667  \t\t1.481  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t3\t\t20.000 \t\t3.030  \t\nL = Leu\t\t0\t\t0.000  \t\t0.000  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t1\t\t6.667  \t\t1.550  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t6\t\t40.000 \t\t8.163  \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t3\t\t20.000 \t\t15.385 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t1\t\t 6.667\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t2\t\t13.333\nAliphatic\t(A+I+L+V)\t\t1\t\t 6.667\nAromatic\t(F+H+W+Y)\t\t3\t\t20.000\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t5\t\t33.333\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t10\t\t66.667\nCharged\t\t(B+D+E+H+K+R+Z)\t\t9\t\t60.000\nBasic\t\t(H+K+R)\t\t\t9\t\t60.000\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-6": {
+   "sequence": "WRWRKKRRR",
+   "molecular_weight": 1427.73,
+   "residues": 9,
+   "charge": 7.0,
+   "isoelectric_point": 13.1074,
+   "a280_molar_ext_reduced": 11000,
+   "prob_inclusion_bodies": -15.165,
+   "tiny": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aliphatic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aromatic": {
+    "n": 2,
+    "mole_pct": 22.222
+   },
+   "non_polar": {
+    "n": 2,
+    "mole_pct": 22.222
+   },
+   "polar": {
+    "n": 7,
+    "mole_pct": 77.778
+   },
+   "charged": {
+    "n": 7,
+    "mole_pct": 77.778
+   },
+   "basic": {
+    "n": 7,
+    "mole_pct": 77.778
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 9\n\nMolecular weight = 1427.73   \t\tResidues = 9     \nAverage Residue Weight  = 158.636 \tCharge   = 7.0   \nIsoelectric Point = 13.1074\nA280 Molar Extinction Coefficients  = 11000 (reduced)   11000 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 7.705 (reduced)   7.705 (cystine bridges)\nProbability of expression in inclusion bodies = -15.165\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t0\t\t0.000  \t\t0.000  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t2\t\t22.222 \t\t3.367  \t\nL = Leu\t\t0\t\t0.000  \t\t0.000  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t5\t\t55.556 \t\t11.338 \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t2\t\t22.222 \t\t17.094 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t0\t\t 0.000\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t0\t\t 0.000\nAliphatic\t(A+I+L+V)\t\t0\t\t 0.000\nAromatic\t(F+H+W+Y)\t\t2\t\t22.222\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t2\t\t22.222\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t7\t\t77.778\nCharged\t\t(B+D+E+H+K+R+Z)\t\t7\t\t77.778\nBasic\t\t(H+K+R)\t\t\t7\t\t77.778\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-7": {
+   "sequence": "RGRWRWKKRHRPK",
+   "molecular_weight": 1847.21,
+   "residues": 13,
+   "charge": 8.5,
+   "isoelectric_point": 13.11,
+   "a280_molar_ext_reduced": 11000,
+   "prob_inclusion_bodies": -5.768,
+   "tiny": {
+    "n": 1,
+    "mole_pct": 7.692
+   },
+   "aliphatic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "aromatic": {
+    "n": 3,
+    "mole_pct": 23.077
+   },
+   "non_polar": {
+    "n": 4,
+    "mole_pct": 30.769
+   },
+   "polar": {
+    "n": 9,
+    "mole_pct": 69.231
+   },
+   "charged": {
+    "n": 9,
+    "mole_pct": 69.231
+   },
+   "basic": {
+    "n": 9,
+    "mole_pct": 69.231
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 13\n\nMolecular weight = 1847.21   \t\tResidues = 13    \nAverage Residue Weight  = 142.093 \tCharge   = 8.5   \nIsoelectric Point = 13.1100\nA280 Molar Extinction Coefficients  = 11000 (reduced)   11000 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 5.955 (reduced)   5.955 (cystine bridges)\nProbability of expression in inclusion bodies = -5.768\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t0\t\t0.000  \t\t0.000  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t1\t\t7.692  \t\t0.916  \t\nH = His\t\t1\t\t7.692  \t\t3.846  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t3\t\t23.077 \t\t3.497  \t\nL = Leu\t\t0\t\t0.000  \t\t0.000  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t1\t\t7.692  \t\t1.479  \t\nQ = Gln\t\t0\t\t0.000  \t\t0.000  \t\nR = Arg\t\t5\t\t38.462 \t\t7.849  \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t2\t\t15.385 \t\t11.834 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t1\t\t 7.692\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t2\t\t15.385\nAliphatic\t(A+I+L+V)\t\t0\t\t 0.000\nAromatic\t(F+H+W+Y)\t\t3\t\t23.077\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t4\t\t30.769\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t9\t\t69.231\nCharged\t\t(B+D+E+H+K+R+Z)\t\t9\t\t69.231\nBasic\t\t(H+K+R)\t\t\t9\t\t69.231\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  },
+  "9B-CPP-8": {
+   "sequence": "GLARWRWRWRRQ",
+   "molecular_weight": 1727.01,
+   "residues": 12,
+   "charge": 5.0,
+   "isoelectric_point": 13.102,
+   "a280_molar_ext_reduced": 16500,
+   "prob_inclusion_bodies": -1.743,
+   "tiny": {
+    "n": 2,
+    "mole_pct": 16.667
+   },
+   "aliphatic": {
+    "n": 2,
+    "mole_pct": 16.667
+   },
+   "aromatic": {
+    "n": 3,
+    "mole_pct": 25.0
+   },
+   "non_polar": {
+    "n": 6,
+    "mole_pct": 50.0
+   },
+   "polar": {
+    "n": 6,
+    "mole_pct": 50.0
+   },
+   "charged": {
+    "n": 5,
+    "mole_pct": 41.667
+   },
+   "basic": {
+    "n": 5,
+    "mole_pct": 41.667
+   },
+   "acidic": {
+    "n": 0,
+    "mole_pct": 0.0
+   },
+   "raw": "PEPSTATS of EMBOSS_001 from 1 to 12\n\nMolecular weight = 1727.01   \t\tResidues = 12    \nAverage Residue Weight  = 143.918 \tCharge   = 5.0   \nIsoelectric Point = 13.1020\nA280 Molar Extinction Coefficients  = 16500 (reduced)   16500 (cystine bridges)\nA280 Extinction Coefficients 1mg/ml = 9.554 (reduced)   9.554 (cystine bridges)\nProbability of expression in inclusion bodies = -1.743\n\nResidue\t\tNumber\t\tMole%\t\tDayhoffStat\nA = Ala\t\t1\t\t8.333  \t\t0.969  \t\nB = Asx\t\t0\t\t0.000  \t\t0.000  \t\nC = Cys\t\t0\t\t0.000  \t\t0.000  \t\nD = Asp\t\t0\t\t0.000  \t\t0.000  \t\nE = Glu\t\t0\t\t0.000  \t\t0.000  \t\nF = Phe\t\t0\t\t0.000  \t\t0.000  \t\nG = Gly\t\t1\t\t8.333  \t\t0.992  \t\nH = His\t\t0\t\t0.000  \t\t0.000  \t\nI = Ile\t\t0\t\t0.000  \t\t0.000  \t\nJ = ---\t\t0\t\t0.000  \t\t0.000  \t\nK = Lys\t\t0\t\t0.000  \t\t0.000  \t\nL = Leu\t\t1\t\t8.333  \t\t1.126  \t\nM = Met\t\t0\t\t0.000  \t\t0.000  \t\nN = Asn\t\t0\t\t0.000  \t\t0.000  \t\nO = ---\t\t0\t\t0.000  \t\t0.000  \t\nP = Pro\t\t0\t\t0.000  \t\t0.000  \t\nQ = Gln\t\t1\t\t8.333  \t\t2.137  \t\nR = Arg\t\t5\t\t41.667 \t\t8.503  \t\nS = Ser\t\t0\t\t0.000  \t\t0.000  \t\nT = Thr\t\t0\t\t0.000  \t\t0.000  \t\nU = ---\t\t0\t\t0.000  \t\t0.000  \t\nV = Val\t\t0\t\t0.000  \t\t0.000  \t\nW = Trp\t\t3\t\t25.000 \t\t19.231 \t\nX = Xaa\t\t0\t\t0.000  \t\t0.000  \t\nY = Tyr\t\t0\t\t0.000  \t\t0.000  \t\nZ = Glx\t\t0\t\t0.000  \t\t0.000  \t\n\nProperty\tResidues\t\tNumber\t\tMole%\nTiny\t\t(A+C+G+S+T)\t\t2\t\t16.667\nSmall\t\t(A+B+C+D+G+N+P+S+T+V)\t2\t\t16.667\nAliphatic\t(A+I+L+V)\t\t2\t\t16.667\nAromatic\t(F+H+W+Y)\t\t3\t\t25.000\nNon-polar\t(A+C+F+G+I+L+M+P+V+W+Y)\t6\t\t50.000\nPolar\t\t(D+E+H+K+N+Q+R+S+T+Z)\t6\t\t50.000\nCharged\t\t(B+D+E+H+K+R+Z)\t\t5\t\t41.667\nBasic\t\t(H+K+R)\t\t\t5\t\t41.667\nAcidic\t\t(B+D+E+Z)\t\t0\t\t 0.000\n\n"
+  }
+ },
+ "summary": {
+  "n": 18,
+  "mean_basic_mole_pct": 63.0,
+  "mean_charge": 9.28
+ }
+}
