@@ -1,0 +1,29 @@
+{
+ "1DUZ": {
+  "pdb_redo_entry": "https://pdb-redo.eu/db/1duz",
+  "r_factor": 0.2139,
+  "r_free": 0.2502,
+  "clashscore": null,
+  "rama_outliers_pct": null,
+  "resolution_A": 1.8,
+  "verdict": "passes QC for coordinate-based analysis"
+ },
+ "8RNI": {
+  "pdb_redo_entry": "https://pdb-redo.eu/db/8rni",
+  "r_factor": 0.24,
+  "r_free": 0.2763,
+  "clashscore": null,
+  "rama_outliers_pct": null,
+  "resolution_A": 2.49,
+  "verdict": "passes QC for coordinate-based analysis"
+ },
+ "7OW3": {
+  "pdb_redo_entry": "https://pdb-redo.eu/db/7ow3",
+  "r_factor": 0.264,
+  "r_free": 0.25954,
+  "clashscore": null,
+  "rama_outliers_pct": null,
+  "resolution_A": 2.46,
+  "verdict": "passes QC for coordinate-based analysis"
+ }
+}
