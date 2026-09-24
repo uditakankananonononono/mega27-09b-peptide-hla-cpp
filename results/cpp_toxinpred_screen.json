@@ -1,0 +1,214 @@
+{
+ "tool": "ToxinPred (IIITD Raghava Lab), batch submission, SVM (Swiss-Prot) + Motif model, threshold 0.0",
+ "tool_url": "https://webs.iiitd.edu.in/raghava/toxinpred/multi_submit.php",
+ "accessed": "2026-09-24",
+ "n_peptides": 18,
+ "results": [
+  {
+   "name": "9B-CPP-1",
+   "sequence": "LRILRWWRWRWRNRWKRRR",
+   "svm_score": -0.99,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.73,
+   "hydropathicity": -2.12,
+   "hydrophilicity": 0.41,
+   "charge": 10.0,
+   "mol_wt": 2936.8
+  },
+  {
+   "name": "9B-CPP-2",
+   "sequence": "RLRRRLRLRLRLRLRLRRL",
+   "svm_score": -0.91,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.8,
+   "hydropathicity": -1.01,
+   "hydrophilicity": 0.98,
+   "charge": 11.0,
+   "mol_wt": 2641.64
+  },
+  {
+   "name": "9B-CPP-3",
+   "sequence": "WRWRKKKRKK",
+   "svm_score": -1.04,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -1.0,
+   "hydropathicity": -3.48,
+   "hydrophilicity": 1.72,
+   "charge": 8.0,
+   "mol_wt": 1500.01
+  },
+  {
+   "name": "9B-CPP-4",
+   "sequence": "GLWRWRWRWRKSLKK",
+   "svm_score": -0.8,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.53,
+   "hydropathicity": -1.79,
+   "hydrophilicity": 0.27,
+   "charge": 7.0,
+   "mol_wt": 2142.81
+  },
+  {
+   "name": "9B-CPP-5",
+   "sequence": "RRINRRWRWKRWKKC",
+   "svm_score": -0.81,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.84,
+   "hydropathicity": -2.53,
+   "hydrophilicity": 0.95,
+   "charge": 9.0,
+   "mol_wt": 2228.91
+  },
+  {
+   "name": "9B-CPP-6",
+   "sequence": "WRWRKKRRR",
+   "svm_score": -0.83,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -1.14,
+   "hydropathicity": -3.57,
+   "hydrophilicity": 1.58,
+   "charge": 7.0,
+   "mol_wt": 1427.84
+  },
+  {
+   "name": "9B-CPP-7",
+   "sequence": "RGRWRWKKRHRPK",
+   "svm_score": -0.45,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.9,
+   "hydropathicity": -3.17,
+   "hydrophilicity": 1.28,
+   "charge": 8.5,
+   "mol_wt": 1847.39
+  },
+  {
+   "name": "9B-CPP-8",
+   "sequence": "GLARWRWRWRRQ",
+   "svm_score": -0.85,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.62,
+   "hydropathicity": -1.96,
+   "hydrophilicity": 0.23,
+   "charge": 5.0,
+   "mol_wt": 1727.18
+  },
+  {
+   "name": "9B-CPP-9",
+   "sequence": "RLRRRRRRNRRRNWRWL",
+   "svm_score": -0.8,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -1.11,
+   "hydropathicity": -2.98,
+   "hydrophilicity": 1.35,
+   "charge": 11.0,
+   "mol_wt": 2563.26
+  },
+  {
+   "name": "9B-CPP-10",
+   "sequence": "WRWKWKKRWRKH",
+   "svm_score": -0.53,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.72,
+   "hydropathicity": -2.99,
+   "hydrophilicity": 0.58,
+   "charge": 7.5,
+   "mol_wt": 1881.44
+  },
+  {
+   "name": "9B-CPP-11",
+   "sequence": "RLFRRRRLRRRRRRNN",
+   "svm_score": -0.95,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -1.19,
+   "hydropathicity": -2.88,
+   "hydrophilicity": 1.71,
+   "charge": 11.0,
+   "mol_wt": 2337.99
+  },
+  {
+   "name": "9B-CPP-12",
+   "sequence": "RLRLRLRLRLRIRIRR",
+   "svm_score": -1.04,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.73,
+   "hydropathicity": -0.78,
+   "hydrophilicity": 0.9,
+   "charge": 9.0,
+   "mol_wt": 2216.06
+  },
+  {
+   "name": "9B-CPP-13",
+   "sequence": "AWRWRWRCKAKKR",
+   "svm_score": -0.53,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.67,
+   "hydropathicity": -2.02,
+   "hydrophilicity": 0.68,
+   "charge": 7.0,
+   "mol_wt": 1831.39
+  },
+  {
+   "name": "9B-CPP-14",
+   "sequence": "RRRRWRRLWRHLRRR",
+   "svm_score": -0.97,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -1.08,
+   "hydropathicity": -2.83,
+   "hydrophilicity": 1.27,
+   "charge": 10.5,
+   "mol_wt": 2315.98
+  },
+  {
+   "name": "9B-CPP-15",
+   "sequence": "YLLRLRRRLRRRSRARRRR",
+   "svm_score": -1.28,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -1.0,
+   "hydropathicity": -2.06,
+   "hydrophilicity": 1.38,
+   "charge": 12.0,
+   "mol_wt": 2666.49
+  },
+  {
+   "name": "9B-CPP-16",
+   "sequence": "RGRLRRHLRRRLRRR",
+   "svm_score": -1.16,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -1.08,
+   "hydropathicity": -2.48,
+   "hydrophilicity": 1.61,
+   "charge": 10.5,
+   "mol_wt": 2113.77
+  },
+  {
+   "name": "9B-CPP-17",
+   "sequence": "RLRRRLRLRRFLRRRR",
+   "svm_score": -1.1,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -1.04,
+   "hydropathicity": -1.97,
+   "hydrophilicity": 1.46,
+   "charge": 11.0,
+   "mol_wt": 2336.11
+  },
+  {
+   "name": "9B-CPP-18",
+   "sequence": "LGRLWRRLRRRRRHLRRAARSH",
+   "svm_score": -1.16,
+   "prediction": "Non-Toxin",
+   "hydrophobicity": -0.79,
+   "hydropathicity": -1.78,
+   "hydrophilicity": 0.94,
+   "charge": 12.0,
+   "mol_wt": 2935.81
+  }
+ ],
+ "summary": {
+  "n_non_toxin": 18,
+  "n_toxin": 0,
+  "svm_score_min": -1.28,
+  "svm_score_max": -0.45,
+  "svm_score_mean": -0.9,
+  "note": "All scores below the 0.0 decision threshold (negative = non-toxin). Independent toxicity screen of the 18 designed CPPs."
+ }
+}
