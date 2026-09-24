@@ -1,0 +1,252 @@
+{
+ "tool": "scikit-bio (skbio.diversity.alpha.shannon, base 2)",
+ "panel_alleles": 52,
+ "n_positions": 23,
+ "ranking_top5": [
+  {
+   "pocket": "F",
+   "position": 114,
+   "n_alleles": 52,
+   "distinct_residues": 6,
+   "shannon_bits": 2.368
+  },
+  {
+   "pocket": "F",
+   "position": 97,
+   "n_alleles": 52,
+   "distinct_residues": 8,
+   "shannon_bits": 2.154
+  },
+  {
+   "pocket": "B",
+   "position": 9,
+   "n_alleles": 52,
+   "distinct_residues": 6,
+   "shannon_bits": 2.106
+  },
+  {
+   "pocket": "F",
+   "position": 116,
+   "n_alleles": 52,
+   "distinct_residues": 7,
+   "shannon_bits": 2.092
+  },
+  {
+   "pocket": "B",
+   "position": 67,
+   "n_alleles": 52,
+   "distinct_residues": 6,
+   "shannon_bits": 1.994
+  }
+ ],
+ "ranking_bottom5": [
+  {
+   "pocket": "B",
+   "position": 7,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  },
+  {
+   "pocket": "B",
+   "position": 34,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  },
+  {
+   "pocket": "F",
+   "position": 84,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  },
+  {
+   "pocket": "F",
+   "position": 123,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  },
+  {
+   "pocket": "F",
+   "position": 146,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  }
+ ],
+ "res66_rank_of_23": 10,
+ "res66": {
+  "pocket": "B",
+  "position": 66,
+  "n_alleles": 52,
+  "distinct_residues": 3,
+  "shannon_bits": 1.575
+ },
+ "mean_entropy_B": 1.174,
+ "mean_entropy_F": 1.098,
+ "all": [
+  {
+   "pocket": "F",
+   "position": 114,
+   "n_alleles": 52,
+   "distinct_residues": 6,
+   "shannon_bits": 2.368
+  },
+  {
+   "pocket": "F",
+   "position": 97,
+   "n_alleles": 52,
+   "distinct_residues": 8,
+   "shannon_bits": 2.154
+  },
+  {
+   "pocket": "B",
+   "position": 9,
+   "n_alleles": 52,
+   "distinct_residues": 6,
+   "shannon_bits": 2.106
+  },
+  {
+   "pocket": "F",
+   "position": 116,
+   "n_alleles": 52,
+   "distinct_residues": 7,
+   "shannon_bits": 2.092
+  },
+  {
+   "pocket": "B",
+   "position": 67,
+   "n_alleles": 52,
+   "distinct_residues": 6,
+   "shannon_bits": 1.994
+  },
+  {
+   "pocket": "B",
+   "position": 70,
+   "n_alleles": 52,
+   "distinct_residues": 5,
+   "shannon_bits": 1.87
+  },
+  {
+   "pocket": "F",
+   "position": 95,
+   "n_alleles": 52,
+   "distinct_residues": 4,
+   "shannon_bits": 1.709
+  },
+  {
+   "pocket": "B",
+   "position": 45,
+   "n_alleles": 52,
+   "distinct_residues": 5,
+   "shannon_bits": 1.663
+  },
+  {
+   "pocket": "F",
+   "position": 77,
+   "n_alleles": 52,
+   "distinct_residues": 3,
+   "shannon_bits": 1.581
+  },
+  {
+   "pocket": "B",
+   "position": 66,
+   "n_alleles": 52,
+   "distinct_residues": 3,
+   "shannon_bits": 1.575
+  },
+  {
+   "pocket": "F",
+   "position": 80,
+   "n_alleles": 52,
+   "distinct_residues": 4,
+   "shannon_bits": 1.568
+  },
+  {
+   "pocket": "F",
+   "position": 74,
+   "n_alleles": 52,
+   "distinct_residues": 4,
+   "shannon_bits": 1.556
+  },
+  {
+   "pocket": "B",
+   "position": 24,
+   "n_alleles": 52,
+   "distinct_residues": 3,
+   "shannon_bits": 1.06
+  },
+  {
+   "pocket": "B",
+   "position": 63,
+   "n_alleles": 52,
+   "distinct_residues": 3,
+   "shannon_bits": 1.017
+  },
+  {
+   "pocket": "F",
+   "position": 81,
+   "n_alleles": 52,
+   "distinct_residues": 2,
+   "shannon_bits": 0.779
+  },
+  {
+   "pocket": "B",
+   "position": 99,
+   "n_alleles": 52,
+   "distinct_residues": 2,
+   "shannon_bits": 0.457
+  },
+  {
+   "pocket": "F",
+   "position": 143,
+   "n_alleles": 52,
+   "distinct_residues": 2,
+   "shannon_bits": 0.235
+  },
+  {
+   "pocket": "F",
+   "position": 147,
+   "n_alleles": 52,
+   "distinct_residues": 2,
+   "shannon_bits": 0.235
+  },
+  {
+   "pocket": "B",
+   "position": 7,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  },
+  {
+   "pocket": "B",
+   "position": 34,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  },
+  {
+   "pocket": "F",
+   "position": 84,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  },
+  {
+   "pocket": "F",
+   "position": 123,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  },
+  {
+   "pocket": "F",
+   "position": 146,
+   "n_alleles": 52,
+   "distinct_residues": 1,
+   "shannon_bits": 0.0
+  }
+ ]
+}
