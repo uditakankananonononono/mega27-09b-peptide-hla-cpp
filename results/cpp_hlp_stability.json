@@ -1,0 +1,142 @@
+{
+ "tool": "HLP (Half-Life Prediction, Raghava Lab), peptide stability in intestine-like protease environment, whole-composition model",
+ "tool_url": "https://webs.iiitd.edu.in/raghava/hlp/pep_both.htm",
+ "accessed": "2026-09-24",
+ "n_peptides": 18,
+ "results": [
+  {
+   "name": "9B-CPP-1",
+   "sequence": "LRILRWWRWRWRNRWKRRR",
+   "half_life_pred": 0.596,
+   "stability_class": "Normal",
+   "bytes": 214480
+  },
+  {
+   "name": "9B-CPP-2",
+   "sequence": "RLRRRLRLRLRLRLRLRRL",
+   "half_life_pred": 0.721,
+   "stability_class": "Normal",
+   "bytes": 214606
+  },
+  {
+   "name": "9B-CPP-3",
+   "sequence": "WRWRKKKRKK",
+   "half_life_pred": 1.381,
+   "stability_class": "High",
+   "bytes": 116469
+  },
+  {
+   "name": "9B-CPP-4",
+   "sequence": "GLWRWRWRWRKSLKK",
+   "half_life_pred": 1.36,
+   "stability_class": "High",
+   "bytes": 169612
+  },
+  {
+   "name": "9B-CPP-5",
+   "sequence": "RRINRRWRWKRWKKC",
+   "half_life_pred": 1.38,
+   "stability_class": "High",
+   "bytes": 169285
+  },
+  {
+   "name": "9B-CPP-6",
+   "sequence": "WRWRKKRRR",
+   "half_life_pred": 1.406,
+   "stability_class": "High",
+   "bytes": 106114
+  },
+  {
+   "name": "9B-CPP-7",
+   "sequence": "RGRWRWKKRHRPK",
+   "half_life_pred": 1.291,
+   "stability_class": "High",
+   "bytes": 148395
+  },
+  {
+   "name": "9B-CPP-8",
+   "sequence": "GLARWRWRWRRQ",
+   "half_life_pred": 1.454,
+   "stability_class": "High",
+   "bytes": 137809
+  },
+  {
+   "name": "9B-CPP-9",
+   "sequence": "RLRRRRRRNRRRNWRWL",
+   "half_life_pred": 0.704,
+   "stability_class": "Normal",
+   "bytes": 192271
+  },
+  {
+   "name": "9B-CPP-10",
+   "sequence": "WRWKWKKRWRKH",
+   "half_life_pred": 1.403,
+   "stability_class": "High",
+   "bytes": 137776
+  },
+  {
+   "name": "9B-CPP-11",
+   "sequence": "RLFRRRRLRRRRRRNN",
+   "half_life_pred": 0.712,
+   "stability_class": "Normal",
+   "bytes": 181366
+  },
+  {
+   "name": "9B-CPP-12",
+   "sequence": "RLRLRLRLRLRIRIRR",
+   "half_life_pred": 0.685,
+   "stability_class": "Normal",
+   "bytes": 181175
+  },
+  {
+   "name": "9B-CPP-13",
+   "sequence": "AWRWRWRCKAKKR",
+   "half_life_pred": 1.229,
+   "stability_class": "High",
+   "bytes": 148150
+  },
+  {
+   "name": "9B-CPP-14",
+   "sequence": "RRRRWRRLWRHLRRR",
+   "half_life_pred": 1.383,
+   "stability_class": "High",
+   "bytes": 169776
+  },
+  {
+   "name": "9B-CPP-15",
+   "sequence": "YLLRLRRRLRRRSRARRRR",
+   "half_life_pred": 0.699,
+   "stability_class": "Normal",
+   "bytes": 214304
+  },
+  {
+   "name": "9B-CPP-16",
+   "sequence": "RGRLRRHLRRRLRRR",
+   "half_life_pred": 1.249,
+   "stability_class": "High",
+   "bytes": 169545
+  },
+  {
+   "name": "9B-CPP-17",
+   "sequence": "RLRRRLRLRRFLRRRR",
+   "half_life_pred": 0.719,
+   "stability_class": "Normal",
+   "bytes": 181188
+  },
+  {
+   "name": "9B-CPP-18",
+   "sequence": "LGRLWRRLRRRRRHLRRAARSH",
+   "half_life_pred": 0.508,
+   "stability_class": "Normal",
+   "bytes": 248443
+  }
+ ],
+ "summary": {
+  "n_high_stability": 10,
+  "n_normal": 8,
+  "half_life_pred_min": 0.508,
+  "half_life_pred_max": 1.454,
+  "half_life_pred_mean": 1.049,
+  "note": "Server-reported half-life predictions and stability classes for the 18 designed CPPs; each response also carried a full single-position saturation-mutagenesis stability scan (retained raw, not duplicated here)."
+ }
+}

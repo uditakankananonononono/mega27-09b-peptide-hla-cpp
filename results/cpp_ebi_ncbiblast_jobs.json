@@ -1,0 +1,17 @@
+{
+ "9B-CPP-1": {
+  "jobid": "ncbiblast-R20260924-182214-0900-9003201-p1m",
+  "database": "pdb",
+  "sequence": "LRILRWWRWRWRNRWKRRR"
+ },
+ "9B-CPP-8": {
+  "jobid": "ncbiblast-R20260924-182217-0657-19938623-p2m",
+  "database": "pdb",
+  "sequence": "GLARWRWRWRRQ"
+ },
+ "9B-CPP-18": {
+  "jobid": "ncbiblast-R20260924-182220-0361-1119879-p1m",
+  "database": "pdb",
+  "sequence": "LGRLWRRLRRRRRHLRRAARSH"
+ }
+}

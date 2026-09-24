@@ -1,0 +1,38 @@
+{
+ "tool": "EBI ncbiblast REST (NCBI BLAST+ 2.16.0, blastp vs PDB, default parameters)",
+ "tool_url": "https://www.ebi.ac.uk/Tools/services/rest/ncbiblast",
+ "accessed": "2026-09-24",
+ "jobs": {
+  "9B-CPP-1": {
+   "jobid": "ncbiblast-R20260924-182214-0900-9003201-p1m",
+   "database": "pdb",
+   "sequence": "LRILRWWRWRWRNRWKRRR"
+  },
+  "9B-CPP-8": {
+   "jobid": "ncbiblast-R20260924-182217-0657-19938623-p2m",
+   "database": "pdb",
+   "sequence": "GLARWRWRWRRQ"
+  },
+  "9B-CPP-18": {
+   "jobid": "ncbiblast-R20260924-182220-0361-1119879-p1m",
+   "database": "pdb",
+   "sequence": "LGRLWRRLRRRRRHLRRAARSH"
+  }
+ },
+ "results": {
+  "9B-CPP-8": {
+   "status": "FINISHED",
+   "database": "pdb",
+   "expect_upper": 10.0,
+   "n_hits": 0,
+   "hits": [],
+   "interpretation": "No PDB sequence homologs at E<=10: the designed 9-mer WRWRKKRRR has no structural-template counterpart in the PDB sequence database."
+  },
+  "9B-CPP-1": {
+   "status": "QUEUED at this commit"
+  },
+  "9B-CPP-18": {
+   "status": "QUEUED at this commit"
+  }
+ }
+}
