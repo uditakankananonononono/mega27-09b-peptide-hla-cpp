@@ -37,11 +37,12 @@ def enc_batch(seqs: list[str], allele_idx: np.ndarray, allele_map: dict[str, int
     for r, s in enumerate(seqs):
         mask[r, : min(len(s), MAX_LEN_PHLA)] = 1.0
     al = np.array([allele_map[a] for a in allele_idx], dtype=np.int64)
-    out = (torch.from_numpy(X), torch.from_numpy(mask), torch.from_numpy(al))
+    X_t, mask_t, al_t = (torch.from_numpy(X), torch.from_numpy(mask),
+                         torch.from_numpy(al))
     if with_graph:
         adj = np.stack([backbone_graph(len(s), MAX_LEN_PHLA) for s in seqs])
-        out = out + (torch.from_numpy(adj),)
-    return out
+        return X_t, torch.from_numpy(adj), mask_t, al_t  # GNN forward order
+    return X_t, mask_t, al_t  # CNN forward order
 
 
 def train_torch_model(model, train: list[PHLAExample], val: list[PHLAExample],

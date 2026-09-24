@@ -17,10 +17,25 @@ def auc(labels: np.ndarray, scores: np.ndarray) -> float:
 
 
 def auc_top_frac(labels: np.ndarray, scores: np.ndarray, frac: float = 0.1) -> float:
-    """AUC restricted to the top-scoring `frac` of peptides (AUC0.1)."""
-    n = max(1, int(round(frac * len(labels))))
-    order = np.argsort(-scores, kind="mergesort")[:n]
-    return auc(labels[order], scores[order])
+    """Partial AUC over FPR in [0, frac] (the literature's AUC0.1), normalized
+    to [0, 1]: TPR integrated against FPR up to `frac`, divided by `frac`."""
+    y = labels.astype(bool)
+    npos, nneg = y.sum(), (~y).sum()
+    if npos == 0 or nneg == 0:
+        return float("nan")
+    order = np.argsort(-scores, kind="mergesort")
+    y = y[order]
+    tpr = np.concatenate([[0.0], np.cumsum(y) / npos])
+    fpr = np.concatenate([[0.0], np.cumsum(~y) / nneg])
+    # integrate TPR dFPR from 0 to frac with linear interpolation at the cut
+    mask = fpr <= frac
+    area = np.trapezoid(tpr[mask], fpr[mask])
+    if fpr[-1] > frac and mask.any():
+        i = mask.sum()
+        if i < len(fpr) and fpr[i] > fpr[i - 1]:
+            t_at = tpr[i - 1] + (tpr[i] - tpr[i - 1]) * (frac - fpr[i - 1]) / (fpr[i] - fpr[i - 1])
+            area += 0.5 * (tpr[i - 1] + t_at) * (frac - fpr[i - 1])
+    return float(area / frac)
 
 
 def ppv(labels: np.ndarray, scores: np.ndarray, top_n: int | None = None) -> float:
