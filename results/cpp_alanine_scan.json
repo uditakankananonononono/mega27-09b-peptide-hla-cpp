@@ -1,0 +1,338 @@
+{
+ "n_candidates": 18,
+ "n_with_basic_run_ge3": 14,
+ "mean_logodds_drop": 0.5508809645254596,
+ "min_drop": 0.10848850919829789,
+ "max_drop": 1.082551438222238,
+ "frac_mutants_below_cascade_0.7": 1.0,
+ "frac_mutants_below_0.5": 0.0,
+ "mean_drop_allRK": 0.6445110954125024,
+ "frac_allRK_below_0.5": 0.7777777777777778,
+ "frac_allRK_below_0.1": 0.0,
+ "candidates": [
+  {
+   "name": "9B-CPP-1",
+   "sequence": "LRILRWWRWRWRNRWKRRR",
+   "z0": 0.3378092934780944,
+   "p0": 0.583658276176495,
+   "n_basic_runs_ge3": 1,
+   "worst_run": {
+    "run": "KRRR",
+    "span": [
+     15,
+     19
+    ],
+    "mutant": "LRILRWWRWRWRNRWAAAA",
+    "drop": 0.2834382565789636,
+    "p_mutant": 0.5135894116272294
+   },
+   "allRK_mutant": "LAILAWWAWAWANAWAAAA",
+   "p_allRK": 0.47165498022871727,
+   "drop_allRK": 0.4513110661156182
+  },
+  {
+   "name": "9B-CPP-2",
+   "sequence": "RLRRRLRLRLRLRLRLRRL",
+   "z0": 0.5140765291283211,
+   "p0": 0.6257616207789035,
+   "n_basic_runs_ge3": 1,
+   "worst_run": {
+    "run": "RRR",
+    "span": [
+     2,
+     5
+    ],
+    "mutant": "RLAAALRLRLRLRLRLRRL",
+    "drop": 0.32181275609273347,
+    "p_mutant": 0.5479184239768522
+   },
+   "allRK_mutant": "ALAAALALALALALALAAL",
+   "p_allRK": 0.59847437709572,
+   "drop_allRK": 0.11496416621083982
+  },
+  {
+   "name": "9B-CPP-3",
+   "sequence": "WRWRKKKRKK",
+   "z0": 0.8095911328161416,
+   "p0": 0.6920223703403938,
+   "n_basic_runs_ge3": 1,
+   "worst_run": {
+    "run": "RKKKRKK",
+    "span": [
+     3,
+     10
+    ],
+    "mutant": "WRWAAAAAAA",
+    "drop": 0.7909944446859303,
+    "p_mutant": 0.5046490380492846
+   },
+   "allRK_mutant": "WAWAAAAAAA",
+   "p_allRK": 0.48921749861171615,
+   "drop_allRK": 0.852727826095724
+  },
+  {
+   "name": "9B-CPP-4",
+   "sequence": "GLWRWRWRWRKSLKK",
+   "z0": 0.13591717467605008,
+   "p0": 0.5339270804772612,
+   "n_basic_runs_ge3": 0,
+   "worst_run": null,
+   "allRK_mutant": "GLWAWAWAWAASLAA",
+   "p_allRK": 0.46614739629799984,
+   "drop_allRK": 0.27153506732323685
+  },
+  {
+   "name": "9B-CPP-5",
+   "sequence": "RRINRRWRWKRWKKC",
+   "z0": 0.14022346787889778,
+   "p0": 0.5349985388372129,
+   "n_basic_runs_ge3": 0,
+   "worst_run": null,
+   "allRK_mutant": "AAINAAWAWAAWAAC",
+   "p_allRK": 0.46738562899621733,
+   "drop_allRK": 0.27086644868786025
+  },
+  {
+   "name": "9B-CPP-6",
+   "sequence": "WRWRKKRRR",
+   "z0": 1.0567251213349222,
+   "p0": 0.7420642144982684,
+   "n_basic_runs_ge3": 1,
+   "worst_run": {
+    "run": "RKKRRR",
+    "span": [
+     3,
+     9
+    ],
+    "mutant": "WRWAAAAAA",
+    "drop": 1.0372266987094871,
+    "p_mutant": 0.5048744512231519
+   },
+   "allRK_mutant": "WAWAAAAAA",
+   "p_allRK": 0.48723926752406926,
+   "drop_allRK": 1.1077791377603339
+  },
+  {
+   "name": "9B-CPP-7",
+   "sequence": "RGRWRWKKRHRPK",
+   "z0": 0.2500124144288072,
+   "p0": 0.5621795564974866,
+   "n_basic_runs_ge3": 1,
+   "worst_run": {
+    "run": "KKR",
+    "span": [
+     6,
+     9
+    ],
+    "mutant": "RGRWRWAAAHRPK",
+    "drop": 0.21649104954857473,
+    "p_mutant": 0.5083795565717464
+   },
+   "allRK_mutant": "AGAWAWAAAHAPA",
+   "p_allRK": 0.46900214615157026,
+   "drop_allRK": 0.3741630494939228
+  },
+  {
+   "name": "9B-CPP-8",
+   "sequence": "GLARWRWRWRRQ",
+   "z0": 0.23588099133894758,
+   "p0": 0.5586983360411245,
+   "n_basic_runs_ge3": 0,
+   "worst_run": null,
+   "allRK_mutant": "GLAAWAWAWAAQ",
+   "p_allRK": 0.4640495037489432,
+   "drop_allRK": 0.3799315547544666
+  },
+  {
+   "name": "9B-CPP-9",
+   "sequence": "RLRRRRRRNRRRNWRWL",
+   "z0": 1.233483374755205,
+   "p0": 0.7744276647479984,
+   "n_basic_runs_ge3": 2,
+   "worst_run": {
+    "run": "RRRRRR",
+    "span": [
+     2,
+     8
+    ],
+    "mutant": "RLAAAAAANRRRNWRWL",
+    "drop": 1.0198198329150485,
+    "p_mutant": 0.5532135965819915
+   },
+   "allRK_mutant": "ALAAAAAANAAANWAWL",
+   "p_allRK": 0.49197969316984175,
+   "drop_allRK": 1.2655673540143852
+  },
+  {
+   "name": "9B-CPP-10",
+   "sequence": "WRWKWKKRWRKH",
+   "z0": 0.26357057813863316,
+   "p0": 0.5655138155419694,
+   "n_basic_runs_ge3": 1,
+   "worst_run": {
+    "run": "KKR",
+    "span": [
+     5,
+     8
+    ],
+    "mutant": "WRWKWAAAWRKH",
+    "drop": 0.261031663259747,
+    "p_mutant": 0.500634728378762
+   },
+   "allRK_mutant": "WAWAWAAAWAAH",
+   "p_allRK": 0.47055812076142,
+   "drop_allRK": 0.3814744906130926
+  },
+  {
+   "name": "9B-CPP-11",
+   "sequence": "RLFRRRRLRRRRRRNN",
+   "z0": 1.550465450456073,
+   "p0": 0.8249809471756303,
+   "n_basic_runs_ge3": 2,
+   "worst_run": {
+    "run": "RRRRRR",
+    "span": [
+     8,
+     14
+    ],
+    "mutant": "RLFRRRRLAAAAAANN",
+    "drop": 1.082551438222238,
+    "p_mutant": 0.6148899123788121
+   },
+   "allRK_mutant": "ALFAAAALAAAAAANN",
+   "p_allRK": 0.49579302162390465,
+   "drop_allRK": 1.5672937610861746
+  },
+  {
+   "name": "9B-CPP-12",
+   "sequence": "RLRLRLRLRLRIRIRR",
+   "z0": 0.2264123581625157,
+   "p0": 0.5563625210938156,
+   "n_basic_runs_ge3": 0,
+   "worst_run": null,
+   "allRK_mutant": "ALALALALALAIAIAA",
+   "p_allRK": 0.5845987866786663,
+   "drop_allRK": -0.11526858675145435
+  },
+  {
+   "name": "9B-CPP-13",
+   "sequence": "AWRWRWRCKAKKR",
+   "z0": 0.25538271240122506,
+   "p0": 0.5635009234121654,
+   "n_basic_runs_ge3": 1,
+   "worst_run": {
+    "run": "KKR",
+    "span": [
+     10,
+     13
+    ],
+    "mutant": "AWRWRWRCKAAAA",
+    "drop": 0.10848850919829789,
+    "p_mutant": 0.5366576581993983
+   },
+   "allRK_mutant": "AWAWAWACAAAAA",
+   "p_allRK": 0.477375492537339,
+   "drop_allRK": 0.3459425823407251
+  },
+  {
+   "name": "9B-CPP-14",
+   "sequence": "RRRRWRRLWRHLRRR",
+   "z0": 0.9232738530294984,
+   "p0": 0.7157087059289011,
+   "n_basic_runs_ge3": 2,
+   "worst_run": {
+    "run": "RRRR",
+    "span": [
+     0,
+     4
+    ],
+    "mutant": "AAAAWRRLWRHLRRR",
+    "drop": 0.5857781365560457,
+    "p_mutant": 0.5835820745605699
+   },
+   "allRK_mutant": "AAAAWAALWAHLAAA",
+   "p_allRK": 0.4824525567387582,
+   "drop_allRK": 0.9934924638244187
+  },
+  {
+   "name": "9B-CPP-15",
+   "sequence": "YLLRLRRRLRRRSRARRRR",
+   "z0": 1.0280872089584177,
+   "p0": 0.7365448933781485,
+   "n_basic_runs_ge3": 3,
+   "worst_run": {
+    "run": "RRRR",
+    "span": [
+     15,
+     19
+    ],
+    "mutant": "YLLRLRRRLRRRSRAAAAA",
+    "drop": 0.4585311496693649,
+    "p_mutant": 0.6386607318375245
+   },
+   "allRK_mutant": "YLLALAAALAAASAAAAAA",
+   "p_allRK": 0.5176268973291711,
+   "drop_allRK": 0.9575503881908347
+  },
+  {
+   "name": "9B-CPP-16",
+   "sequence": "RGRLRRHLRRRLRRR",
+   "z0": 0.799996566955592,
+   "p0": 0.689973746765646,
+   "n_basic_runs_ge3": 2,
+   "worst_run": {
+    "run": "RRR",
+    "span": [
+     8,
+     11
+    ],
+    "mutant": "RGRLRRHLAAALRRR",
+    "drop": 0.3897830594162459,
+    "p_mutant": 0.6011390728459479
+   },
+   "allRK_mutant": "AGALAAHLAAALAAA",
+   "p_allRK": 0.49813976628329365,
+   "drop_allRK": 0.8074375361548736
+  },
+  {
+   "name": "9B-CPP-17",
+   "sequence": "RLRRRLRLRRFLRRRR",
+   "z0": 0.952545230061882,
+   "p0": 0.7216267561620742,
+   "n_basic_runs_ge3": 2,
+   "worst_run": {
+    "run": "RRRR",
+    "span": [
+     12,
+     16
+    ],
+    "mutant": "RLRRRLRLRRFLAAAA",
+    "drop": 0.5327746410865912,
+    "p_mutant": 0.6034283525183978
+   },
+   "allRK_mutant": "ALAAALALAAFLAAAA",
+   "p_allRK": 0.5262066021946175,
+   "drop_allRK": 0.8476226716717135
+  },
+  {
+   "name": "9B-CPP-18",
+   "sequence": "LGRLWRRLRRRRRHLRRAARSH",
+   "z0": 0.6827331054252086,
+   "p0": 0.6643484249756212,
+   "n_basic_runs_ge3": 1,
+   "worst_run": {
+    "run": "RRRRR",
+    "span": [
+     8,
+     13
+    ],
+    "mutant": "LGRLWRRLAAAAAHLRRAARSH",
+    "drop": 0.6236118674171661,
+    "p_mutant": 0.5147760058460209
+   },
+   "allRK_mutant": "LGALWAALAAAAAHLAAAAASH",
+   "p_allRK": 0.48898287488443365,
+   "drop_allRK": 0.7268087398382772
+  }
+ ]
+}

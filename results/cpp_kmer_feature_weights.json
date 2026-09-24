@@ -1,0 +1,214 @@
+{
+ "refit_test_auc": 0.9265232974910395,
+ "benchmark_test_auc": 0.9265232974910395,
+ "n_train": 922,
+ "n_test": 183,
+ "vocab_size": 8000,
+ "intercept": -0.12320878238702516,
+ "top_positive": [
+  {
+   "kmer": "RRR",
+   "weight": 3.567851552592024
+  },
+  {
+   "kmer": "KKK",
+   "weight": 1.6498004205789685
+  },
+  {
+   "kmer": "KKR",
+   "weight": 1.4220040500799218
+  },
+  {
+   "kmer": "RKK",
+   "weight": 1.2672352985248538
+  },
+  {
+   "kmer": "KRR",
+   "weight": 0.9699642629857008
+  },
+  {
+   "kmer": "KLA",
+   "weight": 0.9142629471483233
+  },
+  {
+   "kmer": "QRR",
+   "weight": 0.8567190746850001
+  },
+  {
+   "kmer": "ARR",
+   "weight": 0.833463981761913
+  },
+  {
+   "kmer": "KRK",
+   "weight": 0.8236424612756793
+  },
+  {
+   "kmer": "LAL",
+   "weight": 0.8207250432938547
+  },
+  {
+   "kmer": "RRQ",
+   "weight": 0.7938020675031923
+  },
+  {
+   "kmer": "RQR",
+   "weight": 0.7888024773837585
+  },
+  {
+   "kmer": "LAK",
+   "weight": 0.7650035111560983
+  },
+  {
+   "kmer": "LLK",
+   "weight": 0.7264581077460304
+  },
+  {
+   "kmer": "RRA",
+   "weight": 0.681269281858923
+  },
+  {
+   "kmer": "RRH",
+   "weight": 0.6550762299224269
+  },
+  {
+   "kmer": "MII",
+   "weight": 0.639763001811736
+  },
+  {
+   "kmer": "GRK",
+   "weight": 0.6338226113352456
+  },
+  {
+   "kmer": "ALA",
+   "weight": 0.633382042994704
+  },
+  {
+   "kmer": "RHH",
+   "weight": 0.6090281293228654
+  },
+  {
+   "kmer": "LKL",
+   "weight": 0.5835066784422868
+  },
+  {
+   "kmer": "GKK",
+   "weight": 0.582350098666701
+  },
+  {
+   "kmer": "RAR",
+   "weight": 0.5703821372748852
+  },
+  {
+   "kmer": "KKL",
+   "weight": 0.566687390097531
+  },
+  {
+   "kmer": "LRR",
+   "weight": 0.5584843566463396
+  }
+ ],
+ "top_negative": [
+  {
+   "kmer": "LLL",
+   "weight": -0.49410260853765214
+  },
+  {
+   "kmer": "FLL",
+   "weight": -0.34168040787494885
+  },
+  {
+   "kmer": "EAS",
+   "weight": -0.308846249649363
+  },
+  {
+   "kmer": "ASV",
+   "weight": -0.24156214801564196
+  },
+  {
+   "kmer": "TVV",
+   "weight": -0.24076752196345225
+  },
+  {
+   "kmer": "SFL",
+   "weight": -0.24041910710112385
+  },
+  {
+   "kmer": "VVI",
+   "weight": -0.24007151211905428
+  },
+  {
+   "kmer": "DED",
+   "weight": -0.23416440300981597
+  },
+  {
+   "kmer": "LLV",
+   "weight": -0.228817184204347
+  },
+  {
+   "kmer": "VGK",
+   "weight": -0.2281756725361752
+  },
+  {
+   "kmer": "ELE",
+   "weight": -0.22591688104389643
+  },
+  {
+   "kmer": "IIP",
+   "weight": -0.22422666877026973
+  },
+  {
+   "kmer": "PPP",
+   "weight": -0.2226367316718159
+  },
+  {
+   "kmer": "SLK",
+   "weight": -0.21950054617684747
+  },
+  {
+   "kmer": "CFL",
+   "weight": -0.20910472840684996
+  }
+ ],
+ "top50_composition": {
+  "top50_containing_R_or_K": 46,
+  "top50_containing_W_Y_F": 4,
+  "top50_containing_L_I_V": 18
+ },
+ "chemistry_effects": {
+  "contains_R": {
+   "n_kmers": 1141,
+   "mean_weight": 0.04303917814468824,
+   "mean_weight_rest": -0.007160264186646511
+  },
+  "contains_K": {
+   "n_kmers": 1141,
+   "mean_weight": 0.02235572208917264,
+   "mean_weight_rest": -0.0037195551387760794
+  },
+  "contains_RK": {
+   "n_kmers": 2168,
+   "mean_weight": 0.028914759814431416,
+   "mean_weight_rest": -0.010749614038204125
+  },
+  "contains_W": {
+   "n_kmers": 1141,
+   "mean_weight": 0.007897080873979,
+   "mean_weight_rest": -0.001314348894930629
+  },
+  "contains_WYF": {
+   "n_kmers": 3087,
+   "mean_weight": 0.0006526839499253472,
+   "mean_weight_rest": -0.00041102893273736827
+  },
+  "contains_LIV": {
+   "n_kmers": 3087,
+   "mean_weight": -0.007629278767010301,
+   "mean_weight_rest": 0.004792801498196958
+  },
+  "contains_DE": {
+   "n_kmers": 2168,
+   "mean_weight": -0.013190044352302612,
+   "mean_weight_rest": 0.004902514808414425
+  }
+ }
+}

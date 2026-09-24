@@ -1,0 +1,14 @@
+{
+  "pairs_by_locus": {
+    "HLA-A": 74875,
+    "HLA-B": 38846,
+    "HLA-C": 967
+  },
+  "alleles_by_locus": {
+    "HLA-A": 29,
+    "HLA-B": 28,
+    "HLA-C": 3
+  },
+  "n_alleles_retained": 60,
+  "n_pairs_retained": 114688
+}

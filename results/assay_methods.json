@@ -1,0 +1,37 @@
+{
+  "assay_methods": [
+    {
+      "method": "purified MHC/competitive/radioactivity",
+      "n": 67444
+    },
+    {
+      "method": "purified MHC/direct/fluorescence",
+      "n": 39066
+    },
+    {
+      "method": "purified MHC/competitive/fluorescence",
+      "n": 23498
+    },
+    {
+      "method": "cellular MHC/competitive/fluorescence",
+      "n": 5145
+    },
+    {
+      "method": "cellular MHC/direct/fluorescence",
+      "n": 618
+    },
+    {
+      "method": "cellular MHC/competitive/radioactivity",
+      "n": 75
+    },
+    {
+      "method": "binding assay",
+      "n": 5
+    },
+    {
+      "method": "lysate MHC/direct/radioactivity",
+      "n": 3
+    }
+  ],
+  "n_methods_total": 8
+}

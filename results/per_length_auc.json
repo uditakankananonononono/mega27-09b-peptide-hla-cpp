@@ -1,0 +1,28 @@
+{
+  "per_length_auc": [
+    {
+      "len": 8,
+      "n": 117,
+      "n_binders": 23,
+      "ensemble_auc": 0.8413506012950971
+    },
+    {
+      "len": 9,
+      "n": 12950,
+      "n_binders": 3588,
+      "ensemble_auc": 0.9393180989493094
+    },
+    {
+      "len": 10,
+      "n": 3656,
+      "n_binders": 1410,
+      "ensemble_auc": 0.8842143321776145
+    },
+    {
+      "len": 11,
+      "n": 131,
+      "n_binders": 30,
+      "ensemble_auc": 0.8815181518151814
+    }
+  ]
+}

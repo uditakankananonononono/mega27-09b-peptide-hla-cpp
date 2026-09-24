@@ -1,0 +1,232 @@
+{
+  "HLA-A*01:01": {
+    "rms_interaction": 0.3175834012107714,
+    "hh_contrast": 0.04331494723645156,
+    "n_cells": 126,
+    "n_9mers": 3077,
+    "rms_interaction_ci95": [
+      0.3035,
+      0.3789
+    ]
+  },
+  "HLA-A*02:01": {
+    "rms_interaction": 0.4479580247081306,
+    "hh_contrast": -0.3131575357134123,
+    "n_cells": 188,
+    "n_9mers": 8345,
+    "rms_interaction_ci95": [
+      0.4462,
+      0.5126
+    ]
+  },
+  "HLA-A*02:02": {
+    "rms_interaction": 0.3818746966238465,
+    "hh_contrast": -0.14931186486526785,
+    "n_cells": 55,
+    "n_9mers": 1760,
+    "rms_interaction_ci95": [
+      0.3933,
+      0.5236
+    ]
+  },
+  "HLA-A*02:03": {
+    "rms_interaction": 0.48239027271841656,
+    "hh_contrast": -0.15664564654864344,
+    "n_cells": 96,
+    "n_9mers": 2698,
+    "rms_interaction_ci95": [
+      0.4788,
+      0.5743
+    ]
+  },
+  "HLA-A*02:06": {
+    "rms_interaction": 0.40925999157018794,
+    "hh_contrast": -0.07255484400387108,
+    "n_cells": 64,
+    "n_9mers": 2137,
+    "rms_interaction_ci95": [
+      0.4052,
+      0.5419
+    ]
+  },
+  "HLA-A*03:01": {
+    "rms_interaction": 0.376267435411714,
+    "hh_contrast": 0.10013722886311537,
+    "n_cells": 144,
+    "n_9mers": 4502,
+    "rms_interaction_ci95": [
+      0.3587,
+      0.4261
+    ]
+  },
+  "HLA-A*11:01": {
+    "rms_interaction": 0.46179318256745727,
+    "hh_contrast": 0.107008856994447,
+    "n_cells": 123,
+    "n_9mers": 3740,
+    "rms_interaction_ci95": [
+      0.4483,
+      0.5293
+    ]
+  },
+  "HLA-A*24:02": {
+    "rms_interaction": 0.47352550870325083,
+    "hh_contrast": 0.0759551808757796,
+    "n_cells": 101,
+    "n_9mers": 1975,
+    "rms_interaction_ci95": [
+      0.4666,
+      0.5693
+    ]
+  },
+  "HLA-A*26:01": {
+    "rms_interaction": 0.25087721680900643,
+    "hh_contrast": 0.003077343250660558,
+    "n_cells": 130,
+    "n_9mers": 2673,
+    "rms_interaction_ci95": [
+      0.2571,
+      0.3341
+    ]
+  },
+  "HLA-A*31:01": {
+    "rms_interaction": 0.4665378187657862,
+    "hh_contrast": -0.052147338683764144,
+    "n_cells": 101,
+    "n_9mers": 3160,
+    "rms_interaction_ci95": [
+      0.4144,
+      0.5566
+    ]
+  },
+  "HLA-A*68:01": {
+    "rms_interaction": 0.4318825448780741,
+    "hh_contrast": -0.6709694326384061,
+    "n_cells": 38,
+    "n_9mers": 1513,
+    "rms_interaction_ci95": [
+      0.399,
+      0.5767
+    ]
+  },
+  "HLA-A*68:02": {
+    "rms_interaction": 0.4597792935356073,
+    "hh_contrast": -0.09053361076841547,
+    "n_cells": 106,
+    "n_9mers": 2854,
+    "rms_interaction_ci95": [
+      0.436,
+      0.5339
+    ]
+  },
+  "HLA-A*69:01": {
+    "rms_interaction": 0.42159833601793156,
+    "hh_contrast": -0.05301948878967431,
+    "n_cells": 111,
+    "n_9mers": 2316,
+    "rms_interaction_ci95": [
+      0.3826,
+      0.5394
+    ]
+  },
+  "HLA-B*07:02": {
+    "rms_interaction": 0.40379433688820526,
+    "hh_contrast": -0.024721286716725833,
+    "n_cells": 115,
+    "n_9mers": 2979,
+    "rms_interaction_ci95": [
+      0.3888,
+      0.4775
+    ]
+  },
+  "HLA-B*08:01": {
+    "rms_interaction": 0.4111985596881189,
+    "hh_contrast": -0.07277100540588546,
+    "n_cells": 103,
+    "n_9mers": 2058,
+    "rms_interaction_ci95": [
+      0.4221,
+      0.5779
+    ]
+  },
+  "HLA-B*15:01": {
+    "rms_interaction": 0.41275301088783617,
+    "hh_contrast": -0.11385764009685215,
+    "n_cells": 146,
+    "n_9mers": 3358,
+    "rms_interaction_ci95": [
+      0.3955,
+      0.4804
+    ]
+  },
+  "HLA-B*18:01": {
+    "rms_interaction": 0.2877541241125691,
+    "hh_contrast": -0.011937088820349764,
+    "n_cells": 105,
+    "n_9mers": 1854,
+    "rms_interaction_ci95": [
+      0.2603,
+      0.3981
+    ]
+  },
+  "HLA-B*27:05": {
+    "rms_interaction": 0.2778069961297903,
+    "hh_contrast": -0.008221924684796645,
+    "n_cells": 93,
+    "n_9mers": 1912,
+    "rms_interaction_ci95": [
+      0.2336,
+      0.368
+    ]
+  },
+  "HLA-B*40:01": {
+    "rms_interaction": 0.3831941313004501,
+    "hh_contrast": 0.04959444285145148,
+    "n_cells": 94,
+    "n_9mers": 2097,
+    "rms_interaction_ci95": [
+      0.3403,
+      0.4117
+    ]
+  },
+  "HLA-B*46:01": {
+    "rms_interaction": 0.19367516294817952,
+    "hh_contrast": -0.02838774180644066,
+    "n_cells": 96,
+    "n_9mers": 1675,
+    "rms_interaction_ci95": [
+      0.1651,
+      0.2849
+    ]
+  },
+  "HLA-B*51:01": {
+    "rms_interaction": 0.2211925514399952,
+    "hh_contrast": 0.023355039676086393,
+    "n_cells": 82,
+    "n_9mers": 1770,
+    "rms_interaction_ci95": [
+      0.2069,
+      0.2953
+    ]
+  },
+  "HLA-B*57:01": {
+    "rms_interaction": 0.2696353467675926,
+    "hh_contrast": 0.04584476716085327,
+    "n_cells": 108,
+    "n_9mers": 2094,
+    "rms_interaction_ci95": [
+      0.2736,
+      0.3582
+    ]
+  },
+  "HLA-B*58:01": {
+    "rms_interaction": 0.4355378616479804,
+    "hh_contrast": 0.07913006583680346,
+    "n_cells": 105,
+    "n_9mers": 2255,
+    "rms_interaction_ci95": [
+      0.4337,
+      0.5434
+    ]
+  }
+}
