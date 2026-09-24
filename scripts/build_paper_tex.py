@@ -155,6 +155,107 @@ Consequence: PSSM-style models have a provable ceiling exactly when
 anchor-pocket couplings (P2--P$\Omega$) are real; measured gaps between our
 additive and non-additive models quantify that variance.
 
+\subsection{Ridge estimation and the bias--variance trade (PSSM baseline)}
+The per-allele additive fit solves
+\begin{equation}
+\hat\beta = \arg\min_\beta \; \lVert X\beta - y \rVert_2^2 + \lambda \lVert \beta \rVert_2^2
+= (X^\top X + \lambda I)^{-1} X^\top y,
+\end{equation}
+which exists in closed form because $X^\top X + \lambda I \succ 0$ for
+$\lambda>0$. Its mean-squared error decomposes as
+\begin{equation}
+\mathbb{E}\lVert \hat\beta - \beta^\ast \rVert^2 =
+\underbrace{\lVert \mathbb{E}\hat\beta - \beta^\ast \rVert^2}_{\text{bias}^2
+\;=\; \lambda^2\, \beta^{\ast\top}(X^\top X{+}\lambda I)^{-2}\beta^\ast} +
+\underbrace{\sigma^2 \, \mathrm{tr}\big[(X^\top X)^2 (X^\top X{+}\lambda I)^{-2}\big]}_{\text{variance}},
+\end{equation}
+so $\lambda$ prices bias against variance per allele --- the mechanism behind
+the per-allele PSSM-vs-CNN crossover (Fig.~5).
+
+\subsection{AUC as a concordance probability}
+With $s^+, s^-$ scores of a random binder and non-binder,
+\begin{equation}
+\mathrm{AUC} = P(s^+ > s^-) + \tfrac12 P(s^+ = s^-)
+= \frac{1}{n_+ n_-} \sum_{i,j} \mathbb{1}[s_i^+ > s_j^-],
+\end{equation}
+the Mann--Whitney form used by our implementation; partial AUC truncates the
+FPR domain (\S2.4's metrics are all rank-based, hence monotone-invariant by
+Proposition 4).
+
+\subsection{Lognormal noise and geometric-mean aggregation}
+If replicate assays obey $y_r = \mu + \epsilon_r$, $\epsilon_r \sim
+\mathcal N(0, \sigma^2)$ in log-space (the standard competition-assay
+model), then
+\begin{proposition}[Geometric mean is the MLE]
+The maximum-likelihood estimator of the pair's affinity is the geometric
+mean of replicate IC50 values.
+\end{proposition}
+\begin{proof}
+$\hat\mu_{\mathrm{ML}} = \frac1R\sum_r \log v_r$ is the Gaussian MLE;
+exponentiating gives $\exp \hat\mu_{\mathrm{ML}} = (\prod_r v_r)^{1/R}$.
+\end{proof}
+
+\subsection{GCN propagation as Laplacian smoothing}
+Our graph layer applies
+\begin{equation}
+H^{(l+1)} = \phi\!\left( \hat A \, H^{(l)} W^{(l)} \right), \qquad
+\hat A = D^{-1/2}(A+I)D^{-1/2},
+\end{equation}
+a first-order Chebyshev approximation of spectral convolution: $\hat A$'s
+spectrum lies in $(-1,1]$, so repeated application is a low-pass filter over
+the graph Laplacian $L = I - \hat A$ --- residue features are smoothed along
+backbone and anchor edges, exactly the inductive bias for pocket couplings.
+
+\subsection{Information content of a PSSM column}
+The specificity of position $i$ is the Kullback--Leibler divergence of its
+residue distribution from background $q$:
+\begin{equation}
+I_i = D_{\mathrm{KL}}(p_i \,\|\, q) = \sum_a p_i(a) \log_2 \frac{p_i(a)}{q(a)},
+\end{equation}
+the sequence-logo statistic; anchor positions carry the largest $I_i$
+(quantified in Appendix A per allele).
+
+\subsection{Ensemble variance reduction}
+\begin{proposition}[Ensemble MSE]
+Two estimators with equal variance $v$ and error correlation $\rho < 1$
+have average with variance $v(1+\rho)/2 < v$; the z-scored sum of two
+unbiased rank scores strictly improves MSE whenever their errors are
+imperfectly correlated.
+\end{proposition}
+\begin{proof}
+$\mathrm{Var}\big(\tfrac{e_1+e_2}{2}\big) = \tfrac14( v + v + 2\rho v)
+= v(1+\rho)/2$. \end{proof}
+This is the formal reason the PSSM+CNN ensemble (43/52 allele wins) beats
+both parents: their residuals correlate weakly (rigid vs flexible bias).
+
+\subsection{Generator equations and perplexity}
+The GRU computes
+\begin{align}
+z_t &= \sigma(W_z x_t + U_z h_{t-1}), &
+r_t &= \sigma(W_r x_t + U_r h_{t-1}), \\
+\tilde h_t &= \tanh(W x_t + U (r_t \odot h_{t-1})), &
+h_t &= (1 - z_t) \odot h_{t-1} + z_t \odot \tilde h_t,
+\end{align}
+trained by token cross-entropy
+$\mathcal L = -\frac1T \sum_t \log p_\theta(x_t \mid x_{<t})$, reported
+as perplexity $\exp(\mathcal L) = 6.86$ on the training distribution.
+
+\subsection{BLOSUM62 as log-odds}
+Each encoding channel uses
+\begin{equation}
+B(a,b) = \frac{1}{\lambda} \log_2 \frac{q_{ab}}{f_a f_b},
+\end{equation}
+the log-odds of observed substitution frequency $q_{ab}$ against
+independence, so the BLOSUM row of a residue is a sufficient statistic for
+its exchangeability class.
+
+\subsection{k-mer Jaccard homology proxy}
+\begin{equation}
+J_k(x, y) = \frac{|K_k(x) \cap K_k(y)|}{|K_k(x) \cup K_k(y)|},
+\end{equation}
+with $K_k$ the set of $k$-mers; $J_3 \ge 0.6$ is our redundancy criterion,
+a locality-sensitive proxy for sequence identity.
+
 \subsection{Hydrophobic moment}
 $\mu_H = \frac{1}{N}\left|\sum_{n} H_{x_n} e^{in\delta}\right|$, $\delta{=}100^\circ$.
 \begin{proposition}
