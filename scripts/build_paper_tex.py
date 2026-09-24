@@ -24,6 +24,7 @@ worked = json.load(open("results/epistasis_worked_example.json"))
 novel = json.load(open("results/cpp_novel_candidates.json"))
 kw = json.load(open("results/cpp_kmer_feature_weights.json"))
 scan = json.load(open("results/cpp_alanine_scan.json"))
+cplc = json.load(open("results/cpp_learning_curve.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
 
@@ -473,6 +474,7 @@ counts we report (a 0.01 AUC gap at $n_\pm\sim 10^2$ carries
 $2\sigma\approx0.03$; gaps beyond that are real at that sample size).
 
 \subsection{k-mer logistic regression for CPP classification}
+\label{sec:kmerlr}
 With $x\in\{0,1\}^{20^3}$ the 3-mer indicator (20 amino acids, $k{=}3$),
 the baseline is
 \begin{equation}
@@ -962,6 +964,43 @@ honest-negative standard applied to our own discovery claim, and the
 corrected mechanism --- redundancy of the basic-run signal --- is the more
 useful design rule, since it predicts robustness of uptake to single-point
 mutation, a property that matters for manufacturability.
+
+
+\subsection{The CPP classifier is data-limited, not signal-limited}
+\label{sec:cpplc}
+Figure~\ref{fig:cpplc} subsamples the CPP training set
+(10--100\%, 4 seeds) with the fixed homology-guarded test set and refits
+the 3-mer logistic model at each level (Table~\ref{tab:cpplc}); the
+100\% point reproduces the benchmark AUC of \S\ref{sec:cppcls} exactly.
+The curve is still climbing at full data: the final octave
+(75\%$\to$100\%) adds %(cpplc_last)s AUC, a slope of %(cpplc_slope)s per
+doubling. This is the opposite regime from the peptide--HLA additive
+signal, whose learning curve saturates by ${\sim}$50\% of the data
+(\S\ref{sec:learningcurve}): binding affinity has a low-dimensional
+additive core that IEDB already exhausts, while CPP recognition at
+CPPsite scale is limited by data, not by signal. The falsifiable
+consequence: at the current slope, doubling the effective training data
+(CPPsite growth, or rigorously filtered augmentation) should carry the
+3-mer model to AUC $\approx$ %(cpplc_2x)s. A corollary for the literature:
+architecture comparisons performed at CPPsite scale are made in a
+data-limited regime, where regularized linear models enjoy a structural
+advantage (\S\ref{sec:kmerlr}); claims that deep models are superior CPP
+classifiers should be re-examined as datasets grow, and our curve
+quantifies exactly how much headroom remains.
+\begin{figure}[h]\centering
+\includegraphics[width=.55\linewidth]{figures/fig22_cpp_learning_curve.png}
+\caption{CPP 3-mer logistic regression learning curve (log scale, 4
+seeds, error bars $\pm1$ s.d.). Dashed: conservative extrapolation at the
+last-octave slope. Contrast with the saturated pHLA additive curve
+(Fig.~\ref{fig:lc}).}\label{fig:cpplc}
+\end{figure}
+\begin{table}[h]\centering\begin{tabular}{cccc}\hline\hline
+fraction & $n$ train & AUC (mean) & s.d. \\\hline
+%(cpplc_rows)s
+\hline\hline
+\end{tabular}\caption{CPP learning-curve runs (4 seeds each). The 100\%
+row is the benchmark fit.}\label{tab:cpplc}
+\end{table}
 
 \subsection{Uncertainty on the head-to-head}
 \label{sec:h2hci}
@@ -1479,6 +1518,13 @@ in under 60 seconds.
 """
 
 subs = {
+    "cpplc_rows": "\n".join(
+        (str(int(100*r["fraction"])) + "\\% & " + str(r["n_train"]) + " & "
+         + f(r["auc_mean"]) + " & " + f(r["auc_sd"], 4) + " \\\\")
+        for r in cplc["runs"]),
+    "cpplc_last": f(cplc["runs"][-1]["auc_mean"] - cplc["runs"][-2]["auc_mean"], 3),
+    "cpplc_slope": f((cplc["runs"][-1]["auc_mean"] - cplc["runs"][-2]["auc_mean"]) / 0.4150, 3),
+    "cpplc_2x": f(cplc["runs"][-1]["auc_mean"] + (cplc["runs"][-1]["auc_mean"] - cplc["runs"][-2]["auc_mean"]) / 0.4150, 3),
     "cnn_mean_named": f(sum(c["p_cpp"] for c in novel["named_candidates"]) / len(novel["named_candidates"])),
     "lr_mean_named": f(sum(r["p0"] for r in scan["candidates"]) / len(scan["candidates"]), 3),
     "corrob_names": ", ".join(r["name"] for r in scan["candidates"] if r["p0"] >= 0.7 and next(c for c in novel["named_candidates"] if c["name"] == r["name"])["p_cpp"] >= 0.99),
