@@ -1,0 +1,25 @@
+{
+ "n_candidates": 18,
+ "mean_hydropathy_vs_peptides_KD": {
+  "max_abs_diff": 0.00035294117647044487,
+  "pearson": 0.9999999503284814,
+  "verdict": "identical scale, must match to rounding"
+ },
+ "net_charge_vs_modlamp_pka": {
+  "max_abs_diff": 0.07200000000000006,
+  "mean_signed_diff": -0.012277777777777436,
+  "pearson": 0.9999424445386067,
+  "spearman": 0.9979079474993375,
+  "verdict": "integer sidechain count vs pKa-partials at pH 7: small systematic offset expected (His ~0.1, termini), rank must agree"
+ },
+ "net_charge_vs_peptides_EMBOSS": {
+  "max_abs_diff": 0.25636594295379034,
+  "pearson": 0.9990942801964244,
+  "spearman": 0.9973869827300812
+ },
+ "hydrophobic_moment_vs_peptides_w11": {
+  "pearson": 0.7597481496743484,
+  "spearman": 0.6676986584107326,
+  "verdict": "different windowing convention (full-length vs sliding window <=11); correlation expected, equality not"
+ }
+}
