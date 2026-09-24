@@ -1,0 +1,195 @@
+{
+ "n_cpps": 18,
+ "mean_fraction_per_property": {
+  "Aliphatic": 0.14,
+  "Aromatic": 0.166,
+  "Charged": 0.63,
+  "Negative": 0.0,
+  "Polar": 0.664,
+  "Positive": 0.63,
+  "Small": 0.082,
+  "Tiny": 0.057
+ },
+ "per_cpp": {
+  "9B-CPP-1": {
+   "Tiny": 0.0,
+   "Small": 0.053,
+   "Aliphatic": 0.158,
+   "Aromatic": 0.263,
+   "Polar": 0.579,
+   "Charged": 0.526,
+   "Positive": 0.526,
+   "Negative": 0.0
+  },
+  "9B-CPP-10": {
+   "Tiny": 0.0,
+   "Small": 0.0,
+   "Aliphatic": 0.0,
+   "Aromatic": 0.417,
+   "Polar": 0.667,
+   "Charged": 0.667,
+   "Positive": 0.667,
+   "Negative": 0.0
+  },
+  "9B-CPP-11": {
+   "Tiny": 0.0,
+   "Small": 0.125,
+   "Aliphatic": 0.125,
+   "Aromatic": 0.062,
+   "Polar": 0.812,
+   "Charged": 0.688,
+   "Positive": 0.688,
+   "Negative": 0.0
+  },
+  "9B-CPP-12": {
+   "Tiny": 0.0,
+   "Small": 0.0,
+   "Aliphatic": 0.438,
+   "Aromatic": 0.0,
+   "Polar": 0.562,
+   "Charged": 0.562,
+   "Positive": 0.562,
+   "Negative": 0.0
+  },
+  "9B-CPP-13": {
+   "Tiny": 0.231,
+   "Small": 0.231,
+   "Aliphatic": 0.0,
+   "Aromatic": 0.231,
+   "Polar": 0.538,
+   "Charged": 0.538,
+   "Positive": 0.538,
+   "Negative": 0.0
+  },
+  "9B-CPP-14": {
+   "Tiny": 0.0,
+   "Small": 0.0,
+   "Aliphatic": 0.133,
+   "Aromatic": 0.2,
+   "Polar": 0.733,
+   "Charged": 0.733,
+   "Positive": 0.733,
+   "Negative": 0.0
+  },
+  "9B-CPP-15": {
+   "Tiny": 0.105,
+   "Small": 0.105,
+   "Aliphatic": 0.211,
+   "Aromatic": 0.053,
+   "Polar": 0.684,
+   "Charged": 0.632,
+   "Positive": 0.632,
+   "Negative": 0.0
+  },
+  "9B-CPP-16": {
+   "Tiny": 0.067,
+   "Small": 0.067,
+   "Aliphatic": 0.2,
+   "Aromatic": 0.067,
+   "Polar": 0.733,
+   "Charged": 0.733,
+   "Positive": 0.733,
+   "Negative": 0.0
+  },
+  "9B-CPP-17": {
+   "Tiny": 0.0,
+   "Small": 0.0,
+   "Aliphatic": 0.25,
+   "Aromatic": 0.062,
+   "Polar": 0.688,
+   "Charged": 0.688,
+   "Positive": 0.688,
+   "Negative": 0.0
+  },
+  "9B-CPP-18": {
+   "Tiny": 0.182,
+   "Small": 0.182,
+   "Aliphatic": 0.182,
+   "Aromatic": 0.136,
+   "Polar": 0.636,
+   "Charged": 0.591,
+   "Positive": 0.591,
+   "Negative": 0.0
+  },
+  "9B-CPP-2": {
+   "Tiny": 0.0,
+   "Small": 0.0,
+   "Aliphatic": 0.421,
+   "Aromatic": 0.0,
+   "Polar": 0.579,
+   "Charged": 0.579,
+   "Positive": 0.579,
+   "Negative": 0.0
+  },
+  "9B-CPP-3": {
+   "Tiny": 0.0,
+   "Small": 0.0,
+   "Aliphatic": 0.0,
+   "Aromatic": 0.2,
+   "Polar": 0.8,
+   "Charged": 0.8,
+   "Positive": 0.8,
+   "Negative": 0.0
+  },
+  "9B-CPP-4": {
+   "Tiny": 0.133,
+   "Small": 0.133,
+   "Aliphatic": 0.133,
+   "Aromatic": 0.267,
+   "Polar": 0.533,
+   "Charged": 0.467,
+   "Positive": 0.467,
+   "Negative": 0.0
+  },
+  "9B-CPP-5": {
+   "Tiny": 0.067,
+   "Small": 0.133,
+   "Aliphatic": 0.067,
+   "Aromatic": 0.2,
+   "Polar": 0.667,
+   "Charged": 0.6,
+   "Positive": 0.6,
+   "Negative": 0.0
+  },
+  "9B-CPP-6": {
+   "Tiny": 0.0,
+   "Small": 0.0,
+   "Aliphatic": 0.0,
+   "Aromatic": 0.222,
+   "Polar": 0.778,
+   "Charged": 0.778,
+   "Positive": 0.778,
+   "Negative": 0.0
+  },
+  "9B-CPP-7": {
+   "Tiny": 0.077,
+   "Small": 0.154,
+   "Aliphatic": 0.0,
+   "Aromatic": 0.231,
+   "Polar": 0.692,
+   "Charged": 0.692,
+   "Positive": 0.692,
+   "Negative": 0.0
+  },
+  "9B-CPP-8": {
+   "Tiny": 0.167,
+   "Small": 0.167,
+   "Aliphatic": 0.083,
+   "Aromatic": 0.25,
+   "Polar": 0.5,
+   "Charged": 0.417,
+   "Positive": 0.417,
+   "Negative": 0.0
+  },
+  "9B-CPP-9": {
+   "Tiny": 0.0,
+   "Small": 0.118,
+   "Aliphatic": 0.118,
+   "Aromatic": 0.118,
+   "Polar": 0.765,
+   "Charged": 0.647,
+   "Positive": 0.647,
+   "Negative": 0.0
+  }
+ }
+}
