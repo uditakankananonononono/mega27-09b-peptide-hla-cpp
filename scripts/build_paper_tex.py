@@ -163,6 +163,22 @@ Reynisson et al.\ leader numbers we quote (median PPV 0.8291 EL; FRANK
 head-to-head protocol --- identical peptides, alleles, labels, one scored
 set --- follows the MHCflurry 2.0 paper's own comparison style, tightened
 to a binder-enriched subsample for CPU tractability.
+\begin{table}[h]\centering\small
+\begin{tabular}{llll}\hline\hline
+tool & task & reported metric & evaluation style \\\hline
+NetMHCpan-4.1 & BA + EL & PPV 0.8291 (EL, median) & blind sets, EL \\
+MHCflurry 2.0 & BA + processing & PPV 0.7256 (EL) & held-out, EL \\
+MHCnuggets & BA & per-allele AUCs reported & allele-held-out \\
+MixMHCpred & EL & motif recovery & EL only \\
+TransPHLA & BA & high reported AUCs & random splits$^\dagger$ \\
+CapsNet-MHC & BA & high reported AUCs & random splits$^\dagger$ \\
+\textbf{this study} & BA & AUC 0.9273 (full test) & peptide-disjoint \\\hline\hline
+\multicolumn{4}{l}{$^\dagger$random splits permit peptide-level leakage; scores not comparable across rows.}
+\end{tabular}
+\caption{Benchmark landscape. Cross-row comparisons are invalid where
+evaluation styles differ; our head-to-head (\S\ref{sec:h2h}) is the only
+like-for-like comparison we report.}
+\label{tab:landscape}\end{table}
 \subsection{Cell-penetrating peptide prediction and design}
 CPPsite 2.0 (Agrawal et al.\ 2016) is the reference database
 (1{,}699 experimentally validated entries, natural and non-natural).
@@ -935,14 +951,34 @@ reference values from full texts (2026-09-24): NetMHCpan-4.1 median PPV
 different task, quoted for context only.
 
 \section{Negative results and limits}
-(1) The GNN trails the additive baseline even with 30 epochs.
-(2) The CNN loses to 3-mer logistic regression on CPP classification at
-$n{\sim}600$ positives.
-(3) pAUC0.1 $\approx0.52$ shows top-of-ranking enrichment is much harder
-than global ranking.
-(4) No wet-lab validation: generated CPPs are in-silico candidates only.
-(5) Inequality-censored assays are used at face value.
-(6) Allele coverage mirrors research interest, not population frequency.
+(1) \textbf{GNN undertraining.} The GNN trails the additive
+baseline even with 30 epochs (0.8480 vs 0.9156 AUC); its validation curve
+was still rising at the compute cap. We cannot distinguish "architecture
+inadequate" from "budget inadequate" and claim neither --- only that at
+2 CPU cores the GNN is not competitive. A GPU run settles it. \\ \\
+(2) \textbf{CPP CNN negative.} The CNN loses to 3-mer logistic regression
+at $n{\sim}600$ positives (0.8956 vs 0.9265). At this sample size the
+regularized linear model's variance advantage dominates; literature claims
+above 0.95 on CPP prediction typically come from unfiltered splits, so
+cross-paper comparison is not meaningful. \\ \\
+(3) \textbf{Top-of-ranking difficulty.} pAUC0.1 ${\approx}0.60$ shows
+extreme-enrichment ranking is much harder than global ranking; for
+vaccine triage, where only the top tens of candidates matter, this gap is
+the operationally relevant number and it is the weaker one. \\ \\
+(4) \textbf{No wet-lab validation.} The 18 named CPP candidates are
+in-silico only; classifier score, novelty and biophysical plausibility do
+not establish uptake. They are published for experimental triage, not as
+validated delivery agents. \\ \\
+(5) \textbf{Censoring.} Inequality assays ($<$, $>$) are used at face
+value; a censoring-aware likelihood would modestly change tail behavior.
+\\ \\
+(6) \textbf{Coverage bias.} Allele coverage mirrors research interest
+(A$^*$02:01 has 11{,}414 pairs; three HLA-C alleles have under 1{,}000
+combined), not population frequency; population-weighted utility would
+reweight the per-allele results. \\ \\
+(7) \textbf{Assay heterogeneity.} Six assay-method families with
+different noise floors are pooled (Table~\ref{tab:methods}); per-method
+modeling is possible in principle but splits the data thin.
 \\ \\
 \textbf{Dual-use statement.} CPP design tools are delivery-enabling
 technology; all candidates here are unvalidated sequences published for
