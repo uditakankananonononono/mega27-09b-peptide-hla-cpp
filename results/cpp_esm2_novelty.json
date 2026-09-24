@@ -1,0 +1,314 @@
+{
+ "rows": [
+  {
+   "name": "9B-CPP-1",
+   "sequence": "LRILRWWRWRWRNRWKRRR",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.8869,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8033,
+    "CPPsite_MPGNLS": 0.6688,
+    "CPPsite_MPG": 0.654,
+    "CPPsite_Pep-1": 0.8002,
+    "CPPsite_TAT47-57_unit": 0.8869,
+    "CPPsite_Penetratin_unit": 0.8656,
+    "CPPsite_TP10_unit": 0.6142
+   },
+   "percentile_vs_decoy_maxcos": 20.7
+  },
+  {
+   "name": "9B-CPP-2",
+   "sequence": "RLRRRLRLRLRLRLRLRRL",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.6272,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.5118,
+    "CPPsite_MPGNLS": 0.3187,
+    "CPPsite_MPG": 0.3083,
+    "CPPsite_Pep-1": 0.3897,
+    "CPPsite_TAT47-57_unit": 0.6272,
+    "CPPsite_Penetratin_unit": 0.4861,
+    "CPPsite_TP10_unit": 0.3389
+   },
+   "percentile_vs_decoy_maxcos": 0.3
+  },
+  {
+   "name": "9B-CPP-3",
+   "sequence": "WRWRKKKRKK",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.9394,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8457,
+    "CPPsite_MPGNLS": 0.7094,
+    "CPPsite_MPG": 0.6991,
+    "CPPsite_Pep-1": 0.8578,
+    "CPPsite_TAT47-57_unit": 0.9394,
+    "CPPsite_Penetratin_unit": 0.9093,
+    "CPPsite_TP10_unit": 0.6567
+   },
+   "percentile_vs_decoy_maxcos": 71.7
+  },
+  {
+   "name": "9B-CPP-4",
+   "sequence": "GLWRWRWRWRKSLKK",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.9185,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.842,
+    "CPPsite_MPGNLS": 0.7286,
+    "CPPsite_MPG": 0.7123,
+    "CPPsite_Pep-1": 0.8412,
+    "CPPsite_TAT47-57_unit": 0.9185,
+    "CPPsite_Penetratin_unit": 0.8922,
+    "CPPsite_TP10_unit": 0.6592
+   },
+   "percentile_vs_decoy_maxcos": 39.0
+  },
+  {
+   "name": "9B-CPP-5",
+   "sequence": "RRINRRWRWKRWKKC",
+   "nearest_archetype": "CPPsite_Penetratin_unit",
+   "max_cos_to_archetype": 0.9139,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8391,
+    "CPPsite_MPGNLS": 0.713,
+    "CPPsite_MPG": 0.6997,
+    "CPPsite_Pep-1": 0.8342,
+    "CPPsite_TAT47-57_unit": 0.9125,
+    "CPPsite_Penetratin_unit": 0.9139,
+    "CPPsite_TP10_unit": 0.6506
+   },
+   "percentile_vs_decoy_maxcos": 34.0
+  },
+  {
+   "name": "9B-CPP-6",
+   "sequence": "WRWRKKRRR",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.9474,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8227,
+    "CPPsite_MPGNLS": 0.6746,
+    "CPPsite_MPG": 0.6595,
+    "CPPsite_Pep-1": 0.8221,
+    "CPPsite_TAT47-57_unit": 0.9474,
+    "CPPsite_Penetratin_unit": 0.8819,
+    "CPPsite_TP10_unit": 0.6064
+   },
+   "percentile_vs_decoy_maxcos": 86.3
+  },
+  {
+   "name": "9B-CPP-7",
+   "sequence": "RGRWRWKKRHRPK",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.9394,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8918,
+    "CPPsite_MPGNLS": 0.7857,
+    "CPPsite_MPG": 0.7782,
+    "CPPsite_Pep-1": 0.8748,
+    "CPPsite_TAT47-57_unit": 0.9394,
+    "CPPsite_Penetratin_unit": 0.9287,
+    "CPPsite_TP10_unit": 0.7338
+   },
+   "percentile_vs_decoy_maxcos": 71.7
+  },
+  {
+   "name": "9B-CPP-8",
+   "sequence": "GLARWRWRWRRQ",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.9122,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8232,
+    "CPPsite_MPGNLS": 0.7085,
+    "CPPsite_MPG": 0.6904,
+    "CPPsite_Pep-1": 0.8015,
+    "CPPsite_TAT47-57_unit": 0.9122,
+    "CPPsite_Penetratin_unit": 0.8497,
+    "CPPsite_TP10_unit": 0.626
+   },
+   "percentile_vs_decoy_maxcos": 33.3
+  },
+  {
+   "name": "9B-CPP-9",
+   "sequence": "RLRRRRRRNRRRNWRWL",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.9078,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8096,
+    "CPPsite_MPGNLS": 0.6445,
+    "CPPsite_MPG": 0.6274,
+    "CPPsite_Pep-1": 0.744,
+    "CPPsite_TAT47-57_unit": 0.9078,
+    "CPPsite_Penetratin_unit": 0.84,
+    "CPPsite_TP10_unit": 0.5907
+   },
+   "percentile_vs_decoy_maxcos": 32.0
+  },
+  {
+   "name": "9B-CPP-10",
+   "sequence": "WRWKWKKRWRKH",
+   "nearest_archetype": "CPPsite_Penetratin_unit",
+   "max_cos_to_archetype": 0.8931,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8082,
+    "CPPsite_MPGNLS": 0.7063,
+    "CPPsite_MPG": 0.7001,
+    "CPPsite_Pep-1": 0.8769,
+    "CPPsite_TAT47-57_unit": 0.8793,
+    "CPPsite_Penetratin_unit": 0.8931,
+    "CPPsite_TP10_unit": 0.6573
+   },
+   "percentile_vs_decoy_maxcos": 22.3
+  },
+  {
+   "name": "9B-CPP-11",
+   "sequence": "RLFRRRRLRRRRRRNN",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.891,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8299,
+    "CPPsite_MPGNLS": 0.6587,
+    "CPPsite_MPG": 0.6439,
+    "CPPsite_Pep-1": 0.7103,
+    "CPPsite_TAT47-57_unit": 0.891,
+    "CPPsite_Penetratin_unit": 0.8203,
+    "CPPsite_TP10_unit": 0.6196
+   },
+   "percentile_vs_decoy_maxcos": 22.3
+  },
+  {
+   "name": "9B-CPP-12",
+   "sequence": "RLRLRLRLRLRIRIRR",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.7254,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.6527,
+    "CPPsite_MPGNLS": 0.465,
+    "CPPsite_MPG": 0.4539,
+    "CPPsite_Pep-1": 0.52,
+    "CPPsite_TAT47-57_unit": 0.7254,
+    "CPPsite_Penetratin_unit": 0.64,
+    "CPPsite_TP10_unit": 0.4721
+   },
+   "percentile_vs_decoy_maxcos": 0.3
+  },
+  {
+   "name": "9B-CPP-13",
+   "sequence": "AWRWRWRCKAKKR",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.9173,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.833,
+    "CPPsite_MPGNLS": 0.7233,
+    "CPPsite_MPG": 0.707,
+    "CPPsite_Pep-1": 0.8236,
+    "CPPsite_TAT47-57_unit": 0.9173,
+    "CPPsite_Penetratin_unit": 0.8728,
+    "CPPsite_TP10_unit": 0.6413
+   },
+   "percentile_vs_decoy_maxcos": 38.0
+  },
+  {
+   "name": "9B-CPP-14",
+   "sequence": "RRRRWRRLWRHLRRR",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.8835,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.7984,
+    "CPPsite_MPGNLS": 0.6275,
+    "CPPsite_MPG": 0.6101,
+    "CPPsite_Pep-1": 0.7249,
+    "CPPsite_TAT47-57_unit": 0.8835,
+    "CPPsite_Penetratin_unit": 0.8052,
+    "CPPsite_TP10_unit": 0.5774
+   },
+   "percentile_vs_decoy_maxcos": 19.7
+  },
+  {
+   "name": "9B-CPP-15",
+   "sequence": "YLLRLRRRLRRRSRARRRR",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.871,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8252,
+    "CPPsite_MPGNLS": 0.6636,
+    "CPPsite_MPG": 0.6469,
+    "CPPsite_Pep-1": 0.6904,
+    "CPPsite_TAT47-57_unit": 0.871,
+    "CPPsite_Penetratin_unit": 0.783,
+    "CPPsite_TP10_unit": 0.6374
+   },
+   "percentile_vs_decoy_maxcos": 15.0
+  },
+  {
+   "name": "9B-CPP-16",
+   "sequence": "RGRLRRHLRRRLRRR",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.8842,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8184,
+    "CPPsite_MPGNLS": 0.6422,
+    "CPPsite_MPG": 0.6291,
+    "CPPsite_Pep-1": 0.6714,
+    "CPPsite_TAT47-57_unit": 0.8842,
+    "CPPsite_Penetratin_unit": 0.7809,
+    "CPPsite_TP10_unit": 0.6207
+   },
+   "percentile_vs_decoy_maxcos": 19.7
+  },
+  {
+   "name": "9B-CPP-17",
+   "sequence": "RLRRRLRLRRFLRRRR",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.8078,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.7394,
+    "CPPsite_MPGNLS": 0.5653,
+    "CPPsite_MPG": 0.5503,
+    "CPPsite_Pep-1": 0.6083,
+    "CPPsite_TAT47-57_unit": 0.8078,
+    "CPPsite_Penetratin_unit": 0.727,
+    "CPPsite_TP10_unit": 0.5464
+   },
+   "percentile_vs_decoy_maxcos": 1.7
+  },
+  {
+   "name": "9B-CPP-18",
+   "sequence": "LGRLWRRLRRRRRHLRRAARSH",
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "max_cos_to_archetype": 0.8949,
+   "all_archetype_cos": {
+    "CPPsite_FAM-pVEC": 0.8704,
+    "CPPsite_MPGNLS": 0.7145,
+    "CPPsite_MPG": 0.697,
+    "CPPsite_Pep-1": 0.7218,
+    "CPPsite_TAT47-57_unit": 0.8949,
+    "CPPsite_Penetratin_unit": 0.8208,
+    "CPPsite_TP10_unit": 0.673
+   },
+   "percentile_vs_decoy_maxcos": 22.3
+  }
+ ],
+ "summary": {
+  "model": "esm2_t6_8M_UR50D",
+  "n_decoys": 300,
+  "archetypes": [
+   "CPPsite_FAM-pVEC",
+   "CPPsite_MPGNLS",
+   "CPPsite_MPG",
+   "CPPsite_Pep-1",
+   "CPPsite_TAT47-57_unit",
+   "CPPsite_Penetratin_unit",
+   "CPPsite_TP10_unit"
+  ],
+  "cpp_max_cos_to_archetype": {
+   "mean": 0.8756,
+   "max": 0.9474
+  },
+  "decoy_background_maxcos": {
+   "median": 0.9265,
+   "p95": 0.9553
+  },
+  "n_cpp_below_decoy_p95": 18
+ }
+}
