@@ -1,0 +1,15 @@
+{
+ "n_test": 16870,
+ "m0_mcfadden_r2": 0.0852,
+ "m1_mcfadden_r2": 0.5008,
+ "ensemble_coef": 1.3411,
+ "ensemble_coef_se": 0.0214,
+ "ensemble_pvalue": 0.0,
+ "ensemble_odds_ratio_per_sd": 3.823,
+ "lr_test_vs_m0": {
+  "chi2": 8562.1,
+  "df": 1,
+  "pvalue": 0.0
+ },
+ "verdict": "ensemble score is independently and decisively predictive with length, assay method and locus controlled"
+}

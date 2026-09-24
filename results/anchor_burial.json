@@ -1,0 +1,76 @@
+{
+ "1DUZ": {
+  "peptide_seq": "LLFGYPVYV",
+  "peptide_chain": "C",
+  "sasa_by_position": [
+   30.69,
+   2.8,
+   2.97,
+   43.42,
+   125.43,
+   87.08,
+   5.38,
+   104.48,
+   1.67
+  ],
+  "p2_sasa": 2.8,
+  "pomega_sasa": 1.67,
+  "p2_burial_rank": "8/9",
+  "pomega_burial_rank": "9/9",
+  "max_exposed_position": 5,
+  "max_exposed_sasa": 125.43,
+  "p2_in_top3_buried": true,
+  "pomega_in_top3_buried": true,
+  "most_exposed_is_central": true
+ },
+ "8RNI": {
+  "peptide_seq": "VVVGAVGVGK",
+  "peptide_chain": "C",
+  "sasa_by_position": [
+   3.54,
+   4.13,
+   26.27,
+   44.26,
+   51.76,
+   107.36,
+   32.61,
+   71.53,
+   15.44,
+   5.51
+  ],
+  "p2_sasa": 4.13,
+  "pomega_sasa": 5.51,
+  "p2_burial_rank": "9/10",
+  "pomega_burial_rank": "8/10",
+  "max_exposed_position": 6,
+  "max_exposed_sasa": 107.36,
+  "p2_in_top3_buried": true,
+  "pomega_in_top3_buried": true,
+  "most_exposed_is_central": true
+ },
+ "7OW3": {
+  "peptide_seq": "VVVGAGGVGK",
+  "peptide_chain": "C",
+  "sasa_by_position": [
+   0.0,
+   0.14,
+   16.34,
+   33.68,
+   55.44,
+   64.06,
+   50.11,
+   42.89,
+   37.98,
+   6.72
+  ],
+  "p2_sasa": 0.14,
+  "pomega_sasa": 6.72,
+  "p2_burial_rank": "9/10",
+  "pomega_burial_rank": "8/10",
+  "max_exposed_position": 6,
+  "max_exposed_sasa": 64.06,
+  "p2_in_top3_buried": true,
+  "pomega_in_top3_buried": true,
+  "most_exposed_is_central": true
+ }
+}

@@ -1,0 +1,299 @@
+{
+ "n_refs": 27,
+ "europe_pmc": {
+  "pdbstruct": {
+   "found": true,
+   "year_match": false,
+   "top_title": "Comparative assessment of crystallographic and cryo-EM models in the Protein Data Bank.",
+   "top_year": "2026",
+   "journal": "FEBS Open Bio"
+  },
+  "iedb": {
+   "found": true,
+   "year_match": false,
+   "top_title": "Revised Adaptive Immune Receptor Data in the Immune Epitope Database",
+   "top_year": "2026",
+   "journal": ""
+  },
+  "netmhcpan41": {
+   "found": true,
+   "year_match": true,
+   "top_title": "NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconv",
+   "top_year": "2020",
+   "journal": "Nucleic Acids Res"
+  },
+  "netmhcpan40": {
+   "found": true,
+   "year_match": true,
+   "top_title": "NetMHCpan-4.0: Improved Peptide-MHC Class I Interaction Predictions Integrating Eluted Ligand and Peptide Bind",
+   "top_year": "2017",
+   "journal": "J Immunol"
+  },
+  "netmhc": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Reliable prediction of T-cell epitopes using neural networks with novel sequence representations.",
+   "top_year": "2003",
+   "journal": "Protein Sci"
+  },
+  "netmhcpan": {
+   "found": true,
+   "year_match": true,
+   "top_title": "NetMHCpan, a method for quantitative predictions of peptide binding to any HLA-A and -B locus protein of known",
+   "top_year": "2007",
+   "journal": "PLoS One"
+  },
+  "smm": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Generating quantitative models describing the sequence specificity of biological processes with the stabilized",
+   "top_year": "2005",
+   "journal": "BMC Bioinformatics"
+  },
+  "mhcflurry": {
+   "found": true,
+   "year_match": true,
+   "top_title": "MHCflurry 2.0: Improved Pan-Allele Prediction of MHC Class I-Presented Peptides by Incorporating Antigen Proce",
+   "top_year": "2020",
+   "journal": "Cell Syst"
+  },
+  "mhcflurry1": {
+   "found": true,
+   "year_match": true,
+   "top_title": "MHCflurry: Open-Source Class I MHC Binding Affinity Prediction.",
+   "top_year": "2018",
+   "journal": "Cell Syst"
+  },
+  "mhcnuggets": {
+   "found": true,
+   "year_match": true,
+   "top_title": "High-Throughput Prediction of MHC Class I and II Neoantigens with MHCnuggets.",
+   "top_year": "2020",
+   "journal": "Cancer Immunol Res"
+  },
+  "mixmhcpred": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Deciphering HLA-I motifs across HLA peptidomes improves neo-antigen predictions and identifies allostery regul",
+   "top_year": "2017",
+   "journal": "PLoS Comput Biol"
+  },
+  "transphla": {
+   "found": false,
+   "year_match": false,
+   "top_title": "",
+   "top_year": null,
+   "journal": ""
+  },
+  "capsnet": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Quantification of Uncertainty in Peptide-MHC Binding Prediction Improves High-Affinity Peptide Selection for T",
+   "top_year": "2019",
+   "journal": "Cell Syst"
+  },
+  "kim2014": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Dataset size and composition impact the reliability of performance benchmarks for peptide-MHC binding predicti",
+   "top_year": "2014",
+   "journal": "BMC Bioinformatics"
+  },
+  "sidney": {
+   "found": true,
+   "year_match": true,
+   "top_title": "HLA class I supertypes: a revised and updated classification.",
+   "top_year": "2008",
+   "journal": "BMC Immunol"
+  },
+  "cppsite": {
+   "found": true,
+   "year_match": true,
+   "top_title": "CPPsite 2.0: a repository of experimentally validated cell-penetrating peptides.",
+   "top_year": "2016",
+   "journal": "Nucleic Acids Res"
+  },
+  "cellppd": {
+   "found": false,
+   "year_match": false,
+   "top_title": "",
+   "top_year": null,
+   "journal": ""
+  },
+  "cpppred": {
+   "found": true,
+   "year_match": true,
+   "top_title": "CPPpred: prediction of cell penetrating peptides.",
+   "top_year": "2013",
+   "journal": "Bioinformatics"
+  },
+  "mlcpp": {
+   "found": false,
+   "year_match": false,
+   "top_title": "",
+   "top_year": null,
+   "journal": ""
+  },
+  "skipcpp": {
+   "found": true,
+   "year_match": true,
+   "top_title": "SkipCPP-Pred: an improved and promising sequence-based predictor for predicting cell-penetrating peptides.",
+   "top_year": "2017",
+   "journal": "BMC Genomics"
+  },
+  "blosum": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Amino acid substitution matrices from protein blocks.",
+   "top_year": "1992",
+   "journal": "Proc Natl Acad Sci U S A"
+  },
+  "eisenberg": {
+   "found": true,
+   "year_match": true,
+   "top_title": "The hydrophobic moment detects periodicity in protein hydrophobicity.",
+   "top_year": "1984",
+   "journal": "Proc Natl Acad Sci U S A"
+  },
+  "chengprusoff": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Relationship between the inhibition constant (K1) and the concentration of inhibitor which causes 50 per cent ",
+   "top_year": "1973",
+   "journal": "Biochem Pharmacol"
+  },
+  "delong": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Comparing the areas under two or more correlated receiver operating characteristic curves: a nonparametric app",
+   "top_year": "1988",
+   "journal": "Biometrics"
+  },
+  "uniprot": {
+   "found": true,
+   "year_match": true,
+   "top_title": "UniProt: the Universal Protein Knowledgebase in 2025.",
+   "top_year": "2025",
+   "journal": "Nucleic Acids Res"
+  },
+  "netctlpan": {
+   "found": true,
+   "year_match": true,
+   "top_title": "An integrative approach to CTL epitope prediction: a combined algorithm integrating MHC class I binding, TAP t",
+   "top_year": "2005",
+   "journal": "Eur J Immunol"
+  },
+  "platt": {
+   "found": false,
+   "year_match": false,
+   "top_title": "",
+   "top_year": null,
+   "journal": ""
+  }
+ },
+ "crossref": {
+  "netmhcpan41": {
+   "found": true,
+   "year_match": true,
+   "top_title": "NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconv",
+   "doi": "10.1093/nar/gkaa379"
+  },
+  "mhcflurry": {
+   "found": true,
+   "year_match": true,
+   "top_title": "MHCflurry 2.0: Improved Pan-Allele Prediction of MHC Class I-Presented Peptides by Incorporating Antigen Proce",
+   "doi": "10.1016/j.cels.2020.09.001"
+  },
+  "cppsite": {
+   "found": true,
+   "year_match": true,
+   "top_title": "CPPsite 2.0: a repository of experimentally validated cell-penetrating peptides",
+   "doi": "10.1093/nar/gkv1266"
+  },
+  "chengprusoff": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Relationship Between Phenol-Induced Cytotoxicity and Experimental Inhibition Rate Constant or a Theoretical Pa",
+   "doi": "10.2174/138955712800493816"
+  },
+  "delong": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Comparing the Areas under Two or More Correlated Receiver Operating Characteristic Curves: A Nonparametric App",
+   "doi": "10.2307/2531595"
+  },
+  "cellppd": {
+   "found": true,
+   "year_match": true,
+   "top_title": "In silico approaches for designing highly effective cell penetrating peptides",
+   "doi": "10.1186/1479-5876-11-74",
+   "relaxed": true
+  },
+  "iedb": {
+   "found": true,
+   "year_match": true,
+   "top_title": "The Immune Epitope Database (IEDB): 2018 update",
+   "doi": "10.1093/nar/gky1006",
+   "relaxed": true
+  },
+  "mlcpp": {
+   "found": true,
+   "year_match": true,
+   "top_title": "Machine-Learning-Based Prediction of Cell-Penetrating Peptides and Their Uptake Efficiency with Improved Accuracy",
+   "doi": "10.1021/acs.jproteome.8b00148",
+   "journal": "Journal of Proteome Research",
+   "year": 2018,
+   "relaxed": true
+  },
+  "pdbstruct": {
+   "found": true,
+   "year_match": true,
+   "top_title": "The Protein Data Bank",
+   "doi": "10.1093/nar/28.1.235",
+   "relaxed": true
+  },
+  "platt": {
+   "found": false,
+   "year_match": false,
+   "note": "1999 MIT Press book chapter not indexed in CrossRef/EuropePMC; existence corroborated by Lin et al. 2007 'A note on Platt's probabilistic outputs for support vector machines', Machine Learning, DOI 10.1007/s10994-007-5018-6",
+   "corroborating_doi": "10.1007/s10994-007-5018-6",
+   "status": "corroborated-not-indexed"
+  },
+  "transphla": {
+   "found": true,
+   "year_match": true,
+   "top_title": "A transformer-based model to predict peptide\u2013HLA class I binding and optimize mutated peptides for vaccine des",
+   "doi": "10.1038/s42256-022-00459-7",
+   "relaxed": true
+  }
+ },
+ "ncbi_eutils": {
+  "iedb": {
+   "pubmed_ids": [
+    "42759225",
+    "42753519",
+    "42729316"
+   ],
+   "found": true
+  },
+  "cppsite": {
+   "pubmed_ids": [
+    "26586798"
+   ],
+   "found": true
+  },
+  "cellppd": {
+   "pubmed_ids": [
+    "23517638"
+   ],
+   "found": true
+  }
+ },
+ "failed": [],
+ "verdict": "all 27 bibliography entries verified via Europe PMC/CrossRef/NCBI E-utilities; platt corroborated-not-indexed (book chapter); one venue error found and fixed (MLCPP 2.0: J Mol Biol 2022, not Briefings Bioinform 2020)",
+ "mlcpp2_correction": {
+  "bibitem_was": "MLCPP 2.0: Briefings in Bioinformatics 21(4), 2020",
+  "verified_as": "MLCPP 2.0: J. Mol. Biol. 434(11):167604, 2022, DOI 10.1016/j.jmb.2022.167604",
+  "action": "bibitem corrected in paper"
+ }
+}
