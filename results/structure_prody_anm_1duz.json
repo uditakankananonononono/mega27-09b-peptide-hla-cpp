@@ -1,0 +1,13 @@
+{
+ "tool": "ProDy 2.4.1 (ANM, 20 modes, CA, cutoff 15 A default)",
+ "structure": "1DUZ chain A (HLA-A*02:01 alpha1-alpha2, resnum 1-181)",
+ "n_ca_atoms": 181,
+ "mean_sqfluct_all": 0.0698,
+ "B_pocket_mean_sqfluct": 0.0279,
+ "B_pocket_n": 10,
+ "F_pocket_mean_sqfluct": 0.0367,
+ "F_pocket_n": 13,
+ "B_pocket_rigidity_ratio": 2.5,
+ "F_pocket_rigidity_ratio": 1.902,
+ "mode1_collectivity": 0.633
+}
