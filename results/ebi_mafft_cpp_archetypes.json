@@ -1,0 +1,37 @@
+[
+ {
+  "label": "CPPsite_FAM-pVEC",
+  "sequence": "LLIILRRRIRKQAHAHSK",
+  "provenance": "single-copy record"
+ },
+ {
+  "label": "CPPsite_MPGNLS",
+  "sequence": "GALFLGFLGAAGSTMGAWSQPKSKRKV",
+  "provenance": "single-copy record"
+ },
+ {
+  "label": "CPPsite_MPG",
+  "sequence": "GALFLGFLGAAGSTMGAWSQPKKKRKV",
+  "provenance": "single-copy record"
+ },
+ {
+  "label": "CPPsite_Pep-1",
+  "sequence": "KETWWETWWTEWSQPKKKRKV",
+  "provenance": "single-copy record"
+ },
+ {
+  "label": "CPPsite_TAT47-57_unit",
+  "sequence": "GRKKRRQRRRP",
+  "provenance": "monomer unit of tandem record cpp_TAT(47-57)"
+ },
+ {
+  "label": "CPPsite_Penetratin_unit",
+  "sequence": "RQIKIWFQNRRMKWKK",
+  "provenance": "monomer unit of tandem record cpp_L-Penetratin"
+ },
+ {
+  "label": "CPPsite_TP10_unit",
+  "sequence": "AGYLLGKINLKALAALAKKIL",
+  "provenance": "monomer unit of tandem record cpp_TP10"
+ }
+]
