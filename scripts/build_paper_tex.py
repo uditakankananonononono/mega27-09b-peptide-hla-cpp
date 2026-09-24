@@ -377,6 +377,10 @@ on sparse ones --- the bias/variance split predicted by Proposition~2.
 The non-additive model overtakes the additive baseline only where per-allele
 data are plentiful, consistent with Proposition 2's variance argument.}
 \end{figure}
+\begin{figure}[h]\centering\includegraphics[width=.6\linewidth]{figures/fig7_training_curves.png}
+\caption{Validation AUC by epoch; the GNN is still improving at epoch 30
+(undertrained at our CPU budget --- reported as a limit, not a verdict).}
+\end{figure}
 \begin{figure}[h]\centering\includegraphics[width=.85\linewidth]{figures/fig1_phla_models.png}
 \caption{Model comparison on the held-out test.}\end{figure}
 \begin{figure}[h]\centering\includegraphics[width=.8\linewidth]{figures/fig4_coverage.png}
@@ -501,6 +505,19 @@ the project repository.
 \hline\hline
 \end{longtable}
 
+\section{Anchor epistasis estimates}
+\begin{longtable}{lcccc}
+\caption{Per-allele P2--P$\Omega$ anchor epistasis: RMS interaction and
+hydrophobic-pair contrast (log$_{10}$ IC50 units), bootstrap 95\% CI.
+Negative HH contrast = favorable hydrophobic coupling.}\\
+\hline\hline allele & RMS & CI95 & HH contrast & $n$ (9-mers) \\\hline
+\endfirsthead
+\hline\hline allele & RMS & CI95 & HH contrast & $n$ \\\hline
+\endhead
+%(epi_rows)s
+\hline\hline
+\end{longtable}
+
 \section{Top generated CPP candidates}
 \begin{longtable}{lcccc}
 \caption{Top 50 generated candidates by classifier score.}\label{tab:candidates}\\
@@ -557,6 +574,12 @@ subs = {
     "n_sampled": f"{designs['n_sampled']:,}", "n_unique": f"{designs['n_unique']:,}",
     "n_passed": f"{designs['n_passed']:,}",
     "pa_rows": pa_rows, "cand_rows": cand_rows,
+    "epi_rows": "\n".join(
+        f"{a.replace('*', '$^*$')} & {f(v['rms_interaction'])} & "
+        f"[{f(v['rms_interaction_ci95'][0]) if v['rms_interaction_ci95'][0] else '--'},"
+        f"{f(v['rms_interaction_ci95'][1]) if v['rms_interaction_ci95'][1] else '--'}] & "
+        f"{v['hh_contrast']:+.4f} & {v['n_9mers']} \\\\"
+        for a, v in sorted(json.load(open("results/anchor_epistasis.json")).items())),
 }
 for k, v in subs.items():
     tex = tex.replace(f"%({k})s", str(v))
