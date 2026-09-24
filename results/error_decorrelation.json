@@ -1,0 +1,16 @@
+{
+ "n_peptides": 6000,
+ "n_pairs": 4768751,
+ "auc_mhcflurry": 0.9163802010211898,
+ "auc_ensemble": 0.9281331736549046,
+ "mfl_misordered_pairs": 398762,
+ "mfl_misordered_frac": 0.08361979897881018,
+ "ens_correct_given_mfl_wrong": 0.5603292189325964,
+ "ens_misordered_pairs": 342715,
+ "mfl_correct_given_ens_wrong": 0.48842624338006796,
+ "spearman_mfl_ens_all": 0.782233414339817,
+ "spearman_mfl_ens_pos": 0.6918247595420525,
+ "spearman_mfl_ens_neg": 0.7330407873649587,
+ "spearman_cnn_pssm_pos": 0.635937052551437,
+ "spearman_cnn_pssm_neg": 0.638778176988713
+}
