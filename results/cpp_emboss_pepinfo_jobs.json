@@ -1,0 +1,74 @@
+{
+ "9B-CPP-1": {
+  "jobid": "emboss_pepinfo-R20260924-210501-0093-30555158-p1m",
+  "sequence": "LRILRWWRWRWRNRWKRRR"
+ },
+ "9B-CPP-10": {
+  "jobid": "emboss_pepinfo-R20260924-210506-0157-2001612-p1m",
+  "sequence": "WRWKWKKRWRKH"
+ },
+ "9B-CPP-11": {
+  "jobid": "emboss_pepinfo-R20260924-210508-0795-2916537-p1m",
+  "sequence": "RLFRRRRLRRRRRRNN"
+ },
+ "9B-CPP-12": {
+  "jobid": "emboss_pepinfo-R20260924-210515-0243-67992384-p1m",
+  "sequence": "RLRLRLRLRLRIRIRR"
+ },
+ "9B-CPP-13": {
+  "jobid": "emboss_pepinfo-R20260924-210518-0370-14151666-p1m",
+  "sequence": "AWRWRWRCKAKKR"
+ },
+ "9B-CPP-14": {
+  "jobid": "emboss_pepinfo-R20260924-210521-0229-26825508-p1m",
+  "sequence": "RRRRWRRLWRHLRRR"
+ },
+ "9B-CPP-15": {
+  "jobid": "emboss_pepinfo-R20260924-210523-0970-56341275-p2m",
+  "sequence": "YLLRLRRRLRRRSRARRRR"
+ },
+ "9B-CPP-16": {
+  "jobid": "emboss_pepinfo-R20260924-210526-0688-21806590-p1m",
+  "sequence": "RGRLRRHLRRRLRRR"
+ },
+ "9B-CPP-17": {
+  "jobid": "emboss_pepinfo-R20260924-210529-0324-47443998-p1m",
+  "sequence": "RLRRRLRLRRFLRRRR"
+ },
+ "9B-CPP-18": {
+  "jobid": "emboss_pepinfo-R20260924-210536-0423-19241679-p1m",
+  "sequence": "LGRLWRRLRRRRRHLRRAARSH"
+ },
+ "9B-CPP-2": {
+  "jobid": "emboss_pepinfo-R20260924-210539-0132-73827158-p1m",
+  "sequence": "RLRRRLRLRLRLRLRLRRL"
+ },
+ "9B-CPP-3": {
+  "jobid": "emboss_pepinfo-R20260924-210542-0243-26149336-p2m",
+  "sequence": "WRWRKKKRKK"
+ },
+ "9B-CPP-4": {
+  "jobid": "emboss_pepinfo-R20260924-210544-0907-31323230-p1m",
+  "sequence": "GLWRWRWRWRKSLKK"
+ },
+ "9B-CPP-5": {
+  "jobid": "emboss_pepinfo-R20260924-210548-0438-80429355-p1m",
+  "sequence": "RRINRRWRWKRWKKC"
+ },
+ "9B-CPP-6": {
+  "jobid": "emboss_pepinfo-R20260924-210554-0709-19627269-p1m",
+  "sequence": "WRWRKKRRR"
+ },
+ "9B-CPP-7": {
+  "jobid": "emboss_pepinfo-R20260924-210558-0536-18137692-p1m",
+  "sequence": "RGRWRWKKRHRPK"
+ },
+ "9B-CPP-8": {
+  "jobid": "emboss_pepinfo-R20260924-210601-0704-47297953-p1m",
+  "sequence": "GLARWRWRWRRQ"
+ },
+ "9B-CPP-9": {
+  "jobid": "emboss_pepinfo-R20260924-210605-0305-29306221-p1m",
+  "sequence": "RLRRRRRRNRRRNWRWL"
+ }
+}
