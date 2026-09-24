@@ -65,16 +65,130 @@
    ]
   },
   "9B-CPP-10": {
-   "status": "WAITING",
-   "rid": "BANHDUDW014"
+   "status": "READY",
+   "rid": "BANHDUDW014",
+   "n_hits": 140,
+   "top_hits": [
+    {
+     "subject_id": "A0A0U1RR11.1",
+     "pct_identity": 58.333,
+     "align_len": 12,
+     "evalue": 0.89,
+     "bit_score": 27.4
+    },
+    {
+     "subject_id": "Q0APD6.1",
+     "pct_identity": 85.714,
+     "align_len": 7,
+     "evalue": 1.3,
+     "bit_score": 26.9
+    },
+    {
+     "subject_id": "Q0APD6.1",
+     "pct_identity": 42.857,
+     "align_len": 7,
+     "evalue": 8722.0,
+     "bit_score": 16.3
+    },
+    {
+     "subject_id": "P54025.2",
+     "pct_identity": 80.0,
+     "align_len": 10,
+     "evalue": 1.8,
+     "bit_score": 26.5
+    },
+    {
+     "subject_id": "P54025.2",
+     "pct_identity": 55.556,
+     "align_len": 9,
+     "evalue": 2008.0,
+     "bit_score": 18.0
+    }
+   ]
   },
   "9B-CPP-11": {
-   "status": "WAITING",
-   "rid": "BANHHZDA014"
+   "status": "READY",
+   "rid": "BANHHZDA014",
+   "n_hits": 574,
+   "top_hits": [
+    {
+     "subject_id": "Q9QU30.1",
+     "pct_identity": 66.667,
+     "align_len": 21,
+     "evalue": 7.77e-05,
+     "bit_score": 39.7
+    },
+    {
+     "subject_id": "Q9QU30.1",
+     "pct_identity": 81.818,
+     "align_len": 11,
+     "evalue": 0.32,
+     "bit_score": 29.5
+    },
+    {
+     "subject_id": "Q9QU30.1",
+     "pct_identity": 81.818,
+     "align_len": 11,
+     "evalue": 0.91,
+     "bit_score": 28.2
+    },
+    {
+     "subject_id": "P0DW27.1",
+     "pct_identity": 90.909,
+     "align_len": 11,
+     "evalue": 0.000443,
+     "bit_score": 37.5
+    },
+    {
+     "subject_id": "P0DW27.1",
+     "pct_identity": 83.333,
+     "align_len": 12,
+     "evalue": 0.32,
+     "bit_score": 29.5
+    }
+   ]
   },
   "9B-CPP-12": {
-   "status": "WAITING",
-   "rid": "BANHM6JK014"
+   "status": "READY",
+   "rid": "BANHM6JK014",
+   "n_hits": 266,
+   "top_hits": [
+    {
+     "subject_id": "Q53KW9.1",
+     "pct_identity": 90.909,
+     "align_len": 11,
+     "evalue": 0.014,
+     "bit_score": 33.3
+    },
+    {
+     "subject_id": "Q53KW9.1",
+     "pct_identity": 83.333,
+     "align_len": 12,
+     "evalue": 0.04,
+     "bit_score": 32.0
+    },
+    {
+     "subject_id": "B0Z4Q9.1",
+     "pct_identity": 100.0,
+     "align_len": 8,
+     "evalue": 0.64,
+     "bit_score": 28.6
+    },
+    {
+     "subject_id": "B0Z4Q9.1",
+     "pct_identity": 100.0,
+     "align_len": 8,
+     "evalue": 0.64,
+     "bit_score": 28.6
+    },
+    {
+     "subject_id": "B0Z4Q9.1",
+     "pct_identity": 100.0,
+     "align_len": 7,
+     "evalue": 7.3,
+     "bit_score": 25.7
+    }
+   ]
   },
   "9B-CPP-13": {
    "status": "WAITING",
@@ -85,8 +199,46 @@
    "rid": "BANHW897016"
   },
   "9B-CPP-15": {
-   "status": "WAITING",
-   "rid": "BANJ0XW2014"
+   "status": "READY",
+   "rid": "BANJ0XW2014",
+   "n_hits": 657,
+   "top_hits": [
+    {
+     "subject_id": "Q8L9T5.2",
+     "pct_identity": 83.333,
+     "align_len": 18,
+     "evalue": 2.92e-06,
+     "bit_score": 44.3
+    },
+    {
+     "subject_id": "Q8L9T5.2",
+     "pct_identity": 80.0,
+     "align_len": 5,
+     "evalue": 84549.0,
+     "bit_score": 14.6
+    },
+    {
+     "subject_id": "P67834.2",
+     "pct_identity": 81.25,
+     "align_len": 16,
+     "evalue": 0.000179,
+     "bit_score": 39.2
+    },
+    {
+     "subject_id": "P67834.2",
+     "pct_identity": 70.588,
+     "align_len": 17,
+     "evalue": 0.12,
+     "bit_score": 31.2
+    },
+    {
+     "subject_id": "P67834.2",
+     "pct_identity": 66.667,
+     "align_len": 18,
+     "evalue": 15.0,
+     "bit_score": 25.2
+    }
+   ]
   },
   "9B-CPP-16": {
    "status": "WAITING",
@@ -357,12 +509,50 @@
    ]
   },
   "9B-CPP-9": {
-   "status": "WAITING",
-   "rid": "BANH9WSJ014"
+   "status": "READY",
+   "rid": "BANH9WSJ014",
+   "n_hits": 503,
+   "top_hits": [
+    {
+     "subject_id": "Q8BK35.1",
+     "pct_identity": 66.667,
+     "align_len": 18,
+     "evalue": 0.000261,
+     "bit_score": 38.4
+    },
+    {
+     "subject_id": "Q8BK35.1",
+     "pct_identity": 40.741,
+     "align_len": 27,
+     "evalue": 98.0,
+     "bit_score": 22.7
+    },
+    {
+     "subject_id": "Q9NZM5.2",
+     "pct_identity": 66.667,
+     "align_len": 18,
+     "evalue": 0.000261,
+     "bit_score": 38.4
+    },
+    {
+     "subject_id": "Q9NZM5.2",
+     "pct_identity": 56.25,
+     "align_len": 16,
+     "evalue": 98.0,
+     "bit_score": 22.7
+    },
+    {
+     "subject_id": "Q9LUZ9.1",
+     "pct_identity": 91.667,
+     "align_len": 12,
+     "evalue": 0.000369,
+     "bit_score": 38.0
+    }
+   ]
   }
  },
  "summary": {
-  "n_ready": 7,
+  "n_ready": 12,
   "n_total": 18
  }
 }
