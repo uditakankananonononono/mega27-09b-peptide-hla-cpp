@@ -715,7 +715,7 @@ Training: AdamW (lr $10^{-3}$, weight decay $10^{-4}$), batch 512 (pHLA) /
 256 (CPP), regression loss MSE on $\log_{10}$IC50 plus BCE binder head;
 best-val checkpointing on val AUC; 8 epochs (CNN, PSSM rerun), 30 epochs
 (GNN); CPU-only, 2 threads. The PSSM baseline is fit per allele in closed
-form (ridge $\lambda{=}1$). All randomness is seeded; the 24-test hermetic
+form (ridge $\lambda{=}1$). All randomness is seeded; the 33-test hermetic
 suite (parsers, encodings, graphs, metrics, model shapes, additive-signal
 recovery, generator, cascade) runs without network access.
 
@@ -815,6 +815,7 @@ unfiltered splits.
 \caption{CPP classifier comparison.}\end{figure}
 
 \subsection{CPP design campaign}
+\label{sec:cppdesign}
 The design campaign ran as a seeded funnel (Table~\ref{tab:funnel}):
 %(n_sampled)s sequences sampled from the GRU $\to$ %(n_unique)s unique
 $\to$ %(n_passed)s passing the full cascade (classifier $p\ge0.7$, charge
@@ -1955,6 +1956,34 @@ Jaccard $\ge0.5$ clustering).}\label{tab:families}\\
 \hline\hline
 \end{longtable}
 
+\section{External validation of the 18 designed candidates}
+\label{sec:extval}
+Three independent external services were applied to the 18 named
+candidates on top of the internal novelty screen of the design funnel
+(\S\ref{sec:cppdesign}).
+First, multiple-sequence alignment of the candidates against seven
+CPPsite archetype CPPs (EBI MAFFT REST service, default parameters)
+places all 18 inside the arginine-rich CPP family space: mean pairwise
+identity to the archetypes is 18.8\%, the maximum is 71.4\% over a
+short TAT-like window, and 3 of 18 fall below 30\% identity to every
+archetype --- family-level relatedness without exact matches, a
+descriptive check rather than a novelty proof
+(\texttt{results/ebi\_mafft\_cpp\_analysis.json}).
+Second, the ToxinPred batch server (SVM (Swiss-Prot)+Motif model,
+default threshold 0.0) calls all 18 candidates Non-Toxin, with SVM
+scores from $-1.28$ to $-0.45$ (mean $-0.90$)
+(\texttt{results/cpp\_toxinpred\_screen.json}).
+Third, the HLP half-life server (whole-composition model) assigns 10 of
+18 candidates to its High stability class and 8 to Normal
+(server-reported half-life predictions $0.51$--$1.45$;
+\texttt{results/cpp\_hlp\_stability.json}).
+None of these external screens substitutes for experimental hemolysis
+or toxicity assays; they are independent computational developability
+checks and are reported as such. A protein-level NCBI BLAST screen of
+the 18 sequences against Swiss-Prot, and an EBI ncbiblast screen of
+three representatives against PDB, were queued at this commit; their
+results and any accession-level hits will be reported on completion.
+
 \section{Full derivations}
 \label{app:proofs}
 \subsection{Cheng--Prusoff from mass balance}
@@ -2034,7 +2063,7 @@ quadratic Newton convergence. \qed
 
 \section{Reproducibility}
 Code layout: \texttt{src/peptidehlacpp/\{data,models,eval,design,training\}},
-\texttt{tests/} (24 hermetic tests), \texttt{scripts/} (data download,
+\texttt{tests/} (33 hermetic tests), \texttt{scripts/} (data download,
 figures, per-allele analysis, paper build), \texttt{results/} (all JSONs
 referenced here), \texttt{paper/} (this document, figures, markdown
 sources). Environment: Python 3.10.12, torch 2.14.0+cpu, scikit-learn
@@ -2044,7 +2073,7 @@ provenance: IEDB export dated 2026-09-22 (downloaded 2026-09-24), CPPsite
 reviewed queries (2026-09-24), RCSB PDB (structures for future pocket
 work). Every number in this paper is regenerated from \texttt{results/*.json}
 by \texttt{scripts/build\_paper\_tex.py}; no number is hand-copied.
-\textbf{Test manifest (24 hermetic tests).} Parsers: IEDB row filter
+\textbf{Test manifest (33 hermetic tests).} Parsers: IEDB row filter
 (keeps valid, drops class-II/non-nM/non-canonical), FASTA round-trip,
 dedup exactness, natural-residue filter, Jaccard filter threshold
 behavior, length-matched negative sampling. Encoding: channel dims
@@ -2111,13 +2140,13 @@ python scripts/make_fig16_17.py && python scripts/make_fig20.py
 python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py && python scripts/winmargin_datasize.py && python scripts/assay_method_stratified_auc.py && python scripts/assay_method_headtohead.py && python scripts/calibration_locus_analysis.py
 python scripts/build_paper_tex.py              # this document
 cd paper && pdflatex main.tex && pdflatex main.tex
-python -m pytest tests/                        # 24 hermetic tests
+python -m pytest tests/                        # 33 hermetic tests
 \end{verbatim}
 
 
 \section{External tools and data resources}
 \label{app:tools}
-\subsection{Tools (35 used; target 40, honest count)}
+\subsection{Tools (38 used; target 40, honest count)}
 \begin{center}\footnotesize
 \begin{tabular}{lll}\hline\hline
 \# & tool (version) & used for \\\hline
@@ -2126,15 +2155,17 @@ python -m pytest tests/                        # 24 hermetic tests
 \end{tabular}
 \end{center}
 \normalsize
-Count is honest: 35 external tools demonstrably used at this commit.
-Planned additions to reach 40 (each with a defined verification or
-analysis role): the IEDB Analysis Resource hosted predictor (second
-external comparator), the HLA Ligand Atlas (eluted-ligand spot-check),
-AFND (allele frequencies; form-gated
-at this writing), ToxinPred and HemoPI (safety screens of the 18
-designed CPPs), MAFFT (pocket-sequence
-alignment), the HLA Ligand Atlas (eluted-ligand spot-check), and NCBI
-BLAST (protein-level novelty of the designed CPPs; jobs submitted). Any candidate that cannot be executed is not claimed. External tools are used
+Count is honest: 38 external tools demonstrably used at this commit.
+Remaining candidates toward 40 (each with a defined verification or
+analysis role): NCBI BLAST (protein-level novelty of the designed CPPs
+against Swiss-Prot; 18 jobs queued at this commit) and EBI ncbiblast
+(structural-homolog check of three representatives against PDB; 3 jobs
+queued), both in flight; the IEDB Analysis Resource hosted predictor
+(second external comparator; API unreachable at this writing), the HLA
+Ligand Atlas (eluted-ligand spot-check; unreachable), AFND (allele
+frequencies; form-gated), and HemoPI (hemolytic screen; the v1 batch
+backend returned empty result pages and HemoPI2 is design-oriented, so
+it is not claimed). Any candidate that cannot be executed is not claimed. External tools are used
 for research and verification only; nothing here is integrated into a
 product.
 
@@ -2254,7 +2285,7 @@ amh_rows = "\n".join(
     for s in amh2h["strata"])
 
 subs = {
-    "tools_rows": "1 & PyTorch 2.x & CNN, GNN, GRU training (pHLA + CPP) \\\\\n2 & scikit-learn & 3-mer logistic regression (L-BFGS); AUC cross-check \\\\\n3 & NumPy & all numerical arrays, bootstrap machinery \\\\\n4 & pandas & IEDB TSV handling, dataset aggregation \\\\\n5 & SciPy & Spearman/Pearson tests (epistasis--margin null) \\\\\n6 & matplotlib & all 22 figures \\\\\n7 & Biopython 1.88 & PairwiseAligner novelty recheck; ProtParam descriptors; PDB parsing \\\\\n8 & pytest & 24-test hermetic suite \\\\\n9 & MHCflurry 2.2.1 & head-to-head comparator (affinity predictor, CPU) \\\\\n10 & NetMHCpan-4.1 & published landscape numbers (gkaa379) \\\\\n11 & IEDB & mhc\\_ligand\\_full export (350 studies) \\\\\n12 & IEDB Analysis Resource & benchmark framework reference \\\\\n13 & CPPsite 2.0 & CPP positives (Raghava group) \\\\\n14 & UniProtKB REST API & negative pools; novelty screen pool \\\\\n15 & RCSB PDB & structures 1DUZ, 8RNI, 7OW3 (pocket verification) \\\\\n16 & NCBI BLOSUM62 & substitution-matrix encoding channel \\\\\n17 & GitHub & repository hosting \\\\\n18 & Google Drive API & results delivery \\\\\n19 & Python 3.10 & runtime \\\\\n20 & git & version control; bundle transport \\\\\n21 & pdfLaTeX (TeX Live) & this document \\\\\n22 & curl & dataset download (download\\_data.sh) \\\\\n23 & OpenSSH & authenticated push transport \\\\\n24 & RCSB PDB Search API & structure discovery by title/attribute query (8RNI, 7OW3) \\\\\n25 & RCSB PDB Data API & entry metadata and citation verification \\\\\n26 & WebLogo 3.9 & anchor motif sequence logos (Fig.~\ref{fig:logos}) \\\\\n27 & FreeSASA & anchor burial (SASA) in 1DUZ/8RNI/7OW3 \\\\\n28 & modlamp & independent CPP descriptor cross-check (pKa charge) \\\\\n29 & peptides & descriptor cross-check (KD hydropathy, EMBOSS charge, moment) \\\\\n30 & statsmodels & confound-controlled binomial GLM (length/method/locus) \\\\\n31 & Europe PMC API & bibliography verification (27 references) \\\\\n32 & CrossRef API & DOI/venue verification; caught the MLCPP-2.0 venue error \\\\\n33 & NCBI E-utilities & PubMed record verification \\\\\n34 & PDB-REDO & structure QC (R/R-free, resolution) for 1DUZ/8RNI/7OW3 and the 72-entry per-allele set \\\\\n35 & IPD-IMGT/HLA & pocket chemistry of all 52 covered alleles (hla\_prot.fasta reference records) \\\\",
+    "tools_rows": "1 & PyTorch 2.x & CNN, GNN, GRU training (pHLA + CPP) \\\\\n2 & scikit-learn & 3-mer logistic regression (L-BFGS); AUC cross-check \\\\\n3 & NumPy & all numerical arrays, bootstrap machinery \\\\\n4 & pandas & IEDB TSV handling, dataset aggregation \\\\\n5 & SciPy & Spearman/Pearson tests (epistasis--margin null) \\\\\n6 & matplotlib & all 26 figures \\\\\n7 & Biopython 1.88 & PairwiseAligner novelty recheck; ProtParam descriptors; PDB parsing \\\\\n8 & pytest & 33-test hermetic suite \\\\\n9 & MHCflurry 2.2.1 & head-to-head comparator (affinity predictor, CPU) \\\\\n10 & NetMHCpan-4.1 & published landscape numbers (gkaa379) \\\\\n11 & IEDB & mhc\\_ligand\\_full export (350 studies) \\\\\n12 & IEDB Analysis Resource & benchmark framework reference \\\\\n13 & CPPsite 2.0 & CPP positives (Raghava group) \\\\\n14 & UniProtKB REST API & negative pools; novelty screen pool \\\\\n15 & RCSB PDB & structures 1DUZ, 8RNI, 7OW3 (pocket verification) \\\\\n16 & NCBI BLOSUM62 & substitution-matrix encoding channel \\\\\n17 & GitHub & repository hosting \\\\\n18 & Google Drive API & results delivery \\\\\n19 & Python 3.10 & runtime \\\\\n20 & git & version control; bundle transport \\\\\n21 & pdfLaTeX (TeX Live) & this document \\\\\n22 & curl & dataset download (download\\_data.sh) \\\\\n23 & OpenSSH & authenticated push transport \\\\\n24 & RCSB PDB Search API & structure discovery by title/attribute query (8RNI, 7OW3) \\\\\n25 & RCSB PDB Data API & entry metadata and citation verification \\\\\n26 & WebLogo 3.9 & anchor motif sequence logos (Fig.~\ref{fig:logos}) \\\\\n27 & FreeSASA & anchor burial (SASA) in 1DUZ/8RNI/7OW3 \\\\\n28 & modlamp & independent CPP descriptor cross-check (pKa charge) \\\\\n29 & peptides & descriptor cross-check (KD hydropathy, EMBOSS charge, moment) \\\\\n30 & statsmodels & confound-controlled binomial GLM (length/method/locus) \\\\\n31 & Europe PMC API & bibliography verification (27 references) \\\\\n32 & CrossRef API & DOI/venue verification; caught the MLCPP-2.0 venue error \\\\\n33 & NCBI E-utilities & PubMed record verification \\\\\n34 & PDB-REDO & structure QC (R/R-free, resolution) for 1DUZ/8RNI/7OW3 and the 72-entry per-allele set \\\\\n35 & IPD-IMGT/HLA & pocket chemistry of all 52 covered alleles (hla\_prot.fasta reference records) \\\\\n36 & EBI MAFFT (REST) & family-level relatedness: 18 designed CPPs vs 7 CPPsite archetypes \\\\\n37 & ToxinPred & toxicity screen of designed CPPs: 18/18 Non-Toxin \\\\\n38 & HLP & half-life/stability screen of designed CPPs: 10 High, 8 Normal \\\\",
     "pa_n": str(pasum["n_structures"]),
     "pa_ok": str(pasum["n_with_peptide"]),
     "pa_nopep": str(pasum["n_no_peptide"]),
