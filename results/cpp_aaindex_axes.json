@@ -1,0 +1,169 @@
+{
+ "n_indices_used": 553,
+ "n_indices_skipped_incomplete": 13,
+ "n_cpps": 18,
+ "n_archetypes": 7,
+ "n_decoys": 300,
+ "top_axes": [
+  {
+   "accession": "FAUJ880104",
+   "description": "STERIMOL length of the side chain (Fauchere et al., 1988)",
+   "cpp_mean": 6.843,
+   "arch_mean": 5.471,
+   "decoy_mean": 4.688,
+   "cohens_d": 5.511
+  },
+  {
+   "accession": "HUTJ700103",
+   "description": "Entropy of formation (Hutchens, 1970)",
+   "cpp_mean": 289.728,
+   "arch_mean": 238.965,
+   "decoy_mean": 212.07,
+   "cohens_d": 5.291
+  },
+  {
+   "accession": "HUTJ700102",
+   "description": "Absolute entropy (Hutchens, 1970)",
+   "cpp_mean": 61.203,
+   "arch_mean": 50.566,
+   "decoy_mean": 45.535,
+   "cohens_d": 5.279
+  },
+  {
+   "accession": "ZIMJ680104",
+   "description": "Isoelectric point (Zimmerman et al., 1968)",
+   "cpp_mean": 8.774,
+   "arch_mean": 7.281,
+   "decoy_mean": 6.18,
+   "cohens_d": 5.268
+  },
+  {
+   "accession": "LEVM760102",
+   "description": "Distance between C-alpha and centroid of side chain (Levitt, 1976)",
+   "cpp_mean": 3.133,
+   "arch_mean": 2.283,
+   "decoy_mean": 1.883,
+   "cohens_d": 5.108
+  },
+  {
+   "accession": "LEVM760105",
+   "description": "Radius of gyration of side chain (Levitt, 1976)",
+   "cpp_mean": 2.075,
+   "arch_mean": 1.657,
+   "decoy_mean": 1.45,
+   "cohens_d": 5.087
+  },
+  {
+   "accession": "CHAM830106",
+   "description": "The number of bonds in the longest chain (Charton-Charton, 1983)",
+   "cpp_mean": 4.062,
+   "arch_mean": 2.699,
+   "decoy_mean": 1.963,
+   "cohens_d": 5.071
+  },
+  {
+   "accession": "RADA880105",
+   "description": "Transfer free energy from vap to oct (Radzicka-Wolfenden, 1988)",
+   "cpp_mean": -11.884,
+   "arch_mean": -6.291,
+   "decoy_mean": -3.318,
+   "cohens_d": -5.026
+  },
+  {
+   "accession": "EISD860102",
+   "description": "Atom-based hydrophobic moment (Eisenberg-McLachlan, 1986)",
+   "cpp_mean": 6.05,
+   "arch_mean": 3.18,
+   "decoy_mean": 1.705,
+   "cohens_d": 5.0
+  },
+  {
+   "accession": "KARS160112",
+   "description": "Second smallest eigenvalue of the Laplacian matrix of the graph (Karkbara-Knisley, 2016)",
+   "cpp_mean": -1.528,
+   "arch_mean": -0.234,
+   "decoy_mean": 0.557,
+   "cohens_d": -4.958
+  },
+  {
+   "accession": "CHAM820101",
+   "description": "Polarizability parameter (Charton-Charton, 1982)",
+   "cpp_mean": 0.265,
+   "arch_mean": 0.188,
+   "decoy_mean": 0.155,
+   "cohens_d": 4.954
+  },
+  {
+   "accession": "FAUJ880103",
+   "description": "Normalized van der Waals volume (Fauchere et al., 1988)",
+   "cpp_mean": 5.529,
+   "arch_mean": 3.993,
+   "decoy_mean": 3.332,
+   "cohens_d": 4.931
+  },
+  {
+   "accession": "OOBM770102",
+   "description": "Short and medium range non-bonded energy per atom (Oobatake-Ooi, 1977)",
+   "cpp_mean": -1.047,
+   "arch_mean": -1.168,
+   "decoy_mean": -1.227,
+   "cohens_d": 4.908
+  },
+  {
+   "accession": "KLEP840101",
+   "description": "Net charge (Klein et al., 1984)",
+   "cpp_mean": 0.609,
+   "arch_mean": 0.309,
+   "decoy_mean": 0.054,
+   "cohens_d": 4.907
+  },
+  {
+   "accession": "KARS160114",
+   "description": "Average weighted eccentricity based on the the atomic number (Karkbara-Knisley, 2016)",
+   "cpp_mean": 25.913,
+   "arch_mean": 19.203,
+   "decoy_mean": 16.24,
+   "cohens_d": 4.878
+  },
+  {
+   "accession": "RADA880107",
+   "description": "Energy transfer from out to in(95%buried) (Radzicka-Wolfenden, 1988)",
+   "cpp_mean": -1.741,
+   "arch_mean": -1.067,
+   "decoy_mean": -0.591,
+   "cohens_d": -4.876
+  },
+  {
+   "accession": "KARS160107",
+   "description": "Diameter (maximum eccentricity) (Karkbara-Knisley, 2016)",
+   "cpp_mean": 10.247,
+   "arch_mean": 7.149,
+   "decoy_mean": 5.728,
+   "cohens_d": 4.873
+  },
+  {
+   "accession": "TSAJ990102",
+   "description": "Volumes not including the crystallographic waters using the ProtOr (Tsai et al., 1999)",
+   "cpp_mean": 182.578,
+   "arch_mean": 151.847,
+   "decoy_mean": 137.935,
+   "cohens_d": 4.859
+  },
+  {
+   "accession": "FAUJ880109",
+   "description": "Number of hydrogen bond donors (Fauchere et al., 1988)",
+   "cpp_mean": 2.432,
+   "arch_mean": 1.289,
+   "decoy_mean": 0.689,
+   "cohens_d": 4.851
+  },
+  {
+   "accession": "CHOC750101",
+   "description": "Average volume of buried residue (Chothia, 1975)",
+   "cpp_mean": 189.586,
+   "arch_mean": 157.351,
+   "decoy_mean": 143.653,
+   "cohens_d": 4.847
+  }
+ ]
+}
