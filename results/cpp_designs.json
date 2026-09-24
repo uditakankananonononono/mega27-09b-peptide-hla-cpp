@@ -1,0 +1,358 @@
+{
+  "n_training_cpp": 623,
+  "n_sampled": 4000,
+  "n_unique": 3967,
+  "n_passed": 2319,
+  "top_candidates": [
+    {
+      "sequence": "RWRLRRRLRRRR",
+      "p_cpp": 0.9982,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.808,
+      "mean_hydropathy": -2.817
+    },
+    {
+      "sequence": "LRILRWWRWRWRNRWKRRR",
+      "p_cpp": 0.9979,
+      "net_charge": 10.0,
+      "hydrophobic_moment": 0.635,
+      "mean_hydropathy": -2.121
+    },
+    {
+      "sequence": "SLWRRRRRRRRRR",
+      "p_cpp": 0.997,
+      "net_charge": 10.0,
+      "hydrophobic_moment": 0.342,
+      "mean_hydropathy": -3.3
+    },
+    {
+      "sequence": "RWRRHRRRRRR",
+      "p_cpp": 0.9969,
+      "net_charge": 9.1,
+      "hydrophobic_moment": 0.459,
+      "mean_hydropathy": -4.055
+    },
+    {
+      "sequence": "RLWRWRWRWRWRW",
+      "p_cpp": 0.9966,
+      "net_charge": 6.0,
+      "hydrophobic_moment": 0.651,
+      "mean_hydropathy": -2.2
+    },
+    {
+      "sequence": "RLRRRLRLRLRLRLRLRRL",
+      "p_cpp": 0.9965,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.811,
+      "mean_hydropathy": -1.005
+    },
+    {
+      "sequence": "PLRRLRRRRRRRRRR",
+      "p_cpp": 0.9964,
+      "net_charge": 12.0,
+      "hydrophobic_moment": 1.025,
+      "mean_hydropathy": -3.2
+    },
+    {
+      "sequence": "WRWRKKKRKK",
+      "p_cpp": 0.9964,
+      "net_charge": 8.0,
+      "hydrophobic_moment": 0.42,
+      "mean_hydropathy": -3.48
+    },
+    {
+      "sequence": "CRWHRRRRRRHC",
+      "p_cpp": 0.9963,
+      "net_charge": 7.2,
+      "hydrophobic_moment": 0.535,
+      "mean_hydropathy": -2.817
+    },
+    {
+      "sequence": "GLWRWRWRWRKSLKK",
+      "p_cpp": 0.9963,
+      "net_charge": 7.0,
+      "hydrophobic_moment": 1.197,
+      "mean_hydropathy": -1.793
+    },
+    {
+      "sequence": "KWWRWRWKKKSK",
+      "p_cpp": 0.9962,
+      "net_charge": 7.0,
+      "hydrophobic_moment": 0.554,
+      "mean_hydropathy": -2.742
+    },
+    {
+      "sequence": "RRINRRWRWKRWKKC",
+      "p_cpp": 0.9962,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.482,
+      "mean_hydropathy": -2.527
+    },
+    {
+      "sequence": "RRRRRRRWKRCK",
+      "p_cpp": 0.9962,
+      "net_charge": 10.0,
+      "hydrophobic_moment": 0.685,
+      "mean_hydropathy": -3.517
+    },
+    {
+      "sequence": "WRRRRRRRRRP",
+      "p_cpp": 0.9962,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.362,
+      "mean_hydropathy": -3.909
+    },
+    {
+      "sequence": "WRRLRRRRRRW",
+      "p_cpp": 0.9961,
+      "net_charge": 8.0,
+      "hydrophobic_moment": 1.147,
+      "mean_hydropathy": -3.091
+    },
+    {
+      "sequence": "WRWRKKRRR",
+      "p_cpp": 0.9961,
+      "net_charge": 7.0,
+      "hydrophobic_moment": 0.669,
+      "mean_hydropathy": -3.567
+    },
+    {
+      "sequence": "YRRRRRRRRR",
+      "p_cpp": 0.9961,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.495,
+      "mean_hydropathy": -4.18
+    },
+    {
+      "sequence": "GRKKRRRRRRRRR",
+      "p_cpp": 0.996,
+      "net_charge": 12.0,
+      "hydrophobic_moment": 0.432,
+      "mean_hydropathy": -4.092
+    },
+    {
+      "sequence": "GRRLRRRLRRRRR",
+      "p_cpp": 0.996,
+      "net_charge": 10.0,
+      "hydrophobic_moment": 1.53,
+      "mean_hydropathy": -2.908
+    },
+    {
+      "sequence": "YRRRRRRRRRC",
+      "p_cpp": 0.9959,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.656,
+      "mean_hydropathy": -3.573
+    },
+    {
+      "sequence": "YRRHRRRHRRRRR",
+      "p_cpp": 0.9958,
+      "net_charge": 10.2,
+      "hydrophobic_moment": 0.52,
+      "mean_hydropathy": -4.054
+    },
+    {
+      "sequence": "RGRWRWKKRHRPK",
+      "p_cpp": 0.9957,
+      "net_charge": 8.1,
+      "hydrophobic_moment": 0.241,
+      "mean_hydropathy": -3.169
+    },
+    {
+      "sequence": "RWRWRWWWRWRW",
+      "p_cpp": 0.9957,
+      "net_charge": 5.0,
+      "hydrophobic_moment": 0.448,
+      "mean_hydropathy": -2.4
+    },
+    {
+      "sequence": "GRRRRRRRRRR",
+      "p_cpp": 0.9956,
+      "net_charge": 10.0,
+      "hydrophobic_moment": 0.308,
+      "mean_hydropathy": -4.127
+    },
+    {
+      "sequence": "LRRRRRRRRRRA",
+      "p_cpp": 0.9956,
+      "net_charge": 10.0,
+      "hydrophobic_moment": 0.775,
+      "mean_hydropathy": -3.283
+    },
+    {
+      "sequence": "RRRHRRRRRRRR",
+      "p_cpp": 0.9956,
+      "net_charge": 11.1,
+      "hydrophobic_moment": 0.4,
+      "mean_hydropathy": -4.392
+    },
+    {
+      "sequence": "RRWRWRWRCWK",
+      "p_cpp": 0.9956,
+      "net_charge": 6.0,
+      "hydrophobic_moment": 0.67,
+      "mean_hydropathy": -2.5
+    },
+    {
+      "sequence": "GLARWRWRWRRQ",
+      "p_cpp": 0.9955,
+      "net_charge": 5.0,
+      "hydrophobic_moment": 0.836,
+      "mean_hydropathy": -1.958
+    },
+    {
+      "sequence": "RLRRRRRRNRRRNWRWL",
+      "p_cpp": 0.9955,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.859,
+      "mean_hydropathy": -2.982
+    },
+    {
+      "sequence": "RRLRRLRRRLRR",
+      "p_cpp": 0.9955,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 2.293,
+      "mean_hydropathy": -2.425
+    },
+    {
+      "sequence": "WRWKWKKRWRKH",
+      "p_cpp": 0.9955,
+      "net_charge": 7.1,
+      "hydrophobic_moment": 0.25,
+      "mean_hydropathy": -2.992
+    },
+    {
+      "sequence": "RLFRRRRLRRRRRRNN",
+      "p_cpp": 0.9954,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.266,
+      "mean_hydropathy": -2.881
+    },
+    {
+      "sequence": "RLRLRLRLRLRIRIRR",
+      "p_cpp": 0.9954,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.493,
+      "mean_hydropathy": -0.781
+    },
+    {
+      "sequence": "AWRWRWRCKAKKR",
+      "p_cpp": 0.9953,
+      "net_charge": 7.0,
+      "hydrophobic_moment": 0.399,
+      "mean_hydropathy": -2.023
+    },
+    {
+      "sequence": "GRRRRRLRRLRRL",
+      "p_cpp": 0.9953,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 1.23,
+      "mean_hydropathy": -2.269
+    },
+    {
+      "sequence": "LRGRRRRRRRRRE",
+      "p_cpp": 0.9953,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.419,
+      "mean_hydropathy": -3.469
+    },
+    {
+      "sequence": "RRRRHRRRRRRR",
+      "p_cpp": 0.9953,
+      "net_charge": 11.1,
+      "hydrophobic_moment": 0.335,
+      "mean_hydropathy": -4.392
+    },
+    {
+      "sequence": "RRRRRRRRRRRR",
+      "p_cpp": 0.9953,
+      "net_charge": 12.0,
+      "hydrophobic_moment": 0.424,
+      "mean_hydropathy": -4.5
+    },
+    {
+      "sequence": "RRRRRRRWKW",
+      "p_cpp": 0.9953,
+      "net_charge": 8.0,
+      "hydrophobic_moment": 0.442,
+      "mean_hydropathy": -3.72
+    },
+    {
+      "sequence": "RRRRRRRYRRRRG",
+      "p_cpp": 0.9953,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.226,
+      "mean_hydropathy": -3.938
+    },
+    {
+      "sequence": "RRRRWRRLWRHLRRR",
+      "p_cpp": 0.9953,
+      "net_charge": 10.1,
+      "hydrophobic_moment": 1.158,
+      "mean_hydropathy": -2.827
+    },
+    {
+      "sequence": "YLLRLRRRLRRRSRARRRR",
+      "p_cpp": 0.9953,
+      "net_charge": 12.0,
+      "hydrophobic_moment": 0.947,
+      "mean_hydropathy": -2.058
+    },
+    {
+      "sequence": "YRRRRRRRRRP",
+      "p_cpp": 0.9953,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.333,
+      "mean_hydropathy": -3.945
+    },
+    {
+      "sequence": "RGRLRRHLRRRLRRR",
+      "p_cpp": 0.9952,
+      "net_charge": 10.1,
+      "hydrophobic_moment": 1.064,
+      "mean_hydropathy": -2.48
+    },
+    {
+      "sequence": "RLRRRLRLRRFLRRRR",
+      "p_cpp": 0.9952,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.332,
+      "mean_hydropathy": -1.969
+    },
+    {
+      "sequence": "RRLRRWRRLRRLR",
+      "p_cpp": 0.9952,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.54,
+      "mean_hydropathy": -2.308
+    },
+    {
+      "sequence": "RRRWRRFRRR",
+      "p_cpp": 0.9952,
+      "net_charge": 8.0,
+      "hydrophobic_moment": 1.334,
+      "mean_hydropathy": -3.41
+    },
+    {
+      "sequence": "YRRRRRRRR",
+      "p_cpp": 0.9952,
+      "net_charge": 8.0,
+      "hydrophobic_moment": 0.444,
+      "mean_hydropathy": -4.144
+    },
+    {
+      "sequence": "LGRLWRRLRRRRRHLRRAARSH",
+      "p_cpp": 0.9951,
+      "net_charge": 11.2,
+      "hydrophobic_moment": 1.511,
+      "mean_hydropathy": -1.782
+    },
+    {
+      "sequence": "PHHHHRRRRRRRRHRRR",
+      "p_cpp": 0.9951,
+      "net_charge": 11.5,
+      "hydrophobic_moment": 0.288,
+      "mean_hydropathy": -3.947
+    }
+  ]
+}
