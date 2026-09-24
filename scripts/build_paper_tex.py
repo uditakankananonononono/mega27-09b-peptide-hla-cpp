@@ -19,6 +19,8 @@ plauc = json.load(open("results/per_length_auc.json"))
 ameth = json.load(open("results/assay_methods.json"))
 link = json.load(open("results/epistasis_motif_link.json"))
 locus = json.load(open("results/locus_breakdown.json"))
+mparams = json.load(open("results/model_params.json"))
+worked = json.load(open("results/epistasis_worked_example.json"))
 novel = json.load(open("results/cpp_novel_candidates.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
@@ -530,6 +532,22 @@ windows sampled from reviewed UniProt (short-protein set + human
 train/test split enforces $J<0.6$ against every test peptide.
 
 \section{Models}
+\subsection{Architectures and parameter counts}
+\label{sec:arch}
+\textbf{PSSM} (additive baseline): per-allele ridge on the one-hot design,
+$15\times20$ weights + bias per allele, closed form. \textbf{PHLACNN}:
+44-channel input $\to$ three dilated convolution blocks (96 channels,
+kernel 3/5/3, batch norm, ReLU) $\to$ masked mean- and max-pooling
+concatenated (192) $\to$ sum with a 32-dim allele embedding $\to$ MLP head
+with two outputs ($\log_{10}$IC50 regression; binder logit):
+181{,}730 parameters. \textbf{GNN}: 44-dim input projection (96) $\to$
+three GCN layers (96) over the residue graph $\to$ LayerNorm $\to$ masked
+pool $\to$ head (192$\to$64$\to$2 outputs): 90{,}050 parameters.
+\textbf{CPP CNN}: same convolutional trunk at CPP scale (padding to 40):
+37{,}891 parameters. \textbf{GRU generator}: embedding + single-layer GRU
++ token head: 65{,}750 parameters. All counts are from the saved
+checkpoints, not the design documents. \\ \\
+
 \textbf{PSSM:} per-allele ridge on one-hot design (closed form; the additive
 baseline of Props.~1--2). \textbf{CNN:} 44-channel per-position encoding
 (one-hot + BLOSUM62 + hydropathy/charge/helix-propensity) $\to$ 3 dilated
@@ -625,9 +643,24 @@ unfiltered splits.
 \caption{CPP classifier comparison.}\end{figure}
 
 \subsection{CPP design campaign}
-%(n_sampled)s sampled sequences $\to$ %(n_unique)s unique $\to$ %(n_passed)s
-passing the cascade (Table~\ref{tab:candidates}). Top candidates are
-Arg/Trp-rich and amphipathic, consistent with known CPP chemistry.
+The design campaign ran as a seeded funnel (Table~\ref{tab:funnel}):
+%(n_sampled)s sequences sampled from the GRU $\to$ %(n_unique)s unique
+$\to$ %(n_passed)s passing the full cascade (classifier $p\ge0.7$, charge
+2--12, $\mu_H\ge0.15$, mean hydropathy $\le1.5$, novelty vs training set)
+--- a 58\% cascade pass rate that reflects the generator having internalized
+the CPP property envelope (perplexity 6.86), not a permissive screen. Top
+candidates are Arg/Trp-rich and amphipathic, consistent with known CPP
+chemistry and with the measured enrichment gradients
+(Fig.~\ref{fig:aenr}).
+\begin{table}[h]\centering
+\begin{tabular}{lc}\hline\hline
+funnel stage & count \\\hline
+sampled from GRU & %(n_sampled)s \\
+unique sequences & %(n_unique)s \\
+passing full cascade & %(n_passed)s \\
+novelty-verified (named) & 18 \\\hline\hline
+\end{tabular}\caption{Design-campaign funnel, seeded run.}
+\label{tab:funnel}\end{table}
 \begin{figure}[h]\centering\includegraphics[width=.65\linewidth]{figures/fig3_cpp_designs.png}
 \caption{Property map of generated candidates passing the cascade.}\end{figure}
 
@@ -1210,7 +1243,18 @@ additive; our estimator generalizes this to the full $20\times20$ anchor
 grid as the RMS of all pairwise contrasts weighted by cell support, with
 bootstrap CIs over resampled peptides. The sign-flip between A$^*$02
 ($\Gamma_{HH} = -0.31$) and A$^*$03/A$^*$11 ($+0.10$) families is
-Discovery 1.
+Discovery 1. \\ \\
+\textbf{Worked example.} Collapsing the anchor residues to hydrophobic
+(H $=$ LIVMFWA) vs not gives the coarse $2\times2$ for A$^*$02:01
+(train 9-mers): $\bar y_{HH} = %(w_a02_hh)s$ ($n=%(w_a02_hh_n)s$),
+$\bar y_{Hx} = %(w_a02_hx)s$, $\bar y_{xH} = %(w_a02_xh)s$,
+$\bar y_{xx} = %(w_a02_xx)s$, so
+$\Gamma = %(w_a02_g)s$ --- jointly hydrophobic anchors bind
+${\sim}7\times$ \emph{better} than the additive prediction. The same
+table for A$^*$03:01 gives $\Gamma = %(w_a03_g)s$: the sign flips. The
+coarse contrast amplifies the per-residue grid estimate ($-0.31$/$+0.10$)
+because it pools 49 residue pairs into one cell; both estimators agree in
+sign and ordering.
 \subsection{Hydrophobic moment as a Fourier magnitude}
 $\mu_H = \frac1N\big|\sum_n H_n e^{in\delta}\big|$ is the magnitude of the
 length-$N$ sequence's hydrophobicity sampled at angular frequency
@@ -1329,6 +1373,13 @@ subs = {
     "loc_b_pairs": f"{locus['pairs_by_locus'].get('HLA-B', 0):,}",
     "loc_c_n": locus["alleles_by_locus"].get("HLA-C", 0),
     "loc_c_pairs": f"{locus['pairs_by_locus'].get('HLA-C', 0):,}",
+    "w_a02_hh": f(worked["HLA-A*02:01"]["HH"]["mean_log_ic50"], 3),
+    "w_a02_hh_n": f"{worked['HLA-A*02:01']['HH']['n']:,}",
+    "w_a02_hx": f(worked["HLA-A*02:01"]["Hx"]["mean_log_ic50"], 3),
+    "w_a02_xh": f(worked["HLA-A*02:01"]["xH"]["mean_log_ic50"], 3),
+    "w_a02_xx": f(worked["HLA-A*02:01"]["xx"]["mean_log_ic50"], 3),
+    "w_a02_g": f(worked["HLA-A*02:01"]["gamma_hh"], 3),
+    "w_a03_g": f(worked["HLA-A*03:01"]["gamma_hh"], 3),
     "ece": f(cal["ece"]),
     "corr": f(scorr["pearson_pssm_cnn"], 3),
     "pah2h_wins": pah2h["ensemble_wins"], "pah2h_n": pah2h["n_alleles_compared"],

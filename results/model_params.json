@@ -1,0 +1,6 @@
+{
+  "cnn_params": 181730,
+  "gnn_params": 90050,
+  "cpp_cnn_params": 37891,
+  "generator_params": 65750
+}
