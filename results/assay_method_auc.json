@@ -1,0 +1,36 @@
+{
+ "n_test": 16870,
+ "strata": [
+  {
+   "method": "purified MHC/competitive/radioactivity",
+   "n": 8314,
+   "binder_frac": 0.4422660572528266,
+   "ensemble_auc": 0.8948180170271999
+  },
+  {
+   "method": "purified MHC/direct/fluorescence",
+   "n": 5149,
+   "binder_frac": 0.15983686152651,
+   "ensemble_auc": 0.963353067636473
+  },
+  {
+   "method": "purified MHC/competitive/fluorescence",
+   "n": 3173,
+   "binder_frac": 0.17270721714465806,
+   "ensemble_auc": 0.9227744177963156
+  },
+  {
+   "method": "cellular MHC/competitive/fluorescence",
+   "n": 171,
+   "binder_frac": 0.005847953216374269,
+   "ensemble_auc": 0.9647058823529412
+  },
+  {
+   "method": "all other",
+   "n": 63,
+   "binder_frac": 0.12698412698412698,
+   "ensemble_auc": 0.6045454545454546
+  }
+ ],
+ "overall_auc": 0.9273024003127237
+}

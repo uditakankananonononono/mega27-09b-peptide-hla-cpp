@@ -32,6 +32,7 @@ pdbv = json.load(open("results/pdb_pocket_verification.json"))
 pdbm = json.load(open("results/pdb_pocket_verification_multi.json"))
 dec = json.load(open("results/error_decorrelation.json"))
 wmd = json.load(open("results/winmargin_datasize.json"))
+amauc = json.load(open("results/assay_method_auc.json"))
 refm = json.load(open("results/iedb_reference_manifest.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
@@ -1225,6 +1226,32 @@ data-poor alleles --- consistent with the decorrelation account of
 Section~\ref{sec:decorrelation}, under which the ensemble adds an
 independent estimator rather than a bigger memory.
 
+\subsection{Performance by assay method}
+\label{sec:assaystrata}
+The aggregate AUC also averages over assay chemistry. Attaching each test
+(peptide, allele) pair's dominant IEDB assay method (split replication
+verified against the saved score arrays before the join) and recomputing
+the ensemble AUC within strata:
+\begin{center}\footnotesize
+\begin{tabular}{lrrrl}\hline\hline
+assay method & $n$ & binder frac & AUC & \\\hline
+%(amauc_rows)s
+\hline\hline
+\end{tabular}
+\end{center}
+\normalsize
+Performance spans %(amauc_min)s--%(amauc_max)s across the three large
+strata. The radioactivity-competition stratum is both the largest and the
+hardest (%(amauc_radio)s), plausibly because its 44\% binder prevalence
+puts far more mid-affinity peptides into the ranking problem; the
+direct-fluorescence stratum, dominated by clear binders and clear
+non-binders, reaches %(amauc_fluo)s. The two small strata are reported
+for completeness and carry no statistical weight ($n = 171$ and $n = 63$;
+the latter's 0.60 reflects a handful of peptides, not a modeling
+failure mode we can localize). Prevalence and allele composition differ
+across strata, so the numbers are a description of where the aggregate
+comes from, not a like-for-like assay comparison.
+
 \subsection{Learning curve: how much data does the additive model need?}
 \label{sec:learningcurve}
 Figure~\ref{fig:lc} subsamples the training set (5--100\%, 3 seeds) and
@@ -1812,7 +1839,7 @@ python scripts/cpp_learning_curve.py           # CPP learning curve
 python scripts/epistasis_winmargin_link.py     # margin null
 python scripts/make_figures.py && python scripts/make_fig5.py
 python scripts/make_fig16_17.py && python scripts/make_fig20.py
-python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py && python scripts/winmargin_datasize.py
+python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py && python scripts/winmargin_datasize.py && python scripts/assay_method_stratified_auc.py
 python scripts/build_paper_tex.py              # this document
 cd paper && pdflatex main.tex && pdflatex main.tex
 python -m pytest tests/                        # 24 hermetic tests
@@ -1903,6 +1930,15 @@ pdbm_idrows = "\n".join(
     f"{_ident('8RNI', pos, pocket)} & {_ident('7OW3', pos, pocket)} \\\\"
     for pos, pocket in DIFF_POS)
 
+def _short(m):
+    return (m.replace("purified MHC/", "purif./").replace("cellular MHC/", "cell./")
+             .replace("competitive", "comp.").replace("radioactivity", "radio")
+             .replace("fluorescence", "fluor.").replace("direct", "dir."))
+amauc_rows = "\n".join(
+    f"{_short(s['method'])} & {s['n']:,} & {s['binder_frac']:.3f} & {f(s['ensemble_auc'])} \\\\" 
+    for s in amauc["strata"])
+_large = [s for s in amauc["strata"] if s["n"] > 1000]
+
 subs = {
     "tools_rows": "1 & PyTorch 2.x & CNN, GNN, GRU training (pHLA + CPP) \\\\\n2 & scikit-learn & 3-mer logistic regression (L-BFGS); AUC cross-check \\\\\n3 & NumPy & all numerical arrays, bootstrap machinery \\\\\n4 & pandas & IEDB TSV handling, dataset aggregation \\\\\n5 & SciPy & Spearman/Pearson tests (epistasis--margin null) \\\\\n6 & matplotlib & all 22 figures \\\\\n7 & Biopython 1.88 & PairwiseAligner novelty recheck; ProtParam descriptors; PDB parsing \\\\\n8 & pytest & 24-test hermetic suite \\\\\n9 & MHCflurry 2.2.1 & head-to-head comparator (affinity predictor, CPU) \\\\\n10 & NetMHCpan-4.1 & published landscape numbers (gkaa379) \\\\\n11 & IEDB & mhc\\_ligand\\_full export (350 studies) \\\\\n12 & IEDB Analysis Resource & benchmark framework reference \\\\\n13 & CPPsite 2.0 & CPP positives (Raghava group) \\\\\n14 & UniProtKB REST API & negative pools; novelty screen pool \\\\\n15 & RCSB PDB & structures 1DUZ, 8RNI, 7OW3 (pocket verification) \\\\\n16 & NCBI BLOSUM62 & substitution-matrix encoding channel \\\\\n17 & GitHub & repository hosting \\\\\n18 & Google Drive API & results delivery \\\\\n19 & Python 3.10 & runtime \\\\\n20 & git & version control; bundle transport \\\\\n21 & pdfLaTeX (TeX Live) & this document \\\\\n22 & curl & dataset download (download\\_data.sh) \\\\\n23 & OpenSSH & authenticated push transport \\\\\n24 & RCSB PDB Search API & structure discovery by title/attribute query (8RNI, 7OW3) \\\\\n25 & RCSB PDB Data API & entry metadata and citation verification \\\\",
     "xver_aucdiff": f"{xver['auc_max_abs_diff']:.1e}",
@@ -1932,6 +1968,11 @@ subs = {
     "wmd_topw": wmd["wins_top_half"],
     "wmd_botw": wmd["wins_bottom_half"],
     "wmd_half": wmd["half"],
+    "amauc_rows": amauc_rows,
+    "amauc_min": f(min(s["ensemble_auc"] for s in _large)),
+    "amauc_max": f(max(s["ensemble_auc"] for s in _large)),
+    "amauc_radio": f(amauc["strata"][0]["ensemble_auc"]),
+    "amauc_fluo": f(amauc["strata"][1]["ensemble_auc"]),
     "pdb_bN": 8,
     "pdbm_rows": pdbm_rows,
     "pdbm_idrows": pdbm_idrows,
