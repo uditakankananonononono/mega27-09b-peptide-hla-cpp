@@ -31,6 +31,7 @@ xver = json.load(open("results/external_verification.json"))
 pdbv = json.load(open("results/pdb_pocket_verification.json"))
 pdbm = json.load(open("results/pdb_pocket_verification_multi.json"))
 dec = json.load(open("results/error_decorrelation.json"))
+wmd = json.load(open("results/winmargin_datasize.json"))
 refm = json.load(open("results/iedb_reference_manifest.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
@@ -1209,6 +1210,21 @@ class (CNN vs PSSM: %(dec_rho_cp_pos)s binders, %(dec_rho_cp_neg)s
 non-binders), consistent with the z-scored average harvesting genuinely
 different rankings rather than duplicated signal.
 
+\subsection{The win is not carried by data-rich alleles}
+\label{sec:datasize}
+A benchmark win that concentrates in the alleles with the most training
+data would be a memorization result, not a modeling result. Joining the
+per-allele head-to-head margins with per-allele train sizes
+(%(wmd_n)s alleles), the margin does not increase with data: Spearman
+%(wmd_rho)s between $\Delta$AUC and $\log_{10} n_{\mathrm{train}}$
+($p = %(wmd_p)s$, not significant). Splitting the panel at the median
+train size, the data-rich half averages $\Delta$AUC %(wmd_top)s
+(%(wmd_topw)s/%(wmd_half)s wins) and the data-poor half %(wmd_bot)s
+(%(wmd_botw)s/%(wmd_half)s wins). If anything the margin tilts toward
+data-poor alleles --- consistent with the decorrelation account of
+Section~\ref{sec:decorrelation}, under which the ensemble adds an
+independent estimator rather than a bigger memory.
+
 \subsection{Learning curve: how much data does the additive model need?}
 \label{sec:learningcurve}
 Figure~\ref{fig:lc} subsamples the training set (5--100\%, 3 seeds) and
@@ -1796,7 +1812,7 @@ python scripts/cpp_learning_curve.py           # CPP learning curve
 python scripts/epistasis_winmargin_link.py     # margin null
 python scripts/make_figures.py && python scripts/make_fig5.py
 python scripts/make_fig16_17.py && python scripts/make_fig20.py
-python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py
+python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py && python scripts/winmargin_datasize.py
 python scripts/build_paper_tex.py              # this document
 cd paper && pdflatex main.tex && pdflatex main.tex
 python -m pytest tests/                        # 24 hermetic tests
@@ -1908,6 +1924,14 @@ subs = {
     "dec_rho_cp_pos": f(dec['spearman_cnn_pssm_pos'], 3),
     "dec_rho_cp_neg": f(dec['spearman_cnn_pssm_neg'], 3),
     "ewlref": "\\ref{sec:marginnull}",
+    "wmd_n": wmd["n_alleles"],
+    "wmd_rho": f(wmd["spearman_delta_vs_log_ntrain"], 3),
+    "wmd_p": f(wmd["spearman_delta_vs_log_ntrain_p"], 3),
+    "wmd_top": f"+{wmd['mean_delta_top_half_train']:.4f}",
+    "wmd_bot": f"+{wmd['mean_delta_bottom_half_train']:.4f}",
+    "wmd_topw": wmd["wins_top_half"],
+    "wmd_botw": wmd["wins_bottom_half"],
+    "wmd_half": wmd["half"],
     "pdb_bN": 8,
     "pdbm_rows": pdbm_rows,
     "pdbm_idrows": pdbm_idrows,
