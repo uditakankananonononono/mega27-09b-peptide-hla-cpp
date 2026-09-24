@@ -25,6 +25,7 @@ novel = json.load(open("results/cpp_novel_candidates.json"))
 kw = json.load(open("results/cpp_kmer_feature_weights.json"))
 scan = json.load(open("results/cpp_alanine_scan.json"))
 cplc = json.load(open("results/cpp_learning_curve.json"))
+ewl = json.load(open("results/epistasis_winmargin_link.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
 
@@ -1002,6 +1003,29 @@ fraction & $n$ train & AUC (mean) & s.d. \\\hline
 row is the benchmark fit.}\label{tab:cpplc}
 \end{table}
 
+
+\subsection{Where the ensemble's advantage does not come from: an
+epistasis--margin null}
+\label{sec:marginnull}
+A natural hypothesis after Discovery~1 is that the ensemble's head-to-head
+advantage concentrates where pairwise anchor interactions are strongest ---
+that the CNN head is harvesting the interaction terms the additive MHCflurry
+motifs cannot represent. The data say no. Across the 22 alleles sharing an
+epistasis estimate and a per-allele head-to-head, the Spearman correlation
+between RMS interaction strength and the ensemble's AUC margin over
+MHCflurry is %(ewl_rho)s ($p=%(ewl_p)s$); the $|\gamma|$ contrast and the
+test-set size are equally uninformative ($\rho=%(ewl_rho_hh)s$,
+$p=%(ewl_p_hh)s$; $\rho=%(ewl_rho_n)s$, $p=%(ewl_p_n)s$). The mean margin is
+%(ewl_mean)s $\pm$ %(ewl_sd)s AUC across alleles --- broad-based, not
+concentrated. Combined with the learning-curve saturation
+(\S\ref{sec:learningcurve}), the correct picture is that the win comes from
+\emph{error decorrelation between two additive-leaning estimators}
+(\S\ref{sec:decorrelation}), not from interaction modeling; the interaction
+terms, where measurable (Discovery~1), are too small at current assay noise
+to be the margin's source. We report the null because it disciplines the
+Discovery-1 interpretation: pocket-chemistry epistasis is real but weak as
+a predictive feature at IEDB scale.
+
 \subsection{Uncertainty on the head-to-head}
 \label{sec:h2hci}
 A benchmark win without an uncertainty statement is a claim, not a result.
@@ -1082,6 +1106,30 @@ which NetMHCpan-4.1 leads; (iii) a GPU budget to settle the GNN question
 (validation AUC was still rising at epoch 30); (iv) wet-lab triage of the
 18 named CPP candidates; (v) censoring-aware likelihoods for inequality
 assays, which we currently use at face value.
+
+
+\subsection{Future work, in order of expected value}
+\label{sec:futurework}
+\textbf{(1) Experimental follow-up of the cross-validated CPP subset.}
+The six candidates corroborated by both classifier families
+(\S\ref{sec:alanine}) are the priority order for any synthesis or
+cell-uptake assay; the alanine-scan prediction gives the negative controls
+for free. \textbf{(2) A direct test of the CPP learning-curve prediction.}
+Augmenting CPPsite-scale training with rigorously homology-filtered
+sequences should move the 3-mer AUC toward %(cpplc_2x)s
+(\S\ref{sec:cpplc}); if it does not, the curve's slope estimate is wrong
+in a specific, measurable direction. \textbf{(3) Interaction-aware pHLA
+models at scale.} The epistasis--margin null (\S\ref{sec:marginnull}) says
+interaction terms will not pay off at current assay noise on affinity
+data; the eluted-ligand task, with its cleaner biology, is the right place
+to retry them, and our estimator transfers unchanged.
+\textbf{(4) GPU-scale GNN training.} The 30-epoch CPU GNN underperforms
+the additive baseline; the honest next step is a fully trained model
+before the architecture is judged. \textbf{(5) Calibration-aware cascade
+thresholds.} The CPP cascade threshold (0.7) is a point estimate;
+threshold selection on calibrated probabilities with an explicit
+precision target is the principled version, and the calibration machinery
+of \S\ref{sec:calibration} already provides it.
 
 \section{Discoveries}
 \subsection{Per-allele anchor epistasis (named, quantified, falsifiable)}
@@ -1486,6 +1534,63 @@ signal (synthetic ground truth), generator sampling validity (canonical
 residues, length bounds), cascade threshold logic. All tests run offline
 in under 60 seconds.
 
+
+\section{Alanine-scan results, all 18 candidates}
+\label{app:scan}
+\begin{table}[h]\centering\footnotesize
+\begin{tabular}{llccccc}\hline\hline
+name & sequence & $p_0$ (LR) & worst run & $\Delta$ log-odds & $p$ mut & $p$ all-RK \\\hline
+%(scan_rows)s
+\hline\hline
+\end{tabular}
+\caption{Worst run: the maximal basic run ($\ge3$) whose alanine
+substitution most reduces the LR log-odds; $p$ mut: LR probability after
+that single substitution; $p$ all-RK: after substituting every Arg/Lys
+with alanine. Candidates 9B-CPP-4, -5, -8, -12 have no basic run of
+length $\ge3$.}
+\end{table}
+
+\section{Top 3-mer logistic-regression features}
+\label{app:kmers}
+\begin{table}[h]\centering\footnotesize
+\begin{tabular}{clc}\hline\hline
+rank & 3-mer & weight \\\hline
+%(kwpos_rows)s
+\hline\hline
+\end{tabular}\hspace{1.5em}
+\begin{tabular}{clc}\hline\hline
+rank & 3-mer & weight \\\hline
+%(kwneg_rows)s
+\hline\hline
+\end{tabular}
+\caption{Left: 25 most positive coefficients. Right: 15 most negative.}
+\end{table}
+
+\section{Regeneration commands}
+\label{app:repro}
+Every number in this paper regenerates from the repository checkout with:
+\begin{verbatim}
+bash scripts/download_data.sh                  # IEDB, CPPsite, UniProt
+python -m peptidehlacpp.training.train_phla    # PSSM + CNN + GNN benchmark
+python -m peptidehlacpp.training.train_cpp     # CPP benchmark
+python -m peptidehlacpp.training.run_cpp_generation
+python scripts/head_to_head_mhcflurry.py       # MHCflurry comparison
+python scripts/h2h_bootstrap_learningcurve.py  # CIs + pHLA learning curve
+python scripts/anchor_epistasis.py             # Discovery 1
+python scripts/cpp_novelty_screen.py           # Discovery 2
+python scripts/paper_extension_analyses.py     # motifs, calibration, ...
+python scripts/cpp_kmer_feature_weights.py     # 3-mer weights
+python scripts/cpp_alanine_scan.py             # falsification scan
+python scripts/cpp_learning_curve.py           # CPP learning curve
+python scripts/epistasis_winmargin_link.py     # margin null
+python scripts/make_figures.py && python scripts/make_fig5.py
+python scripts/make_fig16_17.py && python scripts/make_fig20.py
+python scripts/make_fig21.py && python scripts/make_fig22.py
+python scripts/build_paper_tex.py              # this document
+cd paper && pdflatex main.tex && pdflatex main.tex
+python -m pytest tests/                        # 24 hermetic tests
+\end{verbatim}
+
 \begin{thebibliography}{25}
 \bibitem{iedb} Vita R. et al. The Immune Epitope Database (IEDB): 2018 update. \emph{Nucleic Acids Research} 47(D1), 2019.
 \bibitem{netmhcpan41} Reynisson B., Alvarez B., Paul S., Peters B., Nielsen M. NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. \emph{Nucleic Acids Research} 48(W1), 2020 (gkaa379).
@@ -1518,6 +1623,27 @@ in under 60 seconds.
 """
 
 subs = {
+    "ewl_rho": f(ewl["spearman_rms_vs_margin"]["rho"], 2),
+    "ewl_p": f(ewl["spearman_rms_vs_margin"]["p"], 2),
+    "ewl_rho_hh": f(ewl["spearman_abshh_vs_margin"]["rho"], 2),
+    "ewl_p_hh": f(ewl["spearman_abshh_vs_margin"]["p"], 2),
+    "ewl_rho_n": f(ewl["spearman_ntest_vs_margin"]["rho"], 2),
+    "ewl_p_n": f(ewl["spearman_ntest_vs_margin"]["p"], 2),
+    "ewl_mean": f(ewl["margin_mean"], 4), "ewl_sd": f(ewl["margin_sd"], 4),
+    "scan_rows": "\n".join(
+        r["name"] + " & " + "\\texttt{" + r["sequence"] + "}" + " & "
+        + f(r["p0"], 3) + " & "
+        + (r["worst_run"]["run"] if r["worst_run"] else "--") + " & "
+        + (f(r["worst_run"]["drop"], 3) if r["worst_run"] else "--") + " & "
+        + (f(r["worst_run"]["p_mutant"], 3) if r["worst_run"] else "--") + " & "
+        + f(r["p_allRK"], 3) + " \\\\"
+        for r in scan["candidates"]),
+    "kwpos_rows": "\n".join(
+        str(i + 1) + " & " + "\\texttt{" + d["kmer"] + "}" + " & " + f(d["weight"], 3) + " \\\\"
+        for i, d in enumerate(kw["top_positive"])),
+    "kwneg_rows": "\n".join(
+        str(i + 1) + " & " + "\\texttt{" + d["kmer"] + "}" + " & " + f(d["weight"], 3) + " \\\\"
+        for i, d in enumerate(kw["top_negative"])),
     "cpplc_rows": "\n".join(
         (str(int(100*r["fraction"])) + "\\% & " + str(r["n_train"]) + " & "
          + f(r["auc_mean"]) + " & " + f(r["auc_sd"], 4) + " \\\\")
