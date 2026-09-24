@@ -1,0 +1,364 @@
+{
+ "per_structure": {
+  "3ox8": {
+   "resolution": 2.16,
+   "r_free": 0.2006,
+   "r_work": 0.1635
+  },
+  "3oxr": {
+   "resolution": 1.7,
+   "r_free": 0.1914,
+   "r_work": 0.1576
+  },
+  "4jqv": {
+   "resolution": 1.5,
+   "r_free": 0.1974,
+   "r_work": 0.1723
+  },
+  "4jqx": {
+   "resolution": 1.9,
+   "r_free": 0.2224,
+   "r_work": 0.1926
+  },
+  "4mji": {
+   "resolution": 2.99,
+   "r_free": 0.2827,
+   "r_work": 0.2388
+  },
+  "4pr5": {
+   "resolution": 1.8,
+   "r_free": 0.1997,
+   "r_work": 0.1653
+  },
+  "4pra": {
+   "resolution": 1.85,
+   "r_free": 0.2022,
+   "r_work": 0.1759
+  },
+  "4prn": {
+   "resolution": 1.65,
+   "r_free": 0.2036,
+   "r_work": 0.1692
+  },
+  "4prp": {
+   "resolution": 2.5,
+   "r_free": 0.2289,
+   "r_work": 0.1926
+  },
+  "5t6w": {
+   "resolution": 1.9,
+   "r_free": 0.2771,
+   "r_work": 0.2401
+  },
+  "5t6x": {
+   "resolution": 1.69,
+   "r_free": 0.2521,
+   "r_work": 0.2212
+  },
+  "5t6y": {
+   "resolution": 1.76,
+   "r_free": 0.222,
+   "r_work": 0.1915
+  },
+  "5vud": {
+   "resolution": 2,
+   "r_free": 0.2069,
+   "r_work": 0.1568
+  },
+  "5vue": {
+   "resolution": 1.8,
+   "r_free": 0.1933,
+   "r_work": 0.1589
+  },
+  "5vuf": {
+   "resolution": 1.9,
+   "r_free": 0.2139,
+   "r_work": 0.1692
+  },
+  "5vwh": {
+   "resolution": 1.65,
+   "r_free": 0.1917,
+   "r_work": 0.1586
+  },
+  "5vwj": {
+   "resolution": 2,
+   "r_free": 0.2124,
+   "r_work": 0.1764
+  },
+  "5wjl": {
+   "resolution": 3.15,
+   "r_free": 0.2206,
+   "r_work": 0.1717
+  },
+  "5wjn": {
+   "resolution": 2.85,
+   "r_free": 0.2169,
+   "r_work": 0.1763
+  },
+  "5wkf": {
+   "resolution": 2.95,
+   "r_free": 0.2499,
+   "r_work": 0.1864
+  },
+  "5wkh": {
+   "resolution": 3.2,
+   "r_free": 0.2412,
+   "r_work": 0.1886
+  },
+  "6avf": {
+   "resolution": 2.03,
+   "r_free": 0.269,
+   "r_work": 0.2189
+  },
+  "6mpp": {
+   "error": "[Errno 2] No such file or directory: 'data/raw/pdb_structures/6mpp.redo.json'"
+  },
+  "6mt3": {
+   "resolution": 1.21,
+   "r_free": 0.1824,
+   "r_work": 0.1518
+  },
+  "6pbh": {
+   "resolution": 1.89,
+   "r_free": 0.222,
+   "r_work": 0.1801
+  },
+  "6uj7": {
+   "resolution": 1.9,
+   "r_free": 0.2214,
+   "r_work": 0.175
+  },
+  "6uj8": {
+   "resolution": 2.25,
+   "r_free": 0.2571,
+   "r_work": 0.217
+  },
+  "6uzp": {
+   "resolution": 2.08,
+   "r_free": 0.2408,
+   "r_work": 0.1941
+  },
+  "6uzq": {
+   "resolution": 2.4,
+   "r_free": 0.2435,
+   "r_work": 0.1916
+  },
+  "6uzs": {
+   "resolution": 1.9,
+   "r_free": 0.1917,
+   "r_work": 0.1544
+  },
+  "6vb3": {
+   "resolution": 2,
+   "r_free": 0.2753,
+   "r_work": 0.2462
+  },
+  "6vpz": {
+   "resolution": 2.1,
+   "r_free": 0.2298,
+   "r_work": 0.1848
+  },
+  "6vq2": {
+   "resolution": 2.25,
+   "r_free": 0.2286,
+   "r_work": 0.1726
+  },
+  "6vqd": {
+   "resolution": 1.88,
+   "r_free": 0.2018,
+   "r_work": 0.1704
+  },
+  "6vqe": {
+   "resolution": 1.77,
+   "r_free": 0.1842,
+   "r_work": 0.1602
+  },
+  "7k80": {
+   "resolution": 2.4,
+   "r_free": 0.2545,
+   "r_work": 0.2096
+  },
+  "7k81": {
+   "resolution": 2,
+   "r_free": 0.239,
+   "r_work": 0.1902
+  },
+  "7kgu": {
+   "resolution": 2.4,
+   "r_free": 0.2493,
+   "r_work": 0.198
+  },
+  "7l1c": {
+   "resolution": 1.96,
+   "r_free": 0.2016,
+   "r_work": 0.1698
+  },
+  "7mja": {
+   "resolution": 1.69,
+   "r_free": 0.2121,
+   "r_work": 0.1869
+  },
+  "7nui": {
+   "resolution": 2,
+   "r_free": 0.2951,
+   "r_work": 0.2284
+  },
+  "7ow3": {
+   "resolution": 2.46,
+   "r_free": 0.264,
+   "r_work": 0.2281
+  },
+  "7s7e": {
+   "resolution": 2.04,
+   "r_free": 0.2264,
+   "r_work": 0.177
+  },
+  "7s7f": {
+   "resolution": 1.88,
+   "r_free": 0.2296,
+   "r_work": 0.1804
+  },
+  "7srk": {
+   "resolution": 2.5,
+   "r_free": 0.2691,
+   "r_work": 0.221
+  },
+  "7stf": {
+   "error": "[Errno 2] No such file or directory: 'data/raw/pdb_structures/7stf.redo.json'"
+  },
+  "7t5m": {
+   "resolution": 1.67,
+   "r_free": 0.1956,
+   "r_work": 0.166
+  },
+  "7tlt": {
+   "resolution": 2.3,
+   "r_free": 0.2442,
+   "r_work": 0.2126
+  },
+  "8dvg": {
+   "resolution": 2.59,
+   "r_free": 0.2376,
+   "r_work": 0.1781
+  },
+  "8elg": {
+   "resolution": 1.65,
+   "r_free": 0.2092,
+   "r_work": 0.1702
+  },
+  "8elh": {
+   "resolution": 1.85,
+   "r_free": 0.2114,
+   "r_work": 0.1719
+  },
+  "8fu4": {
+   "resolution": 1.6,
+   "r_free": 0.1801,
+   "r_work": 0.1589
+  },
+  "8rng": {
+   "resolution": 1.45,
+   "r_free": 0.192,
+   "r_work": 0.1607
+  },
+  "8rnh": {
+   "resolution": 1.6,
+   "r_free": 0.2348,
+   "r_work": 0.2095
+  },
+  "8rni": {
+   "resolution": 2.49,
+   "r_free": 0.24,
+   "r_work": 0.1959
+  },
+  "8roo": {
+   "resolution": 1.4,
+   "r_free": 0.1907,
+   "r_work": 0.1565
+  },
+  "8rop": {
+   "resolution": 1.15,
+   "r_free": 0.1609,
+   "r_work": 0.1384
+  },
+  "8sbk": {
+   "resolution": 1.8,
+   "r_free": 0.1856,
+   "r_work": 0.1569
+  },
+  "8sbl": {
+   "resolution": 3,
+   "r_free": 0.2596,
+   "r_work": 0.2295
+  },
+  "8v4z": {
+   "resolution": 2.4,
+   "r_free": 0.2612,
+   "r_work": 0.2211
+  },
+  "8v50": {
+   "resolution": 2.65,
+   "r_free": 0.2524,
+   "r_work": 0.199
+  },
+  "8vcl": {
+   "resolution": 2.4,
+   "r_free": 0.2284,
+   "r_work": 0.1824
+  },
+  "8vjz": {
+   "resolution": 1.9,
+   "r_free": 0.1829,
+   "r_work": 0.1622
+  },
+  "9nmu": {
+   "resolution": 2.1,
+   "r_free": 0.2441,
+   "r_work": 0.203
+  },
+  "9nmv": {
+   "resolution": 1.97,
+   "r_free": 0.2181,
+   "r_work": 0.1854
+  },
+  "9nmy": {
+   "resolution": 2.01,
+   "r_free": 0.24,
+   "r_work": 0.2032
+  },
+  "9pbg": {
+   "resolution": 2,
+   "r_free": 0.2865,
+   "r_work": 0.2317
+  },
+  "9pbh": {
+   "resolution": 2.13,
+   "r_free": 0.2605,
+   "r_work": 0.2153
+  },
+  "9wpd": {
+   "resolution": 2.41,
+   "r_free": 0.2469,
+   "r_work": 0.1932
+  },
+  "9yir": {
+   "resolution": 2.28,
+   "r_free": 0.2979,
+   "r_work": 0.2558
+  },
+  "9ytd": {
+   "error": "[Errno 2] No such file or directory: 'data/raw/pdb_structures/9ytd.redo.json'"
+  },
+  "9z50": {
+   "resolution": 2.9,
+   "r_free": 0.3159,
+   "r_work": 0.2835
+  }
+ },
+ "summary": {
+  "n_qc": 72,
+  "n_ok": 69,
+  "n_qc_fail": 0,
+  "fails": {}
+ }
+}

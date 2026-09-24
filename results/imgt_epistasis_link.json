@@ -1,0 +1,19 @@
+{
+ "groups": {
+  "N": {
+   "n": 10,
+   "mean_hh_contrast": -0.04882
+  },
+  "K": {
+   "n": 6,
+   "mean_hh_contrast": -0.10735
+  },
+  "I": {
+   "n": 7,
+   "mean_hh_contrast": -0.02265
+  }
+ },
+ "kruskal_H": 3.1516,
+ "kruskal_p": 0.20684689490677316,
+ "note": "P2xPOmega hydrophobic-coupling contrast grouped by IMGT/HLA pocket residue 66 (B pocket); sequences from IPD-IMGT/HLA hla_prot.fasta reference records"
+}
