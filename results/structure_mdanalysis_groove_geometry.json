@@ -1,0 +1,895 @@
+{
+ "tool": "MDAnalysis 2.9.0",
+ "rows": [
+  {
+   "pdb": "3ox8",
+   "allele": "HLA-A*02:03",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.73,
+   "width_F_A": 14.21,
+   "pep_span_A": 23.12,
+   "depth_P2_A": 1.84,
+   "depth_Pomega_A": 0.88
+  },
+  {
+   "pdb": "3oxr",
+   "allele": "HLA-A*02:06",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.56,
+   "width_F_A": 13.82,
+   "pep_span_A": 22.98,
+   "depth_P2_A": 1.79,
+   "depth_Pomega_A": 0.92
+  },
+  {
+   "pdb": "4jqv",
+   "allele": "HLA-B*18:01",
+   "locus": "B",
+   "pep_len": 8,
+   "width_B_A": 12.7,
+   "width_F_A": 12.97,
+   "pep_span_A": 21.36,
+   "depth_P2_A": 2.47,
+   "depth_Pomega_A": 1.57
+  },
+  {
+   "pdb": "4jqx",
+   "allele": "HLA-B*44:03",
+   "locus": "B",
+   "pep_len": 12,
+   "width_B_A": 13.06,
+   "width_F_A": 13.89,
+   "pep_span_A": 22.82,
+   "depth_P2_A": 2.46,
+   "depth_Pomega_A": 0.46
+  },
+  {
+   "pdb": "4mji",
+   "allele": "HLA-B*51:01",
+   "locus": "B",
+   "pep_len": 8,
+   "width_B_A": 12.41,
+   "width_F_A": 13.45,
+   "pep_span_A": 22.29,
+   "depth_P2_A": 3.0,
+   "depth_Pomega_A": 0.35
+  },
+  {
+   "pdb": "4pr5",
+   "allele": "HLA-B*35:01",
+   "locus": "B",
+   "pep_len": 11,
+   "width_B_A": 13.56,
+   "width_F_A": 12.76,
+   "pep_span_A": 21.76,
+   "depth_P2_A": 2.81,
+   "depth_Pomega_A": 1.64
+  },
+  {
+   "pdb": "4pra",
+   "allele": "HLA-B*35:01",
+   "locus": "B",
+   "pep_len": 11,
+   "width_B_A": 13.64,
+   "width_F_A": 12.83,
+   "pep_span_A": 21.87,
+   "depth_P2_A": 2.76,
+   "depth_Pomega_A": 1.58
+  },
+  {
+   "pdb": "4prn",
+   "allele": "HLA-B*35:01",
+   "locus": "B",
+   "pep_len": 11,
+   "width_B_A": 13.17,
+   "width_F_A": 12.69,
+   "pep_span_A": 21.86,
+   "depth_P2_A": 2.78,
+   "depth_Pomega_A": 1.53
+  },
+  {
+   "pdb": "4prp",
+   "allele": "HLA-B*35:01",
+   "locus": "B",
+   "pep_len": 11,
+   "width_B_A": 13.4,
+   "width_F_A": 13.12,
+   "pep_span_A": 22.16,
+   "depth_P2_A": 2.54,
+   "depth_Pomega_A": 1.71
+  },
+  {
+   "pdb": "5t6w",
+   "allele": "HLA-B*57:01",
+   "locus": "B",
+   "pep_len": 10,
+   "width_B_A": 12.94,
+   "width_F_A": 13.73,
+   "pep_span_A": 23.3,
+   "depth_P2_A": 2.43,
+   "depth_Pomega_A": 0.64
+  },
+  {
+   "pdb": "5t6x",
+   "allele": "HLA-B*57:01",
+   "locus": "B",
+   "pep_len": 10,
+   "width_B_A": 13.23,
+   "width_F_A": 13.75,
+   "pep_span_A": 21.85,
+   "depth_P2_A": 2.38,
+   "depth_Pomega_A": 0.71
+  },
+  {
+   "pdb": "5t6y",
+   "allele": "HLA-B*57:01",
+   "locus": "B",
+   "pep_len": 12,
+   "width_B_A": 13.29,
+   "width_F_A": 14.01,
+   "pep_span_A": 22.81,
+   "depth_P2_A": 2.26,
+   "depth_Pomega_A": 0.42
+  },
+  {
+   "pdb": "5vud",
+   "allele": "HLA-B*57:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.08,
+   "width_F_A": 13.68,
+   "pep_span_A": 22.54,
+   "depth_P2_A": 3.24,
+   "depth_Pomega_A": 0.74
+  },
+  {
+   "pdb": "5vue",
+   "allele": "HLA-B*57:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.54,
+   "width_F_A": 13.68,
+   "pep_span_A": 22.59,
+   "depth_P2_A": 2.67,
+   "depth_Pomega_A": 0.64
+  },
+  {
+   "pdb": "5vuf",
+   "allele": "HLA-B*57:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.58,
+   "width_F_A": 13.44,
+   "pep_span_A": 22.35,
+   "depth_P2_A": 2.74,
+   "depth_Pomega_A": 0.63
+  },
+  {
+   "pdb": "5vwh",
+   "allele": "HLA-B*58:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.23,
+   "width_F_A": 13.84,
+   "pep_span_A": 22.68,
+   "depth_P2_A": 3.04,
+   "depth_Pomega_A": 0.7
+  },
+  {
+   "pdb": "5vwj",
+   "allele": "HLA-B*58:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.35,
+   "width_F_A": 13.78,
+   "pep_span_A": 22.48,
+   "depth_P2_A": 2.9,
+   "depth_Pomega_A": 0.8
+  },
+  {
+   "pdb": "5wjl",
+   "allele": "HLA-A*11:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.16,
+   "width_F_A": 13.72,
+   "pep_span_A": 22.64,
+   "depth_P2_A": 2.56,
+   "depth_Pomega_A": 1.15
+  },
+  {
+   "pdb": "5wjn",
+   "allele": "HLA-A*11:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.02,
+   "width_F_A": 13.6,
+   "pep_span_A": 22.89,
+   "depth_P2_A": 2.56,
+   "depth_Pomega_A": 1.14
+  },
+  {
+   "pdb": "5wkf",
+   "allele": "HLA-A*11:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.23,
+   "width_F_A": 13.06,
+   "pep_span_A": 22.43,
+   "depth_P2_A": 2.61,
+   "depth_Pomega_A": 1.25
+  },
+  {
+   "pdb": "5wkh",
+   "allele": "HLA-A*11:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.38,
+   "width_F_A": 13.11,
+   "pep_span_A": 22.88,
+   "depth_P2_A": 2.64,
+   "depth_Pomega_A": 1.02
+  },
+  {
+   "pdb": "6avf",
+   "allele": "HLA-B*07:02",
+   "locus": "B",
+   "pep_len": 13,
+   "width_B_A": 13.31,
+   "width_F_A": 13.17,
+   "pep_span_A": 21.78,
+   "depth_P2_A": 2.92,
+   "depth_Pomega_A": 1.67
+  },
+  {
+   "pdb": "6mpp",
+   "allele": "HLA-A*01:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 12.96,
+   "width_F_A": 14.65,
+   "pep_span_A": 24.48,
+   "depth_P2_A": 3.09,
+   "depth_Pomega_A": -0.09
+  },
+  {
+   "pdb": "6mt3",
+   "allele": "HLA-B*18:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.02,
+   "width_F_A": 13.1,
+   "pep_span_A": 21.62,
+   "depth_P2_A": 2.51,
+   "depth_Pomega_A": 1.52
+  },
+  {
+   "pdb": "6pbh",
+   "allele": "HLA-A*68:01",
+   "locus": "A",
+   "pep_len": 7,
+   "width_B_A": 12.85,
+   "width_F_A": 14.06,
+   "pep_span_A": 22.37,
+   "depth_P2_A": 2.7,
+   "depth_Pomega_A": 1.39
+  },
+  {
+   "pdb": "6uj7",
+   "allele": "HLA-B*07:02",
+   "locus": "B",
+   "pep_len": 10,
+   "width_B_A": 13.02,
+   "width_F_A": 13.21,
+   "pep_span_A": 22.32,
+   "depth_P2_A": 2.82,
+   "depth_Pomega_A": 1.63
+  },
+  {
+   "pdb": "6uj8",
+   "allele": "HLA-B*07:02",
+   "locus": "B",
+   "pep_len": 10,
+   "width_B_A": 13.19,
+   "width_F_A": 13.26,
+   "pep_span_A": 22.35,
+   "depth_P2_A": 2.98,
+   "depth_Pomega_A": 1.64
+  },
+  {
+   "pdb": "6uzp",
+   "allele": "HLA-B*15:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.72,
+   "width_F_A": 12.96,
+   "pep_span_A": 21.72,
+   "depth_P2_A": 2.4,
+   "depth_Pomega_A": 1.84
+  },
+  {
+   "pdb": "6uzq",
+   "allele": "HLA-B*15:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.1,
+   "width_F_A": 12.77,
+   "pep_span_A": 21.52,
+   "depth_P2_A": 2.52,
+   "depth_Pomega_A": 1.6
+  },
+  {
+   "pdb": "6uzs",
+   "allele": "HLA-B*15:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.61,
+   "width_F_A": 12.84,
+   "pep_span_A": 21.77,
+   "depth_P2_A": 2.39,
+   "depth_Pomega_A": 1.56
+  },
+  {
+   "pdb": "6vb3",
+   "allele": "HLA-B*15:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.18,
+   "width_F_A": 12.98,
+   "pep_span_A": 21.72,
+   "depth_P2_A": 2.48,
+   "depth_Pomega_A": 1.66
+  },
+  {
+   "pdb": "6vpz",
+   "allele": "HLA-B*27:05",
+   "locus": "B",
+   "pep_len": 11,
+   "width_B_A": 13.67,
+   "width_F_A": 13.83,
+   "pep_span_A": 22.83,
+   "depth_P2_A": 2.35,
+   "depth_Pomega_A": 1.22
+  },
+  {
+   "pdb": "6vq2",
+   "allele": "HLA-B*27:05",
+   "locus": "B",
+   "pep_len": 10,
+   "width_B_A": 13.82,
+   "width_F_A": 13.73,
+   "pep_span_A": 23.02,
+   "depth_P2_A": 2.32,
+   "depth_Pomega_A": 0.93
+  },
+  {
+   "pdb": "6vqd",
+   "allele": "HLA-B*27:05",
+   "locus": "B",
+   "pep_len": 6,
+   "width_B_A": 13.76,
+   "width_F_A": 13.78,
+   "pep_span_A": 15.42,
+   "depth_P2_A": 2.22,
+   "depth_Pomega_A": 3.6
+  },
+  {
+   "pdb": "6vqe",
+   "allele": "HLA-B*27:05",
+   "locus": "B",
+   "pep_len": 10,
+   "width_B_A": 13.9,
+   "width_F_A": 13.73,
+   "pep_span_A": 22.72,
+   "depth_P2_A": 2.21,
+   "depth_Pomega_A": 1.01
+  },
+  {
+   "pdb": "7k80",
+   "allele": "HLA-A*24:02",
+   "locus": "A",
+   "pep_len": 8,
+   "width_B_A": 12.32,
+   "width_F_A": 14.01,
+   "pep_span_A": 22.02,
+   "depth_P2_A": 3.0,
+   "depth_Pomega_A": 0.69
+  },
+  {
+   "pdb": "7k81",
+   "allele": "HLA-A*24:02",
+   "locus": "A",
+   "pep_len": 8,
+   "width_B_A": 12.5,
+   "width_F_A": 13.88,
+   "pep_span_A": 21.88,
+   "depth_P2_A": 2.84,
+   "depth_Pomega_A": 0.58
+  },
+  {
+   "pdb": "7l1c",
+   "allele": "HLA-A*03:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 13.74,
+   "width_F_A": 13.26,
+   "pep_span_A": 22.47,
+   "depth_P2_A": 2.06,
+   "depth_Pomega_A": 0.8
+  },
+  {
+   "pdb": "7mja",
+   "allele": "HLA-A*24:02",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 17.02,
+   "width_F_A": 14.86,
+   "pep_span_A": 23.33,
+   "depth_P2_A": 6.08,
+   "depth_Pomega_A": 1.01
+  },
+  {
+   "pdb": "7nui",
+   "allele": "HLA-B*08:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.15,
+   "width_F_A": 13.59,
+   "pep_span_A": 21.52,
+   "depth_P2_A": 2.82,
+   "depth_Pomega_A": 1.75
+  },
+  {
+   "pdb": "7ow3",
+   "allele": "HLA-A*11:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 12.59,
+   "width_F_A": 13.53,
+   "pep_span_A": 22.47,
+   "depth_P2_A": 2.66,
+   "depth_Pomega_A": 0.98
+  },
+  {
+   "pdb": "7s7e",
+   "allele": "HLA-B*07:02",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.03,
+   "width_F_A": 13.34,
+   "pep_span_A": 22.18,
+   "depth_P2_A": 3.04,
+   "depth_Pomega_A": 1.67
+  },
+  {
+   "pdb": "7s7f",
+   "allele": "HLA-B*07:02",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.02,
+   "width_F_A": 13.32,
+   "pep_span_A": 22.18,
+   "depth_P2_A": 2.99,
+   "depth_Pomega_A": 1.7
+  },
+  {
+   "pdb": "7stf",
+   "allele": "HLA-A*03:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.47,
+   "width_F_A": 13.64,
+   "pep_span_A": 20.11,
+   "depth_P2_A": 2.52,
+   "depth_Pomega_A": 2.47
+  },
+  {
+   "pdb": "7tlt",
+   "allele": "HLA-A*29:02",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 13.28,
+   "width_F_A": 14.31,
+   "pep_span_A": 23.11,
+   "depth_P2_A": 2.79,
+   "depth_Pomega_A": 0.47
+  },
+  {
+   "pdb": "8dvg",
+   "allele": "HLA-A*03:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.47,
+   "width_F_A": 13.29,
+   "pep_span_A": 22.35,
+   "depth_P2_A": 2.36,
+   "depth_Pomega_A": 0.9
+  },
+  {
+   "pdb": "8elg",
+   "allele": "HLA-B*15:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.33,
+   "width_F_A": 13.0,
+   "pep_span_A": 21.84,
+   "depth_P2_A": 2.37,
+   "depth_Pomega_A": 1.61
+  },
+  {
+   "pdb": "8elh",
+   "allele": "HLA-B*15:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.37,
+   "width_F_A": 12.89,
+   "pep_span_A": 21.89,
+   "depth_P2_A": 2.36,
+   "depth_Pomega_A": 1.59
+  },
+  {
+   "pdb": "8fu4",
+   "allele": "HLA-A*02:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 13.61,
+   "width_F_A": 14.21,
+   "pep_span_A": 21.89,
+   "depth_P2_A": 2.08,
+   "depth_Pomega_A": 1.27
+  },
+  {
+   "pdb": "8rng",
+   "allele": "HLA-B*18:01",
+   "locus": "B",
+   "pep_len": 8,
+   "width_B_A": 12.73,
+   "width_F_A": 13.47,
+   "pep_span_A": 21.53,
+   "depth_P2_A": 2.5,
+   "depth_Pomega_A": 1.67
+  },
+  {
+   "pdb": "8rnh",
+   "allele": "HLA-B*18:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.24,
+   "width_F_A": 12.99,
+   "pep_span_A": 21.85,
+   "depth_P2_A": 2.44,
+   "depth_Pomega_A": 1.57
+  },
+  {
+   "pdb": "8rni",
+   "allele": "HLA-A*03:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.42,
+   "width_F_A": 13.2,
+   "pep_span_A": 22.45,
+   "depth_P2_A": 2.24,
+   "depth_Pomega_A": 0.9
+  },
+  {
+   "pdb": "8roo",
+   "allele": "HLA-B*18:01",
+   "locus": "B",
+   "pep_len": 8,
+   "width_B_A": 12.86,
+   "width_F_A": 13.24,
+   "pep_span_A": 21.28,
+   "depth_P2_A": 2.49,
+   "depth_Pomega_A": 1.74
+  },
+  {
+   "pdb": "8rop",
+   "allele": "HLA-B*18:01",
+   "locus": "B",
+   "pep_len": 8,
+   "width_B_A": 13.13,
+   "width_F_A": 12.89,
+   "pep_span_A": 21.52,
+   "depth_P2_A": 2.42,
+   "depth_Pomega_A": 1.41
+  },
+  {
+   "pdb": "8sbk",
+   "allele": "HLA-A*24:02",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 12.94,
+   "width_F_A": 14.29,
+   "pep_span_A": 22.65,
+   "depth_P2_A": 2.69,
+   "depth_Pomega_A": 0.97
+  },
+  {
+   "pdb": "8sbl",
+   "allele": "HLA-A*24:02",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 12.88,
+   "width_F_A": 14.26,
+   "pep_span_A": 22.34,
+   "depth_P2_A": 2.71,
+   "depth_Pomega_A": 0.85
+  },
+  {
+   "pdb": "8v4z",
+   "allele": "HLA-B*35:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.86,
+   "width_F_A": 12.86,
+   "pep_span_A": 22.08,
+   "depth_P2_A": 2.74,
+   "depth_Pomega_A": 1.23
+  },
+  {
+   "pdb": "8v50",
+   "allele": "HLA-B*35:01",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.82,
+   "width_F_A": 12.76,
+   "pep_span_A": 22.04,
+   "depth_P2_A": 2.57,
+   "depth_Pomega_A": 1.27
+  },
+  {
+   "pdb": "8vcl",
+   "allele": "HLA-A*03:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 13.64,
+   "width_F_A": 13.17,
+   "pep_span_A": 22.53,
+   "depth_P2_A": 2.02,
+   "depth_Pomega_A": 0.91
+  },
+  {
+   "pdb": "8vjz",
+   "allele": "HLA-A*03:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 13.41,
+   "width_F_A": 13.39,
+   "pep_span_A": 22.3,
+   "depth_P2_A": 2.29,
+   "depth_Pomega_A": 0.94
+  },
+  {
+   "pdb": "9nmu",
+   "allele": "HLA-A*02:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 13.71,
+   "width_F_A": 13.95,
+   "pep_span_A": 21.99,
+   "depth_P2_A": 2.0,
+   "depth_Pomega_A": 1.47
+  },
+  {
+   "pdb": "9nmv",
+   "allele": "HLA-A*02:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 13.77,
+   "width_F_A": 14.09,
+   "pep_span_A": 22.21,
+   "depth_P2_A": 2.06,
+   "depth_Pomega_A": 1.48
+  },
+  {
+   "pdb": "9nmy",
+   "allele": "HLA-A*02:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 13.67,
+   "width_F_A": 13.81,
+   "pep_span_A": 22.01,
+   "depth_P2_A": 1.97,
+   "depth_Pomega_A": 1.56
+  },
+  {
+   "pdb": "9pbg",
+   "allele": "HLA-B*27:05",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 14.14,
+   "width_F_A": 14.08,
+   "pep_span_A": 23.08,
+   "depth_P2_A": 2.06,
+   "depth_Pomega_A": 0.66
+  },
+  {
+   "pdb": "9pbh",
+   "allele": "HLA-B*27:05",
+   "locus": "B",
+   "pep_len": 9,
+   "width_B_A": 13.88,
+   "width_F_A": 14.1,
+   "pep_span_A": 22.73,
+   "depth_P2_A": 2.15,
+   "depth_Pomega_A": 1.06
+  },
+  {
+   "pdb": "9wpd",
+   "allele": "HLA-A*11:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 13.26,
+   "width_F_A": 13.15,
+   "pep_span_A": 22.77,
+   "depth_P2_A": 2.44,
+   "depth_Pomega_A": 0.98
+  },
+  {
+   "pdb": "9yir",
+   "allele": "HLA-A*01:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 11.84,
+   "width_F_A": 13.78,
+   "pep_span_A": 22.56,
+   "depth_P2_A": 2.72,
+   "depth_Pomega_A": 1.18
+  },
+  {
+   "pdb": "9ytd",
+   "allele": "HLA-A*02:01",
+   "locus": "A",
+   "pep_len": 9,
+   "width_B_A": 14.05,
+   "width_F_A": 14.01,
+   "pep_span_A": 22.15,
+   "depth_P2_A": 2.02,
+   "depth_Pomega_A": 1.61
+  },
+  {
+   "pdb": "9z50",
+   "allele": "HLA-A*01:01",
+   "locus": "A",
+   "pep_len": 10,
+   "width_B_A": 12.95,
+   "width_F_A": 14.12,
+   "pep_span_A": 22.44,
+   "depth_P2_A": 1.78,
+   "depth_Pomega_A": 1.01
+  }
+ ],
+ "summary": {
+  "n_structures_analyzed": 69,
+  "n_skipped": 3,
+  "skipped": [
+   [
+    "7kgu",
+    "no free 6-15 residue peptide chain"
+   ],
+   [
+    "7srk",
+    "no 200-320 CA heavy-chain candidate"
+   ],
+   [
+    "7t5m",
+    "no free 6-15 residue peptide chain"
+   ]
+  ],
+  "width_B_A": {
+   "n": 69,
+   "mean": 13.34,
+   "sd": 0.62,
+   "min": 11.84,
+   "max": 17.02
+  },
+  "width_F_A": {
+   "n": 69,
+   "mean": 13.54,
+   "sd": 0.5,
+   "min": 12.69,
+   "max": 14.86
+  },
+  "pep_span_A": {
+   "n": 69,
+   "mean": 22.19,
+   "sd": 1.03,
+   "min": 15.42,
+   "max": 24.48
+  },
+  "depth_P2_A": {
+   "n": 69,
+   "mean": 2.56,
+   "sd": 0.55,
+   "min": 1.78,
+   "max": 6.08
+  },
+  "depth_Pomega_A": {
+   "n": 69,
+   "mean": 1.21,
+   "sd": 0.54,
+   "min": -0.09,
+   "max": 3.6
+  },
+  "by_locus": {
+   "A": {
+    "n": 29,
+    "width_B_A": {
+     "n": 29,
+     "mean": 13.36,
+     "sd": 0.86,
+     "min": 11.84,
+     "max": 17.02
+    },
+    "width_F_A": {
+     "n": 29,
+     "mean": 13.81,
+     "sd": 0.48,
+     "min": 13.06,
+     "max": 14.86
+    },
+    "depth_P2_A": {
+     "n": 29,
+     "mean": 2.52,
+     "sd": 0.78,
+     "min": 1.78,
+     "max": 6.08
+    },
+    "depth_Pomega_A": {
+     "n": 29,
+     "mean": 1.06,
+     "sd": 0.44,
+     "min": -0.09,
+     "max": 2.47
+    }
+   },
+   "B": {
+    "n": 40,
+    "width_B_A": {
+     "n": 40,
+     "mean": 13.33,
+     "sd": 0.38,
+     "min": 12.41,
+     "max": 14.14
+    },
+    "width_F_A": {
+     "n": 40,
+     "mean": 13.34,
+     "sd": 0.43,
+     "min": 12.69,
+     "max": 14.1
+    },
+    "depth_P2_A": {
+     "n": 40,
+     "mean": 2.59,
+     "sd": 0.28,
+     "min": 2.06,
+     "max": 3.24
+    },
+    "depth_Pomega_A": {
+     "n": 40,
+     "mean": 1.32,
+     "sd": 0.59,
+     "min": 0.35,
+     "max": 3.6
+    }
+   }
+  },
+  "spearman": {
+   "pep_len_vs_pep_span_A": {
+    "rho": 0.351,
+    "p": 0.003138531229764657
+   },
+   "width_B_A_vs_depth_P2_A": {
+    "rho": -0.487,
+    "p": 2.199174215510187e-05
+   },
+   "width_F_A_vs_depth_Pomega_A": {
+    "rho": -0.488,
+    "p": 2.0773583645260738e-05
+   }
+  }
+ }
+}
