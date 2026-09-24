@@ -1,0 +1,18 @@
+{
+ "engine": "IEDB tools API mhci recommended (NetMHCpan 4.1 EL)",
+ "n_requested": 400,
+ "n_scored": 400,
+ "alleles": [
+  "HLA-A*02:01",
+  "HLA-A*03:01",
+  "HLA-A*11:01",
+  "HLA-A*31:01",
+  "HLA-A*68:02",
+  "HLA-A*02:03",
+  "HLA-B*07:02",
+  "HLA-B*15:01"
+ ],
+ "iedb_auc_on_rank": 0.8961,
+ "ensemble_auc_same_subset": 0.9176,
+ "n_binders": 280
+}

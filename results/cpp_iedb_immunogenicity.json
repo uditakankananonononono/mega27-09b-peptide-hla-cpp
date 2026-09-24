@@ -1,0 +1,115 @@
+{
+ "engine": "IEDB tools API mhci recommended (NetMHCpan 4.1 EL)",
+ "alleles": [
+  "HLA-A*02:01",
+  "HLA-A*24:02",
+  "HLA-B*07:02",
+  "HLA-B*35:01"
+ ],
+ "skipped_length_outside_8_15": [
+  [
+   "9B-CPP-1",
+   19
+  ],
+  [
+   "9B-CPP-11",
+   16
+  ],
+  [
+   "9B-CPP-12",
+   16
+  ],
+  [
+   "9B-CPP-15",
+   19
+  ],
+  [
+   "9B-CPP-17",
+   16
+  ],
+  [
+   "9B-CPP-18",
+   22
+  ],
+  [
+   "9B-CPP-2",
+   19
+  ],
+  [
+   "9B-CPP-9",
+   17
+  ]
+ ],
+ "per_cpp": {
+  "9B-CPP-6": {
+   "sequence": "WRWRKKRRR",
+   "min_percentile_rank": 16.0,
+   "mean_percentile_rank": 32.75,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-3": {
+   "sequence": "WRWRKKKRKK",
+   "min_percentile_rank": 39.0,
+   "mean_percentile_rank": 61.0,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-10": {
+   "sequence": "WRWKWKKRWRKH",
+   "min_percentile_rank": 60.0,
+   "mean_percentile_rank": 81.25,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-8": {
+   "sequence": "GLARWRWRWRRQ",
+   "min_percentile_rank": 74.0,
+   "mean_percentile_rank": 87.25,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-13": {
+   "sequence": "AWRWRWRCKAKKR",
+   "min_percentile_rank": 74.0,
+   "mean_percentile_rank": 93.5,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-7": {
+   "sequence": "RGRWRWKKRHRPK",
+   "min_percentile_rank": 66.0,
+   "mean_percentile_rank": 85.0,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-14": {
+   "sequence": "RRRRWRRLWRHLRRR",
+   "min_percentile_rank": 49.0,
+   "mean_percentile_rank": 75.25,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-16": {
+   "sequence": "RGRLRRHLRRRLRRR",
+   "min_percentile_rank": 66.0,
+   "mean_percentile_rank": 87.25,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-4": {
+   "sequence": "GLWRWRWRWRKSLKK",
+   "min_percentile_rank": 49.0,
+   "mean_percentile_rank": 74.5,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  },
+  "9B-CPP-5": {
+   "sequence": "RRINRRWRWKRWKKC",
+   "min_percentile_rank": 51.0,
+   "mean_percentile_rank": 79.25,
+   "n_strong_binders_rank_lt0.5": 0,
+   "n_weak_binders_rank_lt2": 0
+  }
+ }
+}

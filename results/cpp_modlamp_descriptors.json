@@ -1,0 +1,503 @@
+{
+ "tool": "modlamp 4.3.0 (Muller et al. 2017) GlobalDescriptor + PeptideDescriptor(Eisenberg)",
+ "summary": {
+  "Length": {
+   "designed_18": {
+    "mean": 15.167,
+    "min": 9.0,
+    "max": 22.0
+   },
+   "archetypes_7": {
+    "mean": 20.143,
+    "min": 11.0,
+    "max": 27.0
+   }
+  },
+  "MW": {
+   "designed_18": {
+    "mean": 2202.585,
+    "min": 1427.71,
+    "max": 2936.48
+   },
+   "archetypes_7": {
+    "mean": 2364.959,
+    "min": 1493.77,
+    "max": 2848.22
+   }
+  },
+  "Charge": {
+   "designed_18": {
+    "mean": 10.096,
+    "min": 5.99,
+    "max": 12.987
+   },
+   "archetypes_7": {
+    "mean": 6.285,
+    "min": 3.989,
+    "max": 8.988
+   }
+  },
+  "ChargeDensity": {
+   "designed_18": {
+    "mean": 0.005,
+    "min": 0.004,
+    "max": 0.006
+   },
+   "archetypes_7": {
+    "mean": 0.003,
+    "min": 0.001,
+    "max": 0.006
+   }
+  },
+  "IsoelectricPoint": {
+   "designed_18": {
+    "mean": 13.805,
+    "min": 12.596,
+    "max": 14.094
+   },
+   "archetypes_7": {
+    "mean": 12.975,
+    "min": 10.839,
+    "max": 13.957
+   }
+  },
+  "InstabilityIndex": {
+   "designed_18": {
+    "mean": 210.686,
+    "min": 98.88,
+    "max": 318.107
+   },
+   "archetypes_7": {
+    "mean": 62.844,
+    "min": -1.519,
+    "max": 229.964
+   }
+  },
+  "Aromaticity": {
+   "designed_18": {
+    "mean": 0.144,
+    "min": 0.0,
+    "max": 0.333
+   },
+   "archetypes_7": {
+    "mean": 0.099,
+    "min": 0.0,
+    "max": 0.238
+   }
+  },
+  "AliphaticIndex": {
+   "designed_18": {
+    "mean": 56.674,
+    "min": 0.0,
+    "max": 170.625
+   },
+   "archetypes_7": {
+    "mean": 73.404,
+    "min": 0.0,
+    "max": 172.381
+   }
+  },
+  "BomanIndex": {
+   "designed_18": {
+    "mean": 7.256,
+    "min": 3.975,
+    "max": 10.286
+   },
+   "archetypes_7": {
+    "mean": 2.781,
+    "min": -1.015,
+    "max": 9.566
+   }
+  },
+  "HydrophobicRatio": {
+   "designed_18": {
+    "mean": 0.176,
+    "min": 0.0,
+    "max": 0.438
+   },
+   "archetypes_7": {
+    "mean": 0.311,
+    "min": 0.0,
+    "max": 0.619
+   }
+  },
+  "EisenbergMean": {
+   "designed_18": {
+    "mean": -1.141,
+    "min": -1.604,
+    "max": -0.584
+   },
+   "archetypes_7": {
+    "mean": -0.336,
+    "min": -1.659,
+    "max": 0.331
+   }
+  },
+  "EisenbergMoment11": {
+   "designed_18": {
+    "mean": 0.542,
+    "min": 0.201,
+    "max": 1.02
+   },
+   "archetypes_7": {
+    "mean": 0.406,
+    "min": 0.209,
+    "max": 0.593
+   }
+  }
+ },
+ "by_name": {
+  "9B-CPP-1": {
+   "Length": 19.0,
+   "MW": 2936.48,
+   "Charge": 10.989,
+   "ChargeDensity": 0.0037,
+   "IsoelectricPoint": 14.0488,
+   "InstabilityIndex": 244.4211,
+   "Aromaticity": 0.2632,
+   "AliphaticIndex": 61.5789,
+   "BomanIndex": 6.3189,
+   "HydrophobicRatio": 0.1579,
+   "EisenbergMean": -0.9016,
+   "EisenbergMoment11": 0.6995
+  },
+  "9B-CPP-10": {
+   "Length": 12.0,
+   "MW": 1881.24,
+   "Charge": 8.029,
+   "ChargeDensity": 0.0043,
+   "IsoelectricPoint": 13.8086,
+   "InstabilityIndex": 131.8,
+   "Aromaticity": 0.3333,
+   "AliphaticIndex": 0.0,
+   "BomanIndex": 5.1917,
+   "HydrophobicRatio": 0.0,
+   "EisenbergMean": -0.8883,
+   "EisenbergMoment11": 0.3109
+  },
+  "9B-CPP-11": {
+   "Length": 16.0,
+   "MW": 2337.75,
+   "Charge": 11.989,
+   "ChargeDensity": 0.0051,
+   "IsoelectricPoint": 14.0938,
+   "InstabilityIndex": 315.525,
+   "Aromaticity": 0.0625,
+   "AliphaticIndex": 48.75,
+   "BomanIndex": 10.2862,
+   "HydrophobicRatio": 0.1875,
+   "EisenbergMean": -1.6038,
+   "EisenbergMoment11": 0.5301
+  },
+  "9B-CPP-12": {
+   "Length": 16.0,
+   "MW": 2215.79,
+   "Charge": 9.989,
+   "ChargeDensity": 0.0045,
+   "IsoelectricPoint": 14.0469,
+   "InstabilityIndex": 105.3625,
+   "Aromaticity": 0.0,
+   "AliphaticIndex": 170.625,
+   "BomanIndex": 6.24,
+   "HydrophobicRatio": 0.4375,
+   "EisenbergMean": -0.8875,
+   "EisenbergMoment11": 0.2866
+  },
+  "9B-CPP-13": {
+   "Length": 13.0,
+   "MW": 1831.2,
+   "Charge": 7.834,
+   "ChargeDensity": 0.0043,
+   "IsoelectricPoint": 12.5957,
+   "InstabilityIndex": 122.4308,
+   "Aromaticity": 0.2308,
+   "AliphaticIndex": 15.3846,
+   "BomanIndex": 4.9569,
+   "HydrophobicRatio": 0.2308,
+   "EisenbergMean": -0.8108,
+   "EisenbergMoment11": 0.2011
+  },
+  "9B-CPP-14": {
+   "Length": 15.0,
+   "MW": 2315.74,
+   "Charge": 11.031,
+   "ChargeDensity": 0.0048,
+   "IsoelectricPoint": 14.0723,
+   "InstabilityIndex": 318.1067,
+   "Aromaticity": 0.1333,
+   "AliphaticIndex": 52.0,
+   "BomanIndex": 9.2907,
+   "HydrophobicRatio": 0.1333,
+   "EisenbergMean": -1.4387,
+   "EisenbergMoment11": 1.0198
+  },
+  "9B-CPP-15": {
+   "Length": 19.0,
+   "MW": 2666.2,
+   "Charge": 12.987,
+   "ChargeDensity": 0.0049,
+   "IsoelectricPoint": 13.1357,
+   "InstabilityIndex": 284.1789,
+   "Aromaticity": 0.0526,
+   "AliphaticIndex": 87.3684,
+   "BomanIndex": 8.4784,
+   "HydrophobicRatio": 0.2632,
+   "EisenbergMean": -1.3105,
+   "EisenbergMoment11": 0.7946
+  },
+  "9B-CPP-16": {
+   "Length": 15.0,
+   "MW": 2113.53,
+   "Charge": 11.031,
+   "ChargeDensity": 0.0052,
+   "IsoelectricPoint": 14.0723,
+   "InstabilityIndex": 245.9667,
+   "Aromaticity": 0.0,
+   "AliphaticIndex": 78.0,
+   "BomanIndex": 9.2107,
+   "HydrophobicRatio": 0.2,
+   "EisenbergMean": -1.4413,
+   "EisenbergMoment11": 0.8677
+  },
+  "9B-CPP-17": {
+   "Length": 16.0,
+   "MW": 2335.86,
+   "Charge": 11.989,
+   "ChargeDensity": 0.0051,
+   "IsoelectricPoint": 14.0938,
+   "InstabilityIndex": 272.325,
+   "Aromaticity": 0.0625,
+   "AliphaticIndex": 97.5,
+   "BomanIndex": 8.8413,
+   "HydrophobicRatio": 0.3125,
+   "EisenbergMean": -1.3688,
+   "EisenbergMoment11": 0.4911
+  },
+  "9B-CPP-18": {
+   "Length": 22.0,
+   "MW": 2935.46,
+   "Charge": 12.073,
+   "ChargeDensity": 0.0041,
+   "IsoelectricPoint": 14.0938,
+   "InstabilityIndex": 222.7636,
+   "Aromaticity": 0.0455,
+   "AliphaticIndex": 80.0,
+   "BomanIndex": 6.8305,
+   "HydrophobicRatio": 0.2727,
+   "EisenbergMean": -0.9795,
+   "EisenbergMoment11": 0.9475
+  },
+  "9B-CPP-2": {
+   "Length": 19.0,
+   "MW": 2641.31,
+   "Charge": 11.989,
+   "ChargeDensity": 0.0045,
+   "IsoelectricPoint": 14.0938,
+   "InstabilityIndex": 170.8737,
+   "Aromaticity": 0.0,
+   "AliphaticIndex": 164.2105,
+   "BomanIndex": 6.5663,
+   "HydrophobicRatio": 0.4211,
+   "EisenbergMean": -0.9842,
+   "EisenbergMoment11": 0.5835
+  },
+  "9B-CPP-3": {
+   "Length": 10.0,
+   "MW": 1499.85,
+   "Charge": 8.987,
+   "ChargeDensity": 0.006,
+   "IsoelectricPoint": 13.8125,
+   "InstabilityIndex": 98.88,
+   "Aromaticity": 0.2,
+   "AliphaticIndex": 0.0,
+   "BomanIndex": 6.785,
+   "HydrophobicRatio": 0.0,
+   "EisenbergMean": -1.338,
+   "EisenbergMoment11": 0.2145
+  },
+  "9B-CPP-4": {
+   "Length": 15.0,
+   "MW": 2142.56,
+   "Charge": 7.988,
+   "ChargeDensity": 0.0037,
+   "IsoelectricPoint": 13.8691,
+   "InstabilityIndex": 134.02,
+   "Aromaticity": 0.2667,
+   "AliphaticIndex": 52.0,
+   "BomanIndex": 3.9753,
+   "HydrophobicRatio": 0.1333,
+   "EisenbergMean": -0.584,
+   "EisenbergMoment11": 0.5025
+  },
+  "9B-CPP-5": {
+   "Length": 15.0,
+   "MW": 2228.68,
+   "Charge": 9.834,
+   "ChargeDensity": 0.0044,
+   "IsoelectricPoint": 12.8071,
+   "InstabilityIndex": 222.0,
+   "Aromaticity": 0.2,
+   "AliphaticIndex": 26.0,
+   "BomanIndex": 6.6413,
+   "HydrophobicRatio": 0.1333,
+   "EisenbergMean": -1.0773,
+   "EisenbergMoment11": 0.5188
+  },
+  "9B-CPP-6": {
+   "Length": 9.0,
+   "MW": 1427.71,
+   "Charge": 7.988,
+   "ChargeDensity": 0.0056,
+   "IsoelectricPoint": 13.918,
+   "InstabilityIndex": 236.0444,
+   "Aromaticity": 0.2222,
+   "AliphaticIndex": 0.0,
+   "BomanIndex": 9.0044,
+   "HydrophobicRatio": 0.0,
+   "EisenbergMean": -1.5422,
+   "EisenbergMoment11": 0.3347
+  },
+  "9B-CPP-7": {
+   "Length": 13.0,
+   "MW": 1847.19,
+   "Charge": 9.03,
+   "ChargeDensity": 0.0049,
+   "IsoelectricPoint": 13.918,
+   "InstabilityIndex": 145.5308,
+   "Aromaticity": 0.1538,
+   "AliphaticIndex": 0.0,
+   "BomanIndex": 6.9469,
+   "HydrophobicRatio": 0.0,
+   "EisenbergMean": -1.1677,
+   "EisenbergMoment11": 0.3405
+  },
+  "9B-CPP-8": {
+   "Length": 12.0,
+   "MW": 1726.99,
+   "Charge": 5.99,
+   "ChargeDensity": 0.0035,
+   "IsoelectricPoint": 13.9141,
+   "InstabilityIndex": 216.15,
+   "Aromaticity": 0.25,
+   "AliphaticIndex": 40.8333,
+   "BomanIndex": 5.4567,
+   "HydrophobicRatio": 0.1667,
+   "EisenbergMean": -0.7267,
+   "EisenbergMoment11": 0.4892
+  },
+  "9B-CPP-9": {
+   "Length": 17.0,
+   "MW": 2562.99,
+   "Charge": 11.989,
+   "ChargeDensity": 0.0047,
+   "IsoelectricPoint": 14.0938,
+   "InstabilityIndex": 305.9706,
+   "Aromaticity": 0.1176,
+   "AliphaticIndex": 45.8824,
+   "BomanIndex": 9.5824,
+   "HydrophobicRatio": 0.1176,
+   "EisenbergMean": -1.4847,
+   "EisenbergMoment11": 0.6234
+  }
+ },
+ "archetypes": {
+  "CPPsite_FAM-pVEC": {
+   "Length": 18.0,
+   "MW": 2209.69,
+   "Charge": 7.072,
+   "ChargeDensity": 0.0032,
+   "IsoelectricPoint": 13.8672,
+   "InstabilityIndex": 98.1889,
+   "Aromaticity": 0.0,
+   "AliphaticIndex": 141.1111,
+   "BomanIndex": 3.1056,
+   "HydrophobicRatio": 0.4444,
+   "EisenbergMean": -0.3383,
+   "EisenbergMoment11": 0.5775
+  },
+  "CPPsite_MPG": {
+   "Length": 27.0,
+   "MW": 2807.33,
+   "Charge": 5.987,
+   "ChargeDensity": 0.0021,
+   "IsoelectricPoint": 13.582,
+   "InstabilityIndex": 23.3926,
+   "Aromaticity": 0.1111,
+   "AliphaticIndex": 68.8889,
+   "BomanIndex": 0.3944,
+   "HydrophobicRatio": 0.4074,
+   "EisenbergMean": 0.1293,
+   "EisenbergMoment11": 0.2093
+  },
+  "CPPsite_MPGNLS": {
+   "Length": 27.0,
+   "MW": 2766.23,
+   "Charge": 4.988,
+   "ChargeDensity": 0.0018,
+   "IsoelectricPoint": 13.5742,
+   "InstabilityIndex": 23.3926,
+   "Aromaticity": 0.1111,
+   "AliphaticIndex": 68.8889,
+   "BomanIndex": 0.3148,
+   "HydrophobicRatio": 0.4074,
+   "EisenbergMean": 0.1781,
+   "EisenbergMoment11": 0.2347
+  },
+  "CPPsite_Penetratin_unit": {
+   "Length": 16.0,
+   "MW": 2246.73,
+   "Charge": 7.987,
+   "ChargeDensity": 0.0036,
+   "IsoelectricPoint": 13.8086,
+   "InstabilityIndex": 46.6,
+   "Aromaticity": 0.1875,
+   "AliphaticIndex": 48.75,
+   "BomanIndex": 4.0531,
+   "HydrophobicRatio": 0.25,
+   "EisenbergMean": -0.6075,
+   "EisenbergMoment11": 0.3783
+  },
+  "CPPsite_Pep-1": {
+   "Length": 21.0,
+   "MW": 2848.22,
+   "Charge": 3.989,
+   "ChargeDensity": 0.0014,
+   "IsoelectricPoint": 10.8394,
+   "InstabilityIndex": 19.8905,
+   "Aromaticity": 0.2381,
+   "AliphaticIndex": 13.8095,
+   "BomanIndex": 3.0505,
+   "HydrophobicRatio": 0.0476,
+   "EisenbergMean": -0.3871,
+   "EisenbergMoment11": 0.3775
+  },
+  "CPPsite_TAT47-57_unit": {
+   "Length": 11.0,
+   "MW": 1493.77,
+   "Charge": 8.988,
+   "ChargeDensity": 0.006,
+   "IsoelectricPoint": 13.957,
+   "InstabilityIndex": 229.9636,
+   "Aromaticity": 0.0,
+   "AliphaticIndex": 0.0,
+   "BomanIndex": 9.5655,
+   "HydrophobicRatio": 0.0,
+   "EisenbergMean": -1.6591,
+   "EisenbergMoment11": 0.4686
+  },
+  "CPPsite_TP10_unit": {
+   "Length": 21.0,
+   "MW": 2182.74,
+   "Charge": 4.985,
+   "ChargeDensity": 0.0023,
+   "IsoelectricPoint": 11.1997,
+   "InstabilityIndex": -1.519,
+   "Aromaticity": 0.0476,
+   "AliphaticIndex": 172.381,
+   "BomanIndex": -1.0148,
+   "HydrophobicRatio": 0.619,
+   "EisenbergMean": 0.3305,
+   "EisenbergMoment11": 0.5926
+  }
+ }
+}
