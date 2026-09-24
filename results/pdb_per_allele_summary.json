@@ -1,13 +1,13 @@
 {
- "n_structures": 35,
- "n_with_peptide": 32,
- "n_no_peptide": 3,
+ "n_structures": 72,
+ "n_with_peptide": 66,
+ "n_no_peptide": 6,
  "n_errors": 0,
- "p2_top3_buried": 28,
- "pomega_top3_buried": 31,
- "mean_p2_rsa": 0.0141,
- "mean_pomega_rsa": 0.0155,
- "mean_internal_rsa": 0.2303,
+ "p2_top3_buried": 57,
+ "pomega_top3_buried": 60,
+ "mean_p2_rsa": 0.0151,
+ "mean_pomega_rsa": 0.0138,
+ "mean_internal_rsa": 0.2271,
  "alleles": [
   "HLA-A*01:01",
   "HLA-A*02:01",
@@ -15,7 +15,17 @@
   "HLA-A*02:06",
   "HLA-A*03:01",
   "HLA-A*11:01",
+  "HLA-A*24:02",
+  "HLA-A*29:02",
   "HLA-B*07:02",
-  "HLA-B*15:01"
+  "HLA-B*08:01",
+  "HLA-B*15:01",
+  "HLA-B*18:01",
+  "HLA-B*27:05",
+  "HLA-B*35:01",
+  "HLA-B*44:03",
+  "HLA-B*51:01",
+  "HLA-B*57:01",
+  "HLA-B*58:01"
  ]
 }

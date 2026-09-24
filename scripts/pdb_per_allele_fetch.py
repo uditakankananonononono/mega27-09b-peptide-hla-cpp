@@ -7,7 +7,11 @@ Each PDB entry is one accession-level dataset under the uniform gate rule.
 import json, os, time, urllib.request, urllib.parse
 
 ALLELES = ["HLA-A*02:01","HLA-A*03:01","HLA-A*11:01","HLA-A*31:01","HLA-A*68:02",
-           "HLA-A*02:03","HLA-B*07:02","HLA-B*15:01","HLA-A*01:01","HLA-A*02:06"]
+           "HLA-A*02:03","HLA-B*07:02","HLA-B*15:01","HLA-A*01:01","HLA-A*02:06",
+           "HLA-A*24:02","HLA-B*08:01","HLA-B*27:05","HLA-B*58:01","HLA-B*44:02",
+           "HLA-B*35:01","HLA-B*40:01","HLA-B*51:01","HLA-B*18:01","HLA-A*26:01",
+           "HLA-A*33:01","HLA-A*68:01","HLA-A*29:02","HLA-A*23:01","HLA-A*30:01",
+           "HLA-B*15:03","HLA-B*57:01","HLA-A*32:01","HLA-B*44:03","HLA-B*46:01"]
 TOPN = 6
 OUTDIR = "data/raw/pdb_structures"
 os.makedirs(OUTDIR, exist_ok=True)

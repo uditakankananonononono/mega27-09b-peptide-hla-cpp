@@ -12,13 +12,8 @@ import freesasa, numpy as np
 AA3 = {'ALA':'A','ARG':'R','ASN':'N','ASP':'D','CYS':'C','GLN':'Q','GLU':'E',
        'GLY':'G','HIS':'H','ILE':'I','LEU':'L','LYS':'K','MET':'M','PHE':'F',
        'PRO':'P','SER':'S','THR':'T','TRP':'W','TYR':'Y','VAL':'V'}
-ALLELE_OF = {
- '7t5m':'HLA-A*02:01','9nmu':'HLA-A*02:01','8fu4':'HLA-A*02:01','9nmv':'HLA-A*02:01','9nmy':'HLA-A*02:01','9ytd':'HLA-A*02:01',
- '8rni':'HLA-A*03:01','8vjz':'HLA-A*03:01','8dvg':'HLA-A*03:01','7l1c':'HLA-A*03:01','7stf':'HLA-A*03:01','8vcl':'HLA-A*03:01',
- '5wjn':'HLA-A*11:01','5wjl':'HLA-A*11:01','5wkf':'HLA-A*11:01','5wkh':'HLA-A*11:01','9wpd':'HLA-A*11:01','7ow3':'HLA-A*11:01',
- '3ox8':'HLA-A*02:03','6uj7':'HLA-B*07:02','6uj8':'HLA-B*07:02','7kgu':'HLA-B*07:02','7s7e':'HLA-B*07:02','7s7f':'HLA-B*07:02','6avf':'HLA-B*07:02',
- '6uzp':'HLA-B*15:01','6uzq':'HLA-B*15:01','6uzs':'HLA-B*15:01','6vb3':'HLA-B*15:01','8elg':'HLA-B*15:01','8elh':'HLA-B*15:01',
- '6mpp':'HLA-A*01:01','9yir':'HLA-A*01:01','9z50':'HLA-A*01:01','3oxr':'HLA-A*02:06'}
+_mf = json.load(open('data/raw/pdb_structures/search_manifest.json'))
+ALLELE_OF = {p.lower(): a for a, ids in _mf.items() for p in ids}
 MAXASA = {'A':121,'R':265,'N':187,'D':187,'C':148,'Q':214,'E':214,'G':97,'H':216,
           'I':195,'L':191,'K':230,'M':203,'F':228,'P':154,'S':143,'T':163,'W':264,'Y':255,'V':165}
 

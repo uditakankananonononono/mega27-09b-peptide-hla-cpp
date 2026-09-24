@@ -1,0 +1,474 @@
+{
+ "n_alleles": 52,
+ "missing": [],
+ "rows": [
+  {
+   "allele": "HLA-A*02:01",
+   "imgt_record": "A*02:01:01:01",
+   "b_pocket": "YFAVMEKVHY",
+   "f_pocket": "HDTLYVRHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*03:01",
+   "imgt_record": "A*03:01:01:01",
+   "b_pocket": "YFAVMENVQY",
+   "f_pocket": "DDTLYIIRDYTKW",
+   "res66": "N",
+   "res70": "Q",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*11:01",
+   "imgt_record": "A*11:01:01:01",
+   "b_pocket": "YYAVMENVQY",
+   "f_pocket": "DDTLYIIRDYTKW",
+   "res66": "N",
+   "res70": "Q",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*31:01",
+   "imgt_record": "A*31:01:02:01",
+   "b_pocket": "YTAVMENVHY",
+   "f_pocket": "DDTLYIMQDYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*68:02",
+   "imgt_record": "A*68:02:01:01",
+   "b_pocket": "YYAVMNNVQY",
+   "f_pocket": "DDTLYIRHYYTKW",
+   "res66": "N",
+   "res70": "Q",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*02:03",
+   "imgt_record": "A*02:03:01:01",
+   "b_pocket": "YFAVMEKVHY",
+   "f_pocket": "HDTLYVRHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*07:02",
+   "imgt_record": "B*07:02:01:01",
+   "b_pocket": "YYSVENIYQY",
+   "f_pocket": "DSNLYLSDYYTKW",
+   "res66": "I",
+   "res70": "Q",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*15:01",
+   "imgt_record": "B*15:01:01:01",
+   "b_pocket": "YYAVMEISNY",
+   "f_pocket": "YSNLYLRDSYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-A*01:01",
+   "imgt_record": "A*01:01:01:01",
+   "b_pocket": "YFAVMENMHY",
+   "f_pocket": "DNTLYIIRDYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*02:06",
+   "imgt_record": "A*02:06:01:01",
+   "b_pocket": "YYAVMEKVHY",
+   "f_pocket": "HDTLYVRHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*68:01",
+   "imgt_record": "A*68:01:01:01",
+   "b_pocket": "YYAVMNNVQY",
+   "f_pocket": "DDTLYIMRDYTKW",
+   "res66": "N",
+   "res70": "Q",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*33:01",
+   "imgt_record": "A*33:01:01:01",
+   "b_pocket": "YTAVMNNVHY",
+   "f_pocket": "DDTLYIMQDYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*02:02",
+   "imgt_record": "A*02:02:01:01",
+   "b_pocket": "YFAVMEKVHY",
+   "f_pocket": "HDTLYLRHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*26:01",
+   "imgt_record": "A*26:01:01:01",
+   "b_pocket": "YYAVMNNVHY",
+   "f_pocket": "DNTLYIRQDYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*24:02",
+   "imgt_record": "A*24:02:01:01",
+   "b_pocket": "YSAVMEKVHF",
+   "f_pocket": "DNIAYLMHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*58:01",
+   "imgt_record": "B*58:01:01:01",
+   "b_pocket": "YYAVTENMSY",
+   "f_pocket": "YNIAYIRDSYTKW",
+   "res66": "N",
+   "res70": "S",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-B*40:01",
+   "imgt_record": "B*40:01:01",
+   "b_pocket": "YHTVKEISNY",
+   "f_pocket": "YSNLYLRNYYSKL",
+   "res66": "I",
+   "res70": "N",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*08:01",
+   "imgt_record": "B*08:01:01:01",
+   "b_pocket": "YDSVENIFNY",
+   "f_pocket": "DSNLYLSNYYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*57:01",
+   "imgt_record": "B*57:01:01:01",
+   "b_pocket": "YYAVMENMSY",
+   "f_pocket": "YNIAYIVDSYTKW",
+   "res66": "N",
+   "res70": "S",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-B*51:01",
+   "imgt_record": "B*51:01:01:01",
+   "b_pocket": "YYAVTNIFNY",
+   "f_pocket": "YNIAYWTNYYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*69:01",
+   "imgt_record": "A*69:01:01:01",
+   "b_pocket": "YYAVMNNVQY",
+   "f_pocket": "DDTLYVRHYYTKW",
+   "res66": "N",
+   "res70": "Q",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*18:01",
+   "imgt_record": "B*18:01:01:01",
+   "b_pocket": "YHSVTNISNY",
+   "f_pocket": "YSNLYLRDSYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-B*27:05",
+   "imgt_record": "B*27:05:02:01",
+   "b_pocket": "YHTVEEICKY",
+   "f_pocket": "DDTLYLNHDYTKW",
+   "res66": "I",
+   "res70": "K",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*29:02",
+   "imgt_record": "A*29:02:01:01",
+   "b_pocket": "YTAVMQNVQY",
+   "f_pocket": "DNTLYIMRDYTKW",
+   "res66": "N",
+   "res70": "Q",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-B*44:02",
+   "imgt_record": "B*44:02:01:01",
+   "b_pocket": "YYTVKEISNY",
+   "f_pocket": "YNTAYIRDDYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-B*35:01",
+   "imgt_record": "B*35:01:01:01",
+   "b_pocket": "YYAVTNIFNY",
+   "f_pocket": "YSNLYIRDSYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-B*46:01",
+   "imgt_record": "B*46:01:01:01",
+   "b_pocket": "YYAVMEKYQY",
+   "f_pocket": "DSNLYLRDSYTKW",
+   "res66": "K",
+   "res70": "Q",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-A*23:01",
+   "imgt_record": "A*23:01:01:01",
+   "b_pocket": "YSAVMEKVHF",
+   "f_pocket": "DNIAYLMHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*30:01",
+   "imgt_record": "A*30:01:01:01",
+   "b_pocket": "YSAVMENVQY",
+   "f_pocket": "DDTLYIIEHYTKW",
+   "res66": "N",
+   "res70": "Q",
+   "res116": "H"
+  },
+  {
+   "allele": "HLA-B*15:17",
+   "imgt_record": "B*15:17:01:01",
+   "b_pocket": "YYAVMENMSY",
+   "f_pocket": "YNIAYLRHDYTKW",
+   "res66": "N",
+   "res70": "S",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-B*39:01",
+   "imgt_record": "B*39:01:01:01",
+   "b_pocket": "YYSVENICNY",
+   "f_pocket": "DSNLYLRNFYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "F"
+  },
+  {
+   "allele": "HLA-A*30:02",
+   "imgt_record": "A*30:02:01:01",
+   "b_pocket": "YSAVMENVHY",
+   "f_pocket": "DNTLYIIEHYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "H"
+  },
+  {
+   "allele": "HLA-A*24:03",
+   "imgt_record": "A*24:03:01:01",
+   "b_pocket": "YSAVMEKVHF",
+   "f_pocket": "DNIAYLMHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*53:01",
+   "imgt_record": "B*53:01:01:01",
+   "b_pocket": "YYAVTNIFNY",
+   "f_pocket": "YNIAYIRDSYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-A*80:01",
+   "imgt_record": "A*80:01:01:01",
+   "b_pocket": "YFAVMENVHY",
+   "f_pocket": "NNTLYIIRDYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*25:01",
+   "imgt_record": "A*25:01:01:01",
+   "b_pocket": "YYAVMNNVHY",
+   "f_pocket": "DSIAYIRQDYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-A*32:01",
+   "imgt_record": "A*32:01:01:01",
+   "b_pocket": "YFAVMENVHY",
+   "f_pocket": "DSIAYIMQDYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-B*44:03",
+   "imgt_record": "B*44:03:01:01",
+   "b_pocket": "YYTVKEISNY",
+   "f_pocket": "YNTAYIRDDYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-B*48:01",
+   "imgt_record": "B*48:01:01:01",
+   "b_pocket": "YYSVEEISNY",
+   "f_pocket": "YSNLYLSNYYSKL",
+   "res66": "I",
+   "res70": "N",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*02:12",
+   "imgt_record": "A*02:12",
+   "b_pocket": "YFAVMEKVHY",
+   "f_pocket": "HDTLYVRHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*02:19",
+   "imgt_record": "A*02:19",
+   "b_pocket": "YFAVMEKVHY",
+   "f_pocket": "HDTLYVRHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*02:11",
+   "imgt_record": "A*02:11:01:01",
+   "b_pocket": "YFAVMEKVHY",
+   "f_pocket": "DDTLYVRHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*02:16",
+   "imgt_record": "A*02:16",
+   "b_pocket": "YFAVMEKVHY",
+   "f_pocket": "HDTLYVRHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*54:01",
+   "imgt_record": "B*54:01:01:01",
+   "b_pocket": "YYAVGNIYQY",
+   "f_pocket": "DSNLYWTNLYTKW",
+   "res66": "I",
+   "res70": "Q",
+   "res116": "L"
+  },
+  {
+   "allele": "HLA-B*40:02",
+   "imgt_record": "B*40:02:01:01",
+   "b_pocket": "YHTVKEISNY",
+   "f_pocket": "YSNLYLSNYYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-B*45:01",
+   "imgt_record": "B*45:01:01:01",
+   "b_pocket": "YHTVKEISNY",
+   "f_pocket": "YSNLYWRNLYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "L"
+  },
+  {
+   "allele": "HLA-B*15:03",
+   "imgt_record": "B*15:03:01:01",
+   "b_pocket": "YYSVEEISNY",
+   "f_pocket": "YSNLYLRDSYTKW",
+   "res66": "I",
+   "res70": "N",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-A*02:17",
+   "imgt_record": "A*02:17:02:01",
+   "b_pocket": "YFAVMEKVHF",
+   "f_pocket": "HDTLYLMHYYTKW",
+   "res66": "K",
+   "res70": "H",
+   "res116": "Y"
+  },
+  {
+   "allele": "HLA-A*26:02",
+   "imgt_record": "A*26:02:01",
+   "b_pocket": "YYAVMNNVHY",
+   "f_pocket": "DNTLYIRQNYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "N"
+  },
+  {
+   "allele": "HLA-C*14:02",
+   "imgt_record": "C*14:02:01:01",
+   "b_pocket": "YSAVGEKYQF",
+   "f_pocket": "DSNLYLWDSYTKW",
+   "res66": "K",
+   "res70": "Q",
+   "res116": "S"
+  },
+  {
+   "allele": "HLA-A*26:03",
+   "imgt_record": "A*26:03:01:01",
+   "b_pocket": "YYAVMNNVHY",
+   "f_pocket": "HDTLYIRQDYTKW",
+   "res66": "N",
+   "res70": "H",
+   "res116": "D"
+  },
+  {
+   "allele": "HLA-C*06:02",
+   "imgt_record": "C*06:02:01:01",
+   "b_pocket": "YDSVGEKYQY",
+   "f_pocket": "DNKLYLWDSYTKW",
+   "res66": "K",
+   "res70": "Q",
+   "res116": "S"
+  }
+ ]
+}
