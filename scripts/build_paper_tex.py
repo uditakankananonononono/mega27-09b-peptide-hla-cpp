@@ -34,6 +34,8 @@ dec = json.load(open("results/error_decorrelation.json"))
 wmd = json.load(open("results/winmargin_datasize.json"))
 amauc = json.load(open("results/assay_method_auc.json"))
 amh2h = json.load(open("results/assay_method_headtohead.json"))
+caldec = json.load(open("results/calibration_decomposition.json"))
+locauc = json.load(open("results/locus_auc.json"))
 refm = json.load(open("results/iedb_reference_manifest.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
@@ -844,6 +846,14 @@ decision-relevant range (predicted binder probability 0.5--0.95); mild
 under-confidence at the top of the ranking is visible and reported, not
 hidden. Calibrated probabilities make the ensemble usable for
 triage thresholds, not only for ranking.
+A Murphy decomposition of the Brier score over the same bins
+quantifies where the probability quality comes from: Brier %(brier)s
+against a climatology baseline of %(brierbase)s (skill %(brierskill)s),
+decomposed as reliability %(brel)s minus resolution %(bres)s plus
+uncertainty %(bunc)s. The reliability term is nearly zero --- after
+Platt scaling the model says what it means --- and essentially all of
+the skill is resolution: the score separates binders from non-binders
+rather than exploiting a favorable bin structure.
 \begin{figure}[h]\centering
 \includegraphics[width=.55\linewidth]{figures/fig10_calibration.png}
 \caption{Reliability curve of the Platt-scaled ensemble on the held-out
@@ -1266,6 +1276,16 @@ assay method & $n$ & MHCflurry AUC & ensemble AUC & $\Delta$ \\\hline
 \end{tabular}
 \end{center}
 \normalsize
+
+\subsection{Locus-level performance}
+\label{sec:locusauc}
+The panel is HLA-A-heavy (%(loc_a_pairs)s A-locus pairs vs
+%(loc_b_pairs)s B-locus), so an A-locus artifact is a live concern.
+Test-set ensemble AUC by locus: %(locauc_a)s on HLA-A ($n = %(locauc_an)s$),
+%(locauc_b)s on HLA-B ($n = %(locauc_bn)s$), %(locauc_c)s on the small
+HLA-C remainder ($n = %(locauc_cn)s$, reported for completeness).
+Performance is consistent across loci; the aggregate is not carried by
+the majority locus.
 
 \subsection{Learning curve: how much data does the additive model need?}
 \label{sec:learningcurve}
@@ -1854,7 +1874,7 @@ python scripts/cpp_learning_curve.py           # CPP learning curve
 python scripts/epistasis_winmargin_link.py     # margin null
 python scripts/make_figures.py && python scripts/make_fig5.py
 python scripts/make_fig16_17.py && python scripts/make_fig20.py
-python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py && python scripts/winmargin_datasize.py && python scripts/assay_method_stratified_auc.py && python scripts/assay_method_headtohead.py
+python scripts/make_fig21.py && python scripts/make_fig22.py && python scripts/error_decorrelation.py && python scripts/make_fig23.py && python scripts/winmargin_datasize.py && python scripts/assay_method_stratified_auc.py && python scripts/assay_method_headtohead.py && python scripts/calibration_locus_analysis.py
 python scripts/build_paper_tex.py              # this document
 cd paper && pdflatex main.tex && pdflatex main.tex
 python -m pytest tests/                        # 24 hermetic tests
@@ -1996,6 +2016,18 @@ subs = {
     "amh_d1": f"+{amh2h['strata'][0]['delta']:.4f}",
     "amh_d2": f"+{amh2h['strata'][1]['delta']:.4f}",
     "amh_d3": f"+{amh2h['strata'][2]['delta']:.4f}",
+    "brier": f(caldec["brier_binned"]),
+    "brierbase": f(caldec["brier_baseline"]),
+    "brierskill": f"{caldec['skill_vs_climatology']*100:.1f}\\%",
+    "brel": f(caldec["reliability"]),
+    "bres": f(caldec["resolution"]),
+    "bunc": f(caldec["uncertainty"]),
+    "locauc_a": f(locauc["loci"][0]["ensemble_auc"]),
+    "locauc_an": f"{locauc['loci'][0]['n']:,}",
+    "locauc_b": f(locauc["loci"][1]["ensemble_auc"]),
+    "locauc_bn": f"{locauc['loci'][1]['n']:,}",
+    "locauc_c": f(locauc["loci"][2]["ensemble_auc"]),
+    "locauc_cn": f"{locauc['loci'][2]['n']:,}",
     "pdb_bN": 8,
     "pdbm_rows": pdbm_rows,
     "pdbm_idrows": pdbm_idrows,

@@ -1,0 +1,22 @@
+{
+ "loci": [
+  {
+   "locus": "HLA-A",
+   "n": 11073,
+   "n_binders": 3655,
+   "ensemble_auc": 0.923152947372808
+  },
+  {
+   "locus": "HLA-B",
+   "n": 5647,
+   "n_binders": 1352,
+   "ensemble_auc": 0.9340150581038912
+  },
+  {
+   "locus": "HLA-C",
+   "n": 150,
+   "n_binders": 50,
+   "ensemble_auc": 0.9238000000000001
+  }
+ ]
+}
