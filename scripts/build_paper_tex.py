@@ -1977,6 +1977,19 @@ Third, the HLP half-life server (whole-composition model) assigns 10 of
 18 candidates to its High stability class and 8 to Normal
 (server-reported half-life predictions $0.51$--$1.45$;
 \texttt{results/cpp\_hlp\_stability.json}).
+Fourth, the CellPPD server (SVM+Motif model, default threshold 0.0)
+was used through its live per-sequence design endpoint to score the
+complete single-mutant landscape of each of the 18 candidates: 5,187
+mutant sequences in total, every one below the server's CPP threshold
+(global SVM range $-1.38$ to $-0.36$; per-candidate means $-1.12$ to
+$-0.50$; \texttt{results/cpp\_cellppd\_design.json}). CellPPD's own
+batch endpoint accepted jobs but never returned rows, so it is
+documented as unreachable rather than cited. We report this as an
+honest negative: by the canonical CPP predictor's scoring, the de novo
+candidates do not occupy classical-CPP sequence space. Whether that
+reflects non-classical uptake chemistry or false negatives on
+out-of-distribution sequences cannot be resolved in silico; membrane
+activity must be established experimentally.
 None of these external screens substitutes for experimental hemolysis
 or toxicity assays; they are independent computational developability
 checks and are reported as such. A protein-level NCBI BLAST screen of
@@ -2155,7 +2168,7 @@ python -m pytest tests/                        # 33 hermetic tests
 \end{tabular}
 \end{center}
 \normalsize
-Count is honest: 38 external tools demonstrably used at this commit.
+Count is honest: 39 external tools demonstrably used at this commit.
 Remaining candidates toward 40 (each with a defined verification or
 analysis role): NCBI BLAST (protein-level novelty of the designed CPPs
 against Swiss-Prot; 18 jobs queued at this commit) and EBI ncbiblast
@@ -2285,7 +2298,7 @@ amh_rows = "\n".join(
     for s in amh2h["strata"])
 
 subs = {
-    "tools_rows": "1 & PyTorch 2.x & CNN, GNN, GRU training (pHLA + CPP) \\\\\n2 & scikit-learn & 3-mer logistic regression (L-BFGS); AUC cross-check \\\\\n3 & NumPy & all numerical arrays, bootstrap machinery \\\\\n4 & pandas & IEDB TSV handling, dataset aggregation \\\\\n5 & SciPy & Spearman/Pearson tests (epistasis--margin null) \\\\\n6 & matplotlib & all 26 figures \\\\\n7 & Biopython 1.88 & PairwiseAligner novelty recheck; ProtParam descriptors; PDB parsing \\\\\n8 & pytest & 33-test hermetic suite \\\\\n9 & MHCflurry 2.2.1 & head-to-head comparator (affinity predictor, CPU) \\\\\n10 & NetMHCpan-4.1 & published landscape numbers (gkaa379) \\\\\n11 & IEDB & mhc\\_ligand\\_full export (350 studies) \\\\\n12 & IEDB Analysis Resource & benchmark framework reference \\\\\n13 & CPPsite 2.0 & CPP positives (Raghava group) \\\\\n14 & UniProtKB REST API & negative pools; novelty screen pool \\\\\n15 & RCSB PDB & structures 1DUZ, 8RNI, 7OW3 (pocket verification) \\\\\n16 & NCBI BLOSUM62 & substitution-matrix encoding channel \\\\\n17 & GitHub & repository hosting \\\\\n18 & Google Drive API & results delivery \\\\\n19 & Python 3.10 & runtime \\\\\n20 & git & version control; bundle transport \\\\\n21 & pdfLaTeX (TeX Live) & this document \\\\\n22 & curl & dataset download (download\\_data.sh) \\\\\n23 & OpenSSH & authenticated push transport \\\\\n24 & RCSB PDB Search API & structure discovery by title/attribute query (8RNI, 7OW3) \\\\\n25 & RCSB PDB Data API & entry metadata and citation verification \\\\\n26 & WebLogo 3.9 & anchor motif sequence logos (Fig.~\ref{fig:logos}) \\\\\n27 & FreeSASA & anchor burial (SASA) in 1DUZ/8RNI/7OW3 \\\\\n28 & modlamp & independent CPP descriptor cross-check (pKa charge) \\\\\n29 & peptides & descriptor cross-check (KD hydropathy, EMBOSS charge, moment) \\\\\n30 & statsmodels & confound-controlled binomial GLM (length/method/locus) \\\\\n31 & Europe PMC API & bibliography verification (27 references) \\\\\n32 & CrossRef API & DOI/venue verification; caught the MLCPP-2.0 venue error \\\\\n33 & NCBI E-utilities & PubMed record verification \\\\\n34 & PDB-REDO & structure QC (R/R-free, resolution) for 1DUZ/8RNI/7OW3 and the 72-entry per-allele set \\\\\n35 & IPD-IMGT/HLA & pocket chemistry of all 52 covered alleles (hla\_prot.fasta reference records) \\\\\n36 & EBI MAFFT (REST) & family-level relatedness: 18 designed CPPs vs 7 CPPsite archetypes \\\\\n37 & ToxinPred & toxicity screen of designed CPPs: 18/18 Non-Toxin \\\\\n38 & HLP & half-life/stability screen of designed CPPs: 10 High, 8 Normal \\\\",
+    "tools_rows": "1 & PyTorch 2.x & CNN, GNN, GRU training (pHLA + CPP) \\\\\n2 & scikit-learn & 3-mer logistic regression (L-BFGS); AUC cross-check \\\\\n3 & NumPy & all numerical arrays, bootstrap machinery \\\\\n4 & pandas & IEDB TSV handling, dataset aggregation \\\\\n5 & SciPy & Spearman/Pearson tests (epistasis--margin null) \\\\\n6 & matplotlib & all 26 figures \\\\\n7 & Biopython 1.88 & PairwiseAligner novelty recheck; ProtParam descriptors; PDB parsing \\\\\n8 & pytest & 33-test hermetic suite \\\\\n9 & MHCflurry 2.2.1 & head-to-head comparator (affinity predictor, CPU) \\\\\n10 & NetMHCpan-4.1 & published landscape numbers (gkaa379) \\\\\n11 & IEDB & mhc\\_ligand\\_full export (350 studies) \\\\\n12 & IEDB Analysis Resource & benchmark framework reference \\\\\n13 & CPPsite 2.0 & CPP positives (Raghava group) \\\\\n14 & UniProtKB REST API & negative pools; novelty screen pool \\\\\n15 & RCSB PDB & structures 1DUZ, 8RNI, 7OW3 (pocket verification) \\\\\n16 & NCBI BLOSUM62 & substitution-matrix encoding channel \\\\\n17 & GitHub & repository hosting \\\\\n18 & Google Drive API & results delivery \\\\\n19 & Python 3.10 & runtime \\\\\n20 & git & version control; bundle transport \\\\\n21 & pdfLaTeX (TeX Live) & this document \\\\\n22 & curl & dataset download (download\\_data.sh) \\\\\n23 & OpenSSH & authenticated push transport \\\\\n24 & RCSB PDB Search API & structure discovery by title/attribute query (8RNI, 7OW3) \\\\\n25 & RCSB PDB Data API & entry metadata and citation verification \\\\\n26 & WebLogo 3.9 & anchor motif sequence logos (Fig.~\ref{fig:logos}) \\\\\n27 & FreeSASA & anchor burial (SASA) in 1DUZ/8RNI/7OW3 \\\\\n28 & modlamp & independent CPP descriptor cross-check (pKa charge) \\\\\n29 & peptides & descriptor cross-check (KD hydropathy, EMBOSS charge, moment) \\\\\n30 & statsmodels & confound-controlled binomial GLM (length/method/locus) \\\\\n31 & Europe PMC API & bibliography verification (27 references) \\\\\n32 & CrossRef API & DOI/venue verification; caught the MLCPP-2.0 venue error \\\\\n33 & NCBI E-utilities & PubMed record verification \\\\\n34 & PDB-REDO & structure QC (R/R-free, resolution) for 1DUZ/8RNI/7OW3 and the 72-entry per-allele set \\\\\n35 & IPD-IMGT/HLA & pocket chemistry of all 52 covered alleles (hla\_prot.fasta reference records) \\\\\n36 & EBI MAFFT (REST) & family-level relatedness: 18 designed CPPs vs 7 CPPsite archetypes \\\\\n37 & ToxinPred & toxicity screen of designed CPPs: 18/18 Non-Toxin \\\\\n38 & HLP & half-life/stability screen of designed CPPs: 10 High, 8 Normal \\\\n39 & CellPPD & mutational-sensitivity screen of the 18 designed CPPs: 5,187 single-mutant SVM scores, all below CPP threshold \\\\",
     "pa_n": str(pasum["n_structures"]),
     "pa_ok": str(pasum["n_with_peptide"]),
     "pa_nopep": str(pasum["n_no_peptide"]),
