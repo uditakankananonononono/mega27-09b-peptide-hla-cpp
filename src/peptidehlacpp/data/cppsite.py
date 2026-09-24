@@ -78,20 +78,18 @@ def sample_length_matched_windows(neg_pool: list[Peptide], positives: list[Pepti
     positive length distribution (standard CPP-benchmark practice)."""
     rng = random.Random(seed)
     eligible = [p for p in neg_pool if len(p.sequence) >= 8]
-    by_len: dict[int, list[Peptide]] = {}
-    for p in eligible:
-        by_len.setdefault(len(p), []).append(p)
     out: list[Peptide] = []
     for pos in positives:
         L = len(pos.sequence)
+        donors = [p for p in eligible if len(p.sequence) >= L]
+        if not donors:
+            continue
         for _ in range(n_per_pos):
-            donors = by_len.get(L) or eligible
             donor = rng.choice(donors)
-            if len(donor.sequence) == L:
-                frag = donor.sequence
-            else:
+            start = 0
+            if len(donor.sequence) > L:
                 start = rng.randrange(0, len(donor.sequence) - L + 1)
-                frag = donor.sequence[start:start + L]
+            frag = donor.sequence[start:start + L]
             if set(frag) <= AA and 8 <= len(frag) <= max_len:
-                out.append(Peptide(f"neg|{donor.identifier}|{start if len(donor.sequence) != L else 0}", frag))
+                out.append(Peptide(f"neg|{donor.identifier}|{start}", frag))
     return out
