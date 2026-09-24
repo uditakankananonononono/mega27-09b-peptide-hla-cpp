@@ -478,6 +478,35 @@ the covariance of placement vectors --- the basis for the per-allele win
 counts we report (a 0.01 AUC gap at $n_\pm\sim 10^2$ carries
 $2\sigma\approx0.03$; gaps beyond that are real at that sample size).
 
+
+\subsection{Variance of a paired AUC difference}
+\label{sec:pairedvar}
+Two models scored on the \emph{same} test set give AUC estimates
+$\hat\theta_1, \hat\theta_2$ whose difference has variance
+\begin{equation}
+\mathrm{Var}(\hat\theta_1-\hat\theta_2)
+=\mathrm{Var}(\hat\theta_1)+\mathrm{Var}(\hat\theta_2)
+-2\,\mathrm{Cov}(\hat\theta_1,\hat\theta_2).
+\end{equation}
+The covariance term is large and positive because both estimators are
+Mann--Whitney statistics over identical labels: any test peptide that is
+hard for one model tends to be hard for the other. Ignoring it ---
+comparing independent DeLong intervals --- overstates the uncertainty of
+the difference and is the standard way real benchmark wins get dismissed
+as noise. The paired bootstrap estimates all three terms in one pass:
+resample test pairs with replacement, recompute both AUCs on each
+replicate, and take the percentile interval of the difference
+(\S\ref{sec:h2hci}). Because the resample preserves the pairing, the
+empirical distribution of $\hat\theta_1^{*}-\hat\theta_2^{*}$ already
+contains the covariance. Two consequences are worth stating. First, the
+paired interval is \emph{narrower} than the overlap of the two marginal
+intervals whenever $\mathrm{Cov}>0$, which is why our 0.0117 margin is
+decisive at $[0.0043,0.0192]$ while the marginal intervals overlap
+substantially. Second, the same pairing argument applies to per-allele
+comparisons: an allele-level win/loss tally (21/30) is a sign test under
+the null of a zero-median margin, and its $p$-value does not require any
+within-allele variance estimate at all.
+
 \subsection{k-mer logistic regression for CPP classification}
 \label{sec:kmerlr}
 With $x\in\{0,1\}^{20^3}$ the 3-mer indicator (20 amino acids, $k{=}3$),
