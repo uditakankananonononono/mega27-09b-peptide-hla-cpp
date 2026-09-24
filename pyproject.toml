@@ -1,13 +1,17 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "peptidehlacpp"
 version = "0.1.0"
-description = "Peptide-HLA binding prediction and CPP design (MEGA27 item 9b)"
+description = "Peptide-HLA class-I binding prediction and cell-penetrating peptide design (MEGA27-09b)"
+readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["numpy", "pandas", "scipy", "matplotlib", "torch", "scikit-learn", "biopython", "networkx"]
+dependencies = ["numpy", "torch"]
+
+[project.scripts]
+peptidehlacpp = "peptidehlacpp.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
