@@ -23,6 +23,7 @@ mparams = json.load(open("results/model_params.json"))
 worked = json.load(open("results/epistasis_worked_example.json"))
 novel = json.load(open("results/cpp_novel_candidates.json"))
 kw = json.load(open("results/cpp_kmer_feature_weights.json"))
+scan = json.load(open("results/cpp_alanine_scan.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
 
@@ -916,7 +917,51 @@ implication as a falsifiable prediction: in any 9B-CPP candidate,
 conservative Arg$\to$Ala substitution of a single Arg$_3$ run should
 reduce the classifier log-odds by $\approx %(kw_top_weight)s$ --- a drop
 from $p\approx0.99$ to below the $0.7$ cascade threshold --- providing a
-direct computational test of the mechanism the classifier has internalized.
+We run that test
+directly in \S\ref{sec:alanine}; the outcome is more instructive than the
+prediction.
+
+
+\subsection{Cross-model corroboration and the alanine-scan test}
+\label{sec:alanine}
+The 18 named candidates were \emph{selected} by the CNN cascade, so their
+CNN scores (mean %(cnn_mean_named)s) cannot corroborate themselves. We
+rescored all 18 with the independent 3-mer logistic model --- a different
+model family, trained on the same homology-guarded split --- and the mean
+probability falls to %(lr_mean_named)s (Fig.~\ref{fig:crossmodel}): the
+generator has learned to exploit the selecting model, and a fraction of
+the CNN's confidence is selection artifact rather than evidence. Six
+candidates pass both gates ($p_{\mathrm{CNN}}\ge0.99$ and
+$p_{\mathrm{LR}}\ge0.7$): %(corrob_names)s. We designate these the
+cross-validated high-confidence subset; any experimental follow-up should
+start here. The remaining twelve are not refuted --- the LR is the weaker
+model on average --- but their evidence is single-model.
+\begin{figure}[h]\centering
+\includegraphics[width=.5\linewidth]{figures/fig21_crossmodel.png}
+\caption{CNN cascade score vs independent 3-mer LR score for the 18 named
+candidates. Dashed lines: the 0.7 gates. Red points are corroborated by
+both model families.}\label{fig:crossmodel}
+\end{figure}
+
+The alanine scan then tests the design rule of \S\ref{sec:kmerweights}
+head-on. For each candidate we mutated its strongest basic run
+($\ge3$ consecutive Arg/Lys, present in 14 of 18) to alanines and rescored
+with the LR. The threshold consequence of the prediction is confirmed:
+every one of the 14 single-run mutants drops below the 0.7 cascade line.
+The magnitude prediction, however, is \emph{rejected}: the mean log-odds
+drop is %(scan_mean_drop)s (range %(scan_min_drop)s--%(scan_max_drop)s),
+not the %(kw_top_weight)s that a single concentrated Arg$_3$ contribution
+would imply. The classifier's CPP signal is \emph{distributed} across many
+cooperating basic 3-mers rather than concentrated in one run --- mutating
+any single run removes only a fraction of the total evidence. Stripping
+\emph{every} Arg/Lys to alanine confirms the picture: 14 of 18 candidates
+fall below 0.5, but none below 0.1, because amphipathic and aromatic
+3-mers carry residual positive weight. We keep the rejected point
+prediction in \S\ref{sec:kmerweights} deliberately: it is the program's
+honest-negative standard applied to our own discovery claim, and the
+corrected mechanism --- redundancy of the basic-run signal --- is the more
+useful design rule, since it predicts robustness of uptake to single-point
+mutation, a property that matters for manufacturability.
 
 \subsection{Uncertainty on the head-to-head}
 \label{sec:h2hci}
@@ -1434,6 +1479,12 @@ in under 60 seconds.
 """
 
 subs = {
+    "cnn_mean_named": f(sum(c["p_cpp"] for c in novel["named_candidates"]) / len(novel["named_candidates"])),
+    "lr_mean_named": f(sum(r["p0"] for r in scan["candidates"]) / len(scan["candidates"]), 3),
+    "corrob_names": ", ".join(r["name"] for r in scan["candidates"] if r["p0"] >= 0.7 and next(c for c in novel["named_candidates"] if c["name"] == r["name"])["p_cpp"] >= 0.99),
+    "scan_mean_drop": f(scan["mean_logodds_drop"], 2),
+    "scan_min_drop": f(scan["min_drop"], 2),
+    "scan_max_drop": f(scan["max_drop"], 2),
     "kw_auc": f(kw["refit_test_auc"]),
     "kw_vocab": f"{kw['vocab_size']:,}",
     "kw_top5": ", ".join(f"\\texttt{{{d['kmer']}}}" for d in kw["top_positive"][:5]),
