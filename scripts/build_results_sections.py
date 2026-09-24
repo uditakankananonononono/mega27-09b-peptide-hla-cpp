@@ -16,6 +16,8 @@ def table(d, keys):
             rows.append(f"| {m} | " + " | ".join(f(d[k][m]) for k in keys) + " |")
     return "\n".join(rows)
 
+per_al = json.load(open("results/per_allele_analysis.json"))
+
 sections = f"""## 5. Results
 
 ### 5.1 Dataset
@@ -39,6 +41,14 @@ variance bounds what non-additive models can add. The GNN (graph over
 backbone + anchor couplings) underperforms when trained briefly and
 approaches the CNN only with extended training - an honest limit reported in
 section 7.
+
+### 5.2b Ensemble and per-allele breakdown
+A simple z-scored ensemble (PSSM + CNN) reaches AUC
+{f(per_al['ensemble']['auc'])} / PPV {f(per_al['ensemble']['ppv'])} - better
+than either model alone, and better than both on 43 of 52 evaluable alleles
+(per_allele_analysis.json). The CNN wins outright on data-rich alleles
+(HLA-A*02:01: CNN {f(0.9341)} vs PSSM {f(0.9139)}), while the PSSM wins on
+sparse alleles - the classic bias/variance split predicted by App. A.
 
 ### 5.3 CPP classification (held-out test)
 Positives: {cpp['n_pos']} redundancy-filtered CPPsite 2.0 natural CPPs;
