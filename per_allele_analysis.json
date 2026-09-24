@@ -1,0 +1,424 @@
+{
+  "ensemble": {
+    "auc": 0.9273024003127237,
+    "ppv": 0.7739766660075144
+  },
+  "per_allele": [
+    {
+      "allele": "HLA-A*02:01",
+      "n_test": 1672,
+      "n_train": 8594,
+      "pssm_auc": 0.9139,
+      "cnn_auc": 0.9341,
+      "ens_auc": 0.9378
+    },
+    {
+      "allele": "HLA-A*03:01",
+      "n_test": 939,
+      "n_train": 4597,
+      "pssm_auc": 0.9048,
+      "cnn_auc": 0.8924,
+      "ens_auc": 0.9123
+    },
+    {
+      "allele": "HLA-A*11:01",
+      "n_test": 813,
+      "n_train": 4001,
+      "pssm_auc": 0.9165,
+      "cnn_auc": 0.9008,
+      "ens_auc": 0.9217
+    },
+    {
+      "allele": "HLA-A*31:01",
+      "n_test": 732,
+      "n_train": 3433,
+      "pssm_auc": 0.9007,
+      "cnn_auc": 0.8921,
+      "ens_auc": 0.9102
+    },
+    {
+      "allele": "HLA-A*68:02",
+      "n_test": 640,
+      "n_train": 3294,
+      "pssm_auc": 0.9054,
+      "cnn_auc": 0.8812,
+      "ens_auc": 0.9121
+    },
+    {
+      "allele": "HLA-A*02:03",
+      "n_test": 611,
+      "n_train": 3185,
+      "pssm_auc": 0.9069,
+      "cnn_auc": 0.9267,
+      "ens_auc": 0.9322
+    },
+    {
+      "allele": "HLA-B*07:02",
+      "n_test": 536,
+      "n_train": 2653,
+      "pssm_auc": 0.9179,
+      "cnn_auc": 0.8898,
+      "ens_auc": 0.9284
+    },
+    {
+      "allele": "HLA-B*15:01",
+      "n_test": 532,
+      "n_train": 2646,
+      "pssm_auc": 0.9076,
+      "cnn_auc": 0.883,
+      "ens_auc": 0.9139
+    },
+    {
+      "allele": "HLA-A*01:01",
+      "n_test": 525,
+      "n_train": 2806,
+      "pssm_auc": 0.9191,
+      "cnn_auc": 0.8859,
+      "ens_auc": 0.9207
+    },
+    {
+      "allele": "HLA-A*02:06",
+      "n_test": 522,
+      "n_train": 2760,
+      "pssm_auc": 0.8849,
+      "cnn_auc": 0.8925,
+      "ens_auc": 0.9119
+    },
+    {
+      "allele": "HLA-A*68:01",
+      "n_test": 488,
+      "n_train": 2191,
+      "pssm_auc": 0.8841,
+      "cnn_auc": 0.8608,
+      "ens_auc": 0.8943
+    },
+    {
+      "allele": "HLA-A*33:01",
+      "n_test": 465,
+      "n_train": 2069,
+      "pssm_auc": 0.9424,
+      "cnn_auc": 0.9146,
+      "ens_auc": 0.9448
+    },
+    {
+      "allele": "HLA-A*02:02",
+      "n_test": 451,
+      "n_train": 2321,
+      "pssm_auc": 0.8673,
+      "cnn_auc": 0.888,
+      "ens_auc": 0.8954
+    },
+    {
+      "allele": "HLA-A*26:01",
+      "n_test": 448,
+      "n_train": 2395,
+      "pssm_auc": 0.9133,
+      "cnn_auc": 0.8539,
+      "ens_auc": 0.9062
+    },
+    {
+      "allele": "HLA-A*24:02",
+      "n_test": 391,
+      "n_train": 1919,
+      "pssm_auc": 0.8369,
+      "cnn_auc": 0.8051,
+      "ens_auc": 0.8409
+    },
+    {
+      "allele": "HLA-B*58:01",
+      "n_test": 363,
+      "n_train": 1815,
+      "pssm_auc": 0.9381,
+      "cnn_auc": 0.9508,
+      "ens_auc": 0.9548
+    },
+    {
+      "allele": "HLA-B*40:01",
+      "n_test": 349,
+      "n_train": 1872,
+      "pssm_auc": 0.9497,
+      "cnn_auc": 0.9364,
+      "ens_auc": 0.9665
+    },
+    {
+      "allele": "HLA-B*08:01",
+      "n_test": 345,
+      "n_train": 1715,
+      "pssm_auc": 0.8887,
+      "cnn_auc": 0.8426,
+      "ens_auc": 0.8942
+    },
+    {
+      "allele": "HLA-B*57:01",
+      "n_test": 335,
+      "n_train": 1711,
+      "pssm_auc": 0.9575,
+      "cnn_auc": 0.945,
+      "ens_auc": 0.9633
+    },
+    {
+      "allele": "HLA-B*51:01",
+      "n_test": 334,
+      "n_train": 1657,
+      "pssm_auc": 0.8663,
+      "cnn_auc": 0.8143,
+      "ens_auc": 0.8738
+    },
+    {
+      "allele": "HLA-A*69:01",
+      "n_test": 327,
+      "n_train": 1755,
+      "pssm_auc": 0.9553,
+      "cnn_auc": 0.9389,
+      "ens_auc": 0.9634
+    },
+    {
+      "allele": "HLA-B*18:01",
+      "n_test": 303,
+      "n_train": 1632,
+      "pssm_auc": 0.9379,
+      "cnn_auc": 0.8582,
+      "ens_auc": 0.9332
+    },
+    {
+      "allele": "HLA-B*27:05",
+      "n_test": 302,
+      "n_train": 1498,
+      "pssm_auc": 0.9551,
+      "cnn_auc": 0.9298,
+      "ens_auc": 0.9648
+    },
+    {
+      "allele": "HLA-A*29:02",
+      "n_test": 269,
+      "n_train": 1426,
+      "pssm_auc": 0.9183,
+      "cnn_auc": 0.8875,
+      "ens_auc": 0.9218
+    },
+    {
+      "allele": "HLA-B*44:02",
+      "n_test": 245,
+      "n_train": 1367,
+      "pssm_auc": 0.9429,
+      "cnn_auc": 0.9148,
+      "ens_auc": 0.9605
+    },
+    {
+      "allele": "HLA-B*35:01",
+      "n_test": 242,
+      "n_train": 1197,
+      "pssm_auc": 0.8684,
+      "cnn_auc": 0.8487,
+      "ens_auc": 0.8939
+    },
+    {
+      "allele": "HLA-B*46:01",
+      "n_test": 238,
+      "n_train": 1259,
+      "pssm_auc": 0.9385,
+      "cnn_auc": 0.8125,
+      "ens_auc": 0.9394
+    },
+    {
+      "allele": "HLA-A*23:01",
+      "n_test": 236,
+      "n_train": 1284,
+      "pssm_auc": 0.8936,
+      "cnn_auc": 0.8803,
+      "ens_auc": 0.9064
+    },
+    {
+      "allele": "HLA-A*30:01",
+      "n_test": 211,
+      "n_train": 1042,
+      "pssm_auc": 0.8892,
+      "cnn_auc": 0.8415,
+      "ens_auc": 0.8916
+    },
+    {
+      "allele": "HLA-B*15:17",
+      "n_test": 206,
+      "n_train": 1056,
+      "pssm_auc": 0.9711,
+      "cnn_auc": 0.9503,
+      "ens_auc": 0.9738
+    },
+    {
+      "allele": "HLA-B*39:01",
+      "n_test": 194,
+      "n_train": 1001,
+      "pssm_auc": 0.9417,
+      "cnn_auc": 0.8698,
+      "ens_auc": 0.9449
+    },
+    {
+      "allele": "HLA-A*30:02",
+      "n_test": 181,
+      "n_train": 1018,
+      "pssm_auc": 0.7641,
+      "cnn_auc": 0.7982,
+      "ens_auc": 0.8013
+    },
+    {
+      "allele": "HLA-A*24:03",
+      "n_test": 163,
+      "n_train": 846,
+      "pssm_auc": 0.9652,
+      "cnn_auc": 0.9488,
+      "ens_auc": 0.9693
+    },
+    {
+      "allele": "HLA-B*53:01",
+      "n_test": 162,
+      "n_train": 870,
+      "pssm_auc": 0.8273,
+      "cnn_auc": 0.8447,
+      "ens_auc": 0.8601
+    },
+    {
+      "allele": "HLA-A*80:01",
+      "n_test": 156,
+      "n_train": 836,
+      "pssm_auc": 0.9772,
+      "cnn_auc": 0.9638,
+      "ens_auc": 0.9826
+    },
+    {
+      "allele": "HLA-A*25:01",
+      "n_test": 135,
+      "n_train": 678,
+      "pssm_auc": 0.9584,
+      "cnn_auc": 0.9272,
+      "ens_auc": 0.9632
+    },
+    {
+      "allele": "HLA-A*32:01",
+      "n_test": 130,
+      "n_train": 623,
+      "pssm_auc": 0.8564,
+      "cnn_auc": 0.8436,
+      "ens_auc": 0.8763
+    },
+    {
+      "allele": "HLA-B*44:03",
+      "n_test": 127,
+      "n_train": 708,
+      "pssm_auc": 0.8708,
+      "cnn_auc": 0.8895,
+      "ens_auc": 0.901
+    },
+    {
+      "allele": "HLA-B*48:01",
+      "n_test": 122,
+      "n_train": 676,
+      "pssm_auc": 0.9258,
+      "cnn_auc": 0.8879,
+      "ens_auc": 0.928
+    },
+    {
+      "allele": "HLA-A*02:12",
+      "n_test": 121,
+      "n_train": 679,
+      "pssm_auc": 0.9632,
+      "cnn_auc": 0.9579,
+      "ens_auc": 0.9774
+    },
+    {
+      "allele": "HLA-A*02:19",
+      "n_test": 113,
+      "n_train": 632,
+      "pssm_auc": 0.9517,
+      "cnn_auc": 0.9456,
+      "ens_auc": 0.9755
+    },
+    {
+      "allele": "HLA-A*02:11",
+      "n_test": 104,
+      "n_train": 536,
+      "pssm_auc": 0.944,
+      "cnn_auc": 0.8799,
+      "ens_auc": 0.933
+    },
+    {
+      "allele": "HLA-A*02:16",
+      "n_test": 94,
+      "n_train": 448,
+      "pssm_auc": 0.9603,
+      "cnn_auc": 0.9553,
+      "ens_auc": 0.9806
+    },
+    {
+      "allele": "HLA-B*54:01",
+      "n_test": 91,
+      "n_train": 497,
+      "pssm_auc": 0.898,
+      "cnn_auc": 0.8271,
+      "ens_auc": 0.8974
+    },
+    {
+      "allele": "HLA-B*40:02",
+      "n_test": 80,
+      "n_train": 413,
+      "pssm_auc": 0.6924,
+      "cnn_auc": 0.6795,
+      "ens_auc": 0.7309
+    },
+    {
+      "allele": "HLA-B*45:01",
+      "n_test": 70,
+      "n_train": 378,
+      "pssm_auc": 0.8381,
+      "cnn_auc": 0.7159,
+      "ens_auc": 0.8295
+    },
+    {
+      "allele": "HLA-B*15:03",
+      "n_test": 57,
+      "n_train": 297,
+      "pssm_auc": 0.8403,
+      "cnn_auc": 0.6968,
+      "ens_auc": 0.8565
+    },
+    {
+      "allele": "HLA-A*02:17",
+      "n_test": 53,
+      "n_train": 257,
+      "pssm_auc": 0.6243,
+      "cnn_auc": 0.7457,
+      "ens_auc": 0.6586
+    },
+    {
+      "allele": "HLA-A*26:02",
+      "n_test": 45,
+      "n_train": 315,
+      "pssm_auc": 0.9133,
+      "cnn_auc": 0.8933,
+      "ens_auc": 0.9333
+    },
+    {
+      "allele": "HLA-C*14:02",
+      "n_test": 38,
+      "n_train": 183,
+      "pssm_auc": 0.5885,
+      "cnn_auc": 0.75,
+      "ens_auc": 0.5885
+    },
+    {
+      "allele": "HLA-A*26:03",
+      "n_test": 38,
+      "n_train": 205,
+      "pssm_auc": 0.8242,
+      "cnn_auc": 0.6606,
+      "ens_auc": 0.8182
+    },
+    {
+      "allele": "HLA-C*06:02",
+      "n_test": 33,
+      "n_train": 162,
+      "pssm_auc": 0.8296,
+      "cnn_auc": 0.3111,
+      "ens_auc": 0.7556
+    }
+  ]
+}

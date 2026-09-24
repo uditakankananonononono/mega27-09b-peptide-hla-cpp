@@ -1,0 +1,220 @@
+{
+  "n_screened": 50,
+  "n_novel": 18,
+  "named_candidates": [
+    {
+      "sequence": "LRILRWWRWRWRNRWKRRR",
+      "p_cpp": 0.9979,
+      "net_charge": 10.0,
+      "hydrophobic_moment": 0.635,
+      "mean_hydropathy": -2.121,
+      "max_db_jaccard": 0.176,
+      "max_db_identity": 0.5,
+      "name": "9B-CPP-1"
+    },
+    {
+      "sequence": "RLRRRLRLRLRLRLRLRRL",
+      "p_cpp": 0.9965,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.811,
+      "mean_hydropathy": -1.005,
+      "max_db_jaccard": 0.429,
+      "max_db_identity": 0.625,
+      "name": "9B-CPP-2"
+    },
+    {
+      "sequence": "WRWRKKKRKK",
+      "p_cpp": 0.9964,
+      "net_charge": 8.0,
+      "hydrophobic_moment": 0.42,
+      "mean_hydropathy": -3.48,
+      "max_db_jaccard": 0.333,
+      "max_db_identity": 0.75,
+      "name": "9B-CPP-3"
+    },
+    {
+      "sequence": "GLWRWRWRWRKSLKK",
+      "p_cpp": 0.9963,
+      "net_charge": 7.0,
+      "hydrophobic_moment": 1.197,
+      "mean_hydropathy": -1.793,
+      "max_db_jaccard": 0.222,
+      "max_db_identity": 0.571,
+      "name": "9B-CPP-4"
+    },
+    {
+      "sequence": "RRINRRWRWKRWKKC",
+      "p_cpp": 0.9962,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.482,
+      "mean_hydropathy": -2.527,
+      "max_db_jaccard": 0.25,
+      "max_db_identity": 0.583,
+      "name": "9B-CPP-5"
+    },
+    {
+      "sequence": "WRWRKKRRR",
+      "p_cpp": 0.9961,
+      "net_charge": 7.0,
+      "hydrophobic_moment": 0.669,
+      "mean_hydropathy": -3.567,
+      "max_db_jaccard": 0.444,
+      "max_db_identity": 0.667,
+      "name": "9B-CPP-6"
+    },
+    {
+      "sequence": "RGRWRWKKRHRPK",
+      "p_cpp": 0.9957,
+      "net_charge": 8.1,
+      "hydrophobic_moment": 0.241,
+      "mean_hydropathy": -3.169,
+      "max_db_jaccard": 0.267,
+      "max_db_identity": 0.538,
+      "name": "9B-CPP-7"
+    },
+    {
+      "sequence": "GLARWRWRWRRQ",
+      "p_cpp": 0.9955,
+      "net_charge": 5.0,
+      "hydrophobic_moment": 0.836,
+      "mean_hydropathy": -1.958,
+      "max_db_jaccard": 0.286,
+      "max_db_identity": 0.667,
+      "name": "9B-CPP-8"
+    },
+    {
+      "sequence": "RLRRRRRRNRRRNWRWL",
+      "p_cpp": 0.9955,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.859,
+      "mean_hydropathy": -2.982,
+      "max_db_jaccard": 0.286,
+      "max_db_identity": 0.733,
+      "name": "9B-CPP-9"
+    },
+    {
+      "sequence": "WRWKWKKRWRKH",
+      "p_cpp": 0.9955,
+      "net_charge": 7.1,
+      "hydrophobic_moment": 0.25,
+      "mean_hydropathy": -2.992,
+      "max_db_jaccard": 0.286,
+      "max_db_identity": 0.583,
+      "name": "9B-CPP-10"
+    },
+    {
+      "sequence": "RLFRRRRLRRRRRRNN",
+      "p_cpp": 0.9954,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.266,
+      "mean_hydropathy": -2.881,
+      "max_db_jaccard": 0.273,
+      "max_db_identity": 0.733,
+      "name": "9B-CPP-11"
+    },
+    {
+      "sequence": "RLRLRLRLRLRIRIRR",
+      "p_cpp": 0.9954,
+      "net_charge": 9.0,
+      "hydrophobic_moment": 0.493,
+      "mean_hydropathy": -0.781,
+      "max_db_jaccard": 0.214,
+      "max_db_identity": 0.562,
+      "name": "9B-CPP-12"
+    },
+    {
+      "sequence": "AWRWRWRCKAKKR",
+      "p_cpp": 0.9953,
+      "net_charge": 7.0,
+      "hydrophobic_moment": 0.399,
+      "mean_hydropathy": -2.023,
+      "max_db_jaccard": 0.308,
+      "max_db_identity": 0.636,
+      "name": "9B-CPP-13"
+    },
+    {
+      "sequence": "RRRRWRRLWRHLRRR",
+      "p_cpp": 0.9953,
+      "net_charge": 10.1,
+      "hydrophobic_moment": 1.158,
+      "mean_hydropathy": -2.827,
+      "max_db_jaccard": 0.273,
+      "max_db_identity": 0.667,
+      "name": "9B-CPP-14"
+    },
+    {
+      "sequence": "YLLRLRRRLRRRSRARRRR",
+      "p_cpp": 0.9953,
+      "net_charge": 12.0,
+      "hydrophobic_moment": 0.947,
+      "mean_hydropathy": -2.058,
+      "max_db_jaccard": 0.316,
+      "max_db_identity": 0.75,
+      "name": "9B-CPP-15"
+    },
+    {
+      "sequence": "RGRLRRHLRRRLRRR",
+      "p_cpp": 0.9952,
+      "net_charge": 10.1,
+      "hydrophobic_moment": 1.064,
+      "mean_hydropathy": -2.48,
+      "max_db_jaccard": 0.4,
+      "max_db_identity": 0.667,
+      "name": "9B-CPP-16"
+    },
+    {
+      "sequence": "RLRRRLRLRRFLRRRR",
+      "p_cpp": 0.9952,
+      "net_charge": 11.0,
+      "hydrophobic_moment": 0.332,
+      "mean_hydropathy": -1.969,
+      "max_db_jaccard": 0.3,
+      "max_db_identity": 0.688,
+      "name": "9B-CPP-17"
+    },
+    {
+      "sequence": "LGRLWRRLRRRRRHLRRAARSH",
+      "p_cpp": 0.9951,
+      "net_charge": 11.2,
+      "hydrophobic_moment": 1.511,
+      "mean_hydropathy": -1.782,
+      "max_db_jaccard": 0.222,
+      "max_db_identity": 0.579,
+      "name": "9B-CPP-18"
+    }
+  ],
+  "families": [
+    [
+      "RLRRRLRLRLRLRLRLRRL",
+      "RLRRRLRLRRFLRRRR"
+    ],
+    [
+      "WRWRKKKRKK",
+      "WRWRKKRRR"
+    ],
+    [
+      "LRILRWWRWRWRNRWKRRR"
+    ],
+    [
+      "GLWRWRWRWRKSLKK"
+    ],
+    [
+      "RRINRRWRWKRWKKC"
+    ],
+    [
+      "RGRWRWKKRHRPK"
+    ],
+    [
+      "GLARWRWRWRRQ"
+    ],
+    [
+      "RLRRRRRRNRRRNWRWL"
+    ],
+    [
+      "WRWKWKKRWRKH"
+    ],
+    [
+      "RLFRRRRLRRRRRRNN"
+    ]
+  ]
+}
