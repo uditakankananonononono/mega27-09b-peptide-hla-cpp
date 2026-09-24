@@ -1,6 +1,5 @@
 {
  "pdb": "1DUZ",
- "peptide": "LEULEUPHEGLYTYRPROVALTYRVAL",
  "p2_contacts": [
   7,
   9,
@@ -9,7 +8,8 @@
   66,
   67,
   70,
-  99
+  99,
+  159
  ],
  "pomega_contacts": [
   77,
@@ -28,6 +28,7 @@
   45,
   63,
   66,
+  67,
   70,
   99
  ],
