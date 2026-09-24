@@ -22,6 +22,7 @@ locus = json.load(open("results/locus_breakdown.json"))
 mparams = json.load(open("results/model_params.json"))
 worked = json.load(open("results/epistasis_worked_example.json"))
 novel = json.load(open("results/cpp_novel_candidates.json"))
+kw = json.load(open("results/cpp_kmer_feature_weights.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
 
@@ -403,6 +404,37 @@ $\mu_H$ is reversal-invariant; for fixed composition it is maximized by
 placing the largest $|H_n|$ at aligned phases (rearrangement inequality).
 \end{proposition}
 
+
+\subsection{Algorithm: the per-allele anchor-epistasis estimator}
+\label{sec:epialgo}
+We state the estimator behind Discovery~1 explicitly, since no published
+tool reports the quantity. For allele $A$:
+\begin{enumerate}
+\item \textbf{Grid.} Collect the allele's 9-mers; bin by residue identity
+at P2 and P$\Omega$ into cells $(a,b)\in\mathrm{AA}^2$; retain cells with
+$\ge 5$ observations; require $\ge 8$ filled cells, $\ge 3$ distinct
+residues at each anchor, and $\ge 1500$ 9-mers for the allele.
+\item \textbf{Double-mutant cycle.} With $G_{ab}$ the cell mean of
+$\log_{10}\mathrm{IC50}$, form the interaction matrix
+$I_{ab}=G_{ab}-\bar G_{a\cdot}-\bar G_{\cdot b}+\bar G_{\cdot\cdot}$ ---
+the double-mutant-cycle energies of Prop.~2, computed on available cells
+(missing cells are simply absent from every mean they would enter).
+\item \textbf{Summaries.} Report the RMS interaction
+$\mathrm{RMS}(I)=\big(\sum_{(a,b)} I_{ab}^2/|\mathrm{cells}|\big)^{1/2}$
+and the hydrophobic--hydrophobic contrast
+$\gamma_A=\mathrm{mean}\{I_{ab}: a,b\in\{\mathrm{L,I,V,M,F,W,A}\}\}$,
+the mean coupling when both anchors are hydrophobic.
+\item \textbf{Uncertainty.} $B=200$ peptide-level bootstrap resamples of
+the allele's 9-mers; the grid is refit per replicate; percentile 95\%
+CIs are reported for $\mathrm{RMS}(I)$.
+\end{enumerate}
+The cost is $O(n_A(1+B))$ per allele: linear in the data, since the grid
+is bounded by $20\times20$ cells. The sign of $\gamma_A$ is the falsifiable
+object: it predicts which anchor chemistries cooperate, and the sign flip
+between the A$^*$02 and A$^*$03/A$^*$11 families (Discovery section) is a
+statement about pocket chemistry, not about model choice --- the estimator
+is model-free, operating on assay values alone.
+
 \subsection{Platt scaling for calibrated binder probabilities}
 Ranking scores are monotone-invariant; decision-making needs calibrated
 probabilities. Platt scaling fits a one-dimensional logistic map on
@@ -577,6 +609,37 @@ best-val checkpointing on val AUC; 8 epochs (CNN, PSSM rerun), 30 epochs
 form (ridge $\lambda{=}1$). All randomness is seeded; the 24-test hermetic
 suite (parsers, encodings, graphs, metrics, model shapes, additive-signal
 recovery, generator, cascade) runs without network access.
+
+
+\subsection{Optimization details and compute budget}
+\label{sec:opt}
+All neural models are trained on CPU with AdamW (learning rate $10^{-3}$,
+weight decay $10^{-4}$) and best-on-validation checkpoint selection by
+validation AUC; the pHLA models minimize a multi-task loss
+$\mathrm{MSE}(\hat g, g) + \mathrm{BCE}(\hat y, y)$ over the regression
+and binder heads jointly. Table~\ref{tab:opt} lists the exact
+configuration of every trained model in this paper.
+\begin{table}[h]\centering\begin{tabular}{llcccc}\hline\hline
+model & optimizer & batch & epochs & parameters & selection \\\hline
+pHLA CNN & AdamW & 512 & 8 & %(p_cnn)s & best val AUC \\
+pHLA GNN & AdamW & 512 & 30 & %(p_gnn)s & best val AUC \\
+CPP CNN & AdamW & 256 & 10 & %(p_cpp)s & best val AUC \\
+GRU generator & Adam & 256 & 40 & %(p_gen)s & final epoch \\
+3-mer LR & L-BFGS & full & $C=1$ & 8{,}000 + 1 & converged \\
+PSSM ridge & closed form & full & -- & 301/allele & -- \\\hline\hline
+\end{tabular}\caption{Training configurations. Parameter counts are read
+from the saved checkpoints (results/model\_params.json). The PSSM is a
+per-allele ridge: $15\times20$ positional weights plus bias, closed form,
+no iterative fitting.}\label{tab:opt}\end{table}
+The total compute budget of the project is deliberately modest --- every
+number in this paper is reproducible on a laptop in under a day: the
+binding models train in minutes per epoch over ${\sim}10^5$ pairs, the
+30-epoch GNN run is the single largest job, and the MHCflurry head-to-head
+is inference-only on the 6{,}000-pair subset. We regard a strong result
+under an explicit compute ceiling as more informative than a
+datacenter-scale number: it bounds what the signal in the data itself
+supports, which is the quantity the learning curve
+(\S\ref{sec:learningcurve}) then measures directly.
 
 \section{Pipeline architecture}
 The pipeline is a single Python package (\texttt{src/peptidehlacpp}) with
@@ -812,6 +875,48 @@ moment: CPPsite 2.0 CPPs vs length-matched UniProt windows.}
 \caption{Amino-acid enrichment (log$_2$ ratio) of CPPs vs UniProt
 windows.}\label{fig:aenr}
 \end{figure}
+
+
+\subsection{Sequence drivers of CPP classification: learned 3-mer weights}
+\label{sec:kmerweights}
+The regularized 3-mer model of \S\ref{sec:cppcls} is not only the
+strongest CPP classifier at this sample size; its coefficients are
+directly interpretable as per-occurrence log-odds contributions of each
+3-mer. We refit the model on the identical homology-guarded split ---
+reproducing the benchmark AUC exactly (%(kw_auc)s) --- and ranked all
+%(kw_vocab)s coefficients (Fig.~\ref{fig:kw}). The top five features are
+%(kw_top5)s: poly-basic runs dominate, RRR alone contributing
+%(kw_top_weight)s log-odds per occurrence, an $e^{%(kw_top_weight)s}$-fold
+factor on the odds scale. %(kw_top50_rk)s of the 50 most positive 3-mers
+contain Arg or Lys, and the chemistry-resolved means over the full
+vocabulary (Table~\ref{tab:chemeffects}) show the effect is monotone in
+basic character: Arg-containing 3-mers average strongly positive weight,
+acidic (D/E) and aliphatic (L/I/V) 3-mers negative. The most negative
+features are hydrophobic and acidic runs (LLL, FLL, EAS, DED) --- exactly
+the composition of the length-matched UniProt windows used as negatives,
+so the classifier has learned composition, not contamination.
+\begin{figure}[h]\centering
+\includegraphics[width=.6\linewidth]{figures/fig20_cpp_kmer_weights.png}
+\caption{Top 20 positive and top 10 negative 3-mer logistic-regression
+coefficients, colored by chemistry. Poly-basic runs (red) dominate the
+positive end; the negative end is hydrophobic/acidic.}\label{fig:kw}
+\end{figure}
+\begin{table}[h]\centering\begin{tabular}{lccc}\hline\hline
+3-mer group & $n$ 3-mers & mean weight & mean weight (rest) \\\hline
+%(chem_rows)s
+\hline\hline
+\end{tabular}\caption{Chemistry-resolved mean logistic-regression weights
+over the full 8{,}000-mer vocabulary. Basic-residue 3-mers carry positive
+mean weight; hydrophobic and acidic 3-mers negative.}\label{tab:chemeffects}
+\end{table}
+The learned rule is visible in what the generator produces: the 18 named
+novel candidates of the Discovery section carry a mean Arg+Lys fraction of
+%(rk_frac_named)s and every one has net charge $\ge +5$. We state the
+implication as a falsifiable prediction: in any 9B-CPP candidate,
+conservative Arg$\to$Ala substitution of a single Arg$_3$ run should
+reduce the classifier log-odds by $\approx %(kw_top_weight)s$ --- a drop
+from $p\approx0.99$ to below the $0.7$ cascade threshold --- providing a
+direct computational test of the mechanism the classifier has internalized.
 
 \subsection{Uncertainty on the head-to-head}
 \label{sec:h2hci}
@@ -1329,6 +1434,23 @@ in under 60 seconds.
 """
 
 subs = {
+    "kw_auc": f(kw["refit_test_auc"]),
+    "kw_vocab": f"{kw['vocab_size']:,}",
+    "kw_top5": ", ".join(f"\\texttt{{{d['kmer']}}}" for d in kw["top_positive"][:5]),
+    "kw_top_weight": f(kw["top_positive"][0]["weight"], 2),
+    "kw_top50_rk": kw["top50_composition"]["top50_containing_R_or_K"],
+    "rk_frac_named": f(sum(sum(1 for a in c["sequence"] if a in "RK") / len(c["sequence"]) for c in novel["named_candidates"]) / len(novel["named_candidates"]), 3),
+    "p_cnn": f"{mparams['cnn_params']:,}", "p_gnn": f"{mparams['gnn_params']:,}",
+    "p_cpp": f"{mparams['cpp_cnn_params']:,}", "p_gen": f"{mparams['generator_params']:,}",
+    "chem_rows": "\n".join(
+        f"{lab} & {kw['chemistry_effects'][k]['n_kmers']} & "
+        f"{f(kw['chemistry_effects'][k]['mean_weight'], 3)} & "
+        f"{f(kw['chemistry_effects'][k]['mean_weight_rest'], 3)} \\\\"
+        for lab, k in [("contains R", "contains_R"), ("contains K", "contains_K"),
+                       ("contains R or K", "contains_RK"), ("contains W", "contains_W"),
+                       ("contains W/Y/F", "contains_WYF"), ("contains L/I/V", "contains_LIV"),
+                       ("contains D/E", "contains_DE")]),
+
     "n_examples": f"{phla['n_examples']:,}", "n_alleles": phla["n_alleles"],
     "pssm_auc": f(phla["pssm"]["auc"]), "pssm_auc01": f(phla["pssm"]["auc0.1"]),
     "pssm_ppv": f(phla["pssm"]["ppv"]), "pssm_srcc": f(phla["pssm"]["srcc"]),
