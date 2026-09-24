@@ -1,0 +1,15 @@
+{
+ "iedb": {
+  "filtered_measurements": 135854,
+  "unique_pairs": 117339,
+  "alleles": 105,
+  "alleles_ge200": 60
+ },
+ "cppsite": {
+  "raw": 1564,
+  "natural": 1514,
+  "dedup": 1150,
+  "redundancy_filtered": 695,
+  "length_window": 623
+ }
+}
