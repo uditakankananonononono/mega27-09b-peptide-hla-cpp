@@ -37,6 +37,7 @@ amh2h = json.load(open("results/assay_method_headtohead.json"))
 caldec = json.load(open("results/calibration_decomposition.json"))
 locauc = json.load(open("results/locus_auc.json"))
 refm = json.load(open("results/iedb_reference_manifest.json"))
+plh2h = json.load(open("results/per_length_headtohead.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
 
@@ -630,6 +631,40 @@ windows sampled from reviewed UniProt (short-protein set + human
 60--400\,aa set) matched to the positive length distribution; the
 train/test split enforces $J<0.6$ against every test peptide.
 
+\subsection{Negative-window sampling and the homology guard}
+\label{sec:negsampler}
+CPP classification benchmarks live or die on their negatives: random
+UniProt windows are easy in ways that inflate AUC (length bias,
+composition bias), and redundant positives inflate it further. Our
+construction makes both controls explicit. Positives pass a greedy
+redundancy filter: sequences are scanned in database order and a
+candidate is kept only if its 3-mer Jaccard similarity to every
+previously kept sequence is below $0.6$ (\texttt{redundancy\_filter};
+$O(n^2)$ worst case, acceptable at the ${\sim}1.5$k CPPsite scale). This
+step removes the near-duplicate families that populate the public
+database --- the 84\% attrition of the funnel is mostly this filter.
+Negatives are then drawn by a length-matched window sampler
+(\texttt{sample\_length\_matched\_windows}, seed 13): for each positive
+of length $L$, a donor protein is chosen uniformly at random from the
+reviewed UniProt pools restricted to sequences of length ${\ge}L$, a
+start position is drawn uniformly from $[0,\,|\mathrm{donor}|-L]$, and
+the window is accepted only if it uses canonical amino acids and lies
+within 8--35\,aa. One window is drawn per positive, giving a balanced
+set whose length distribution matches the positives by construction ---
+length therefore cannot be a classification feature, and any signal the
+classifier learns is compositional. The final guard operates at the
+split: no training peptide, positive or negative, may have $J \ge 0.6$
+3-mer Jaccard similarity to any test peptide, so near-homologs cannot
+leak across the boundary. The guard is deliberately cheap ($k$-mer sets,
+not alignments) and conservative: at $k{=}3$ even unrelated sequences
+sharing a few common tripeptides can approach small thresholds, so the
+$0.6$ cutoff errs on the side of dropping data rather than risking
+leakage. The pHLA side uses the analogous control at peptide level:
+\texttt{split\_by\_peptide} guarantees no measured peptide sequence
+appears in more than one of train/validation/test, which removes the
+dominant leakage mode of this corpus (the same peptide assayed against
+many alleles).
+
 \section{Models}
 \subsection{Architectures and parameter counts}
 \label{sec:arch}
@@ -919,6 +954,54 @@ very assays.
 \caption{Per-allele AUC, our ensemble vs MHCflurry 2.2.1, identical
 held-out pairs. Red: ensemble wins.}\label{fig:pah2h}
 \end{figure}
+
+\subsection{Where the win lives: per-length head-to-head}
+\label{sec:lenh2h}
+The pooled margin of \S\ref{sec:h2hci} mixes lengths of very different
+difficulty (\S\ref{sec:length}). Stratifying the identical
+6{,}000-peptide subset by peptide length (Fig.~\ref{fig:lenh2h},
+Table~\ref{tab:lenh2h}) shows the margin is not uniform. On 9-mers
+($n=%(plh9_n)s$) --- the length on which MHCflurry's training corpus is
+richest --- the ensemble's edge is %(plh9_delta)s AUC with a paired
+95\% CI of %(plh9_ci)s spanning zero (bootstrap win frequency
+%(plh9_pwin)s): on this length the two systems are statistically tied.
+On 10-mers ($n=%(plh10_n)s$) the margin grows to %(plh10_delta)s with CI
+%(plh10_ci)s excluding zero (win frequency %(plh10_pwin)s). The thin
+strata are uninformative in both directions ($n=%(plh8_n)s$ 8-mers,
+%(plh8_delta)s; $n=%(plh11_n)s$ 11-mers, %(plh11_delta)s). Two honest
+readings follow. First, the pooled win is a \emph{10-mer win}: it is
+carried by the length where \S\ref{sec:length} showed ranking is
+genuinely harder --- both anchors groove-fixed, the extra central
+residue a bulge position whose contribution the additive model must
+spread across weakly conserved sites. MHCflurry degrades more on exactly
+that length (%(plh10_mfl)s there vs %(plh9_mfl)s on 9-mers) than our
+ensemble does (%(plh10_ens)s vs %(plh9_ens)s), so the relative margin
+opens up precisely where the absolute problem gets harder. Second, the
+scoped negative: at this scale our ensemble does \emph{not} beat
+MHCflurry on 9-mers; the superiority claim is length-specific and we
+state it that way. The 10-mer concentration is also consistent with the
+decorrelation mechanism of \S\ref{sec:decorrelation}: if the win comes
+from differently-placed errors rather than from a better conserved
+signal, it should appear where the conserved signal is weakest, which on
+this data is the bulge-bearing length.
+\begin{figure}[h]\centering
+\includegraphics[width=.7\linewidth]{figures/fig24.pdf}
+\caption{Per-length AUC on the identical head-to-head subset, ensemble
+vs MHCflurry 2.2.1. The margin concentrates on 10-mers; 9-mers are a
+statistical tie; thin lengths ($n<40$) are uninformative in either
+direction.}\label{fig:lenh2h}
+\end{figure}
+\begin{table}[h]\centering\footnotesize
+\begin{tabular}{lrrrrr}\hline\hline
+length & $n$ & binders & ensemble & MHCflurry & $\Delta$AUC [95\% CI] \\\hline
+%(plh_rows)s
+\hline\hline
+\end{tabular}
+\caption{Per-length head-to-head on the identical 6{,}000-peptide
+subset (rebuilt and checked bit-exactly against
+\texttt{results/h2h\_scores.npz}; paired bootstrap, 10{,}000
+replicates).}\label{tab:lenh2h}
+\end{table}
 
 \subsection{Model introspection: learned additive weights}
 \label{sec:introspection}
@@ -2136,6 +2219,26 @@ subs = {
     "h2h_delta": f(boot["delta_auc_mean"]),
     "h2h_delta_ci": f"[{boot['delta_auc_ci95'][0]:.4f}, {boot['delta_auc_ci95'][1]:.4f}]",
     "h2h_pwin": f"{boot['p_win']*100:.1f}\%",
+    "plh9_n": f"{plh2h['strata']['9']['n']:,}",
+    "plh9_delta": f"{plh2h['strata']['9']['delta']:+.4f}",
+    "plh9_ci": f"[{plh2h['strata']['9']['ci95'][0]:+.4f}, {plh2h['strata']['9']['ci95'][1]:+.4f}]",
+    "plh9_pwin": f"{plh2h['strata']['9']['p_win']*100:.1f}\\%",
+    "plh10_n": f"{plh2h['strata']['10']['n']:,}",
+    "plh10_delta": f"{plh2h['strata']['10']['delta']:+.4f}",
+    "plh10_ci": f"[{plh2h['strata']['10']['ci95'][0]:+.4f}, {plh2h['strata']['10']['ci95'][1]:+.4f}]",
+    "plh10_pwin": f"{plh2h['strata']['10']['p_win']*100:.1f}\\%",
+    "plh8_n": f"{plh2h['strata']['8']['n']:,}",
+    "plh8_delta": f"{plh2h['strata']['8']['delta']:+.4f}",
+    "plh11_n": f"{plh2h['strata']['11']['n']:,}",
+    "plh11_delta": f"{plh2h['strata']['11']['delta']:+.4f}",
+    "plh9_ens": f(plh2h['strata']['9']['auc_ensemble']),
+    "plh9_mfl": f(plh2h['strata']['9']['auc_mhcflurry']),
+    "plh10_ens": f(plh2h['strata']['10']['auc_ensemble']),
+    "plh10_mfl": f(plh2h['strata']['10']['auc_mhcflurry']),
+    "plh_rows": "\n".join(
+        f"{L} & {s['n']:,} & {s['n_binders']:,} & {f(s['auc_ensemble'])} & "
+        f"{f(s['auc_mhcflurry'])} & {s['delta']:+.4f} [{s['ci95'][0]:+.4f}, {s['ci95'][1]:+.4f}] \\\\"
+        for L, s in sorted(plh2h["strata"].items(), key=lambda kv: int(kv[0]))),
     "lc25": f(lc["0.25"]["mean"]), "lc50": f(lc["0.5"]["mean"]), "lc100": f(lc["1.0"]["mean"]),
     "auc9": f([d for d in plauc["per_length_auc"] if d["len"] == 9][0]["ensemble_auc"]),
     "n9": f"{[d for d in plauc['per_length_auc'] if d['len'] == 9][0]['n']:,}",

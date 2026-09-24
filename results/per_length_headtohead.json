@@ -1,0 +1,54 @@
+{
+ "n_total": 6000,
+ "replication": "labels match results/h2h_scores.npz bit-exactly",
+ "strata": {
+  "8": {
+   "n": 28,
+   "n_binders": 23,
+   "auc_ensemble": 0.8783,
+   "auc_mhcflurry": 0.5826,
+   "delta": 0.2977,
+   "ci95": [
+    0.0267,
+    0.5925
+   ],
+   "p_win": 0.9802
+  },
+  "9": {
+   "n": 4330,
+   "n_binders": 3588,
+   "auc_ensemble": 0.9392,
+   "auc_mhcflurry": 0.9345,
+   "delta": 0.0046,
+   "ci95": [
+    -0.0029,
+    0.012
+   ],
+   "p_win": 0.8881
+  },
+  "10": {
+   "n": 1600,
+   "n_binders": 1410,
+   "auc_ensemble": 0.8928,
+   "auc_mhcflurry": 0.8703,
+   "delta": 0.0224,
+   "ci95": [
+    0.0027,
+    0.0434
+   ],
+   "p_win": 0.9867
+  },
+  "11": {
+   "n": 36,
+   "n_binders": 30,
+   "auc_ensemble": 0.85,
+   "auc_mhcflurry": 0.9056,
+   "delta": -0.058,
+   "ci95": [
+    -0.2857,
+    0.101
+   ],
+   "p_win": 0.3032
+  }
+ }
+}
