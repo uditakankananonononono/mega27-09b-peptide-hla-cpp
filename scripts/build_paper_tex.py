@@ -17,6 +17,8 @@ boot = json.load(open("results/h2h_bootstrap.json"))
 lc = json.load(open("results/pssm_learning_curve.json"))
 plauc = json.load(open("results/per_length_auc.json"))
 ameth = json.load(open("results/assay_methods.json"))
+link = json.load(open("results/epistasis_motif_link.json"))
+locus = json.load(open("results/locus_breakdown.json"))
 novel = json.load(open("results/cpp_novel_candidates.json"))
 
 def f(x, n=4): return f"{x:.{n}f}"
@@ -99,6 +101,24 @@ affinity to the MHC is the best-measured and most predictable step, and the
 step with the largest open quantitative dataset (IEDB); later steps are
 captured only indirectly by eluted-ligand data, which is where the leaders
 gain their edge. \\ \\
+\subsection{Class-I structure and the pocket map}
+The class-I binding groove comprises six pockets (A--F). The A pocket
+anchors the peptide N terminus through conserved hydrogen bonds; the B
+pocket binds the P2 side chain and is the largest determinant of
+allele-specific preference (hydrophobic in A$^*$02 alleles, proline-
+preferring in B$^*$07:02); the F pocket binds the C-terminal
+(P$\Omega$) side chain, hydrophobic in A$^*$02 but basic-residue-
+preferring in the A$^*$03/A$^*$11/A$^*$31 family owing to acidic residues
+at the pocket floor (notably Asp116 in A$^*$11:01). Central positions
+P4--P7 bulge toward the T-cell receptor and contribute little to
+affinity --- the pattern our information-content analysis recovers
+quantitatively from measurements alone (Fig.~8). This pocket geography is
+the structural substrate of every model and discovery in this paper: the
+PSSM estimates per-pocket preferences, the GNN's anchor edge encodes a
+B--F pocket coupling hypothesis, and the epistasis estimator measures
+that coupling directly.
+
+\subsection{CPP uptake mechanisms and descriptor rationale}
 Cell-penetrating peptides (typically 5--30 residues, cationic and/or
 amphipathic) cross membranes via direct translocation or endocytosis. The
 two canonical families are exemplified by TAT (arginine-rich, HIV-derived)
@@ -173,6 +193,34 @@ A$^*$03/A$^*$11 families, is to our knowledge not present in any public
 tool or paper. That is the niche of Discovery 1.
 
 \section{Mathematical foundations}
+\subsection{Notation}
+\begin{longtable}{ll}
+\hline\hline symbol & meaning \\\hline
+\endfirsthead
+\hline\hline symbol & meaning \\\hline
+\endhead
+$P, M$ & peptide, MHC molecule \\
+$K_d$ & dissociation constant $[P][M]/[PM]$ \\
+IC50 & half-maximal inhibitory concentration (competitive assay) \\
+$y$ & regression target, $\log_{10}\mathrm{IC50}$ \\
+$w(i,a)$ & additive weight, position $i$, residue $a$ \\
+$X$ & one-hot design matrix, $n \times (L\cdot20)$ \\
+$\lambda$ & ridge penalty \\
+$s^+, s^-$ & scores of a binder / non-binder \\
+AUC, AUC0.1 & concordance probability; partial AUC at FPR $\le0.1$ \\
+PPV & precision at $k=\#\{$true binders$\}$ (prevalence point) \\
+SRCC & Spearman rank correlation, predicted vs measured \\
+$I_i$ & information content of position $i$ (bits) \\
+$\Gamma$ & double-mutant-cycle coupling contrast \\
+$\mu_H$ & hydrophobic moment at $100^\circ$ \\
+$\hat A$ & symmetrized normalized adjacency $D^{-1/2}(A{+}I)D^{-1/2}$ \\
+$J_k$ & k-mer Jaccard similarity \\
+ECE & expected calibration error \\
+$\pi$ & binder prevalence (0.301 in the retained set) \\
+\hline\hline
+\end{longtable}
+All logarithms of concentration are base 10; information-theoretic
+quantities use base 2 (bits).
 \subsection{Why $\log_{10}\mathrm{IC50}$ is the right regression target}
 Let peptide $P$ and MHC $M$ bind with $K_d = [P][M]/[PM]$. In a
 competitive assay with tracer $L$ (dissociation constant $K_L$, free
@@ -429,6 +477,13 @@ at 500\,nM. Assay methods: 67{,}444 purified/competitive/radioactivity,
 fluorescence, remainder cellular assays; 350 distinct source references.
 Replicates aggregated by geometric mean. \textbf{Splits:} peptide-level
 85/10/15 (no peptide in two splits).
+\\ \\
+\textbf{Locus breakdown (retained set).} HLA-A: %(loc_a_n)s alleles,
+%(loc_a_pairs)s pairs; HLA-B: %(loc_b_n)s alleles, %(loc_b_pairs)s pairs;
+HLA-C: %(loc_c_n)s alleles, %(loc_c_pairs)s pairs. The HLA-C tail is thin
+(3 alleles), a direct reflection of assay availability in the IEDB rather
+than a design choice; per-allele results are reported for every retained
+allele so coverage asymmetries stay visible.
 
 \textbf{CPP:} CPPsite 2.0 natural set (1{,}564 sequences) $\to$ natural-only
 + exact dedup (1{,}150) $\to$ k-mer-Jaccard ($k{=}3$, $J{<}0.6$) redundancy
@@ -750,6 +805,21 @@ noisy, and their z-scored average captures most of both (43/52 alleles).
 Third, the CPP negative result (3-mer LR $>$ CNN) is a sample-size story,
 not an architecture flaw --- but it is precisely the kind of result that
 unfiltered benchmarks hide, and we report it deliberately. \\ \\
+A fourth point concerns the shape of the head-to-head win. The margin
+(1.2 AUC points) is modest, but three properties make it meaningful: it
+is paired (identical inputs, identical labels), it is broad (per-allele
+wins across A and B loci), and it is achieved against a competitor with
+training-set overlap on this very benchmark. The learning-curve analysis
+adds a mechanistic reading: the additive component saturates around half
+the data, so the ensemble's edge over the PSSM --- and plausibly part of
+its edge over MHCflurry --- lives in the interaction terms that only the
+full data can estimate. \\ \\
+The calibration result deserves emphasis for practice. Binder triage is
+threshold-driven (vaccine candidates are ranked and cut), and a rank
+metric cannot certify a threshold. ECE $=0.016$ after one-parameter
+Platt scaling means the ensemble's probabilities can be used for
+prevalence-aware cutoffs with quantified error --- a property most
+published predictors report only for EL benchmarks, if at all. \\ \\
 The GNN's deficit deserves separate comment. Its inductive bias (local
 message passing with a single long-range anchor edge) is reasonable, but at
 96 hidden units and CPU budget it undertrains: validation AUC was still
@@ -792,6 +862,26 @@ double-mutant binding assays. The estimator ships as an open tool
 anchor epistasis.
 \begin{figure}[h]\centering\includegraphics[width=.9\linewidth]{figures/fig6_anchor_epistasis.png}
 \caption{RMS P2--P$\Omega$ interaction by allele, bootstrap 95\% CI.}
+\end{figure}
+\subsection{Mechanistic link: motif asymmetry predicts the epistasis sign}
+\label{sec:link}
+The two views of anchor chemistry --- the compositional (information
+content, \S\ref{sec:motifs}) and the interactional (epistasis,
+\S\ref{sec:epistasis}) --- are not independent. Across the 12 alleles with
+both measurements, the anchor asymmetry $I_{P\Omega}-I_{P2}$ correlates
+with the hydrophobic-coupling contrast at Pearson $r = %(link_r)s$
+(bootstrap 95\% CI %(link_ci)s; Fig.~\ref{fig:link}): alleles whose
+specificity is concentrated in the F pocket (A$^*$11:01, A$^*$03:01 ---
+basic C-terminus seekers) show \emph{unfavorable} hydrophobic--hydrophobic
+coupling, while P2/P$\Omega$-balanced A$^*$02 alleles show favorable
+coupling. With $n=12$ this is a hypothesis-grade link, stated with its
+interval; it makes Discovery 1 mechanistically testable: the sign of
+anchor epistasis should be predictable from motif asymmetry for alleles
+outside this set.
+\begin{figure}[h]\centering
+\includegraphics[width=.55\linewidth]{figures/fig19_epistasis_motif_link.png}
+\caption{Anchor asymmetry vs hydrophobic anchor coupling, 12 alleles.
+Dashed: least-squares line with bootstrap CI for $r$.}\label{fig:link}
 \end{figure}
 \subsection{Novel CPP candidates}
 Of 50 top generated candidates, 18 have no near-neighbor (3-mer Jaccard
@@ -1195,6 +1285,14 @@ subs = {
     "family_rows": "\n".join(
         f"{i+1} & \\texttt{{{'; '.join(fam)}}} \\\\"
         for i, fam in enumerate(novel["families"])),
+    "link_r": f(link["pearson_r"], 2),
+    "link_ci": f"[{link['ci95'][0]:.2f}, {link['ci95'][1]:.2f}]",
+    "loc_a_n": locus["alleles_by_locus"].get("HLA-A", 0),
+    "loc_a_pairs": f"{locus['pairs_by_locus'].get('HLA-A', 0):,}",
+    "loc_b_n": locus["alleles_by_locus"].get("HLA-B", 0),
+    "loc_b_pairs": f"{locus['pairs_by_locus'].get('HLA-B', 0):,}",
+    "loc_c_n": locus["alleles_by_locus"].get("HLA-C", 0),
+    "loc_c_pairs": f"{locus['pairs_by_locus'].get('HLA-C', 0):,}",
     "ece": f(cal["ece"]),
     "corr": f(scorr["pearson_pssm_cnn"], 3),
     "pah2h_wins": pah2h["ensemble_wins"], "pah2h_n": pah2h["n_alleles_compared"],
