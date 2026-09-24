@@ -1,0 +1,305 @@
+{
+ "summary": {
+  "tool": "EBI MAFFT REST (mafft)",
+  "jobid": "mafft-R20260924-180428-0833-67632677-p1m",
+  "n_designed": 18,
+  "n_archetypes": 7,
+  "archetype_provenance": [
+   {
+    "label": "CPPsite_FAM-pVEC",
+    "sequence": "LLIILRRRIRKQAHAHSK",
+    "provenance": "single-copy record"
+   },
+   {
+    "label": "CPPsite_MPGNLS",
+    "sequence": "GALFLGFLGAAGSTMGAWSQPKSKRKV",
+    "provenance": "single-copy record"
+   },
+   {
+    "label": "CPPsite_MPG",
+    "sequence": "GALFLGFLGAAGSTMGAWSQPKKKRKV",
+    "provenance": "single-copy record"
+   },
+   {
+    "label": "CPPsite_Pep-1",
+    "sequence": "KETWWETWWTEWSQPKKKRKV",
+    "provenance": "single-copy record"
+   },
+   {
+    "label": "CPPsite_TAT47-57_unit",
+    "sequence": "GRKKRRQRRRP",
+    "provenance": "monomer unit of tandem record cpp_TAT(47-57)"
+   },
+   {
+    "label": "CPPsite_Penetratin_unit",
+    "sequence": "RQIKIWFQNRRMKWKK",
+    "provenance": "monomer unit of tandem record cpp_L-Penetratin"
+   },
+   {
+    "label": "CPPsite_TP10_unit",
+    "sequence": "AGYLLGKINLKALAALAKKIL",
+    "provenance": "monomer unit of tandem record cpp_TP10"
+   }
+  ],
+  "max_identity_designed_vs_archetype": 71.43,
+  "mean_identity_designed_vs_archetype": 18.76,
+  "mean_identity_within_designed": 46.01,
+  "mean_identity_within_archetypes": 26.07,
+  "n_designed_below_30pct_to_all_archetypes": 3,
+  "note": "Ultra-short compositionally-biased peptides: alignment is descriptive, not phylogenetic."
+ },
+ "per_designed": {
+  "9B-CPP-1": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 23.53,
+    "CPPsite_MPGNLS": 8.33,
+    "CPPsite_MPG": 8.33,
+    "CPPsite_Pep-1": 6.67,
+    "CPPsite_TAT47-57_unit": 27.27,
+    "CPPsite_Penetratin_unit": 23.08,
+    "CPPsite_TP10_unit": 0.0
+   },
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "nearest_identity": 27.27,
+   "mean_identity_vs_archetypes": 13.89
+  },
+  "9B-CPP-2": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 17.65,
+    "CPPsite_MPGNLS": 0.0,
+    "CPPsite_MPG": 0.0,
+    "CPPsite_Pep-1": 0.0,
+    "CPPsite_TAT47-57_unit": 18.18,
+    "CPPsite_Penetratin_unit": 10.0,
+    "CPPsite_TP10_unit": 18.18
+   },
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "nearest_identity": 18.18,
+   "mean_identity_vs_archetypes": 9.14
+  },
+  "9B-CPP-3": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 30.0,
+    "CPPsite_MPGNLS": 14.29,
+    "CPPsite_MPG": 14.29,
+    "CPPsite_Pep-1": 14.29,
+    "CPPsite_TAT47-57_unit": 22.22,
+    "CPPsite_Penetratin_unit": 40.0,
+    "CPPsite_TP10_unit": 0.0
+   },
+   "nearest_archetype": "CPPsite_Penetratin_unit",
+   "nearest_identity": 40.0,
+   "mean_identity_vs_archetypes": 19.3
+  },
+  "9B-CPP-4": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 33.33,
+    "CPPsite_MPGNLS": 8.33,
+    "CPPsite_MPG": 8.33,
+    "CPPsite_Pep-1": 7.69,
+    "CPPsite_TAT47-57_unit": 10.0,
+    "CPPsite_Penetratin_unit": 27.27,
+    "CPPsite_TP10_unit": 0.0
+   },
+   "nearest_archetype": "CPPsite_FAM-pVEC",
+   "nearest_identity": 33.33,
+   "mean_identity_vs_archetypes": 13.56
+  },
+  "9B-CPP-5": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 25.0,
+    "CPPsite_MPGNLS": 16.67,
+    "CPPsite_MPG": 16.67,
+    "CPPsite_Pep-1": 13.33,
+    "CPPsite_TAT47-57_unit": 14.29,
+    "CPPsite_Penetratin_unit": 35.71,
+    "CPPsite_TP10_unit": 20.0
+   },
+   "nearest_archetype": "CPPsite_Penetratin_unit",
+   "nearest_identity": 35.71,
+   "mean_identity_vs_archetypes": 20.24
+  },
+  "9B-CPP-6": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 33.33,
+    "CPPsite_MPGNLS": 14.29,
+    "CPPsite_MPG": 14.29,
+    "CPPsite_Pep-1": 14.29,
+    "CPPsite_TAT47-57_unit": 50.0,
+    "CPPsite_Penetratin_unit": 40.0,
+    "CPPsite_TP10_unit": 0.0
+   },
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "nearest_identity": 50.0,
+   "mean_identity_vs_archetypes": 23.74
+  },
+  "9B-CPP-7": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 23.08,
+    "CPPsite_MPGNLS": 10.0,
+    "CPPsite_MPG": 10.0,
+    "CPPsite_Pep-1": 10.0,
+    "CPPsite_TAT47-57_unit": 11.11,
+    "CPPsite_Penetratin_unit": 50.0,
+    "CPPsite_TP10_unit": 11.11
+   },
+   "nearest_archetype": "CPPsite_Penetratin_unit",
+   "nearest_identity": 50.0,
+   "mean_identity_vs_archetypes": 17.9
+  },
+  "9B-CPP-8": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 41.67,
+    "CPPsite_MPGNLS": 18.18,
+    "CPPsite_MPG": 18.18,
+    "CPPsite_Pep-1": 16.67,
+    "CPPsite_TAT47-57_unit": 42.86,
+    "CPPsite_Penetratin_unit": 18.18,
+    "CPPsite_TP10_unit": 0.0
+   },
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "nearest_identity": 42.86,
+   "mean_identity_vs_archetypes": 22.25
+  },
+  "9B-CPP-9": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 18.18,
+    "CPPsite_MPGNLS": 16.67,
+    "CPPsite_MPG": 16.67,
+    "CPPsite_Pep-1": 16.67,
+    "CPPsite_TAT47-57_unit": 55.56,
+    "CPPsite_Penetratin_unit": 0.0,
+    "CPPsite_TP10_unit": 9.09
+   },
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "nearest_identity": 55.56,
+   "mean_identity_vs_archetypes": 18.98
+  },
+  "9B-CPP-10": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 25.0,
+    "CPPsite_MPGNLS": 33.33,
+    "CPPsite_MPG": 33.33,
+    "CPPsite_Pep-1": 33.33,
+    "CPPsite_TAT47-57_unit": 22.22,
+    "CPPsite_Penetratin_unit": 71.43,
+    "CPPsite_TP10_unit": 11.11
+   },
+   "nearest_archetype": "CPPsite_Penetratin_unit",
+   "nearest_identity": 71.43,
+   "mean_identity_vs_archetypes": 32.82
+  },
+  "9B-CPP-11": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 26.67,
+    "CPPsite_MPGNLS": 8.33,
+    "CPPsite_MPG": 8.33,
+    "CPPsite_Pep-1": 8.33,
+    "CPPsite_TAT47-57_unit": 60.0,
+    "CPPsite_Penetratin_unit": 20.0,
+    "CPPsite_TP10_unit": 10.0
+   },
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "nearest_identity": 60.0,
+   "mean_identity_vs_archetypes": 20.24
+  },
+  "9B-CPP-12": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 26.67,
+    "CPPsite_MPGNLS": 0.0,
+    "CPPsite_MPG": 0.0,
+    "CPPsite_Pep-1": 0.0,
+    "CPPsite_TAT47-57_unit": 22.22,
+    "CPPsite_Penetratin_unit": 12.5,
+    "CPPsite_TP10_unit": 9.09
+   },
+   "nearest_archetype": "CPPsite_FAM-pVEC",
+   "nearest_identity": 26.67,
+   "mean_identity_vs_archetypes": 10.07
+  },
+  "9B-CPP-13": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 30.77,
+    "CPPsite_MPGNLS": 30.0,
+    "CPPsite_MPG": 30.0,
+    "CPPsite_Pep-1": 20.0,
+    "CPPsite_TAT47-57_unit": 11.11,
+    "CPPsite_Penetratin_unit": 25.0,
+    "CPPsite_TP10_unit": 11.11
+   },
+   "nearest_archetype": "CPPsite_FAM-pVEC",
+   "nearest_identity": 30.77,
+   "mean_identity_vs_archetypes": 22.57
+  },
+  "9B-CPP-14": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 30.77,
+    "CPPsite_MPGNLS": 11.11,
+    "CPPsite_MPG": 11.11,
+    "CPPsite_Pep-1": 11.11,
+    "CPPsite_TAT47-57_unit": 33.33,
+    "CPPsite_Penetratin_unit": 42.86,
+    "CPPsite_TP10_unit": 9.09
+   },
+   "nearest_archetype": "CPPsite_Penetratin_unit",
+   "nearest_identity": 42.86,
+   "mean_identity_vs_archetypes": 21.34
+  },
+  "9B-CPP-15": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 38.89,
+    "CPPsite_MPGNLS": 8.33,
+    "CPPsite_MPG": 8.33,
+    "CPPsite_Pep-1": 7.69,
+    "CPPsite_TAT47-57_unit": 27.27,
+    "CPPsite_Penetratin_unit": 18.18,
+    "CPPsite_TP10_unit": 9.09
+   },
+   "nearest_archetype": "CPPsite_FAM-pVEC",
+   "nearest_identity": 38.89,
+   "mean_identity_vs_archetypes": 16.83
+  },
+  "9B-CPP-16": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 26.67,
+    "CPPsite_MPGNLS": 16.67,
+    "CPPsite_MPG": 16.67,
+    "CPPsite_Pep-1": 8.33,
+    "CPPsite_TAT47-57_unit": 36.36,
+    "CPPsite_Penetratin_unit": 20.0,
+    "CPPsite_TP10_unit": 11.11
+   },
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "nearest_identity": 36.36,
+   "mean_identity_vs_archetypes": 19.4
+  },
+  "9B-CPP-17": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 33.33,
+    "CPPsite_MPGNLS": 0.0,
+    "CPPsite_MPG": 0.0,
+    "CPPsite_Pep-1": 0.0,
+    "CPPsite_TAT47-57_unit": 22.22,
+    "CPPsite_Penetratin_unit": 25.0,
+    "CPPsite_TP10_unit": 18.18
+   },
+   "nearest_archetype": "CPPsite_FAM-pVEC",
+   "nearest_identity": 33.33,
+   "mean_identity_vs_archetypes": 14.1
+  },
+  "9B-CPP-18": {
+   "identity_vs_archetypes": {
+    "CPPsite_FAM-pVEC": 23.53,
+    "CPPsite_MPGNLS": 18.18,
+    "CPPsite_MPG": 18.18,
+    "CPPsite_Pep-1": 16.67,
+    "CPPsite_TAT47-57_unit": 54.55,
+    "CPPsite_Penetratin_unit": 10.0,
+    "CPPsite_TP10_unit": 7.69
+   },
+   "nearest_archetype": "CPPsite_TAT47-57_unit",
+   "nearest_identity": 54.55,
+   "mean_identity_vs_archetypes": 21.26
+  }
+ }
+}
