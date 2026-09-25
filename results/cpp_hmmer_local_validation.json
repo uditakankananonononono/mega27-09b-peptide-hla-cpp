@@ -1,0 +1,124 @@
+{
+  "tool": "HMMER 3.3.2 phmmer, Ubuntu 22.04 package 3.3.2+dfsg-1",
+  "database_url": "https://ftp.ebi.ac.uk/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz",
+  "database_download_date": "2026-09-25",
+  "database_sha256_uncompressed": "1372f18e218d761027616bf17479bcf450b30314fc0a8095fcb0e97e85d6ecf9",
+  "database_seq_count": 575748,
+  "reporting_threshold_E": 100,
+  "results": {
+    "9B-CPP-1": {
+      "sequence": "LRILRWWRWRWRNRWKRRR",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-2": {
+      "sequence": "RLRRRLRLRLRLRLRLRRL",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-3": {
+      "sequence": "WRWRKKKRKK",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-4": {
+      "sequence": "GLWRWRWRWRKSLKK",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-5": {
+      "sequence": "RRINRRWRWKRWKKC",
+      "n_hits_E_le_100": 1,
+      "top_hits": [
+        {
+          "target": "sp|P47170|IML1_YEAST",
+          "accession": "P47170",
+          "evalue": 11.0,
+          "score": 11.0,
+          "description": "Vacuolar membrane-associated protein IML1 OS=Saccharomyces cerevisiae (strain ATCC 204508 / S288c) OX=559292 GN=IML1 PE=1 SV=1"
+        }
+      ]
+    },
+    "9B-CPP-6": {
+      "sequence": "WRWRKKRRR",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-7": {
+      "sequence": "RGRWRWKKRHRPK",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-8": {
+      "sequence": "GLARWRWRWRRQ",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-9": {
+      "sequence": "RLRRRRRRNRRRNWRWL",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-10": {
+      "sequence": "WRWKWKKRWRKH",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-11": {
+      "sequence": "RLFRRRRLRRRRRRNN",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-12": {
+      "sequence": "RLRLRLRLRLRIRIRR",
+      "n_hits_E_le_100": 1,
+      "top_hits": [
+        {
+          "target": "sp|P14044|PRO2_TRYBB",
+          "accession": "P14044",
+          "evalue": 62.0,
+          "score": 8.5,
+          "description": "Duplicate procyclin OS=Trypanosoma brucei brucei OX=5702 PE=4 SV=1"
+        }
+      ]
+    },
+    "9B-CPP-13": {
+      "sequence": "AWRWRWRCKAKKR",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-14": {
+      "sequence": "RRRRWRRLWRHLRRR",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-15": {
+      "sequence": "YLLRLRRRLRRRSRARRRR",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-16": {
+      "sequence": "RGRLRRHLRRRLRRR",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-17": {
+      "sequence": "RLRRRLRLRRFLRRRR",
+      "n_hits_E_le_100": 0,
+      "top_hits": []
+    },
+    "9B-CPP-18": {
+      "sequence": "LGRLWRRLRRRRRHLRRAARSH",
+      "n_hits_E_le_100": 1,
+      "top_hits": [
+        {
+          "target": "sp|P04070|PROC_HUMAN",
+          "accession": "P04070",
+          "evalue": 3.6,
+          "score": 12.6,
+          "description": "Vitamin K-dependent protein C OS=Homo sapiens OX=9606 GN=PROC PE=1 SV=1"
+        }
+      ]
+    }
+  }
+}

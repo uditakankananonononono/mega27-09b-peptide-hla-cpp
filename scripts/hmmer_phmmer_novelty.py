@@ -42,16 +42,36 @@ def poll():
             d = json.loads(urllib.request.urlopen(req, timeout=60).read().decode())
         except Exception as e:
             print(name, 'ERR', str(e)[:80]); continue
-        if 'results' not in d:
-            print(name, 'RUNNING'); continue
-        open(f'{RAW}/{name}.json', 'w').write(json.dumps(d))
-        hits = d['results'].get('hits', [])
-        res[name] = {'n_hits': len(hits),
+        status = d.get('task', {}).get('status', 'UNKNOWN')
+        if status not in ('SUCCESS', 'FAILURE', 'REVOKED'):
+            print(name, status); continue
+        if status == 'SUCCESS':
+            result_url = f'https://www.ebi.ac.uk/Tools/hmmer/api/v1/result/{jid}'
+            try:
+                rd = json.loads(urllib.request.urlopen(urllib.request.Request(
+                    result_url, headers={'Accept': 'application/json'}), timeout=60).read().decode())
+            except Exception as e:
+                print(name, 'RESULT_ERR', str(e)[:80]); continue
+            if rd.get('status') != 'SUCCESS' or 'result' not in rd:
+                print(name, 'RESULT_NOT_READY', rd.get('status')); continue
+            hits = rd['result'].get('hits', [])
+            stats = rd['result'].get('stats', {})
+            if stats.get('nhits') != len(hits) or d.get('number_of_hits') != len(hits):
+                print(name, 'INCONSISTENT hit count', stats.get('nhits'), len(hits)); continue
+            open(f'{RAW}/{name}.json', 'w').write(json.dumps(rd))
+        else:
+            hits, stats, result_url = [], {}, None
+        res[name] = {'job_id': jid, 'status': status,
+                     'date_done': d.get('task', {}).get('date_done'),
+                     'database': d.get('database', {}),
+                     'result_url': result_url,
+                     'stats': stats,
+                     'n_hits': len(hits) if status == 'SUCCESS' else None,
                      'top': [{'acc': h.get('acc'), 'name': h.get('name'),
                               'evalue': h.get('evalue'),
                               'desc': (h.get('desc') or '')[:80]} for h in hits[:5]]}
         done += 1
-        print(name, 'DONE hits', len(hits))
+        print(name, status, 'hits', len(hits))
     json.dump(res, open(OUT, 'w'), indent=1)
     print(f'done={done}/{len(jobs)}')
 
