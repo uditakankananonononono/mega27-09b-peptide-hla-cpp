@@ -2012,6 +2012,19 @@ $2.9\times10^{-6}$) and the \emph{M.~tuberculosis} protein
 Rv1078A (CPP-16/P0DV55, 63.2\% over 19, expect 0.017). CPP-3
 returned zero hits, and CPP-13 and CPP-17 returned only weak
 alignments (expect $\geq 0.02$) --- documented negatives. The
+orthogonal HMMER phmmer screen (tool 51,
+\texttt{results/cpp\_hmmer\_phmmer.json}) reported zero of 18
+hits at the EBI default E-value threshold against its 2025\_01
+Swiss-Prot database (503{,}053 entries). A local run of HMMER 3.3.2
+against the current full Swiss-Prot (575{,}748 entries) at an
+intentionally permissive expect 100 reported just three weak
+matches: CPP-5 to yeast IML1 (expect 11), CPP-12 to trypanosome
+procyclin (62), and CPP-18 to human protein C (3.6); the other 15
+reported none (\texttt{results/cpp\_hmmer\_local\_validation.json}).
+Thus these short, strongly composition-biased sequences are not
+well recovered by phmmer's default filters, which can disagree with
+BLAST on short local motifs. The zero-hit finding is a method limit,
+not a claim that these candidates lack natural analogs. The
 convergence is the central novelty result: the de novo designs
 re-derive the arginine-rich motif class that natural proteins use
 for nucleic-acid translocation (five independent viral isolates,
@@ -2190,25 +2203,36 @@ python -m pytest tests/                        # 33 hermetic tests
 \label{app:tools}
 \subsection{Tools (honest count under the program-wide gate convention)}
 \begin{center}\footnotesize
-\begin{tabular}{lll}\hline\hline
-\# & tool (version) & used for \\\hline
+\begin{longtable}{p{0.045\textwidth}p{0.29\textwidth}p{0.57\textwidth}}
+\hline\hline
+\# & tool (version) & used for \\ \hline
+\endfirsthead
+\hline\hline
+\# & tool (version) & used for (continued) \\ \hline
+\endhead
 %(tools_rows)s
 \hline\hline
-\end{tabular}
+\end{longtable}
 \end{center}
 \normalsize
 Count is honest and restated under the program-wide tool-gate
-convention (infrastructure does not count): 42 research/analysis tools,
+convention (infrastructure does not count): 43 research/analysis tools,
 libraries, databases and services are demonstrably used at this commit.
 Eight further entries below are infrastructure, marked $\dagger$ and
 listed for transparency only: pytest (test plumbing), GitHub (hosting),
 Google Drive API (delivery), Python 3.10 (runtime), git (version
 control), pdfLaTeX (typesetting), curl (download transport) and OpenSSH
 (push transport). The counted total grows only with real research
-packages. One candidate remains in flight (with a defined
-verification role): EBI HMMER phmmer (profile-HMM novelty
-screen of the 18 CPPs against Swiss-Prot; 18 jobs running at this
-commit). The NCBI BLAST protein-level screen completed at this
+packages. EBI HMMER phmmer finished all 18 searches against
+Swiss-Prot 2025\_01 (503{,}053 sequences) with zero reported hits
+at its default threshold (tool 51; see \texttt{results/cpp\_hmmer\_phmmer.json}).
+Local HMMER 3.3.2 phmmer cross-checked the current 575{,}748-entry
+Swiss-Prot release; even at relaxed expect 100, only three weak
+matches were reported (CPP-5: 11; CPP-12: 62; CPP-18: 3.6),
+with 15 sequences returning zero. This is a filter-sensitive
+negative for very short arginine-rich queries, not evidence of
+biological novelty; NCBI BLAST recovered bona fide natural ARMs.
+The NCBI BLAST protein-level screen completed at this
 commit: all 18 jobs finished against Swiss-Prot (tool 50;
 \S\ref{sec:extval}). The EBI ncbiblast structural-homolog check completed at this
 commit: all 3 jobs finished - CPP-8 and CPP-18 have no PDB homologs at
@@ -2243,7 +2267,7 @@ benchmark values, MHCflurry 2.2.1 pretrained weights, and PDB structures
 1DUZ, 8RNI, and 7OW3. Program-level count: %(refm_total)s; conservative single-accession
 count: %(n_conservative)s. Under the uniform accession-level gate rule
 (identifier-backed records individually fetched and used), the count is
-\textbf{227}: the 11 primary accessioned resources, the 27 bibliography
+\textbf{230}: the 11 primary accessioned resources, the 27 bibliography
 records individually resolved via Europe PMC/CrossRef/NCBI and used,
 3 PDB-REDO QC entries for the original structure trio, 72 per-allele
 pHLA structures individually fetched from RCSB PDB and analyzed
@@ -2252,7 +2276,12 @@ fetched for that set (one entry, 9YTD, has no PDB-REDO record and is
 not counted), the PDB entry 6RQS individually fetched from RCSB for
 the RW16 structural-homolog verification, and 42 distinct Swiss-Prot
 accessions individually recovered by the NCBI BLAST novelty screen
-and individually resolved against their UniProtKB records (tool 50). The IPD-IMGT/HLA flat file contributes its 52 extracted
+and individually resolved against their UniProtKB records (tool 50), plus
+3 non-overlapping Swiss-Prot accessions from the local phmmer
+cross-check (P47170, P14044, P04070; individually resolved against
+UniProtKB; weak expect $3.6$--$62$, not strong homolog claims).
+Arithmetic: $11+27+3+72+71+1+42+3=230$.
+The IPD-IMGT/HLA flat file contributes its 52 extracted
 reference allele sequences as a study-level transparency count (bulk
 file, not individually fetched), on the same footing as the IEDB
 studies. The 350
@@ -2345,7 +2374,7 @@ amh_rows = "\n".join(
     for s in amh2h["strata"])
 
 subs = {
-    "tools_rows": "1 & PyTorch 2.x & CNN, GNN, GRU training (pHLA + CPP) \\\\\n2 & scikit-learn & 3-mer logistic regression (L-BFGS); AUC cross-check \\\\\n3 & NumPy & all numerical arrays, bootstrap machinery \\\\\n4 & pandas & IEDB TSV handling, dataset aggregation \\\\\n5 & SciPy & Spearman/Pearson tests (epistasis--margin null) \\\\\n6 & matplotlib & all 26 figures \\\\\n7 & Biopython 1.88 & PairwiseAligner novelty recheck; ProtParam descriptors; PDB parsing \\\\\n8 & pytest$^{\\dagger}$ & 33-test hermetic suite \\\\\n9 & MHCflurry 2.2.1 & head-to-head comparator (affinity predictor, CPU) \\\\\n10 & NetMHCpan-4.1 & published landscape numbers (gkaa379) \\\\\n11 & IEDB & mhc\\_ligand\\_full export (350 studies) \\\\\n12 & IEDB Analysis Resource & benchmark framework reference \\\\\n13 & CPPsite 2.0 & CPP positives (Raghava group) \\\\\n14 & UniProtKB REST API & negative pools; novelty screen pool \\\\\n15 & RCSB PDB & structures 1DUZ, 8RNI, 7OW3 (pocket verification) \\\\\n16 & NCBI BLOSUM62 & substitution-matrix encoding channel \\\\\n17 & GitHub$^{\\dagger}$ & repository hosting \\\\\n18 & Google Drive API$^{\\dagger}$ & results delivery \\\\\n19 & Python 3.10$^{\\dagger}$ & runtime \\\\\n20 & git$^{\\dagger}$ & version control; bundle transport \\\\\n21 & pdfLaTeX (TeX Live)$^{\\dagger}$ & this document \\\\\n22 & curl$^{\\dagger}$ & dataset download (download\\_data.sh) \\\\\n23 & OpenSSH$^{\\dagger}$ & authenticated push transport \\\\\n24 & RCSB PDB Search API & structure discovery by title/attribute query (8RNI, 7OW3) \\\\\n25 & RCSB PDB Data API & entry metadata and citation verification \\\\\n26 & WebLogo 3.9 & anchor motif sequence logos (Fig.~\ref{fig:logos}) \\\\\n27 & FreeSASA & anchor burial (SASA) in 1DUZ/8RNI/7OW3 \\\\\n28 & modlamp & independent CPP descriptor cross-check (pKa charge) \\\\\n29 & peptides & descriptor cross-check (KD hydropathy, EMBOSS charge, moment) \\\\\n30 & statsmodels & confound-controlled binomial GLM (length/method/locus) \\\\\n31 & Europe PMC API & bibliography verification (27 references) \\\\\n32 & CrossRef API & DOI/venue verification; caught the MLCPP-2.0 venue error \\\\\n33 & NCBI E-utilities & PubMed record verification \\\\\n34 & PDB-REDO & structure QC (R/R-free, resolution) for 1DUZ/8RNI/7OW3 and the 72-entry per-allele set \\\\\n35 & IPD-IMGT/HLA & pocket chemistry of all 52 covered alleles (hla\_prot.fasta reference records) \\\\\n36 & EBI MAFFT (REST) & family-level relatedness: 18 designed CPPs vs 7 CPPsite archetypes \\\\\n37 & ToxinPred & toxicity screen of designed CPPs: 18/18 Non-Toxin \\\\\n38 & HLP & half-life/stability screen of designed CPPs: 10 High, 8 Normal \\\\n39 & CellPPD & mutational-sensitivity screen of the 18 designed CPPs: 5,187 single-mutant SVM scores, all below CPP threshold \\\\\n40 & scikit-bio 0.7.4 & B/F-pocket compositional entropy across the 52-allele panel (23 pocket positions) \\\\\n41 & ProDy 2.4.1 & ANM rigidity of the 1DUZ groove (B-pocket 2.50$\\times$, F-pocket 1.90$\\times$ vs chain mean) \\\\\n42 & MDAnalysis 2.9.0 & groove geometry of 69/72 pHLA structures: pocket widths, peptide span, anchor seating depth \\\\\n43 & fair-esm (ESM-2 t6\\_8M) & PLM-embedding novelty of the 18 CPPs vs 7 archetypes and 300 UniProt decoys \\\\\n44 & IEDB tools API (NetMHCpan 4.1 EL) & official-engine benchmark on 400 held-out peptides; CPP immunogenicity screen \\\\n45 & EMBOSS pepstats (EBI REST) & global composition screen of the 18 CPPs: mean basic content 63.0 mol\\%, mean charge +9.28, pI $\\sim$13.5 \\\\n46 & EBI Clustal Omega (REST) & cross-engine relatedness check: mean max identity of the 18 CPPs to 7 archetypes 40.5\\% vs MAFFT 41.5\\% \\\\n47 & EMBOSS pepinfo (EBI REST) & per-residue physicochemical class screen: 63.0\\% positive, 0.0\\% negative, 16.6\\% aromatic \\\\\n48 & AAindex1 (aaindex 1.3.2) & principal physicochemical axes of the CPP signature: 553 indices scored; top separators vs decoys d $\\geq$ 5.0 (STERIMOL length, pI, hydrophobic moment) \\\\\n49 & EBI ncbiblast (EBI REST) & structural-homolog screen of 3 designed CPPs vs PDB: CPP-8 and CPP-18 zero hits at expect 10; CPP-1 weak hit (expect 1.2, 69.2\\% identity) to the published arginine-rich CPP RW16 (PDB 6RQS) \\\\\n50 & NCBI BLAST (blastp vs Swiss-Prot) & protein-level homolog screen of all 18 designed CPPs: 42 distinct accessions; TTV capsid ARM homologs in 7 of 18 designs across five TTV isolates (best expect $1.2\times10^{-5}$); HIV-1 Rev ARM and protamine P1 homologs; no deep homology outside arginine-rich natural scaffolds \\\\",
+    "tools_rows": "1 & PyTorch 2.x & CNN, GNN, GRU training (pHLA + CPP) \\\\\n2 & scikit-learn & 3-mer logistic regression (L-BFGS); AUC cross-check \\\\\n3 & NumPy & all numerical arrays, bootstrap machinery \\\\\n4 & pandas & IEDB TSV handling, dataset aggregation \\\\\n5 & SciPy & Spearman/Pearson tests (epistasis--margin null) \\\\\n6 & matplotlib & all 26 figures \\\\\n7 & Biopython 1.88 & PairwiseAligner novelty recheck; ProtParam descriptors; PDB parsing \\\\\n8 & pytest$^{\\dagger}$ & 33-test hermetic suite \\\\\n9 & MHCflurry 2.2.1 & head-to-head comparator (affinity predictor, CPU) \\\\\n10 & NetMHCpan-4.1 & published landscape numbers (gkaa379) \\\\\n11 & IEDB & mhc\\_ligand\\_full export (350 studies) \\\\\n12 & IEDB Analysis Resource & benchmark framework reference \\\\\n13 & CPPsite 2.0 & CPP positives (Raghava group) \\\\\n14 & UniProtKB REST API & negative pools; novelty screen pool \\\\\n15 & RCSB PDB & structures 1DUZ, 8RNI, 7OW3 (pocket verification) \\\\\n16 & NCBI BLOSUM62 & substitution-matrix encoding channel \\\\\n17 & GitHub$^{\\dagger}$ & repository hosting \\\\\n18 & Google Drive API$^{\\dagger}$ & results delivery \\\\\n19 & Python 3.10$^{\\dagger}$ & runtime \\\\\n20 & git$^{\\dagger}$ & version control; bundle transport \\\\\n21 & pdfLaTeX (TeX Live)$^{\\dagger}$ & this document \\\\\n22 & curl$^{\\dagger}$ & dataset download (download\\_data.sh) \\\\\n23 & OpenSSH$^{\\dagger}$ & authenticated push transport \\\\\n24 & RCSB PDB Search API & structure discovery by title/attribute query (8RNI, 7OW3) \\\\\n25 & RCSB PDB Data API & entry metadata and citation verification \\\\\n26 & WebLogo 3.9 & anchor motif sequence logos (Fig.~\ref{fig:logos}) \\\\\n27 & FreeSASA & anchor burial (SASA) in 1DUZ/8RNI/7OW3 \\\\\n28 & modlamp & independent CPP descriptor cross-check (pKa charge) \\\\\n29 & peptides & descriptor cross-check (KD hydropathy, EMBOSS charge, moment) \\\\\n30 & statsmodels & confound-controlled binomial GLM (length/method/locus) \\\\\n31 & Europe PMC API & bibliography verification (27 references) \\\\\n32 & CrossRef API & DOI/venue verification; caught the MLCPP-2.0 venue error \\\\\n33 & NCBI E-utilities & PubMed record verification \\\\\n34 & PDB-REDO & structure QC (R/R-free, resolution) for 1DUZ/8RNI/7OW3 and the 72-entry per-allele set \\\\\n35 & IPD-IMGT/HLA & pocket chemistry of all 52 covered alleles (hla\_prot.fasta reference records) \\\\\n36 & EBI MAFFT (REST) & family-level relatedness: 18 designed CPPs vs 7 CPPsite archetypes \\\\\n37 & ToxinPred & toxicity screen of designed CPPs: 18/18 Non-Toxin \\\\\n38 & HLP & half-life/stability screen of designed CPPs: 10 High, 8 Normal \\\\n39 & CellPPD & mutational-sensitivity screen of the 18 designed CPPs: 5,187 single-mutant SVM scores, all below CPP threshold \\\\\n40 & scikit-bio 0.7.4 & B/F-pocket compositional entropy across the 52-allele panel (23 pocket positions) \\\\\n41 & ProDy 2.4.1 & ANM rigidity of the 1DUZ groove (B-pocket 2.50$\\times$, F-pocket 1.90$\\times$ vs chain mean) \\\\\n42 & MDAnalysis 2.9.0 & groove geometry of 69/72 pHLA structures: pocket widths, peptide span, anchor seating depth \\\\\n43 & fair-esm (ESM-2 t6\\_8M) & PLM-embedding novelty of the 18 CPPs vs 7 archetypes and 300 UniProt decoys \\\\\n44 & IEDB tools API (NetMHCpan 4.1 EL) & official-engine benchmark on 400 held-out peptides; CPP immunogenicity screen \\\\n45 & EMBOSS pepstats (EBI REST) & global composition screen of the 18 CPPs: mean basic content 63.0 mol\\%, mean charge +9.28, pI $\\sim$13.5 \\\\n46 & EBI Clustal Omega (REST) & cross-engine relatedness check: mean max identity of the 18 CPPs to 7 archetypes 40.5\\% vs MAFFT 41.5\\% \\\\n47 & EMBOSS pepinfo (EBI REST) & per-residue physicochemical class screen: 63.0\\% positive, 0.0\\% negative, 16.6\\% aromatic \\\\\n48 & AAindex1 (aaindex 1.3.2) & principal physicochemical axes of the CPP signature: 553 indices scored; top separators vs decoys d $\\geq$ 5.0 (STERIMOL length, pI, hydrophobic moment) \\\\\n49 & EBI ncbiblast (EBI REST) & structural-homolog screen of 3 designed CPPs vs PDB: CPP-8 and CPP-18 zero hits at expect 10; CPP-1 weak hit (expect 1.2, 69.2\\% identity) to the published arginine-rich CPP RW16 (PDB 6RQS) \\\\\n50 & NCBI BLAST (blastp vs Swiss-Prot) & protein-level homolog screen of all 18 designed CPPs: 42 distinct accessions; TTV capsid ARM homologs in 7 of 18 designs across five TTV isolates (best expect $1.2\\times10^{-5}$); HIV-1 Rev ARM and protamine P1 homologs; no deep homology outside arginine-rich natural scaffolds \\\\\n51 & HMMER phmmer (EBI REST; HMMER 3.3.2 local) & 18-sequence Swiss-Prot novelty screen: EBI zero hits at default threshold; local full release 3 weak hits at expect 100, 15 zero; short-query sensitivity negative \\\\",
     "pa_n": str(pasum["n_structures"]),
     "pa_ok": str(pasum["n_with_peptide"]),
     "pa_nopep": str(pasum["n_no_peptide"]),
@@ -2620,6 +2649,8 @@ subs = {
         for a, v in sorted(json.load(open("results/anchor_epistasis.json")).items())),
 }
 for k, v in subs.items():
+    if k == "tools_rows":
+        v = v.replace('\\\\n', '\\\\\n').replace('\\n', '\\\\\n')
     tex = tex.replace(f"%({k})s", str(v))
 open("paper/main.tex", "w").write(tex)
 print("main.tex written:", len(tex), "chars")
