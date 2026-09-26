@@ -89,11 +89,18 @@ def main():
     rng2 = np.random.default_rng(17)
     binders = [e for e in test_ex if e.binder]
     nonb = [e for e in test_ex if not e.binder]
-    take = rng2.choice(len(nonb), size=min(len(nonb), max(6000 - len(binders), 0)), replace=False) if len(binders) < 6000 else np.array([], dtype=int)
-    subset = binders + [nonb[i] for i in take]
+    # locked intent: a balanced-class eval of up to 6000 (both classes are
+    # required for AUC). Cap binders at 3000 (seeded), fill to 6000 with
+    # seeded negatives. (v1 bug: binders>=6000 took ZERO negatives -> NaN.)
+    b_take = rng2.choice(len(binders), size=min(len(binders), 3000), replace=False)
+    n_take = rng2.choice(len(nonb), size=min(len(nonb), 6000 - len(b_take)), replace=False)
+    subset = [binders[i] for i in b_take] + [nonb[i] for i in n_take]
     print(f"eval subset {len(subset)} ({len(binders)} binders)", flush=True)
     Xte = np.array([pep_feats(e.sequence) + af_cache[e.allele] for e in subset], dtype=np.float64)
     ours = clf.predict_proba(Xte)[:, 1]
+    import pickle
+    pickle.dump({"clf": clf, "subset": subset, "ours": ours,
+                 "test_alleles": sorted(test_alleles)}, open("/tmp/g3_ckpt.pkl", "wb"))
     del Xte, clf, af_cache
     labels = np.array([e.binder for e in subset], dtype=int)
     from mhcflurry import Class1AffinityPredictor as CAP
