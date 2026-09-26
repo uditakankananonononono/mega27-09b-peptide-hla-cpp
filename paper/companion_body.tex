@@ -1,0 +1,169 @@
+\pandoclink{evidence-locked-companion-analysis-binding-and-cpp-screening}{%
+\section{Evidence-locked companion analysis: binding and CPP screening}\label{evidence-locked-companion-analysis-binding-and-cpp-screening}}
+
+This companion expands the paper with committed outputs only. It does not rerun the science builder or turn retrospective comparisons into new experiments. Each section names its JSON source. The earlier within-allele and peptide-held-out results must be read alongside the independently failed G3 allele-held-out test.
+
+\pandoclink{matched-row-binding-benchmark-what-actually-happened}{%
+\subsection{Matched-row binding benchmark: what actually happened}\label{matched-row-binding-benchmark-what-actually-happened}}
+
+The committed \texttt{results/head\_to\_head\_mhcflurry.json} evaluates 6,000 examples, 5,057 called binders under its defined threshold. High binder prevalence makes positive predictive value less revealing than AUROC or partial AUROC. The comparison uses predictions on the same recorded rows, not proof that each model had identical training access.
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule
+Model & AUROC & AUROC at FPR ≤ 0.1 & PPV\tabularnewline
+\midrule
+\endhead
+MHCflurry & 0.9164 & 0.5762 & 0.9383\tabularnewline
+Per-allele PSSM & 0.9202 & 0.5676 & 0.9425\tabularnewline
+CNN & 0.9026 & 0.5127 & 0.9343\tabularnewline
+PSSM/CNN ensemble & 0.9281 & 0.6026 & 0.9440\tabularnewline
+\bottomrule
+\end{longtable}
+
+On these selected same rows, ensemble AUROC exceeds MHCflurry by 0.0118 in the stored point summaries. The committed \texttt{results/h2h\_bootstrap.json} reports 2,000 resamples, a mean delta 0.01171 and a percentile 95\% interval {[}0.00430, 0.01918{]}. This conditions on the sample and the evaluation protocol. It is not an independent held-out-allele replication, as G3 demonstrates. The bootstrap reports p\_win=1 across the recorded resamples, which is not a literal probability of superiority in all populations.
+
+The \texttt{results/g2\_wilcoxon.json} per-allele comparison has 30 evaluable alleles and 21 ensemble wins; mean AUROC delta 0.0130, median 0.0110 and one-sided Wilcoxon p=0.0104. Alleles are not independent biological cohorts, so this test does not license a clinical-generalization claim. The sign and size of a small within-panel margin should be judged against the much larger held-out-allele failure.
+
+\pandoclink{locked-g3-transfer-failure-allele-by-allele}{%
+\subsection{Locked G3 transfer failure, allele by allele}\label{locked-g3-transfer-failure-allele-by-allele}}
+
+The separate \texttt{results/g3\_allele\_holdout.json} has 83,333 training examples, 6,000 evaluations and 12 held-out test alleles. These test alleles are not the same unit of generalization as a peptide-disjoint split within familiar alleles. G3 overall AUROC is 0.6687 versus 0.9285 for MHCflurry; mean per-allele AUROC 0.5798 versus 0.9056. Its recorded two-sided paired Wilcoxon p is 0.00048828125, favoring the comparator, and the gate is false.
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule
+Held-out allele & n & Our AUROC & MHCflurry AUROC\tabularnewline
+\midrule
+\endhead
+HLA-A*02:01 & 2290 & 0.6794 & 0.9304\tabularnewline
+HLA-A*02:03 & 933 & 0.6534 & 0.9142\tabularnewline
+HLA-A*26:01 & 512 & 0.5553 & 0.9365\tabularnewline
+HLA-A*32:01 & 154 & 0.6634 & 0.8301\tabularnewline
+HLA-A*33:01 & 510 & 0.6557 & 0.8967\tabularnewline
+HLA-A*69:01 & 365 & 0.6030 & 0.9496\tabularnewline
+HLA-B*08:03 & 28 & 0.4470 & 0.8864\tabularnewline
+HLA-B*15:03 & 113 & 0.5498 & 0.8879\tabularnewline
+HLA-B*27:05 & 359 & 0.6007 & 0.9337\tabularnewline
+HLA-B*39:01 & 234 & 0.5238 & 0.9330\tabularnewline
+HLA-B*58:01 & 462 & 0.6937 & 0.9444\tabularnewline
+HLA-C*06:02 & 40 & 0.3324 & 0.8242\tabularnewline
+\bottomrule
+\end{longtable}
+
+All twelve recorded per-allele comparisons favor MHCflurry numerically. The 28-row HLA-B\emph{08:03 and 40-row HLA-C}06:02 strata are noisy on their own, but the pooled and mean-per-allele gaps remain large. No data-dependent exclusion of those small alleles is justified after seeing the result. {[}PENDING: an architecture and training protocol locked before a new unseen-allele benchmark.{]}
+
+\pandoclink{assay-method-slices-and-confounding-limits}{%
+\subsection{Assay-method slices and confounding limits}\label{assay-method-slices-and-confounding-limits}}
+
+The committed \texttt{results/assay\_method\_headtohead.json} reports three assay-method strata. Their listed row counts do not sum to all 6,000 rows, so these are a subset view rather than an exhaustive decomposition; the file also records exact replication of its subset calculation (maximum difference zero).
+
+\begin{longtable}[]{@{}lrrrrr@{}}
+\toprule
+Method & n & Binders & MHCflurry & Ensemble & Delta\tabularnewline
+\midrule
+\endhead
+Competitive radioactivity & 4056 & 3677 & 0.8856 & 0.9002 & 0.0147\tabularnewline
+Direct fluorescence & 1166 & 823 & 0.9539 & 0.9599 & 0.0060\tabularnewline
+Competitive fluorescence & 757 & 548 & 0.9208 & 0.9230 & 0.0022\tabularnewline
+\bottomrule
+\end{longtable}
+
+The three listed differences are positive but small. Multiple assay systems differ in measurement scale and chemistry. Any claim about a mutation mechanism requires assay-aware evaluation, not a post-hoc positive slice. \texttt{results/binder\_confounds.json} fits a model to the 16,870-row held-out peptide panel controlling for length, assay method and locus; the ensemble coefficient is 1.3411 per standardized score with recorded odds ratio 3.823 and standard error 0.0214. This is association conditional on the recorded covariates, not causal proof or transfer validation. Its McFadden pseudo-R² changes from 0.0852 in the covariate-only model to 0.5008 when the score enters. Outcome-derived evaluation and feature construction must remain separated in any follow-up.
+
+\pandoclink{calibration-and-decision-thresholds}{%
+\subsection{Calibration and decision thresholds}\label{calibration-and-decision-thresholds}}
+
+The committed \texttt{results/calibration\_decomposition.json} records n=16,870, base rate 0.2998 and binned Brier score 0.09839; a constant-base-rate predictor has 0.20991. Reliability term 0.000597 and resolution 0.11211 are binned decomposition quantities, not a guarantee of calibration under a new allele or clinic. Expected calibration error in \texttt{results/calibration.json} is 0.0164 for its bins. A threshold selected after observing a held-out cohort would invalidate a prospective PPV claim. {[}PENDING: predeclared decision threshold and calibration on new assay/allele domains.{]}
+
+\pandoclink{computational-cpp-nominations-and-safety-boundary}{%
+\subsection{Computational CPP nominations and safety boundary}\label{computational-cpp-nominations-and-safety-boundary}}
+
+The committed \texttt{results/cpp\_novel\_candidates.json} records 50 screened sequences, 18 meeting its implemented novelty filter, and ten sequence families. This is a filter result, not proof of biological novelty, delivery or safety. The highest-score sequences are often rich in Arg/Trp/Lys; without measured uptake and toxicity, classifier score alone is not an actionable treatment ranking.
+
+\begin{longtable}[]{@{}lrrrr@{}}
+\toprule
+ID & Score & Charge & Moment & Max Jaccard\tabularnewline
+\midrule
+\endhead
+9B-CPP-1 & 0.9979 & 10.0 & 0.635 & 0.176\tabularnewline
+9B-CPP-2 & 0.9965 & 11.0 & 0.811 & 0.429\tabularnewline
+9B-CPP-3 & 0.9964 & 8.0 & 0.420 & 0.333\tabularnewline
+9B-CPP-4 & 0.9963 & 7.0 & 1.197 & 0.222\tabularnewline
+9B-CPP-5 & 0.9962 & 9.0 & 0.482 & 0.250\tabularnewline
+9B-CPP-6 & 0.9961 & 7.0 & 0.669 & 0.444\tabularnewline
+9B-CPP-7 & 0.9957 & 8.1 & 0.241 & 0.267\tabularnewline
+9B-CPP-8 & 0.9955 & 5.0 & 0.836 & 0.286\tabularnewline
+9B-CPP-9 & 0.9955 & 11.0 & 0.859 & 0.286\tabularnewline
+9B-CPP-10 & 0.9955 & 7.1 & 0.250 & 0.286\tabularnewline
+9B-CPP-11 & 0.9954 & 11.0 & 0.266 & 0.273\tabularnewline
+9B-CPP-12 & 0.9954 & 9.0 & 0.493 & 0.214\tabularnewline
+9B-CPP-13 & 0.9953 & 7.0 & 0.399 & 0.308\tabularnewline
+9B-CPP-14 & 0.9953 & 10.1 & 1.158 & 0.273\tabularnewline
+9B-CPP-15 & 0.9953 & 12.0 & 0.947 & 0.316\tabularnewline
+9B-CPP-16 & 0.9952 & 10.1 & 1.064 & 0.400\tabularnewline
+9B-CPP-17 & 0.9952 & 11.0 & 0.332 & 0.300\tabularnewline
+9B-CPP-18 & 0.9951 & 11.2 & 1.511 & 0.222\tabularnewline
+\bottomrule
+\end{longtable}
+
+Sequences, in the same order as the table:
+
+\begin{itemize}
+\tightlist
+\item
+  9B-CPP-1: \texttt{LRILRWWRWRWRNRWKRRR}
+\item
+  9B-CPP-2: \texttt{RLRRRLRLRLRLRLRLRRL}
+\item
+  9B-CPP-3: \texttt{WRWRKKKRKK}
+\item
+  9B-CPP-4: \texttt{GLWRWRWRWRKSLKK}
+\item
+  9B-CPP-5: \texttt{RRINRRWRWKRWKKC}
+\item
+  9B-CPP-6: \texttt{WRWRKKRRR}
+\item
+  9B-CPP-7: \texttt{RGRWRWKKRHRPK}
+\item
+  9B-CPP-8: \texttt{GLARWRWRWRRQ}
+\item
+  9B-CPP-9: \texttt{RLRRRRRRNRRRNWRWL}
+\item
+  9B-CPP-10: \texttt{WRWKWKKRWRKH}
+\item
+  9B-CPP-11: \texttt{RLFRRRRLRRRRRRNN}
+\item
+  9B-CPP-12: \texttt{RLRLRLRLRLRIRIRR}
+\item
+  9B-CPP-13: \texttt{AWRWRWRCKAKKR}
+\item
+  9B-CPP-14: \texttt{RRRRWRRLWRHLRRR}
+\item
+  9B-CPP-15: \texttt{YLLRLRRRLRRRSRARRRR}
+\item
+  9B-CPP-16: \texttt{RGRLRRHLRRRLRRR}
+\item
+  9B-CPP-17: \texttt{RLRRRLRLRRFLRRRR}
+\item
+  9B-CPP-18: \texttt{LGRLWRRLRRRRRHLRRAARSH}
+\end{itemize}
+
+Several candidates share basic-rich motifs and may be near-duplicates under a biological similarity metric even when a small reference search passes. The published \texttt{max\_db\_identity} entries for these candidates can be high; a pass against a defined reference database is not a global novelty claim. {[}PENDING: measured cellular uptake with endosomal-escape and membrane-damage controls, hemolysis testing, a broad homology audit and an assay-aware independent test.{]}
+
+\pandoclink{evidence-map-and-limits}{%
+\subsection{Evidence map and limits}\label{evidence-map-and-limits}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{results/phla\_benchmark.json}: 114,688 measured (peptide, allele) pairs and 60 alleles in the draft protocol. Its peptide-disjoint split supports within-panel generalization, not unseen-allele performance.
+\item
+  \texttt{results/head\_to\_head\_mhcflurry.json} and \texttt{results/h2h\_bootstrap.json}: same-row comparison and paired empirical uncertainty under the selected test panel.
+\item
+  \texttt{results/g2\_wilcoxon.json}: per-allele within-panel comparisons. This is descriptive against the independent transfer failure.
+\item
+  \texttt{results/g3\_allele\_holdout.json}: locked negative transfer test; it overrides any blanket leader-beating assertion.
+\item
+  \texttt{results/cpp\_benchmark.json} and \texttt{results/cpp\_novel\_candidates.json}: classifier and screen outputs, not wet-lab evidence.
+\end{itemize}
+
+These artifacts support a scoped scientific contribution: a transparent baseline-plus-ensemble panel, a failure mode exposed by allele-held-out evaluation, and testable computational CPP nominations. They do not establish a best-in-world immune prediction tool, peptide therapy, or clinical performance.
