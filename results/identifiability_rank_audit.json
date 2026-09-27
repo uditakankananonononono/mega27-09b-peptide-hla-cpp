@@ -1,0 +1,832 @@
+{
+ "protocol": "B5 identifiability rank audit (addendum 2026-09-27, verdict section 8). Empirical audit of Prop 1 (paper App. A): numerical rank of the observed additive design Gram matrix per allele (PSSM design, L*20+1 params, eigvalsh tolerance = max*P*1e-10). Data: data/processed/iedb_class1_human_nM.tsv, sequences >=8aa standard alphabet, truncated to MAX_LEN_PHLA as in the model.",
+ "max_len_phla": 15,
+ "param_count": 301,
+ "alleles_audited": 81,
+ "alleles_full_rank": 0,
+ "median_deficiency": 128.0,
+ "worst": [
+  {
+   "allele": "HLA-B*27:04",
+   "n": 52,
+   "param_count": 301,
+   "design_rank": 47,
+   "rank_deficiency": 254,
+   "min_eig": -1.9814125994069178e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*27:06",
+   "n": 54,
+   "param_count": 301,
+   "design_rank": 48,
+   "rank_deficiency": 253,
+   "min_eig": -3.786580099801572e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*66:01",
+   "n": 52,
+   "param_count": 301,
+   "design_rank": 52,
+   "rank_deficiency": 249,
+   "min_eig": -2.0232067230016296e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*40:13",
+   "n": 56,
+   "param_count": 301,
+   "design_rank": 56,
+   "rank_deficiency": 245,
+   "min_eig": -2.131061314887404e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:07",
+   "n": 84,
+   "param_count": 301,
+   "design_rank": 62,
+   "rank_deficiency": 239,
+   "min_eig": -1.2124479674365563e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*32:15",
+   "n": 74,
+   "param_count": 301,
+   "design_rank": 74,
+   "rank_deficiency": 227,
+   "min_eig": -2.4796472749106276e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*68:23",
+   "n": 80,
+   "param_count": 301,
+   "design_rank": 80,
+   "rank_deficiency": 221,
+   "min_eig": -2.8424763626560916e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:05",
+   "n": 122,
+   "param_count": 301,
+   "design_rank": 84,
+   "rank_deficiency": 217,
+   "min_eig": -1.1844835884458192e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*14:02",
+   "n": 86,
+   "param_count": 301,
+   "design_rank": 86,
+   "rank_deficiency": 215,
+   "min_eig": -2.1994470649743706e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*27:20",
+   "n": 87,
+   "param_count": 301,
+   "design_rank": 87,
+   "rank_deficiency": 214,
+   "min_eig": -4.983800086003634e-14,
+   "identifiable_full": false
+  }
+ ],
+ "audits": [
+  {
+   "allele": "HLA-A*02:01",
+   "n": 16924,
+   "param_count": 301,
+   "design_rank": 231,
+   "rank_deficiency": 70,
+   "min_eig": -1.0992455817210618e-12,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*68:02",
+   "n": 6618,
+   "param_count": 301,
+   "design_rank": 200,
+   "rank_deficiency": 101,
+   "min_eig": -8.88421001002653e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*03:01",
+   "n": 6578,
+   "param_count": 301,
+   "design_rank": 219,
+   "rank_deficiency": 82,
+   "min_eig": -5.09932891371155e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:03",
+   "n": 6467,
+   "param_count": 301,
+   "design_rank": 195,
+   "rank_deficiency": 106,
+   "min_eig": -4.3046184634468935e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:06",
+   "n": 5902,
+   "param_count": 301,
+   "design_rank": 195,
+   "rank_deficiency": 106,
+   "min_eig": -2.1529373944275945e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*11:01",
+   "n": 5833,
+   "param_count": 301,
+   "design_rank": 205,
+   "rank_deficiency": 96,
+   "min_eig": -1.1877225511504027e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:02",
+   "n": 5351,
+   "param_count": 301,
+   "design_rank": 191,
+   "rank_deficiency": 110,
+   "min_eig": -3.193654687030768e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*31:01",
+   "n": 4884,
+   "param_count": 301,
+   "design_rank": 197,
+   "rank_deficiency": 104,
+   "min_eig": -2.317976695679623e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*01:01",
+   "n": 3998,
+   "param_count": 301,
+   "design_rank": 203,
+   "rank_deficiency": 98,
+   "min_eig": -1.2148825685222068e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*07:02",
+   "n": 3929,
+   "param_count": 301,
+   "design_rank": 205,
+   "rank_deficiency": 96,
+   "min_eig": -2.0988624252563908e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*15:01",
+   "n": 3827,
+   "param_count": 301,
+   "design_rank": 194,
+   "rank_deficiency": 107,
+   "min_eig": -2.920729791303843e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*26:01",
+   "n": 3341,
+   "param_count": 301,
+   "design_rank": 193,
+   "rank_deficiency": 108,
+   "min_eig": -7.826105067604019e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*68:01",
+   "n": 3098,
+   "param_count": 301,
+   "design_rank": 192,
+   "rank_deficiency": 109,
+   "min_eig": -1.423498079690278e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*33:01",
+   "n": 2945,
+   "param_count": 301,
+   "design_rank": 189,
+   "rank_deficiency": 112,
+   "min_eig": -5.373849951586934e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*24:02",
+   "n": 2680,
+   "param_count": 301,
+   "design_rank": 202,
+   "rank_deficiency": 99,
+   "min_eig": -7.229006144651493e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*40:01",
+   "n": 2660,
+   "param_count": 301,
+   "design_rank": 192,
+   "rank_deficiency": 109,
+   "min_eig": -1.3442918156841137e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*58:01",
+   "n": 2562,
+   "param_count": 301,
+   "design_rank": 201,
+   "rank_deficiency": 100,
+   "min_eig": -1.7485856759504458e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*08:01",
+   "n": 2449,
+   "param_count": 301,
+   "design_rank": 194,
+   "rank_deficiency": 107,
+   "min_eig": -5.902604828742133e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*69:01",
+   "n": 2390,
+   "param_count": 301,
+   "design_rank": 176,
+   "rank_deficiency": 125,
+   "min_eig": -6.260284609535032e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*57:01",
+   "n": 2292,
+   "param_count": 301,
+   "design_rank": 195,
+   "rank_deficiency": 106,
+   "min_eig": -1.8373816462680387e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*51:01",
+   "n": 2261,
+   "param_count": 301,
+   "design_rank": 202,
+   "rank_deficiency": 99,
+   "min_eig": -1.5554011764018906e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*27:05",
+   "n": 2171,
+   "param_count": 301,
+   "design_rank": 204,
+   "rank_deficiency": 97,
+   "min_eig": -2.196793081888909e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*18:01",
+   "n": 2166,
+   "param_count": 301,
+   "design_rank": 199,
+   "rank_deficiency": 102,
+   "min_eig": -2.2317735665719738e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*29:02",
+   "n": 1964,
+   "param_count": 301,
+   "design_rank": 195,
+   "rank_deficiency": 106,
+   "min_eig": -3.3517692325099157e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*44:02",
+   "n": 1823,
+   "param_count": 301,
+   "design_rank": 196,
+   "rank_deficiency": 105,
+   "min_eig": -3.059412534288658e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*23:01",
+   "n": 1775,
+   "param_count": 301,
+   "design_rank": 181,
+   "rank_deficiency": 120,
+   "min_eig": -1.523520106274662e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*46:01",
+   "n": 1676,
+   "param_count": 301,
+   "design_rank": 173,
+   "rank_deficiency": 128,
+   "min_eig": -6.641130757994547e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*35:01",
+   "n": 1667,
+   "param_count": 301,
+   "design_rank": 202,
+   "rank_deficiency": 99,
+   "min_eig": -2.0159826196657612e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*15:17",
+   "n": 1407,
+   "param_count": 301,
+   "design_rank": 175,
+   "rank_deficiency": 126,
+   "min_eig": -7.462946892054479e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*30:02",
+   "n": 1395,
+   "param_count": 301,
+   "design_rank": 182,
+   "rank_deficiency": 119,
+   "min_eig": -8.423478221594775e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*30:01",
+   "n": 1377,
+   "param_count": 301,
+   "design_rank": 194,
+   "rank_deficiency": 107,
+   "min_eig": -1.0313386297556579e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*39:01",
+   "n": 1354,
+   "param_count": 301,
+   "design_rank": 180,
+   "rank_deficiency": 121,
+   "min_eig": -3.2674008469456204e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*24:03",
+   "n": 1304,
+   "param_count": 301,
+   "design_rank": 173,
+   "rank_deficiency": 128,
+   "min_eig": -3.17278866256668e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*53:01",
+   "n": 1181,
+   "param_count": 301,
+   "design_rank": 199,
+   "rank_deficiency": 102,
+   "min_eig": -5.27046460570107e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*80:01",
+   "n": 1123,
+   "param_count": 301,
+   "design_rank": 174,
+   "rank_deficiency": 127,
+   "min_eig": -5.002462391501851e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*44:03",
+   "n": 945,
+   "param_count": 301,
+   "design_rank": 199,
+   "rank_deficiency": 102,
+   "min_eig": -7.629012829972466e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*25:01",
+   "n": 912,
+   "param_count": 301,
+   "design_rank": 191,
+   "rank_deficiency": 110,
+   "min_eig": -3.821050868346222e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:12",
+   "n": 892,
+   "param_count": 301,
+   "design_rank": 173,
+   "rank_deficiency": 128,
+   "min_eig": -9.511302556851122e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*48:01",
+   "n": 877,
+   "param_count": 301,
+   "design_rank": 169,
+   "rank_deficiency": 132,
+   "min_eig": -7.482391551000802e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*27:03",
+   "n": 859,
+   "param_count": 301,
+   "design_rank": 181,
+   "rank_deficiency": 120,
+   "min_eig": -1.3129979728823733e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*32:01",
+   "n": 838,
+   "param_count": 301,
+   "design_rank": 191,
+   "rank_deficiency": 110,
+   "min_eig": -6.894828360334119e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:19",
+   "n": 836,
+   "param_count": 301,
+   "design_rank": 173,
+   "rank_deficiency": 128,
+   "min_eig": -4.9318718533677253e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:11",
+   "n": 715,
+   "param_count": 301,
+   "design_rank": 173,
+   "rank_deficiency": 128,
+   "min_eig": -4.7666937004033215e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*54:01",
+   "n": 686,
+   "param_count": 301,
+   "design_rank": 187,
+   "rank_deficiency": 114,
+   "min_eig": -1.0872335250981952e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:16",
+   "n": 604,
+   "param_count": 301,
+   "design_rank": 173,
+   "rank_deficiency": 128,
+   "min_eig": -2.2721141748416745e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*40:02",
+   "n": 561,
+   "param_count": 301,
+   "design_rank": 191,
+   "rank_deficiency": 110,
+   "min_eig": -2.998185896863623e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*45:01",
+   "n": 509,
+   "param_count": 301,
+   "design_rank": 174,
+   "rank_deficiency": 127,
+   "min_eig": -3.170557207912023e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*04:01",
+   "n": 509,
+   "param_count": 301,
+   "design_rank": 162,
+   "rank_deficiency": 139,
+   "min_eig": -5.547590616550511e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*08:02",
+   "n": 431,
+   "param_count": 301,
+   "design_rank": 173,
+   "rank_deficiency": 128,
+   "min_eig": -2.3943746228801344e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*15:09",
+   "n": 412,
+   "param_count": 301,
+   "design_rank": 170,
+   "rank_deficiency": 131,
+   "min_eig": -3.705442234476549e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*26:02",
+   "n": 399,
+   "param_count": 301,
+   "design_rank": 170,
+   "rank_deficiency": 131,
+   "min_eig": -9.303975760069578e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*15:03",
+   "n": 390,
+   "param_count": 301,
+   "design_rank": 162,
+   "rank_deficiency": 139,
+   "min_eig": -3.317858612370392e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*15:42",
+   "n": 357,
+   "param_count": 301,
+   "design_rank": 157,
+   "rank_deficiency": 144,
+   "min_eig": -7.470031991971887e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*45:06",
+   "n": 355,
+   "param_count": 301,
+   "design_rank": 157,
+   "rank_deficiency": 144,
+   "min_eig": -3.6833845051762744e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:17",
+   "n": 334,
+   "param_count": 301,
+   "design_rank": 158,
+   "rank_deficiency": 143,
+   "min_eig": -8.322738284626316e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*83:01",
+   "n": 333,
+   "param_count": 301,
+   "design_rank": 156,
+   "rank_deficiency": 145,
+   "min_eig": -3.6881180470550915e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*14:02",
+   "n": 315,
+   "param_count": 301,
+   "design_rank": 157,
+   "rank_deficiency": 144,
+   "min_eig": -4.4759672349713385e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*26:03",
+   "n": 269,
+   "param_count": 301,
+   "design_rank": 167,
+   "rank_deficiency": 134,
+   "min_eig": -5.2967507731025716e-15,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*06:02",
+   "n": 240,
+   "param_count": 301,
+   "design_rank": 148,
+   "rank_deficiency": 153,
+   "min_eig": -1.719879229874603e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*08:03",
+   "n": 203,
+   "param_count": 301,
+   "design_rank": 168,
+   "rank_deficiency": 133,
+   "min_eig": -9.4984223161412e-15,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*15:02",
+   "n": 181,
+   "param_count": 301,
+   "design_rank": 144,
+   "rank_deficiency": 157,
+   "min_eig": -1.7380982383802607e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*05:01",
+   "n": 172,
+   "param_count": 301,
+   "design_rank": 137,
+   "rank_deficiency": 164,
+   "min_eig": -4.1464449028314687e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*12:03",
+   "n": 172,
+   "param_count": 301,
+   "design_rank": 143,
+   "rank_deficiency": 158,
+   "min_eig": -1.449516186275152e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*38:01",
+   "n": 169,
+   "param_count": 301,
+   "design_rank": 163,
+   "rank_deficiency": 138,
+   "min_eig": -8.296043626435637e-15,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*03:03",
+   "n": 165,
+   "param_count": 301,
+   "design_rank": 141,
+   "rank_deficiency": 160,
+   "min_eig": -2.0996074642082068e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*15:02",
+   "n": 157,
+   "param_count": 301,
+   "design_rank": 143,
+   "rank_deficiency": 158,
+   "min_eig": -3.363694215902922e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*07:02",
+   "n": 143,
+   "param_count": 301,
+   "design_rank": 142,
+   "rank_deficiency": 159,
+   "min_eig": -2.8411433737413902e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*73:01",
+   "n": 126,
+   "param_count": 301,
+   "design_rank": 126,
+   "rank_deficiency": 175,
+   "min_eig": -7.183044626919419e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:50",
+   "n": 125,
+   "param_count": 301,
+   "design_rank": 125,
+   "rank_deficiency": 176,
+   "min_eig": -3.740719018306906e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:05",
+   "n": 122,
+   "param_count": 301,
+   "design_rank": 84,
+   "rank_deficiency": 217,
+   "min_eig": -1.1844835884458192e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*27:20",
+   "n": 87,
+   "param_count": 301,
+   "design_rank": 87,
+   "rank_deficiency": 214,
+   "min_eig": -4.983800086003634e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*32:07",
+   "n": 87,
+   "param_count": 301,
+   "design_rank": 87,
+   "rank_deficiency": 214,
+   "min_eig": -2.3220775885026606e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-C*08:02",
+   "n": 87,
+   "param_count": 301,
+   "design_rank": 87,
+   "rank_deficiency": 214,
+   "min_eig": -1.4881154156884803e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*14:02",
+   "n": 86,
+   "param_count": 301,
+   "design_rank": 86,
+   "rank_deficiency": 215,
+   "min_eig": -2.1994470649743706e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*02:07",
+   "n": 84,
+   "param_count": 301,
+   "design_rank": 62,
+   "rank_deficiency": 239,
+   "min_eig": -1.2124479674365563e-13,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*68:23",
+   "n": 80,
+   "param_count": 301,
+   "design_rank": 80,
+   "rank_deficiency": 221,
+   "min_eig": -2.8424763626560916e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*32:15",
+   "n": 74,
+   "param_count": 301,
+   "design_rank": 74,
+   "rank_deficiency": 227,
+   "min_eig": -2.4796472749106276e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*40:13",
+   "n": 56,
+   "param_count": 301,
+   "design_rank": 56,
+   "rank_deficiency": 245,
+   "min_eig": -2.131061314887404e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*27:06",
+   "n": 54,
+   "param_count": 301,
+   "design_rank": 48,
+   "rank_deficiency": 253,
+   "min_eig": -3.786580099801572e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-B*27:04",
+   "n": 52,
+   "param_count": 301,
+   "design_rank": 47,
+   "rank_deficiency": 254,
+   "min_eig": -1.9814125994069178e-14,
+   "identifiable_full": false
+  },
+  {
+   "allele": "HLA-A*66:01",
+   "n": 52,
+   "param_count": 301,
+   "design_rank": 52,
+   "rank_deficiency": 249,
+   "min_eig": -2.0232067230016296e-14,
+   "identifiable_full": false
+  }
+ ],
+ "finding": "Verdict CONFIRMED empirically: 0 of 81 audited alleles have a full-rank additive design (median rank deficiency 128 of 301 params). Prop 1s identifiability condition does not hold on the observed IEDB design for ANY allele - per-position amino-acid coverage is too sparse. Consequence (now stated in the paper): the additive PSSM baseline is only estimable under ridge regularization, so \"deep model vs additive baseline\" comparisons are against a regularized approximation, and the identifiability propositions stay conditional. This is a locked finding, reported as-is."
+}
