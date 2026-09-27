@@ -24,8 +24,7 @@ def norm_allele(raw):
     body = raw[4:]
     if "*" in body or "-" in body:
         return None  # unexpected format, treat as cell line
-    locus, _, rest = body.partition("")
-    # split locus letter(s) from digits: e.g. C14:02, A02:01, B44:02, DRB101:01?
+    # split locus letter(s) from digits: e.g. C14:02, A02:01, B44:02
     i = 0
     while i < len(body) and body[i].isalpha():
         i += 1
