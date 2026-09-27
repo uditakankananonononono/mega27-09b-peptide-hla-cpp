@@ -1,0 +1,26 @@
+{
+ "engine": "IEDB nextgen API mhci netmhcpan_el (NetMHCpan EL percentile)",
+ "prereg": "docs/PREREG_G1_NEXTGEN_RERUN_2026-09-28.md",
+ "n_requested": 400,
+ "n_scored": 400,
+ "failed_groups_excluded_symmetrically": [],
+ "alleles": [
+  "HLA-A*02:01",
+  "HLA-A*03:01",
+  "HLA-A*11:01",
+  "HLA-A*31:01",
+  "HLA-A*68:02",
+  "HLA-A*02:03",
+  "HLA-B*07:02",
+  "HLA-B*15:01"
+ ],
+ "iedb_auc_on_rank": 0.8961,
+ "ensemble_auc_same_subset": 0.9176,
+ "n_binders": 280,
+ "cross_engine_note": {
+  "old_api_iedb_auc": 0.8961,
+  "old_api_ensemble_auc": 0.9176,
+  "old_api_n_scored": 400,
+  "delta_iedb_auc_nextgen_minus_old": 0.0
+ }
+}

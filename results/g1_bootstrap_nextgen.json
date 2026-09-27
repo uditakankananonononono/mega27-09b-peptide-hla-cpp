@@ -1,0 +1,16 @@
+{
+ "engine": "IEDB nextgen API mhci netmhcpan_el (NetMHCpan EL percentile)",
+ "prereg": "docs/PREREG_G1_NEXTGEN_RERUN_2026-09-28.md",
+ "n": 400,
+ "n_boot": 10000,
+ "iedb_auc": 0.8961011904761906,
+ "ensemble_auc": 0.9175892857142858,
+ "delta_auc_mean": 0.021935835230027116,
+ "delta_auc_ci95": [
+  -0.005307527608886042,
+  0.05052774676976248
+ ],
+ "p_win": 0.9418,
+ "subset": "same deterministic 400-example subset as results/iedb_api_benchmark.json (rng 7)",
+ "note": "IEDB percentile rank negated so higher = stronger binder; paired bootstrap on identical examples"
+}
