@@ -1,0 +1,154 @@
+{
+ "protocol": "PREREG_B1 locked selection: >=50 usable rows (std alphabet, len 8-14), not in the 52-allele training set; ALL qualifying alleles; sorted by supertype (Sidney 2008) then allele",
+ "supertype_source": "Sidney et al. 2008 BMC Immunol 9:1 doi:10.1186/1471-2172-9-1 (table via exa.ai mirror, 2026-09-27)",
+ "training_allele_count": 52,
+ "held_out_count": 29,
+ "total_usable_rows": 5790,
+ "alleles": [
+  {
+   "allele": "HLA-A*32:07",
+   "n_usable": 87,
+   "supertype": "A01"
+  },
+  {
+   "allele": "HLA-A*02:05",
+   "n_usable": 122,
+   "supertype": "A02"
+  },
+  {
+   "allele": "HLA-A*02:07",
+   "n_usable": 84,
+   "supertype": "A02"
+  },
+  {
+   "allele": "HLA-A*02:50",
+   "n_usable": 125,
+   "supertype": "A02"
+  },
+  {
+   "allele": "HLA-A*66:01",
+   "n_usable": 52,
+   "supertype": "A03"
+  },
+  {
+   "allele": "HLA-A*68:23",
+   "n_usable": 80,
+   "supertype": "A03"
+  },
+  {
+   "allele": "HLA-B*08:02",
+   "n_usable": 431,
+   "supertype": "B08"
+  },
+  {
+   "allele": "HLA-B*08:03",
+   "n_usable": 203,
+   "supertype": "B08"
+  },
+  {
+   "allele": "HLA-B*14:02",
+   "n_usable": 86,
+   "supertype": "B27"
+  },
+  {
+   "allele": "HLA-B*15:09",
+   "n_usable": 412,
+   "supertype": "B27"
+  },
+  {
+   "allele": "HLA-B*27:03",
+   "n_usable": 859,
+   "supertype": "B27"
+  },
+  {
+   "allele": "HLA-B*27:04",
+   "n_usable": 52,
+   "supertype": "B27"
+  },
+  {
+   "allele": "HLA-B*27:06",
+   "n_usable": 54,
+   "supertype": "B27"
+  },
+  {
+   "allele": "HLA-B*27:20",
+   "n_usable": 87,
+   "supertype": "B27"
+  },
+  {
+   "allele": "HLA-B*38:01",
+   "n_usable": 169,
+   "supertype": "B27"
+  },
+  {
+   "allele": "HLA-B*73:01",
+   "n_usable": 126,
+   "supertype": "B27"
+  },
+  {
+   "allele": "HLA-B*15:02",
+   "n_usable": 157,
+   "supertype": "B62"
+  },
+  {
+   "allele": "HLA-A*32:15",
+   "n_usable": 74,
+   "supertype": "unclassified"
+  },
+  {
+   "allele": "HLA-B*15:42",
+   "n_usable": 357,
+   "supertype": "unclassified"
+  },
+  {
+   "allele": "HLA-B*40:13",
+   "n_usable": 56,
+   "supertype": "unclassified"
+  },
+  {
+   "allele": "HLA-B*45:06",
+   "n_usable": 355,
+   "supertype": "unclassified"
+  },
+  {
+   "allele": "HLA-B*83:01",
+   "n_usable": 333,
+   "supertype": "unclassified"
+  },
+  {
+   "allele": "HLA-C*03:03",
+   "n_usable": 165,
+   "supertype": "C-locus (outside Sidney 2008 scope)"
+  },
+  {
+   "allele": "HLA-C*04:01",
+   "n_usable": 509,
+   "supertype": "C-locus (outside Sidney 2008 scope)"
+  },
+  {
+   "allele": "HLA-C*05:01",
+   "n_usable": 172,
+   "supertype": "C-locus (outside Sidney 2008 scope)"
+  },
+  {
+   "allele": "HLA-C*07:02",
+   "n_usable": 143,
+   "supertype": "C-locus (outside Sidney 2008 scope)"
+  },
+  {
+   "allele": "HLA-C*08:02",
+   "n_usable": 87,
+   "supertype": "C-locus (outside Sidney 2008 scope)"
+  },
+  {
+   "allele": "HLA-C*12:03",
+   "n_usable": 172,
+   "supertype": "C-locus (outside Sidney 2008 scope)"
+  },
+  {
+   "allele": "HLA-C*15:02",
+   "n_usable": 181,
+   "supertype": "C-locus (outside Sidney 2008 scope)"
+  }
+ ]
+}
