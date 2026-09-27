@@ -10,3 +10,8 @@ Branch: `paper-build`, paper directory only. `paper/manuscript.md` adapts the ex
 
 - Added `companion_analysis.md` (rendered into `companion_body.tex`): same-row MHCflurry table with paired bootstrap, G2 per-allele comparison, all twelve G3 held-out allele AUCs, three assay-method slices, confound/calibration caveats, and 18 computational CPP nomination rows, each from committed result JSON. The within-panel numerical win is explicitly subordinate to G3's transfer failure.
 - Rebuilt `manuscript.pdf` with pdfLaTeX twice: 10 pages, up from six. `mathptmx` resolves to Nimbus Roman in this environment, not genuine TNR. Visual inspection of pages 8-10 found tables readable after shortening labels and separating long sequences from metrics. Formula prose from the original draft is still not publication-grade; 50-page, full reference and font gates remain open.
+
+## Morning evidence expansion, 2026-09-27
+
+- Added `detailed_diagnostics.md` (compiled into `detailed_body.tex`) from committed per-allele head-to-head, per-length head-to-head, CPP learning curve and k-mer feature-weight artifacts. The 30 familiar-allele rows and length slices are deliberately separate from the failed 12-allele G3 transfer test; small strata cannot support a claim of mechanism.
+- Rebuilt with pdfLaTeX twice: 13 pages, up from ten, Nimbus Roman substitute rather than licensed Times New Roman. Visual inspection of pages 11-13 showed readable metrics and no material table clipping. Still not a 50-page paper; do not add blank or repetitive pages to meet a numerical floor.
