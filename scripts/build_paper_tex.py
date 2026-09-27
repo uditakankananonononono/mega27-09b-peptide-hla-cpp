@@ -66,7 +66,7 @@ tex = r"""\documentclass[11pt]{article}
 \newtheorem{proposition}{Proposition}
 \title{Peptide--HLA Binding Prediction and Cell-Penetrating Peptide Design:\\
 A Leakage-Controlled Benchmark on Real Open Data}
-\author{Udita Phookan \and Instinct MEGA27-09b pipeline}
+\author{Udita Phookan}
 \date{September 24, 2026}
 \begin{document}
 \maketitle

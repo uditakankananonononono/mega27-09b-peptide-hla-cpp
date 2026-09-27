@@ -1,6 +1,6 @@
 # Peptide-HLA Binding Prediction and Cell-Penetrating Peptide Design: A Benchmarked In-Silico Study
 
-**MEGA-PROGRAM-27, Item 9 (Part 2)** | Author: Udita Phookan (pipeline: Instinct MEGA27-09b agent)
+**MEGA-PROGRAM-27, Item 9 (Part 2)** | Author: Udita Phookan
 
 ## Abstract
 (to fill with final numbers)
