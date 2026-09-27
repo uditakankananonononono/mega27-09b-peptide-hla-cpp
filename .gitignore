@@ -1,3 +1,6 @@
 *.pyc
 __pycache__/
 texput.log
+results/b3_partial/el_monoallelic.json
+results/b3_partial/scores_covered.json
+results/b3_partial/scores_uncovered.json
