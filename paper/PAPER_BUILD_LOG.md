@@ -15,3 +15,8 @@ Branch: `paper-build`, paper directory only. `paper/manuscript.md` adapts the ex
 
 - Added `detailed_diagnostics.md` (compiled into `detailed_body.tex`) from committed per-allele head-to-head, per-length head-to-head, CPP learning curve and k-mer feature-weight artifacts. The 30 familiar-allele rows and length slices are deliberately separate from the failed 12-allele G3 transfer test; small strata cannot support a claim of mechanism.
 - Rebuilt with pdfLaTeX twice: 13 pages, up from ten, Nimbus Roman substitute rather than licensed Times New Roman. Visual inspection of pages 11-13 showed readable metrics and no material table clipping. Still not a 50-page paper; do not add blank or repetitive pages to meet a numerical floor.
+
+## Structure and error audit, 2026-09-27
+
+- Added `structure_audit.tex` from committed HLA pocket-entropy (52 alleles, 23 sites), MDAnalysis groove-geometry (69 analyzed complexes, 3 excluded), three selected anchor-burial structures, motif interaction summaries, PSSM learning curve and paired-error counts. The long structure table is an audit of distinct deposited complexes, not an independent binding replication. The pocket-residue-66 group comparison is negative (Kruskal p=0.20685), while the small within-panel pair-error edge cannot overturn G3.
+- Rebuilt twice after removing an accidental duplicate include: 18 pages, up from 13. Visually inspected pages 14-18; tables are readable and not clipped. Page 18 is sparse because the previous longtable and the final short diagnostic paragraph cross a page break, not because blank pages were inserted. Nimbus Roman, not genuine Times New Roman; the 50-page floor remains unmet.

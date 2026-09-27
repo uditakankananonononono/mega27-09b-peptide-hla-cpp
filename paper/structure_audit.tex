@@ -1,0 +1,131 @@
+\clearpage
+\section{Structure, pocket, and error audit}
+\subsection{Scope and noncausal interpretation}
+The evidence in this section is transcribed from committed result artifacts; it is not a prospective validation set. A structure is an observed complex, not a uniformly sampled allele or an independent peptide-binding experiment. The tests below examine whether recorded descriptors agree with expected geometry and where prediction errors differ. They cannot explain the large, locked G3 unseen-allele failure or establish delivery for the CPP candidates. All residue-contact and distance calculations inherit the specific structure, chain selection and atom-selection rules in the source computations.
+\subsection{Allele-panel pocket entropy}
+The committed \texttt{results/hla\_pocket\_entropy\_skbio.json} covers 52 allele sequences and 23 pocket sites. The mean entropy across B-pocket sites is 1.174 bits and across F-pocket sites is 1.098 bits. These are sample-composition summaries, not population frequencies. Position 66 has 1.575 bits, three distinct recorded residues and rank 10 of 23 by the stored entropy ranking. A site with zero entropy in this panel is not invariant across all HLA alleles.
+\begin{longtable}{llrrr}
+\caption{Allele-panel Shannon entropy by indexed pocket residue. Counts and entropy are from the committed scikit-bio audit.}\\
+\hline Pocket & Position & Alleles & Residues & Entropy (bits)\\\hline\endfirsthead
+\hline Pocket & Position & Alleles & Residues & Entropy (bits)\\\hline\endhead
+B & 7 & 52 & 1 & 0.000\\
+B & 9 & 52 & 6 & 2.106\\
+B & 24 & 52 & 3 & 1.060\\
+B & 34 & 52 & 1 & 0.000\\
+B & 45 & 52 & 5 & 1.663\\
+B & 63 & 52 & 3 & 1.017\\
+B & 66 & 52 & 3 & 1.575\\
+B & 67 & 52 & 6 & 1.994\\
+B & 70 & 52 & 5 & 1.870\\
+B & 99 & 52 & 2 & 0.457\\
+F & 74 & 52 & 4 & 1.556\\
+F & 77 & 52 & 3 & 1.581\\
+F & 80 & 52 & 4 & 1.568\\
+F & 81 & 52 & 2 & 0.779\\
+F & 84 & 52 & 1 & 0.000\\
+F & 95 & 52 & 4 & 1.709\\
+F & 97 & 52 & 8 & 2.154\\
+F & 114 & 52 & 6 & 2.368\\
+F & 116 & 52 & 7 & 2.092\\
+F & 123 & 52 & 1 & 0.000\\
+F & 143 & 52 & 2 & 0.235\\
+F & 146 & 52 & 1 & 0.000\\
+F & 147 & 52 & 2 & 0.235\\
+\hline\end{longtable}
+\subsection{Observed groove geometry}
+The committed \texttt{results/structure\_mdanalysis\_groove\_geometry.json} records 69 analyzed complexes and three skipped accessions: 7kgu and 7t5m lacked a qualifying free 6--15-residue peptide chain, and 7srk lacked a qualifying heavy-chain candidate under the implemented selection. The analyzed set includes 29 locus-A and 40 locus-B complexes. Pooled B/F width means are 13.34/13.54 Angstrom, with observed standard deviations 0.62/0.50; pooled P2/terminal depth means are 2.56/1.21 Angstrom. These quantities are calculation-specific coordinates, not measurements of affinity.
+The source reports Spearman rho 0.351 (p=0.00314) for peptide length versus peptide span, -0.487 (p=2.20e-5) for B width versus P2 depth, and -0.488 (p=2.08e-5) for F width versus terminal depth. Complexes are not necessarily independent and several alleles appear repeatedly; these nominal p values are descriptive rather than a calibrated molecular-mechanism test. Differences among deposited structures, ligands and resolutions can confound the association.
+\begin{longtable}{lllrrrr}
+\caption{Observed groove geometry by deposited complex; Angstrom values from the committed MDAnalysis output.}\\
+\hline PDB & Allele & Length & B width & F width & P2 depth & Terminal depth\\\hline\endfirsthead
+\hline PDB & Allele & Length & B width & F width & P2 depth & Terminal depth\\\hline\endhead
+3OX8 & HLA-A$^{*}$02:03 & 10 & 13.73 & 14.21 & 1.84 & 0.88\\
+3OXR & HLA-A$^{*}$02:06 & 10 & 13.56 & 13.82 & 1.79 & 0.92\\
+4JQV & HLA-B$^{*}$18:01 & 8 & 12.70 & 12.97 & 2.47 & 1.57\\
+4JQX & HLA-B$^{*}$44:03 & 12 & 13.06 & 13.89 & 2.46 & 0.46\\
+4MJI & HLA-B$^{*}$51:01 & 8 & 12.41 & 13.45 & 3.00 & 0.35\\
+4PR5 & HLA-B$^{*}$35:01 & 11 & 13.56 & 12.76 & 2.81 & 1.64\\
+4PRA & HLA-B$^{*}$35:01 & 11 & 13.64 & 12.83 & 2.76 & 1.58\\
+4PRN & HLA-B$^{*}$35:01 & 11 & 13.17 & 12.69 & 2.78 & 1.53\\
+4PRP & HLA-B$^{*}$35:01 & 11 & 13.40 & 13.12 & 2.54 & 1.71\\
+5T6W & HLA-B$^{*}$57:01 & 10 & 12.94 & 13.73 & 2.43 & 0.64\\
+5T6X & HLA-B$^{*}$57:01 & 10 & 13.23 & 13.75 & 2.38 & 0.71\\
+5T6Y & HLA-B$^{*}$57:01 & 12 & 13.29 & 14.01 & 2.26 & 0.42\\
+5VUD & HLA-B$^{*}$57:01 & 9 & 13.08 & 13.68 & 3.24 & 0.74\\
+5VUE & HLA-B$^{*}$57:01 & 9 & 13.54 & 13.68 & 2.67 & 0.64\\
+5VUF & HLA-B$^{*}$57:01 & 9 & 13.58 & 13.44 & 2.74 & 0.63\\
+5VWH & HLA-B$^{*}$58:01 & 9 & 13.23 & 13.84 & 3.04 & 0.70\\
+5VWJ & HLA-B$^{*}$58:01 & 9 & 13.35 & 13.78 & 2.90 & 0.80\\
+5WJL & HLA-A$^{*}$11:01 & 10 & 13.16 & 13.72 & 2.56 & 1.15\\
+5WJN & HLA-A$^{*}$11:01 & 10 & 13.02 & 13.60 & 2.56 & 1.14\\
+5WKF & HLA-A$^{*}$11:01 & 10 & 13.23 & 13.06 & 2.61 & 1.25\\
+5WKH & HLA-A$^{*}$11:01 & 10 & 13.38 & 13.11 & 2.64 & 1.02\\
+6AVF & HLA-B$^{*}$07:02 & 13 & 13.31 & 13.17 & 2.92 & 1.67\\
+6MPP & HLA-A$^{*}$01:01 & 10 & 12.96 & 14.65 & 3.09 & -0.09\\
+6MT3 & HLA-B$^{*}$18:01 & 9 & 13.02 & 13.10 & 2.51 & 1.52\\
+6PBH & HLA-A$^{*}$68:01 & 7 & 12.85 & 14.06 & 2.70 & 1.39\\
+6UJ7 & HLA-B$^{*}$07:02 & 10 & 13.02 & 13.21 & 2.82 & 1.63\\
+6UJ8 & HLA-B$^{*}$07:02 & 10 & 13.19 & 13.26 & 2.98 & 1.64\\
+6UZP & HLA-B$^{*}$15:01 & 9 & 13.72 & 12.96 & 2.40 & 1.84\\
+6UZQ & HLA-B$^{*}$15:01 & 9 & 13.10 & 12.77 & 2.52 & 1.60\\
+6UZS & HLA-B$^{*}$15:01 & 9 & 13.61 & 12.84 & 2.39 & 1.56\\
+6VB3 & HLA-B$^{*}$15:01 & 9 & 13.18 & 12.98 & 2.48 & 1.66\\
+6VPZ & HLA-B$^{*}$27:05 & 11 & 13.67 & 13.83 & 2.35 & 1.22\\
+6VQ2 & HLA-B$^{*}$27:05 & 10 & 13.82 & 13.73 & 2.32 & 0.93\\
+6VQD & HLA-B$^{*}$27:05 & 6 & 13.76 & 13.78 & 2.22 & 3.60\\
+6VQE & HLA-B$^{*}$27:05 & 10 & 13.90 & 13.73 & 2.21 & 1.01\\
+7K80 & HLA-A$^{*}$24:02 & 8 & 12.32 & 14.01 & 3.00 & 0.69\\
+7K81 & HLA-A$^{*}$24:02 & 8 & 12.50 & 13.88 & 2.84 & 0.58\\
+7L1C & HLA-A$^{*}$03:01 & 9 & 13.74 & 13.26 & 2.06 & 0.80\\
+7MJA & HLA-A$^{*}$24:02 & 9 & 17.02 & 14.86 & 6.08 & 1.01\\
+7NUI & HLA-B$^{*}$08:01 & 9 & 13.15 & 13.59 & 2.82 & 1.75\\
+7OW3 & HLA-A$^{*}$11:01 & 10 & 12.59 & 13.53 & 2.66 & 0.98\\
+7S7E & HLA-B$^{*}$07:02 & 9 & 13.03 & 13.34 & 3.04 & 1.67\\
+7S7F & HLA-B$^{*}$07:02 & 9 & 13.02 & 13.32 & 2.99 & 1.70\\
+7STF & HLA-A$^{*}$03:01 & 10 & 13.47 & 13.64 & 2.52 & 2.47\\
+7TLT & HLA-A$^{*}$29:02 & 9 & 13.28 & 14.31 & 2.79 & 0.47\\
+8DVG & HLA-A$^{*}$03:01 & 10 & 13.47 & 13.29 & 2.36 & 0.90\\
+8ELG & HLA-B$^{*}$15:01 & 9 & 13.33 & 13.00 & 2.37 & 1.61\\
+8ELH & HLA-B$^{*}$15:01 & 9 & 13.37 & 12.89 & 2.36 & 1.59\\
+8FU4 & HLA-A$^{*}$02:01 & 9 & 13.61 & 14.21 & 2.08 & 1.27\\
+8RNG & HLA-B$^{*}$18:01 & 8 & 12.73 & 13.47 & 2.50 & 1.67\\
+8RNH & HLA-B$^{*}$18:01 & 9 & 13.24 & 12.99 & 2.44 & 1.57\\
+8RNI & HLA-A$^{*}$03:01 & 10 & 13.42 & 13.20 & 2.24 & 0.90\\
+8ROO & HLA-B$^{*}$18:01 & 8 & 12.86 & 13.24 & 2.49 & 1.74\\
+8ROP & HLA-B$^{*}$18:01 & 8 & 13.13 & 12.89 & 2.42 & 1.41\\
+8SBK & HLA-A$^{*}$24:02 & 9 & 12.94 & 14.29 & 2.69 & 0.97\\
+8SBL & HLA-A$^{*}$24:02 & 9 & 12.88 & 14.26 & 2.71 & 0.85\\
+8V4Z & HLA-B$^{*}$35:01 & 9 & 13.86 & 12.86 & 2.74 & 1.23\\
+8V50 & HLA-B$^{*}$35:01 & 9 & 13.82 & 12.76 & 2.57 & 1.27\\
+8VCL & HLA-A$^{*}$03:01 & 9 & 13.64 & 13.17 & 2.02 & 0.91\\
+8VJZ & HLA-A$^{*}$03:01 & 10 & 13.41 & 13.39 & 2.29 & 0.94\\
+9NMU & HLA-A$^{*}$02:01 & 9 & 13.71 & 13.95 & 2.00 & 1.47\\
+9NMV & HLA-A$^{*}$02:01 & 9 & 13.77 & 14.09 & 2.06 & 1.48\\
+9NMY & HLA-A$^{*}$02:01 & 9 & 13.67 & 13.81 & 1.97 & 1.56\\
+9PBG & HLA-B$^{*}$27:05 & 9 & 14.14 & 14.08 & 2.06 & 0.66\\
+9PBH & HLA-B$^{*}$27:05 & 9 & 13.88 & 14.10 & 2.15 & 1.06\\
+9WPD & HLA-A$^{*}$11:01 & 9 & 13.26 & 13.15 & 2.44 & 0.98\\
+9YIR & HLA-A$^{*}$01:01 & 9 & 11.84 & 13.78 & 2.72 & 1.18\\
+9YTD & HLA-A$^{*}$02:01 & 9 & 14.05 & 14.01 & 2.02 & 1.61\\
+9Z50 & HLA-A$^{*}$01:01 & 10 & 12.95 & 14.12 & 1.78 & 1.01\\
+\hline\end{longtable}
+\subsection{Anchor burial in three selected complexes}
+The committed \texttt{results/anchor\_burial.json} reports per-position solvent-accessible surface areas in three selected structures. The P2 and terminal positions fall among the three most buried peptide positions in all three recorded examples, while the most exposed position lies centrally. The three structures are an illustration, not a prevalence estimate. The independent pocket-verification artifact records a specific 1DUZ residue-contact overlap with the assigned B and F pocket sets. Neither calculation demonstrates that the learned model uses the same contacts.
+\begin{center}\begin{tabular}{lrrrrl}\hline
+PDB & Length & P2 SASA & Terminal SASA & Max SASA & Max site\\\hline
+1DUZ & 9 & 2.80 & 1.67 & 125.43 & 5\\
+8RNI & 10 & 4.13 & 5.51 & 107.36 & 6\\
+7OW3 & 10 & 0.14 & 6.72 & 64.06 & 6\\
+\hline\end{tabular}\end{center}
+\subsection{Motif interaction and structural proxy limits}
+The twelve-allele audit in \texttt{results/epistasis\_motif\_link.json} correlates a P9-minus-P2 anchor asymmetry with the recorded hydrophobic interaction contrast: Pearson r=0.5072, with its stored 95\% interval [0.0873, 0.9222]. This small, selected panel does not establish pocket-mediated causation. An independent grouping in \texttt{results/imgt\_epistasis\_link.json} compares residue-66 groups N (n=10), K (n=6), I (n=7), with contrasts -0.04882, -0.10735 and -0.02265. Its Kruskal H=3.1516 and p=0.20685 do not reject the group-null under that test. The two analyses use different allele panels and summaries; neither should be used to claim a successful unseen-allele predictor.
+\subsection{Learning curve and paired-error asymmetry}
+The committed per-allele PSSM learning curve uses training fractions 0.05, 0.10, 0.25, 0.50 and 1.00, with recorded mean AUCs 0.7724, 0.8257, 0.8791, 0.9022 and 0.9156. These are within its chosen evaluation protocol, not extrapolations to novel alleles. Table below reports its run-to-run spread as stored, without inventing confidence intervals.
+\begin{center}\begin{tabular}{rrr}\hline Fraction & Mean AUC & Recorded SD\\\hline
+0.05 & 0.7724 & 0.0051\\
+0.1 & 0.8257 & 0.0042\\
+0.25 & 0.8791 & 0.0021\\
+0.5 & 0.9022 & 0.0009\\
+1.0 & 0.9156 & 0.0000\\
+\hline\end{tabular}\end{center}
+The committed \texttt{results/error\_decorrelation.json} compares 6,000 peptides and 4,768,751 opposite-label pairs. MHCflurry misorders 398,762 pairs and the ensemble 342,715; the ensemble correctly orders 0.560 of MHCflurry's misordered pairs, whereas MHCflurry correctly orders 0.488 of ensemble-misordered pairs. The recorded Spearman correlation between the two model scores is 0.782 overall. Pair counts reuse peptides extensively, so they are not independent observations for a significance test. This audit helps localize the small same-row advantage but cannot override G3. [PENDING: a new locked unseen-allele experiment with source-equivalent training access and predefined negative sampling.]
