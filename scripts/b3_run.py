@@ -34,10 +34,13 @@ def norm_allele(raw):
 
 
 def phase_parse():
-    out_p = PART / "el_monoallelic.json"
-    if out_p.exists():
+    done_p = PART / "parse_meta.json"
+    if done_p.exists():
         print("parse done, skip"); return
-    per_allele = defaultdict(dict)
+    shard_dir = PART / "shards"
+    shard_dir.mkdir(exist_ok=True)
+    handles = {}
+    counts = defaultdict(int)
     n_total = n_ma_excluded = n_bad = 0
     for f in sorted(glob.glob("data/external/NetMHCpan_train/c00?_el")):
         for line in open(f):
@@ -54,16 +57,28 @@ def phase_parse():
             if not (8 <= len(pep) <= 14) or not set(pep) <= AA20:
                 n_bad += 1
                 continue
-            t = 1 if tgt == "1" else 0
-            # ligand overrides decoy on (peptide, allele) conflict
-            per_allele[a][pep] = max(per_allele[a].get(pep, 0), t)
+            if a not in handles:
+                safe = a.replace("*", "_")
+                handles[a] = open(shard_dir / f"{safe}.tsv", "w")
+            handles[a].write(f"{pep}\t{tgt}\n")
+            counts[a] += 1
         print(f"{f} parsed; total {n_total}", flush=True)
-    out = {a: d for a, d in per_allele.items()}
+    for h in handles.values():
+        h.close()
     meta = {"n_lines": n_total, "n_ma_excluded": n_ma_excluded, "n_bad": n_bad,
-            "n_alleles": len(out), "n_rows": sum(len(d) for d in out.values())}
-    json.dump(out, open(out_p, "w"))
-    json.dump(meta, open(PART / "parse_meta.json", "w"), indent=1)
+            "n_alleles": len(counts), "n_rows_sharded": sum(counts.values()),
+            "shards": "results/b3_partial/shards/<allele>.tsv (peptide, target; dedupe ligand-overrides-decoy at load)"}
+    json.dump(meta, open(done_p, "w"), indent=1)
     print(json.dumps(meta, indent=1), flush=True)
+
+
+def load_shard(a):
+    safe = a.replace("*", "_")
+    d = {}
+    for line in open(PART / "shards" / f"{safe}.tsv"):
+        pep, tgt = line.rstrip("\n").split("\t")
+        d[pep] = max(d.get(pep, 0), int(tgt))
+    return d
 
 
 def phase_score():
@@ -74,11 +89,11 @@ def phase_score():
     from peptidehlacpp.features import stacked_enc, MAX_LEN_PHLA
     train_alleles = sorted({r["allele"] for r in json.load(open("results/per_allele_analysis.json"))["per_allele"]})
     tset = set(train_alleles)
-    el = json.load(open(PART / "el_monoallelic.json"))
-    covered = {a: d for a, d in el.items() if a in tset}
-    uncovered = {a: d for a, d in el.items() if a not in tset}
-    print(f"covered {len(covered)} alleles / {sum(len(d) for d in covered.values())} rows; "
-          f"uncovered {len(uncovered)} / {sum(len(d) for d in uncovered.values())}", flush=True)
+    shards = sorted((PART / "shards").glob("*.tsv"))
+    all_alleles = [p.stem.replace("_", "*") for p in shards]
+    covered = {a: None for a in all_alleles if a in tset}
+    uncovered = {a: None for a in all_alleles if a not in tset}
+    print(f"covered {len(covered)} alleles; uncovered {len(uncovered)}", flush=True)
     # fit per-allele PSSMs on IEDB BA rows (production recipe; no EL row touches any fit)
     df = load_filtered_tsv("data/processed/iedb_class1_human_nM.tsv")
     examples = aggregate(df)
@@ -128,9 +143,10 @@ def phase_score():
     for group, scorer in (("covered", covered), ("uncovered", uncovered)):
         ck = PART / f"scores_{group}.json"
         done = json.load(open(ck)) if ck.exists() else {}
-        for a, d in sorted(scorer.items()):
+        for a in sorted(scorer):
             if a in done:
                 continue
+            d = load_shard(a)
             peps = sorted(d)
             labels = np.array([d[p] for p in peps])
             if group == "covered":
@@ -164,12 +180,10 @@ def phase_finalize():
     examples = aggregate(load_filtered_tsv("data/processed/iedb_class1_human_nM.tsv"))
     ba_peps = {e.sequence for e in examples}
     audit = {}
-    for group, res in (("covered", cov), ("uncovered", unc)):
-        for a, v in res.items():
-            peps = sorted({p for p in v.get("scores", [])})  # placeholder, see below
-    # per-allele overlap needs peptide lists; recompute from el_monoallelic
-    el = json.load(open(PART / "el_monoallelic.json"))
-    for a, d in el.items():
+    # per-allele overlap recomputed from shards
+    for p in sorted((PART / "shards").glob("*.tsv")):
+        a = p.stem.replace("_", "*")
+        d = load_shard(a)
         if not d:
             continue
         hits = sum(1 for p in d if d[p] == 1 and p in ba_peps)

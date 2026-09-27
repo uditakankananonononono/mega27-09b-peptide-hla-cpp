@@ -1,0 +1,8 @@
+{
+ "n_lines": 12868293,
+ "n_ma_excluded": 9188888,
+ "n_bad": 12184,
+ "n_alleles": 130,
+ "n_rows_sharded": 3667221,
+ "shards": "results/b3_partial/shards/<allele>.tsv (peptide, target; dedupe ligand-overrides-decoy at load)"
+}
