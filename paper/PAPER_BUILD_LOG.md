@@ -28,3 +28,9 @@ The owner said "NOT 10 ROUNDS OOF CHATGPT CHECK JUST ONE WHICH I PROVIDE OK?" (a
 ## Authorship-attribution cleanup, 2026-09-27 11:14 IST
 
 The owner requested removal of the assistant's attribution from the papers (WhatsApp `wamid.HBgMOTE4MTM0MDk4NTcxFQIAEhgWM0VCMEY5MzY4M0Q4OUYwNjg4ODZDNwA=`). Removed agent/program-style byline and credit text from the editable paper source and PDF display, without substituting an author. Udita's own byline in 09b was preserved, with only the Instinct pipeline parenthetical removed. Manuscript PDF author metadata is empty. Literature references to other studies' authors and technical uses of "author numbering" are not authorship credits for this paper.
+
+## Owner mega-verdict, 2026-09-27 noon IST
+
+Original complete WhatsApp message archived in `MEGA_VERDICT_FULL_BODY_2026-09-27.txt` (SHA-256 `d700f12c2a01d6f21b7392305aaa6b25d7a9efb29062ce5ba95c14e22f11bc33`); lane and cross-cutting excerpts in `MEGA_VERDICT_2026-09-27.md`, with a separate agent-authored locked queue. Source: wamid.HBgMOTE4MTM0MDk4NTcxFQIAEhgWM0VCMEFGRDY4MzY4OTkxNzFEQURGRAA=.
+
+Added one-question framing and a G3-first interpretive response. Committed G3 result remains negative: 0.6687 against MHCflurry 0.9285 pooled, and 0.5798 versus 0.9056 mean per allele. Mechanisms are hypotheses, not tested explanations; no new benchmark numbers invented. PDF double-built to 20 pages, with Nimbus Roman substitute, not licensed Times New Roman; visual inspection of final two pages completed. The 50-page font gate remains open. No slides rendered in this paper-side revision.
